@@ -6,29 +6,67 @@ import Footer from '../components/Footer.astro';
 
 <Layout title="Privacy Policy | Bra Size Calculator">
   <Header />
-  <main class="flex-1 w-full max-w-3xl mx-auto px-6 py-12">
-    <h1 class="text-3xl font-bold text-ink mb-6">Privacy Policy</h1>
-    <div class="prose prose-slate max-w-none text-body space-y-6">
-      <p>Last updated: August 2026</p>
+  <main class="flex-1 w-full max-w-3xl mx-auto px-6 py-12 md:py-16">
+    <h1 class="text-3xl md:text-4xl font-bold text-ink mb-6">Privacy Policy</h1>
+    <div class="prose prose-slate max-w-none text-body space-y-6 leading-relaxed">
+      <p class="text-xs text-mute font-mono uppercase tracking-wider">Last updated: August 2026</p>
       
       <section>
         <h2 class="text-xl font-bold text-ink mb-3">1. Introduction</h2>
-        <p>Welcome to Bra Size Calculator. We value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and share information when you visit our website.</p>
+        <p>
+          Welcome to BraSizeChecker.com. We respect your privacy and are committed to maintaining full transparency regarding data processing. This Privacy Policy explains how our calculator operates and how information is handled when you visit our website.
+        </p>
       </section>
 
       <section>
-        <h2 class="text-xl font-bold text-ink mb-3">2. Information We Collect</h2>
-        <p>We may collect information you provide directly to us when you use our contact form, such as your email address and any message contents. Our calculator runs on your device, and we do not store your body measurements on our servers.</p>
+        <h2 class="text-xl font-bold text-ink mb-3">2. Body Measurement Privacy (Local Processing)</h2>
+        <p>
+          Your body measurements (bust and underbust) are processed <strong>100% locally</strong> inside your browser's JavaScript engine. 
+        </p>
+        <ul class="list-disc pl-6 space-y-2 mt-2">
+          <li>Measurements are <strong>never</strong> transmitted over network requests or sent to remote servers.</li>
+          <li>Measurements are <strong>never</strong> stored in databases, cookies, `localStorage`, or `sessionStorage`.</li>
+          <li>Measurements are <strong>never</strong> included in query parameters or analytics events.</li>
+          <li>Once you close or refresh your browser tab, your entered measurements vanish from memory.</li>
+        </ul>
       </section>
 
       <section>
-        <h2 class="text-xl font-bold text-ink mb-3">3. How We Use Information</h2>
-        <p>We use the information you provide to respond to your inquiries and improve our services.</p>
+        <h2 class="text-xl font-bold text-ink mb-3">3. No Account Required</h2>
+        <p>
+          BraSizeChecker.com is open to all users without registration. We do not require users to create an account, log in, or provide a name, email address, or personal profile to use the sizing tool.
+        </p>
       </section>
 
       <section>
-        <h2 class="text-xl font-bold text-ink mb-3">4. Contact Us</h2>
-        <p>If you have questions about this Privacy Policy, please contact us at <a href="mailto:ornacasa11@gmail.com" class="text-primary hover:underline">ornacasa11@gmail.com</a>.</p>
+        <h2 class="text-xl font-bold text-ink mb-3">4. Contact Form Submissions</h2>
+        <p>
+          If you choose to submit an inquiry through our <a href="/contact" class="text-primary font-medium hover:underline">Contact Us</a> page, you voluntarily provide your email address and message contents. 
+        </p>
+        <p class="mt-2">
+          Contact form submissions are securely processed via Formspree solely for the purpose of responding to your inquiry. Formspree handles form data in accordance with their privacy standards.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-ink mb-3">5. Browser Storage & Cookies</h2>
+        <p>
+          We do not use tracking or advertising cookies. The only item saved in your browser's local storage (`localStorage`) is your preferred color theme (`light` or `dark`), which allows the website to preserve your visual theme choice across visits.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-ink mb-3">6. Third-Party Links & Services</h2>
+        <p>
+          Our website contains no third-party tracking scripts or advertising networks on sizing pages. If external links are provided, we encourage you to review the privacy policies of any third-party websites you visit.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-ink mb-3">7. Contact Us</h2>
+        <p>
+          If you have any questions or feedback regarding this Privacy Policy, please email us at <a href="mailto:ornacasa11@gmail.com" class="text-primary font-medium hover:underline">ornacasa11@gmail.com</a>.
+        </p>
       </section>
     </div>
   </main>

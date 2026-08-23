@@ -179,24 +179,17 @@ export function calculateBraSize(input: BraSizeInput): BraSizeResult | null {
   let frBand = euBand + 15;
 
   // --- Australia / New Zealand ---
-  let auBand = usBand - 22;
-  if (auBand < 4) auBand = 4;
+  let auBand = 8 + (usBand - 30);
+  if (auBand < 6) auBand = 6;
   const auCup = ukCup;
 
   // --- Japan (JP) ---
   let jpBand = euBand;
   const jpCup = euCup;
 
-  // --- Sister Sizes (US) ---
-  const tightBand = Math.max(usBand - 2, 28);
-  const tightCupIndex = Math.min(usDiff + 1, US_CUPS.length - 1);
-  const tightSize = `${tightBand}${US_CUPS[tightCupIndex]}`;
-
-  const looseBand = usBand + 2;
-  const looseCupIndex = Math.max(usDiff - 1, 0);
-  const looseSize = `${looseBand}${US_CUPS[looseCupIndex]}`;
-
   const primarySize = `${usBand}${usCup}`;
+  const tightSize = `${usBand - 2}${US_CUPS[Math.min(usCupIndex + 1, US_CUPS.length - 1)]}`;
+  const looseSize = `${usBand + 2}${US_CUPS[Math.max(usCupIndex - 1, 0)]}`;
 
   const internationalSizes: InternationalSize[] = [
     { location: 'US / CA', band: `${usBand}`, cup: usCup },
@@ -216,5 +209,54 @@ export function calculateBraSize(input: BraSizeInput): BraSizeResult | null {
     sisterTight: tightSize,
     sisterLoose: looseSize,
     internationalSizes,
+  };
+}
+
+export interface ConvertKnownSizeResult {
+  us: { band: number; cup: string; full: string };
+  uk: { band: number; cup: string; full: string };
+  eu: { band: number; cup: string; full: string };
+  fr: { band: number; cup: string; full: string };
+  au: { band: number; cup: string; full: string };
+  jp: { band: number; cup: string; full: string };
+}
+
+/**
+ * Converts a known bra size from one system to all supported international systems using authoritative matrices.
+ */
+export function convertKnownSize(
+  systemKey: 'US' | 'UK' | 'EU' | 'FR' | 'AU' | 'JP',
+  bandVal: number,
+  cupVal: string
+): ConvertKnownSizeResult | null {
+  const key = systemKey.toLowerCase() as keyof BandRow;
+
+  // Match Band row
+  const bandRowIndex = BAND_CONVERSION_MATRIX.findIndex(row => row[key] === bandVal);
+  if (bandRowIndex === -1) return null;
+  const bandRow = BAND_CONVERSION_MATRIX[bandRowIndex];
+
+  // Match Cup row
+  const cupKey = (systemKey === 'FR' ? 'eu' : key) as keyof CupRow;
+  const cupRowIndex = CUP_CONVERSION_MATRIX.findIndex(row => {
+    const val = row[cupKey];
+    if (typeof val === 'string') {
+      return val.split('/').map(s => s.trim().toLowerCase()).includes(cupVal.trim().toLowerCase());
+    }
+    return false;
+  });
+  if (cupRowIndex === -1) return null;
+  const cupRow = CUP_CONVERSION_MATRIX[cupRowIndex];
+
+  // Clean display cup names
+  const cleanCup = (cStr: string) => cStr.split('/')[0].trim();
+
+  return {
+    us: { band: bandRow.us, cup: cleanCup(cupRow.us), full: `${bandRow.us}${cleanCup(cupRow.us)}` },
+    uk: { band: bandRow.uk, cup: cleanCup(cupRow.uk), full: `${bandRow.uk}${cleanCup(cupRow.uk)}` },
+    eu: { band: bandRow.eu, cup: cleanCup(cupRow.eu), full: `${bandRow.eu}${cleanCup(cupRow.eu)}` },
+    fr: { band: bandRow.fr, cup: cleanCup(cupRow.eu), full: `${bandRow.fr}${cleanCup(cupRow.eu)}` },
+    au: { band: bandRow.au, cup: cleanCup(cupRow.au), full: `${bandRow.au}${cleanCup(cupRow.au)}` },
+    jp: { band: bandRow.jp, cup: cleanCup(cupRow.jp), full: `${bandRow.jp}${cleanCup(cupRow.jp)}` },
   };
 }

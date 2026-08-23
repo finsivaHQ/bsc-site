@@ -1,5 +1,5 @@
 import assert from 'node:assert';
-import { calculateBraSize, validateAndCalculateBraSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../src/utils/braSizing.js';
+import { calculateBraSize, validateAndCalculateBraSize, convertKnownSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../src/utils/braSizing.js';
 
 console.log('🧪 Running Bra Sizing Methodology, Conversion & Validation Test Suite...\n');
 
@@ -41,7 +41,7 @@ runTest('Small Measurement 28" underbust, 29" bust -> 28A', () => {
   const result = calculateBraSize({ underbust: 28, overbust: 29, unit: 'in' });
   assert.ok(result !== null);
   assert.strictEqual(result.primarySize, '28A');
-  assert.strictEqual(result.sisterTight, '28B');
+  assert.strictEqual(result.sisterTight, '26B');
   assert.strictEqual(result.sisterLoose, '30AA');
 });
 
@@ -116,7 +116,33 @@ runTest('Conversion Matrix Consistency (BAND & CUP matrices)', () => {
   assert.strictEqual(rowDD?.jp, 'E');
 });
 
-// 8. Invalid & Boundary Measurements
+// 8. Known Size Converter Function (convertKnownSize)
+runTest('Known Size Converter Function (convertKnownSize)', () => {
+  // US 34C -> UK 34C, EU 75C, FR 90C, AU 12C, JP 75C
+  const conv34C = convertKnownSize('US', 34, 'C');
+  assert.ok(conv34C !== null);
+  assert.strictEqual(conv34C.us.full, '34C');
+  assert.strictEqual(conv34C.uk.full, '34C');
+  assert.strictEqual(conv34C.eu.full, '75C');
+  assert.strictEqual(conv34C.fr.full, '90C');
+  assert.strictEqual(conv34C.au.full, '12C');
+  assert.strictEqual(conv34C.jp.full, '75C');
+
+  // UK 32FF -> US 32H, EU 70H, FR 85H, AU 10FF, JP 70H
+  const conv32FF = convertKnownSize('UK', 32, 'FF');
+  assert.ok(conv32FF !== null);
+  assert.strictEqual(conv32FF.us.full, '32H');
+  assert.strictEqual(conv32FF.uk.full, '32FF');
+  assert.strictEqual(conv32FF.eu.full, '70H');
+  assert.strictEqual(conv32FF.fr.full, '85H');
+  assert.strictEqual(conv32FF.au.full, '10FF');
+  assert.strictEqual(conv32FF.jp.full, '70H');
+
+  // Invalid lookup
+  assert.strictEqual(convertKnownSize('US', 99, 'Z'), null);
+});
+
+// 9. Invalid & Boundary Measurements
 runTest('Invalid Measurements (Zero, Negative, or Bust < Underbust)', () => {
   assert.strictEqual(calculateBraSize({ underbust: 0, overbust: 34, unit: 'in' }), null);
   assert.strictEqual(calculateBraSize({ underbust: 34, overbust: -5, unit: 'in' }), null);
@@ -124,7 +150,7 @@ runTest('Invalid Measurements (Zero, Negative, or Bust < Underbust)', () => {
   assert.strictEqual(calculateBraSize({ underbust: NaN, overbust: 34, unit: 'in' }), null);
 });
 
-// 9. Input Validation & Error Handling Tests
+// 10. Input Validation & Error Handling Tests
 runTest('Validation Error Handling (validateAndCalculateBraSize)', () => {
   // Test zero / negative
   const zeroRes = validateAndCalculateBraSize({ underbust: 0, overbust: 34, unit: 'in' });

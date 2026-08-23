@@ -1,0 +1,295 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizing';
+
+const defaultSystem = 'US';
+const defaultBand = 34;
+const defaultCup = 'C';
+---
+
+<Layout 
+  title="Bra Size Converter — Convert US, UK, EU & International Sizes | BraSizeChecker"
+  description="Free international bra size converter tool. Convert your known bra size between US, UK, EU, FR, AU, and JP sizing systems instantly."
+  canonical="https://brasizechecker.com/bra-size-converter"
+>
+  <Header />
+  <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+    <Breadcrumbs items={[{ label: 'Bra Size Converter' }]} />
+
+    <!-- Page Header / Intro -->
+    <header class="mb-10 text-center sm:text-left">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+        Interactive Tool
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+        International Bra Size Converter
+      </h1>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
+        Select your known bra size and country standard below to convert your equivalent band and cup sizes across US/CA, UK, EU, FR, AU, and JP sizing conventions.
+      </p>
+    </header>
+
+    <!-- Converter Form & Results Card -->
+    <section class="bg-surface border border-hairline rounded-2xl shadow-sm p-4 sm:p-6 md:p-10 mb-12" aria-labelledby="converter-heading">
+      <h2 id="converter-heading" class="sr-only">Bra Size Converter Tool</h2>
+
+      <form id="converter-form" action="#" onsubmit="event.preventDefault();" class="space-y-6 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <!-- Step 1: System Selection -->
+          <div>
+            <label for="system-select" class="block text-sm font-semibold text-ink mb-1.5">
+              Step 1: I know my size in
+            </label>
+            <select 
+              id="system-select" 
+              class="w-full h-12 px-4 bg-surface border border-hairline rounded-xl text-base text-ink font-medium focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 cursor-pointer transition-all"
+            >
+              <option value="US" selected>US / Canada (US/CA)</option>
+              <option value="UK">United Kingdom (UK)</option>
+              <option value="EU">European Union (EU)</option>
+              <option value="FR">France / Belgium / Spain (FR)</option>
+              <option value="AU">Australia / New Zealand (AU)</option>
+              <option value="JP">Japan (JP)</option>
+            </select>
+          </div>
+
+          <!-- Step 2: Band Select -->
+          <div>
+            <label for="band-select" class="block text-sm font-semibold text-ink mb-1.5">
+              Step 2: Select Band
+            </label>
+            <select 
+              id="band-select" 
+              class="w-full h-12 px-4 bg-surface border border-hairline rounded-xl text-base text-ink font-medium focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 cursor-pointer transition-all"
+            >
+              <!-- Populated dynamically based on selected system -->
+            </select>
+          </div>
+
+          <!-- Step 2: Cup Select -->
+          <div>
+            <label for="cup-select" class="block text-sm font-semibold text-ink mb-1.5">
+              Select Cup
+            </label>
+            <select 
+              id="cup-select" 
+              class="w-full h-12 px-4 bg-surface border border-hairline rounded-xl text-base text-ink font-medium focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 cursor-pointer transition-all"
+            >
+              <!-- Populated dynamically based on selected system -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Step 3: Primary CTA Button -->
+        <div>
+          <button 
+            type="submit" 
+            id="convert-btn" 
+            class="w-full sm:w-auto h-12 px-8 bg-primary hover:bg-primary-hover active:translate-y-[1px] text-white font-bold text-base rounded-xl shadow-xs transition-all duration-200 cursor-pointer flex items-center justify-center gap-2"
+          >
+            Convert My Size
+          </button>
+        </div>
+      </form>
+
+      <!-- Dynamic Conversion Results Section -->
+      <div id="converter-results" class="bg-canvas-soft-2 border border-hairline rounded-2xl p-5 sm:p-8 transition-all duration-300">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-hairline">
+          <div>
+            <span class="text-xs font-bold text-primary uppercase tracking-widest block mb-1">CONVERSION RESULT</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-ink">
+              Entered Size: <span id="entered-size-display" class="text-primary font-bold">34C (US/CA)</span>
+            </h3>
+          </div>
+          <button 
+            type="button" 
+            id="copy-converter-btn" 
+            class="h-10 px-4 bg-surface hover:bg-canvas-soft-2 border border-hairline rounded-xl text-xs font-semibold text-ink transition-all duration-200 flex items-center gap-2 shadow-2xs cursor-pointer self-start sm:self-auto"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span id="copy-converter-text">Copy Results</span>
+          </button>
+        </div>
+
+        <!-- 6-Card Grid Display -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 text-left">
+          <!-- US/CA Card -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
+            <span class="text-[11px] font-semibold text-mute uppercase tracking-wider block mb-1">US / Canada</span>
+            <div id="res-us" class="text-2xl sm:text-3xl font-bold text-ink">34C</div>
+          </div>
+
+          <!-- UK Card -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
+            <span class="text-[11px] font-semibold text-mute uppercase tracking-wider block mb-1">United Kingdom</span>
+            <div id="res-uk" class="text-2xl sm:text-3xl font-bold text-ink">34C</div>
+          </div>
+
+          <!-- EU Card -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
+            <span class="text-[11px] font-semibold text-mute uppercase tracking-wider block mb-1">EU (EN 13402)</span>
+            <div id="res-eu" class="text-2xl sm:text-3xl font-bold text-primary">75C</div>
+          </div>
+
+          <!-- FR Card -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
+            <span class="text-[11px] font-semibold text-mute uppercase tracking-wider block mb-1">FR / BE / ES</span>
+            <div id="res-fr" class="text-2xl sm:text-3xl font-bold text-ink">90C</div>
+          </div>
+
+          <!-- AU Card -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
+            <span class="text-[11px] font-semibold text-mute uppercase tracking-wider block mb-1">AU / NZ</span>
+            <div id="res-au" class="text-2xl sm:text-3xl font-bold text-ink">12C</div>
+          </div>
+
+          <!-- JP Card -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
+            <span class="text-[11px] font-semibold text-mute uppercase tracking-wider block mb-1">Japan (JP)</span>
+            <div id="res-jp" class="text-2xl sm:text-3xl font-bold text-ink">75C</div>
+          </div>
+        </div>
+
+        <p class="text-xs text-mute mt-6 pt-4 border-t border-hairline leading-relaxed">
+          * International bra conversions are reference equivalents based on standard sizing matrices. Actual bra fit can vary between manufacturers, fabrics, and cup styles.
+        </p>
+      </div>
+    </section>
+
+    <!-- Supporting Educational Content -->
+    <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">What is a Bra Size Converter?</h2>
+        <p class="mb-4">
+          A bra size converter is a tool that translates your known bra size from one national standard into another. Because manufacturers in North America, Europe, Australia, and Asia use different measurement systems for bands and cups, purchasing underwear across international brands often requires converting your size labels.
+        </p>
+        <p>
+          For example, a US band size 34 corresponds to a French 90 or an Australian 12, while cup progressions differ significantly between US and UK manufacturers starting at D cups.
+        </p>
+      </section>
+
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">US vs UK Sizing Differences</h2>
+        <p class="mb-4">
+          While US and UK band sizes use the same inch numbers (30, 32, 34, 36, 38, 40), their cup sizing progressions diverge after D cups:
+        </p>
+        <div class="overflow-x-auto -mx-2 px-2 my-4">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[360px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">Cup Order Step</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">US Cup Label</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">UK Cup Label</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr><td class="py-2 px-3 font-medium">5th Cup Step</td><td class="py-2 px-3 font-semibold text-ink">DD / E</td><td class="py-2 px-3 font-semibold text-primary">DD</td></tr>
+              <tr><td class="py-2 px-3 font-medium">6th Cup Step</td><td class="py-2 px-3 font-semibold text-ink">DDD / F</td><td class="py-2 px-3 font-semibold text-primary">E</td></tr>
+              <tr><td class="py-2 px-3 font-medium">7th Cup Step</td><td class="py-2 px-3 font-semibold text-ink">G</td><td class="py-2 px-3 font-semibold text-primary">F</td></tr>
+              <tr><td class="py-2 px-3 font-medium">8th Cup Step</td><td class="py-2 px-3 font-semibold text-ink">H</td><td class="py-2 px-3 font-semibold text-primary">FF</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Don't Know Your Starting Size?</h2>
+        <p class="mb-4">
+          If you are unsure of your baseline bra size or suspect your current bra doesn't fit properly, establish your size from home in three easy steps:
+        </p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Use our free <a href="/#calculator" class="text-primary font-semibold hover:underline">Bra Size Calculator</a> to compute your baseline starting size.</li>
+          <li>Follow our step-by-step <a href="/#how-to-measure" class="text-primary font-semibold hover:underline">How to Measure Guide</a>.</li>
+          <li>Explore our comprehensive <a href="/bra-size-chart" class="text-primary font-semibold hover:underline">Bra Size Chart</a> for full conversion matrices.</li>
+          <li>Learn about cup volume transfer with our <a href="/#fit-guide" class="text-primary font-semibold hover:underline">Sister Size Guide</a>.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX, convertKnownSize } from '../utils/braSizing';
+
+  const systemSelect = document.getElementById('system-select') as HTMLSelectElement;
+  const bandSelect = document.getElementById('band-select') as HTMLSelectElement;
+  const cupSelect = document.getElementById('cup-select') as HTMLSelectElement;
+  const convertBtn = document.getElementById('convert-btn');
+  const copyBtn = document.getElementById('copy-converter-btn');
+  const copyTextEl = document.getElementById('copy-converter-text');
+
+  const enteredSizeDisplay = document.getElementById('entered-size-display');
+  const resUs = document.getElementById('res-us');
+  const resUk = document.getElementById('res-uk');
+  const resEu = document.getElementById('res-eu');
+  const resFr = document.getElementById('res-fr');
+  const resAu = document.getElementById('res-au');
+  const resJp = document.getElementById('res-jp');
+
+  const populateSelectors = () => {
+    const sys = (systemSelect.value || 'US') as 'US' | 'UK' | 'EU' | 'FR' | 'AU' | 'JP';
+    const key = (sys === 'FR' ? 'fr' : sys.toLowerCase()) as keyof typeof BAND_CONVERSION_MATRIX[0];
+    const cupKey = (sys === 'FR' ? 'eu' : sys.toLowerCase()) as keyof typeof CUP_CONVERSION_MATRIX[0];
+
+    // Populate Band Options
+    const uniqueBands = Array.from(new Set(BAND_CONVERSION_MATRIX.map(row => row[key])));
+    bandSelect.innerHTML = uniqueBands.map(b => `<option value="${b}">${b}</option>`).join('');
+
+    // Populate Cup Options
+    const uniqueCups = Array.from(new Set(CUP_CONVERSION_MATRIX.map(row => {
+      const val = row[cupKey];
+      return typeof val === 'string' ? val.split('/')[0].trim() : String(val);
+    })));
+    cupSelect.innerHTML = uniqueCups.map(c => `<option value="${c}">${c}</option>`).join('');
+  };
+
+  const handleConvert = () => {
+    const sys = (systemSelect.value || 'US') as 'US' | 'UK' | 'EU' | 'FR' | 'AU' | 'JP';
+    const bandVal = parseInt(bandSelect.value, 10);
+    const cupVal = cupSelect.value;
+
+    if (isNaN(bandVal) || !cupVal) return;
+
+    const result = convertKnownSize(sys, bandVal, cupVal);
+    if (!result) return;
+
+    if (enteredSizeDisplay) enteredSizeDisplay.textContent = `${bandVal}${cupVal} (${sys})`;
+    if (resUs) resUs.textContent = result.us.full;
+    if (resUk) resUk.textContent = result.uk.full;
+    if (resEu) resEu.textContent = result.eu.full;
+    if (resFr) resFr.textContent = result.fr.full;
+    if (resAu) resAu.textContent = result.au.full;
+    if (resJp) resJp.textContent = result.jp.full;
+  };
+
+  systemSelect?.addEventListener('change', () => {
+    populateSelectors();
+    handleConvert();
+  });
+
+  bandSelect?.addEventListener('change', handleConvert);
+  cupSelect?.addEventListener('change', handleConvert);
+  convertBtn?.addEventListener('click', handleConvert);
+
+  // Copy Results Button
+  copyBtn?.addEventListener('click', () => {
+    const summary = `Converted Bra Size on BraSizeChecker.com: ${enteredSizeDisplay?.textContent} => US: ${resUs?.textContent}, UK: ${resUk?.textContent}, EU: ${resEu?.textContent}, FR: ${resFr?.textContent}, AU: ${resAu?.textContent}, JP: ${resJp?.textContent}.`;
+    navigator.clipboard.writeText(summary).then(() => {
+      if (copyTextEl) copyTextEl.textContent = 'Copied!';
+      setTimeout(() => {
+        if (copyTextEl) copyTextEl.textContent = 'Copy Results';
+      }, 2000);
+    });
+  });
+
+  // Initial Population & Calculation
+  populateSelectors();
+  handleConvert();
+</script>

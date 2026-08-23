@@ -7,26 +7,76 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 
 <Layout 
   title="About Us — Independent Bra Sizing Tools & Guides | BraSizeChecker"
-  description="Learn about BraSizeChecker.com, our privacy-first local sizing calculator, and our mission to simplify bra sizing and fit education."
+  description="Learn about BraSizeChecker, our independent modern bra sizing methodology, team transparency, privacy commitments, and fit limitations."
+  canonical="https://brasizechecker.com/about"
 >
   <Header />
-  <main class="flex-1 w-full max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
+  <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[{ label: 'About Us' }]} />
     
-    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-ink mb-6">About Us</h1>
-    <div class="prose prose-slate max-w-none text-body space-y-4 leading-relaxed text-sm sm:text-base">
-      <p>
-        Welcome to BraSizeChecker! We are dedicated to helping people find their recommended bra size quickly and easily from the comfort of their homes.
+    <header class="mb-10 text-center sm:text-left">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+        Product Transparency
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+        About BraSizeChecker
+      </h1>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
+        BraSizeChecker is an independent digital tool and reference hub designed to help individuals find an accurate starting bra size from home using modern fitting standards.
       </p>
-      <p>
-        We understand that bra sizing can be confusing and inconsistent across different manufacturers. That's why we've built an easy-to-use <a href="/#calculator" class="text-primary font-medium hover:underline">bra size calculator</a>, comprehensive <a href="/#chart-section" class="text-primary font-medium hover:underline">international conversion charts</a>, and a simple <a href="/#how-to-measure" class="text-primary font-medium hover:underline">measurement guide</a> to establish your baseline starting size.
-      </p>
-      <p class="p-4 bg-canvas-soft-2 rounded-xl border border-hairline text-ink font-medium text-xs sm:text-sm">
-        🔒 BraSizeChecker is designed to make sizing simple without requiring an account or storing your measurements.
-      </p>
-      <p>
-        If you have any questions or suggestions, please feel free to reach out to us at <a href="mailto:ornacasa11@gmail.com" class="text-primary font-medium hover:underline">ornacasa11@gmail.com</a> or via our <a href="/contact" class="text-primary font-medium hover:underline">Contact Us</a> page.
-      </p>
+    </header>
+
+    <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <!-- Section 1: Why BraSizeChecker Exists -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Why BraSizeChecker Exists</h2>
+        <p class="mb-4">
+          For decades, traditional bra fitting guides relied on the outdated "+4 method"—adding 4 to 5 inches to a person's underbust measurement. This resulted in millions of people wearing band sizes that were far too loose and cup sizes that were far too small.
+        </p>
+        <p>
+          BraSizeChecker was created to provide a modern, direct underbust calculation algorithm that anchors the bra band snugly against the ribcage where 80% of support belongs.
+        </p>
+      </section>
+
+      <!-- Section 2: Independent & Unbiased -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">100% Independent & Brand-Neutral</h2>
+        <p class="mb-4">
+          BraSizeChecker is completely independent. We are not owned, operated, or sponsored by any lingerie manufacturer, brand, or retail outlet.
+        </p>
+        <p class="p-4 bg-canvas-soft-2 rounded-xl border border-hairline font-medium text-xs sm:text-sm text-ink">
+          &bull; Zero paid product placements &bull; Objective conversion algorithms &bull; Unbiased fit advice
+        </p>
+      </section>
+
+      <!-- Section 3: Transparency & Limitations -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Understanding Sizing Limitations</h2>
+        <p class="mb-4">
+          While our calculator provides a highly accurate modern fitting baseline, a calculated size is always a <strong>starting point, not a guaranteed medical prescription</strong>.
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm text-body mb-4">
+          <li><strong>Fabric Elasticity:</strong> Firm powernet elastic fits tighter than soft microfiber of the same size label.</li>
+          <li><strong>Cup Construction:</strong> Molded foam cups hold a fixed shape, whereas seamed fabric cups conform flexibly.</li>
+          <li><strong>Body Asymmetry:</strong> Most human bodies have slight breast size variations that require fitting the larger side.</li>
+        </ul>
+        <a href="/methodology" class="text-primary font-bold hover:underline text-xs sm:text-sm">Read full methodology documentation &rarr;</a>
+      </section>
+
+      <!-- Section 4: Privacy & Maintenance -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Privacy & Editorial Team</h2>
+        <p class="mb-4">
+          Our calculator processes all underbust and bust inputs locally inside your browser. We do not create user profiles, require account sign-ups, or store personal measurement data.
+        </p>
+        <p class="mb-4">
+          All educational guides are researched, written, and maintained by the <strong>BraSizeChecker Editorial & Product Team</strong> with continuous updates.
+        </p>
+        <div class="flex flex-wrap gap-3 text-xs font-bold">
+          <a href="/contact" class="px-5 py-2.5 bg-primary text-white rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">Contact Our Team &rarr;</a>
+          <a href="/privacy-policy" class="px-5 py-2.5 bg-surface border border-hairline text-ink rounded-xl hover:bg-canvas-soft-2 transition-colors">Privacy Policy &rarr;</a>
+        </div>
+      </section>
     </div>
   </main>
   <Footer />

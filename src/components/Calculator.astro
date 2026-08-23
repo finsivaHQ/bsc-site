@@ -108,8 +108,8 @@
           </tbody>
         </table>
       </div>
-      <p class="text-xs text-mute mt-4">
-        * Calculation results serve as a starting point. Fit may vary depending on brand fabric, wire shape, and style.
+      <p class="text-xs text-mute mt-4 leading-relaxed">
+        * Your recommended size is calculated from your underbust and bust measurements using standard international sizing matrices. Because bra sizing can vary between brands and styles, this result should be treated as a starting size.
       </p>
     </div>
   </div>
@@ -170,6 +170,8 @@
 </section>
 
 <script>
+  import { calculateBraSize } from '../utils/braSizing';
+
   // DOM Elements
   const unitInBtn = document.getElementById('unit-in');
   const unitCmBtn = document.getElementById('unit-cm');
@@ -182,10 +184,10 @@
   const sisterLooseEl = document.getElementById('sister-loose');
   const intlTableBody = document.getElementById('intl-table-body');
 
-  let currentUnit = 'in';
+  let currentUnit: 'in' | 'cm' = 'in';
 
   // Toggle Units
-  const setUnit = (unit) => {
+  const setUnit = (unit: 'in' | 'cm') => {
     if (unit === currentUnit) return;
     
     // Convert values if present
@@ -203,18 +205,18 @@
     currentUnit = unit;
     
     if (unit === 'in') {
-      unitInBtn.classList.add('bg-primary', 'text-on-primary', 'shadow-xs');
-      unitInBtn.classList.remove('text-body', 'hover:text-ink');
-      unitCmBtn.classList.remove('bg-primary', 'text-on-primary', 'shadow-xs');
-      unitCmBtn.classList.add('text-body', 'hover:text-ink');
+      unitInBtn?.classList.add('bg-primary', 'text-on-primary', 'shadow-xs');
+      unitInBtn?.classList.remove('text-body', 'hover:text-ink');
+      unitCmBtn?.classList.remove('bg-primary', 'text-on-primary', 'shadow-xs');
+      unitCmBtn?.classList.add('text-body', 'hover:text-ink');
       unitLabels.forEach(el => el.textContent = 'in');
       underbustInput.placeholder = 'e.g. 32';
       overbustInput.placeholder = 'e.g. 35';
     } else {
-      unitCmBtn.classList.add('bg-primary', 'text-on-primary', 'shadow-xs');
-      unitCmBtn.classList.remove('text-body', 'hover:text-ink');
-      unitInBtn.classList.remove('bg-primary', 'text-on-primary', 'shadow-xs');
-      unitInBtn.classList.add('text-body', 'hover:text-ink');
+      unitCmBtn?.classList.add('bg-primary', 'text-on-primary', 'shadow-xs');
+      unitCmBtn?.classList.remove('text-body', 'hover:text-ink');
+      unitInBtn?.classList.remove('bg-primary', 'text-on-primary', 'shadow-xs');
+      unitInBtn?.classList.add('text-body', 'hover:text-ink');
       unitLabels.forEach(el => el.textContent = 'cm');
       underbustInput.placeholder = 'e.g. 80';
       overbustInput.placeholder = 'e.g. 90';
@@ -224,11 +226,6 @@
 
   unitInBtn?.addEventListener('click', () => setUnit('in'));
   unitCmBtn?.addEventListener('click', () => setUnit('cm'));
-
-  // Cup arrays
-  const usCups = ['AA', 'A', 'B', 'C', 'D', 'DD', 'DDD', 'G', 'H', 'I', 'J', 'K', 'L'];
-  const ukCups = ['AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H', 'HH', 'J'];
-  const euCups = ['AA', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
   
   const calculateSize = () => {
     if (!underbustInput.value || !overbustInput.value) {
@@ -236,116 +233,34 @@
       return;
     }
 
-    let u_in = parseFloat(underbustInput.value);
-    let o_in = parseFloat(overbustInput.value);
+    const u = parseFloat(underbustInput.value);
+    const o = parseFloat(overbustInput.value);
 
-    if (isNaN(u_in) || isNaN(o_in)) {
+    const result = calculateBraSize({
+      underbust: u,
+      overbust: o,
+      unit: currentUnit
+    });
+
+    if (!result) {
       resultArea?.classList.add('hidden');
       return;
     }
 
-    // Normalize to inches for standard US/UK math
-    if (currentUnit === 'cm') {
-      u_in = u_in / 2.54;
-      o_in = o_in / 2.54;
-    }
-    
-    let u_cm = u_in * 2.54;
-    let o_cm = o_in * 2.54;
-
-    // --- US/CA & UK (Modern Standard) ---
-    let usBand = Math.round(u_in);
-    if (usBand % 2 !== 0) usBand += 1;
-    
-    let usDiff = Math.round(o_in - usBand);
-    if (usDiff < 0) usDiff = 0;
-    
-    const usCupIndex = Math.min(usDiff, usCups.length - 1);
-    const ukCupIndex = Math.min(usDiff, ukCups.length - 1);
-
-    const usSize = `${usBand}`;
-    const usCup = usCups[usCupIndex];
-    
-    const ukSize = `${usBand}`;
-    const ukCup = ukCups[ukCupIndex];
-
-    // --- US/CA & UK (Underbust +4) ---
-    let u_round = Math.round(u_in);
-    let plus4Band = (u_round % 2 === 0) ? u_round + 4 : u_round + 5;
-    let plus4Diff = Math.round(o_in - plus4Band);
-    if (plus4Diff < 0) plus4Diff = 0;
-    
-    const plus4UsCup = usCups[Math.min(plus4Diff, usCups.length - 1)];
-    const plus4UkCup = ukCups[Math.min(plus4Diff, ukCups.length - 1)];
-
-    // --- EU (EN 13402) ---
-    let euBand = Math.round(u_cm / 5) * 5;
-    let euDiff = o_cm - u_cm;
-    let euCupIndex = Math.floor((euDiff - 10) / 2);
-    if (euCupIndex < 0) euCupIndex = 0;
-    const euCup = euCups[Math.min(euCupIndex, euCups.length - 1)];
-
-    // --- FR/BE/ES ---
-    let frBand = euBand + 15;
-
-    // --- Australia/NZ ---
-    let auBand = usBand - 22;
-    if (auBand < 4) auBand = 4;
-    const auCup = ukCup; // AU cups are very close to UK for standard range
-
-    // Sister Sizes (US)
-    const tightBand = usBand - 2;
-    const tightCupIndex = Math.min(usDiff + 1, usCups.length - 1);
-    const tightSize = `${tightBand}${usCups[tightCupIndex]}`;
-
-    const looseBand = usBand + 2;
-    const looseCupIndex = Math.max(usDiff - 1, 0);
-    const looseSize = `${looseBand}${usCups[looseCupIndex]}`;
-
     // Update DOM
-    if (mainSizeEl) mainSizeEl.textContent = `${usSize}${usCup}`;
-    if (sisterTightEl) sisterTightEl.textContent = tightSize;
-    if (sisterLooseEl) sisterLooseEl.textContent = looseSize;
+    if (mainSizeEl) mainSizeEl.textContent = result.primarySize;
+    if (sisterTightEl) sisterTightEl.textContent = result.sisterTight;
+    if (sisterLooseEl) sisterLooseEl.textContent = result.sisterLoose;
 
     // Build Table
     if (intlTableBody) {
-      intlTableBody.innerHTML = `
+      intlTableBody.innerHTML = result.internationalSizes.map(item => `
         <tr class="border-b border-hairline hover:bg-surface/70 transition-colors">
-          <td class="py-2.5 font-medium text-ink">US / CA</td>
-          <td class="py-2.5 font-semibold text-ink">${usSize}</td>
-          <td class="py-2.5 font-semibold text-primary">${usCup}</td>
+          <td class="py-2.5 ${item.isSecondary ? 'text-mute font-normal' : 'font-medium text-ink'}">${item.location}</td>
+          <td class="py-2.5 ${item.isSecondary ? 'text-mute font-medium' : 'font-semibold text-ink'}">${item.band}</td>
+          <td class="py-2.5 ${item.isSecondary ? 'text-mute font-medium' : 'font-semibold text-primary'}">${item.cup}</td>
         </tr>
-        <tr class="border-b border-hairline hover:bg-surface/70 transition-colors">
-          <td class="py-2.5 font-medium text-ink">UK</td>
-          <td class="py-2.5 font-semibold text-ink">${ukSize}</td>
-          <td class="py-2.5 font-semibold text-primary">${ukCup}</td>
-        </tr>
-        <tr class="border-b border-hairline hover:bg-surface/70 transition-colors">
-          <td class="py-2.5 text-mute">US/CA (Underbust +4)*</td>
-          <td class="py-2.5 font-medium text-mute">${plus4Band}</td>
-          <td class="py-2.5 font-medium text-mute">${plus4UsCup}</td>
-        </tr>
-        <tr class="border-b border-hairline hover:bg-surface/70 transition-colors">
-          <td class="py-2.5 text-mute">UK (Underbust +4)*</td>
-          <td class="py-2.5 font-medium text-mute">${plus4Band}</td>
-          <td class="py-2.5 font-medium text-mute">${plus4UkCup}</td>
-        </tr>
-        <tr class="border-b border-hairline hover:bg-surface/70 transition-colors">
-          <td class="py-2.5 font-medium text-ink">EU (EN 13402)</td>
-          <td class="py-2.5 font-semibold text-ink">${euBand} cm</td>
-          <td class="py-2.5 font-semibold text-primary">${euCup}</td>
-        </tr>
-        <tr class="border-b border-hairline hover:bg-surface/70 transition-colors">
-          <td class="py-2.5 font-medium text-ink">FR / BE / ES</td>
-          <td class="py-2.5 font-semibold text-ink">${frBand} cm</td>
-          <td class="py-2.5 font-semibold text-primary">${euCup}</td>
-        </tr>
-        <tr class="hover:bg-surface/70 transition-colors">
-          <td class="py-2.5 font-medium text-ink">Australia / New Zealand</td>
-          <td class="py-2.5 font-semibold text-ink">${auBand}</td>
-          <td class="py-2.5 font-semibold text-primary">${auCup}</td>
-        </tr>
-      `;
+      `).join('');
     }
 
     resultArea?.classList.remove('hidden');

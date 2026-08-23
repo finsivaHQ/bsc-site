@@ -4,17 +4,20 @@ import '../styles/global.css';
 interface Props {
 	title: string;
 	description?: string;
+	canonical?: string;
 	noindex?: boolean;
 }
 
 const { 
 	title, 
 	description = "Calculate your recommended bra size in seconds with our free, private calculator. Includes sister sizes, US/UK/EU international size conversion charts, and fit guidance.",
+	canonical,
 	noindex = false 
 } = Astro.props;
 
-// Generate canonical URL dynamically based on the current path
-const canonicalURL = new URL(Astro.url.pathname, 'https://brasizechecker.com').toString().replace(/\/$/, '');
+// Generate canonical URL dynamically based on the current path if not explicitly overridden
+const defaultCanonical = new URL(Astro.url.pathname, 'https://brasizechecker.com').toString().replace(/\/$/, '');
+const canonicalURL = canonical || defaultCanonical || 'https://brasizechecker.com';
 ---
 
 <!doctype html>
@@ -27,7 +30,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://brasizechecker.com').t
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="msvalidate.01" content="1F7EB46675900FDE533DDDA7125754E4" />
-		<link rel="canonical" href={canonicalURL || 'https://brasizechecker.com'} />
+		<link rel="canonical" href={canonicalURL} />
 		<title>{title}</title>
 		<script is:inline>
 			const theme = (() => {

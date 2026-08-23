@@ -133,47 +133,110 @@
     </form>
 
     <!-- Dynamic Result Area -->
-    <div id="result-area" class="hidden bg-canvas-soft-2 border border-hairline rounded-xl p-4 sm:p-6 md:p-8 mt-8 transition-all duration-300">
-      <div class="text-center mb-8">
-        <p class="text-xs text-primary font-bold uppercase tracking-widest mb-2">Your Recommended Size (US/CA)</p>
-        <div id="main-size" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-ink tracking-tight mb-2">34C</div>
-        <p class="text-xs text-body">Based on standard sizing metrics</p>
+    <div 
+      id="result-area" 
+      class="hidden bg-canvas-soft-2 border border-hairline rounded-2xl p-5 sm:p-8 md:p-10 mt-8 transition-all duration-300"
+      role="region"
+      aria-live="polite"
+      aria-label="Calculated bra size recommendation"
+    >
+      <!-- Main Size Display Hero Card -->
+      <div class="text-center mb-8 pb-8 border-b border-hairline relative">
+        <span class="inline-block text-xs font-bold text-primary uppercase tracking-widest mb-2">
+          YOUR RECOMMENDED SIZE
+        </span>
+        
+        <!-- Dominant Result Size -->
+        <div id="main-size" class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-ink tracking-tight my-2">
+          34C
+        </div>
+        
+        <p id="size-system-label" class="text-xs sm:text-sm font-semibold text-body mb-4">
+          US / CA Sizing System
+        </p>
+
+        <!-- Band & Cup Breakdown Chips -->
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <span class="px-3.5 py-1.5 bg-surface border border-hairline rounded-full text-xs font-semibold text-ink shadow-2xs">
+            Band: <strong id="chip-band" class="text-primary font-bold">34</strong>
+          </span>
+          <span class="px-3.5 py-1.5 bg-surface border border-hairline rounded-full text-xs font-semibold text-ink shadow-2xs">
+            Cup: <strong id="chip-cup" class="text-primary font-bold">C</strong>
+          </span>
+        </div>
+
+        <!-- Result Action Bar (Copy & Recalculate) -->
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <button 
+            type="button" 
+            id="copy-size-btn" 
+            class="h-10 px-4 bg-surface hover:bg-canvas-soft-2 border border-hairline rounded-xl text-xs font-semibold text-ink transition-all duration-200 flex items-center gap-2 shadow-2xs cursor-pointer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span id="copy-size-text">Copy Result</span>
+          </button>
+          
+          <button 
+            type="button" 
+            id="recalculate-btn" 
+            class="h-10 px-4 bg-surface hover:bg-canvas-soft-2 border border-hairline rounded-xl text-xs font-semibold text-body hover:text-ink transition-all duration-200 flex items-center gap-1.5 shadow-2xs cursor-pointer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.5 2v6h-6"></path>
+              <path d="M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+            </svg>
+            <span>Recalculate</span>
+          </button>
+        </div>
       </div>
 
       <!-- Sister Sizes -->
-      <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-8 text-left">
-        <div class="bg-surface border border-hairline rounded-xl p-3.5 sm:p-4 text-center shadow-xs">
-          <p class="text-xs text-mute uppercase font-medium mb-1">Tighter Band</p>
-          <div class="flex items-end justify-center gap-2">
-            <span id="sister-tight" class="text-xl sm:text-2xl font-bold text-ink">32D</span>
+      <div class="mb-8">
+        <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-3">Sister Sizes (Alternative Fits)</h3>
+        <div class="grid grid-cols-2 gap-3 sm:gap-4 text-left">
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
+            <p class="text-xs text-mute font-medium uppercase mb-1">Tighter Band</p>
+            <div class="flex items-end justify-center gap-1.5">
+              <span id="sister-tight" class="text-2xl sm:text-3xl font-bold text-ink">32D</span>
+            </div>
+            <p class="text-[11px] text-body mt-1">One band size smaller, one cup size larger</p>
           </div>
-        </div>
-        <div class="bg-surface border border-hairline rounded-xl p-3.5 sm:p-4 text-center shadow-xs">
-          <p class="text-xs text-mute uppercase font-medium mb-1">Looser Band</p>
-          <div class="flex items-end justify-center gap-2">
-            <span id="sister-loose" class="text-xl sm:text-2xl font-bold text-ink">36B</span>
+
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
+            <p class="text-xs text-mute font-medium uppercase mb-1">Looser Band</p>
+            <div class="flex items-end justify-center gap-1.5">
+              <span id="sister-loose" class="text-2xl sm:text-3xl font-bold text-ink">36B</span>
+            </div>
+            <p class="text-[11px] text-body mt-1">One band size larger, one cup size smaller</p>
           </div>
         </div>
       </div>
 
       <!-- International Sizes Table -->
-      <h3 class="text-base font-bold text-ink mb-4 border-b border-hairline pb-2">International Sizes</h3>
-      <div class="overflow-x-auto -mx-2 px-2">
-        <table class="w-full text-left border-collapse text-xs sm:text-sm text-body min-w-[280px]">
-          <thead>
-            <tr class="border-b border-hairline text-ink">
-              <th class="py-2.5 font-semibold">Location</th>
-              <th class="py-2.5 font-semibold">Band</th>
-              <th class="py-2.5 font-semibold">Cup</th>
-            </tr>
-          </thead>
-          <tbody id="intl-table-body">
-            <!-- Populated dynamically via JS -->
-          </tbody>
-        </table>
+      <div class="mb-6">
+        <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-3">International Size Equivalents</h3>
+        <div class="overflow-x-auto -mx-2 px-2">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm text-body min-w-[280px]">
+            <thead>
+              <tr class="border-b border-hairline text-ink bg-surface/50">
+                <th class="py-2.5 px-3 font-semibold rounded-l-lg">Location</th>
+                <th class="py-2.5 px-3 font-semibold">Band</th>
+                <th class="py-2.5 px-3 font-semibold rounded-r-lg">Cup</th>
+              </tr>
+            </thead>
+            <tbody id="intl-table-body" class="divide-y divide-hairline">
+              <!-- Populated dynamically via JS -->
+            </tbody>
+          </table>
+        </div>
       </div>
-      <p class="text-xs text-mute mt-4 leading-relaxed">
-        * Your recommended size is calculated from your underbust and bust measurements using standard international sizing matrices. Because bra sizing can vary between brands and styles, this result should be treated as a starting size.
+
+      <!-- Transparency Caveat Note -->
+      <p class="text-xs text-mute leading-relaxed pt-4 border-t border-hairline">
+        * Your recommended size is based on the measurements you entered and is intended as a starting point. Fit can vary between brands, fabrics, and cup styles.
       </p>
     </div>
   </div>
@@ -252,9 +315,14 @@
   const errorBox = document.getElementById('calculator-error');
   const errorText = document.getElementById('calculator-error-text');
   const mainSizeEl = document.getElementById('main-size');
+  const chipBandEl = document.getElementById('chip-band');
+  const chipCupEl = document.getElementById('chip-cup');
   const sisterTightEl = document.getElementById('sister-tight');
   const sisterLooseEl = document.getElementById('sister-loose');
   const intlTableBody = document.getElementById('intl-table-body');
+  const copyBtn = document.getElementById('copy-size-btn');
+  const copyTextEl = document.getElementById('copy-size-text');
+  const recalculateBtn = document.getElementById('recalculate-btn');
 
   let currentUnit: 'in' | 'cm' = 'in';
 
@@ -366,8 +434,15 @@
     clearError();
     const result = validation.result;
 
+    // Split primary size into band and cup (e.g. "34C" -> band: "34", cup: "C")
+    const match = result.primarySize.match(/^(\d+)(.*)$/);
+    const bandVal = match ? match[1] : '';
+    const cupVal = match ? match[2] : '';
+
     // Update DOM
     if (mainSizeEl) mainSizeEl.textContent = result.primarySize;
+    if (chipBandEl) chipBandEl.textContent = bandVal || String(result.bandUs);
+    if (chipCupEl) chipCupEl.textContent = cupVal || result.cupUs;
     if (sisterTightEl) sisterTightEl.textContent = result.sisterTight;
     if (sisterLooseEl) sisterLooseEl.textContent = result.sisterLoose;
 
@@ -375,9 +450,9 @@
     if (intlTableBody) {
       intlTableBody.innerHTML = result.internationalSizes.map(item => `
         <tr class="border-b border-hairline hover:bg-surface/70 transition-colors">
-          <td class="py-2.5 ${item.isSecondary ? 'text-mute font-normal' : 'font-medium text-ink'}">${item.location}</td>
-          <td class="py-2.5 ${item.isSecondary ? 'text-mute font-medium' : 'font-semibold text-ink'}">${item.band}</td>
-          <td class="py-2.5 ${item.isSecondary ? 'text-mute font-medium' : 'font-semibold text-primary'}">${item.cup}</td>
+          <td class="py-2.5 px-3 ${item.isSecondary ? 'text-mute font-normal' : 'font-medium text-ink'}">${item.location}</td>
+          <td class="py-2.5 px-3 ${item.isSecondary ? 'text-mute font-medium' : 'font-semibold text-ink'}">${item.band}</td>
+          <td class="py-2.5 px-3 ${item.isSecondary ? 'text-mute font-medium' : 'font-semibold text-primary'}">${item.cup}</td>
         </tr>
       `).join('');
     }
@@ -395,5 +470,34 @@
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
     calculateSize(true);
+  });
+
+  // Copy Result Functionality
+  copyBtn?.addEventListener('click', () => {
+    const size = mainSizeEl?.textContent || '';
+    if (!size) return;
+
+    const copySummary = `My recommended bra size on BraSizeChecker.com is ${size} (US/CA). Underbust: ${underbustInput.value} ${currentUnit}, Bust: ${overbustInput.value} ${currentUnit}.`;
+    
+    navigator.clipboard.writeText(copySummary).then(() => {
+      if (copyTextEl) copyTextEl.textContent = 'Copied!';
+      setTimeout(() => {
+        if (copyTextEl) copyTextEl.textContent = 'Copy Result';
+      }, 2000);
+    }).catch(() => {
+      if (copyTextEl) copyTextEl.textContent = 'Copied!';
+      setTimeout(() => {
+        if (copyTextEl) copyTextEl.textContent = 'Copy Result';
+      }, 2000);
+    });
+  });
+
+  // Recalculate / Focus Reset
+  recalculateBtn?.addEventListener('click', () => {
+    underbustInput.value = '';
+    overbustInput.value = '';
+    clearError();
+    resultArea?.classList.add('hidden');
+    underbustInput.focus();
   });
 </script>

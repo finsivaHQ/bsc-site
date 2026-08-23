@@ -20,6 +20,13 @@ export interface BraSizeResult {
   internationalSizes: InternationalSize[];
 }
 
+export interface BraValidationResponse {
+  isValid: boolean;
+  error?: string;
+  fieldWithError?: 'underbust' | 'overbust' | 'both';
+  result?: BraSizeResult;
+}
+
 export interface BandRow {
   us: number;
   uk: number;
@@ -64,6 +71,54 @@ export const CUP_CONVERSION_MATRIX: CupRow[] = [
 ];
 
 /**
+ * Validates inputs and calculates bra size, returning structured error messages if invalid.
+ */
+export function validateAndCalculateBraSize(input: BraSizeInput): BraValidationResponse {
+  const { underbust, overbust, unit } = input;
+
+  if (typeof underbust !== 'number' || isNaN(underbust) || !isFinite(underbust)) {
+    return { isValid: false, error: 'Please enter a valid numeric band size.', fieldWithError: 'underbust' };
+  }
+  if (typeof overbust !== 'number' || isNaN(overbust) || !isFinite(overbust)) {
+    return { isValid: false, error: 'Please enter a valid numeric bust size.', fieldWithError: 'overbust' };
+  }
+
+  if (underbust <= 0) {
+    return { isValid: false, error: 'Band size must be greater than zero.', fieldWithError: 'underbust' };
+  }
+  if (overbust <= 0) {
+    return { isValid: false, error: 'Bust size must be greater than zero.', fieldWithError: 'overbust' };
+  }
+
+  if (unit === 'in') {
+    if (underbust < 20 || underbust > 60) {
+      return { isValid: false, error: 'Please enter a band size between 20 and 60 inches.', fieldWithError: 'underbust' };
+    }
+    if (overbust < 22 || overbust > 80) {
+      return { isValid: false, error: 'Please enter a bust size between 22 and 80 inches.', fieldWithError: 'overbust' };
+    }
+  } else {
+    if (underbust < 50 || underbust > 150) {
+      return { isValid: false, error: 'Please enter a band size between 50 and 150 cm.', fieldWithError: 'underbust' };
+    }
+    if (overbust < 55 || overbust > 200) {
+      return { isValid: false, error: 'Please enter a bust size between 55 and 200 cm.', fieldWithError: 'overbust' };
+    }
+  }
+
+  if (overbust < underbust) {
+    return { isValid: false, error: 'Bust size must be equal to or larger than band size.', fieldWithError: 'overbust' };
+  }
+
+  const result = calculateBraSize(input);
+  if (!result) {
+    return { isValid: false, error: 'Unable to calculate bra size with provided measurements.' };
+  }
+
+  return { isValid: true, result };
+}
+
+/**
  * Calculates bra size recommendations based on bust and underbust measurements.
  */
 export function calculateBraSize(input: BraSizeInput): BraSizeResult | null {
@@ -74,6 +129,8 @@ export function calculateBraSize(input: BraSizeInput): BraSizeResult | null {
     typeof overbust !== 'number' ||
     isNaN(underbust) ||
     isNaN(overbust) ||
+    !isFinite(underbust) ||
+    !isFinite(overbust) ||
     underbust <= 0 ||
     overbust <= 0 ||
     overbust < underbust

@@ -1,7 +1,7 @@
 import assert from 'node:assert';
-import { calculateBraSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../src/utils/braSizing.js';
+import { calculateBraSize, validateAndCalculateBraSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../src/utils/braSizing.js';
 
-console.log('🧪 Running Bra Sizing Methodology & Conversion Test Suite...\n');
+console.log('🧪 Running Bra Sizing Methodology, Conversion & Validation Test Suite...\n');
 
 let passedTests = 0;
 let totalTests = 0;
@@ -122,6 +122,29 @@ runTest('Invalid Measurements (Zero, Negative, or Bust < Underbust)', () => {
   assert.strictEqual(calculateBraSize({ underbust: 34, overbust: -5, unit: 'in' }), null);
   assert.strictEqual(calculateBraSize({ underbust: 34, overbust: 30, unit: 'in' }), null);
   assert.strictEqual(calculateBraSize({ underbust: NaN, overbust: 34, unit: 'in' }), null);
+});
+
+// 9. Input Validation & Error Handling Tests
+runTest('Validation Error Handling (validateAndCalculateBraSize)', () => {
+  // Test zero / negative
+  const zeroRes = validateAndCalculateBraSize({ underbust: 0, overbust: 34, unit: 'in' });
+  assert.strictEqual(zeroRes.isValid, false);
+  assert.strictEqual(zeroRes.error, 'Band size must be greater than zero.');
+
+  // Test absurd numbers (999)
+  const absurdRes = validateAndCalculateBraSize({ underbust: 34, overbust: 999, unit: 'in' });
+  assert.strictEqual(absurdRes.isValid, false);
+  assert.strictEqual(absurdRes.error, 'Please enter a bust size between 22 and 80 inches.');
+
+  // Test bust < underbust
+  const invalidOrderRes = validateAndCalculateBraSize({ underbust: 36, overbust: 32, unit: 'in' });
+  assert.strictEqual(invalidOrderRes.isValid, false);
+  assert.strictEqual(invalidOrderRes.error, 'Bust size must be equal to or larger than band size.');
+
+  // Test valid calculation
+  const validRes = validateAndCalculateBraSize({ underbust: 34, overbust: 37, unit: 'in' });
+  assert.strictEqual(validRes.isValid, true);
+  assert.strictEqual(validRes.result?.primarySize, '34C');
 });
 
 console.log(`\n🎉 Results: ${passedTests} / ${totalTests} test cases passed successfully!\n`);

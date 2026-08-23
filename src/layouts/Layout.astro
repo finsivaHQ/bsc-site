@@ -6,6 +6,9 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+// Generate canonical URL dynamically based on the current path
+const canonicalURL = new URL(Astro.url.pathname, 'https://brasizechecker.com').toString().replace(/\/$/, '');
 ---
 
 <!doctype html>
@@ -16,6 +19,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="canonical" href={canonicalURL || 'https://brasizechecker.com'} />
 		<title>{title}</title>
 		<script is:inline>
 			const theme = (() => {

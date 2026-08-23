@@ -4,10 +4,10 @@
   <div class="text-center mb-12">
     <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft border border-hairline text-caption font-mono uppercase tracking-widest text-mute mb-4">Precision Fit</span>
     <h1 class="text-display-lg md:text-display-xl mb-4">Find Your Perfect Fit.</h1>
-    <p class="text-body-lg text-body max-w-2xl mx-auto">Enter your measurements below. Our calculator instantly determines your size and provides sister sizes for the perfect adjustments.</p>
+    <p class="text-body-lg text-body max-w-2xl mx-auto">Enter your measurements below. Our calculator instantly determines your size across international standards.</p>
   </div>
 
-  <div class="bg-canvas border border-hairline rounded-lg shadow-sm p-6 md:p-10">
+  <div class="bg-canvas border border-hairline rounded-lg shadow-sm p-6 md:p-10 mb-12">
     <div class="flex items-center justify-between mb-8 pb-4 border-b border-hairline">
       <h2 class="text-display-sm">Measurements</h2>
       <div class="flex bg-canvas-soft rounded-sm p-1 border border-hairline">
@@ -36,26 +36,97 @@
     </div>
 
     <!-- Result Area -->
-    <div id="result-area" class="hidden bg-canvas-soft border border-hairline rounded-md p-6 md:p-8 text-center transition-all">
-      <p class="text-body-sm text-mute uppercase tracking-widest font-mono mb-2">Your Bra Size</p>
-      <div id="main-size" class="text-[64px] leading-none font-bold text-ink tracking-tight mb-4">34C</div>
-      
-      <div class="grid grid-cols-2 gap-4 mt-6 pt-6 border-t border-hairline text-left">
-        <div class="bg-canvas border border-hairline rounded-md p-4">
+    <div id="result-area" class="hidden bg-canvas-soft border border-hairline rounded-md p-6 md:p-8 transition-all">
+      <div class="text-center mb-8">
+        <p class="text-body-sm text-mute uppercase tracking-widest font-mono mb-2">Primary Result (US/CA)</p>
+        <div id="main-size" class="text-[64px] leading-none font-bold text-ink tracking-tight mb-4">34C</div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mb-8 text-left">
+        <div class="bg-canvas border border-hairline rounded-md p-4 text-center">
           <p class="text-caption text-mute uppercase mb-1">Tighter Band</p>
-          <div class="flex items-end gap-2">
+          <div class="flex items-end justify-center gap-2">
             <span id="sister-tight" class="text-display-md text-ink">32D</span>
-            <span class="text-xs text-mute mb-1">Sister Size</span>
           </div>
         </div>
-        <div class="bg-canvas border border-hairline rounded-md p-4">
+        <div class="bg-canvas border border-hairline rounded-md p-4 text-center">
           <p class="text-caption text-mute uppercase mb-1">Looser Band</p>
-          <div class="flex items-end gap-2">
+          <div class="flex items-end justify-center gap-2">
             <span id="sister-loose" class="text-display-md text-ink">36B</span>
-            <span class="text-xs text-mute mb-1">Sister Size</span>
           </div>
         </div>
       </div>
+
+      <h3 class="text-lg font-semibold text-ink mb-4 border-b border-hairline pb-2">International Sizes</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-sm text-body">
+          <thead>
+            <tr class="border-b border-hairline">
+              <th class="py-2 font-semibold text-ink">Location</th>
+              <th class="py-2 font-semibold text-ink">Size</th>
+              <th class="py-2 font-semibold text-ink">Cup</th>
+            </tr>
+          </thead>
+          <tbody id="intl-table-body">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-mute mt-4">
+        * The calculation result is only a starting point. Fit can vary by brand and body shape.
+      </p>
+    </div>
+  </div>
+
+  <!-- Bra Size Chart Reference -->
+  <div class="bg-canvas border border-hairline rounded-lg shadow-sm p-6 md:p-10">
+    <h2 class="text-display-sm mb-6 border-b border-hairline pb-4">Bra Size Converter Chart</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-sm text-body min-w-[600px]">
+        <thead>
+          <tr class="border-b border-hairline bg-canvas-soft">
+            <th class="py-3 px-2 font-semibold text-ink rounded-tl-md">US/CA</th>
+            <th class="py-3 px-2 font-semibold text-ink">UK</th>
+            <th class="py-3 px-2 font-semibold text-ink">EU</th>
+            <th class="py-3 px-2 font-semibold text-ink">FR/BE/ES</th>
+            <th class="py-3 px-2 font-semibold text-ink rounded-tr-md">AU/NZ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">30</td><td class="py-2 px-2">30</td><td class="py-2 px-2">65</td><td class="py-2 px-2">80</td><td class="py-2 px-2">8</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">32</td><td class="py-2 px-2">32</td><td class="py-2 px-2">70</td><td class="py-2 px-2">85</td><td class="py-2 px-2">10</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">34</td><td class="py-2 px-2">34</td><td class="py-2 px-2">75</td><td class="py-2 px-2">90</td><td class="py-2 px-2">12</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">36</td><td class="py-2 px-2">36</td><td class="py-2 px-2">80</td><td class="py-2 px-2">95</td><td class="py-2 px-2">14</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">38</td><td class="py-2 px-2">38</td><td class="py-2 px-2">85</td><td class="py-2 px-2">100</td><td class="py-2 px-2">16</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">40</td><td class="py-2 px-2">40</td><td class="py-2 px-2">90</td><td class="py-2 px-2">105</td><td class="py-2 px-2">18</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-lg font-semibold text-ink mt-8 mb-4">Cup Size Converter</h3>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-sm text-body min-w-[600px]">
+        <thead>
+          <tr class="border-b border-hairline bg-canvas-soft">
+            <th class="py-3 px-2 font-semibold text-ink rounded-tl-md">US/CA</th>
+            <th class="py-3 px-2 font-semibold text-ink">UK</th>
+            <th class="py-3 px-2 font-semibold text-ink">EU</th>
+            <th class="py-3 px-2 font-semibold text-ink">AU/NZ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">A</td><td class="py-2 px-2">A</td><td class="py-2 px-2">A</td><td class="py-2 px-2">A</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">B</td><td class="py-2 px-2">B</td><td class="py-2 px-2">B</td><td class="py-2 px-2">B</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">C</td><td class="py-2 px-2">C</td><td class="py-2 px-2">C</td><td class="py-2 px-2">C</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">D</td><td class="py-2 px-2">D</td><td class="py-2 px-2">D</td><td class="py-2 px-2">D</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">DD / E</td><td class="py-2 px-2">DD</td><td class="py-2 px-2">E</td><td class="py-2 px-2">DD</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">DDD / F</td><td class="py-2 px-2">E</td><td class="py-2 px-2">F</td><td class="py-2 px-2">E</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">G</td><td class="py-2 px-2">F</td><td class="py-2 px-2">G</td><td class="py-2 px-2">F</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">H</td><td class="py-2 px-2">FF</td><td class="py-2 px-2">H</td><td class="py-2 px-2">FF</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">I</td><td class="py-2 px-2">G</td><td class="py-2 px-2">I</td><td class="py-2 px-2">G</td></tr>
+          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">J</td><td class="py-2 px-2">GG</td><td class="py-2 px-2">J</td><td class="py-2 px-2">GG</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
@@ -71,6 +142,7 @@
   const mainSizeEl = document.getElementById('main-size');
   const sisterTightEl = document.getElementById('sister-tight');
   const sisterLooseEl = document.getElementById('sister-loose');
+  const intlTableBody = document.getElementById('intl-table-body');
 
   let currentUnit = 'in';
 
@@ -115,8 +187,10 @@
   unitInBtn?.addEventListener('click', () => setUnit('in'));
   unitCmBtn?.addEventListener('click', () => setUnit('cm'));
 
-  // Calculate Logic
-  const cups = ['AA', 'A', 'B', 'C', 'D', 'DD', 'DDD', 'G', 'H', 'I', 'J'];
+  // Cup arrays
+  const usCups = ['AA', 'A', 'B', 'C', 'D', 'DD', 'DDD', 'G', 'H', 'I', 'J', 'K', 'L'];
+  const ukCups = ['AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H', 'HH', 'J'];
+  const euCups = ['AA', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
   
   const calculateSize = () => {
     if (!underbustInput.value || !overbustInput.value) {
@@ -124,40 +198,112 @@
       return;
     }
 
-    let u = parseFloat(underbustInput.value);
-    let o = parseFloat(overbustInput.value);
+    let u_in = parseFloat(underbustInput.value);
+    let o_in = parseFloat(overbustInput.value);
 
-    // Convert cm to inches for standard calculation logic
+    // Normalize to inches for standard US/UK math
     if (currentUnit === 'cm') {
-      u = u / 2.54;
-      o = o / 2.54;
+      u_in = u_in / 2.54;
+      o_in = o_in / 2.54;
     }
-
-    // Modern sizing logic:
-    // Band: round to nearest even number.
-    let band = Math.round(u);
-    if (band % 2 !== 0) band += 1;
-
-    let diff = Math.round(o - band);
     
-    if (diff < 0) diff = 0;
-    if (diff >= cups.length) diff = cups.length - 1;
+    let u_cm = u_in * 2.54;
+    let o_cm = o_in * 2.54;
 
-    const cup = cups[diff];
-    const size = `${band}${cup}`;
+    // --- US/CA & UK (Modern Standard) ---
+    let usBand = Math.round(u_in);
+    if (usBand % 2 !== 0) usBand += 1;
+    
+    let usDiff = Math.round(o_in - usBand);
+    if (usDiff < 0) usDiff = 0;
+    
+    const usCupIndex = Math.min(usDiff, usCups.length - 1);
+    const ukCupIndex = Math.min(usDiff, ukCups.length - 1);
 
-    // Sister Sizes
-    const tightBand = band - 2;
-    const tightCupIndex = diff + 1 < cups.length ? diff + 1 : diff;
-    const tightSize = `${tightBand}${cups[tightCupIndex]}`;
+    const usSize = `${usBand}`;
+    const usCup = usCups[usCupIndex];
+    
+    const ukSize = `${usBand}`;
+    const ukCup = ukCups[ukCupIndex];
 
-    const looseBand = band + 2;
-    const looseCupIndex = diff - 1 >= 0 ? diff - 1 : 0;
-    const looseSize = `${looseBand}${cups[looseCupIndex]}`;
+    // --- US/CA & UK (Underbust +4) ---
+    let u_round = Math.round(u_in);
+    let plus4Band = (u_round % 2 === 0) ? u_round + 4 : u_round + 5;
+    let plus4Diff = Math.round(o_in - plus4Band);
+    if (plus4Diff < 0) plus4Diff = 0;
+    
+    const plus4UsCup = usCups[Math.min(plus4Diff, usCups.length - 1)];
+    const plus4UkCup = ukCups[Math.min(plus4Diff, ukCups.length - 1)];
 
-    if (mainSizeEl) mainSizeEl.textContent = size;
+    // --- EU (EN 13402) ---
+    let euBand = Math.round(u_cm / 5) * 5;
+    let euDiff = o_cm - u_cm;
+    let euCupIndex = Math.floor((euDiff - 10) / 2);
+    if (euCupIndex < 0) euCupIndex = 0;
+    const euCup = euCups[Math.min(euCupIndex, euCups.length - 1)];
+
+    // --- FR/BE/ES ---
+    let frBand = euBand + 15;
+
+    // --- Australia/NZ ---
+    let auBand = usBand - 22;
+    if (auBand < 4) auBand = 4;
+    const auCup = ukCup; // AU cups are very close to UK for standard range
+
+    // Sister Sizes (US)
+    const tightBand = usBand - 2;
+    const tightCupIndex = Math.min(usDiff + 1, usCups.length - 1);
+    const tightSize = `${tightBand}${usCups[tightCupIndex]}`;
+
+    const looseBand = usBand + 2;
+    const looseCupIndex = Math.max(usDiff - 1, 0);
+    const looseSize = `${looseBand}${usCups[looseCupIndex]}`;
+
+    // Update DOM
+    if (mainSizeEl) mainSizeEl.textContent = `${usSize}${usCup}`;
     if (sisterTightEl) sisterTightEl.textContent = tightSize;
     if (sisterLooseEl) sisterLooseEl.textContent = looseSize;
+
+    // Build Table
+    if (intlTableBody) {
+      intlTableBody.innerHTML = `
+        <tr class="border-b border-hairline hover:bg-canvas-soft-2 transition-colors">
+          <td class="py-2">US/CA</td>
+          <td class="py-2 font-medium">${usSize}</td>
+          <td class="py-2 font-medium">${usCup}</td>
+        </tr>
+        <tr class="border-b border-hairline hover:bg-canvas-soft-2 transition-colors">
+          <td class="py-2">UK</td>
+          <td class="py-2 font-medium">${ukSize}</td>
+          <td class="py-2 font-medium">${ukCup}</td>
+        </tr>
+        <tr class="border-b border-hairline hover:bg-canvas-soft-2 transition-colors">
+          <td class="py-2 text-mute">US/CA (Underbust +4)*</td>
+          <td class="py-2 font-medium text-mute">${plus4Band}</td>
+          <td class="py-2 font-medium text-mute">${plus4UsCup}</td>
+        </tr>
+        <tr class="border-b border-hairline hover:bg-canvas-soft-2 transition-colors">
+          <td class="py-2 text-mute">UK (Underbust +4)*</td>
+          <td class="py-2 font-medium text-mute">${plus4Band}</td>
+          <td class="py-2 font-medium text-mute">${plus4UkCup}</td>
+        </tr>
+        <tr class="border-b border-hairline hover:bg-canvas-soft-2 transition-colors">
+          <td class="py-2">EU (EN 13402)</td>
+          <td class="py-2 font-medium">${euBand} cm</td>
+          <td class="py-2 font-medium">${euCup}</td>
+        </tr>
+        <tr class="border-b border-hairline hover:bg-canvas-soft-2 transition-colors">
+          <td class="py-2">FR/BE/ES</td>
+          <td class="py-2 font-medium">${frBand} cm</td>
+          <td class="py-2 font-medium">${euCup}</td>
+        </tr>
+        <tr class="hover:bg-canvas-soft-2 transition-colors">
+          <td class="py-2">Australia/New Zealand</td>
+          <td class="py-2 font-medium">${auBand}</td>
+          <td class="py-2 font-medium">${auCup}</td>
+        </tr>
+      `;
+    }
 
     resultArea?.classList.remove('hidden');
   };

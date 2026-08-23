@@ -6,13 +6,17 @@ interface Props {
 	description?: string;
 	canonical?: string;
 	noindex?: boolean;
+	image?: string;
+	type?: string;
 }
 
 const { 
 	title, 
 	description = "Calculate your recommended bra size in seconds with our free, private calculator. Includes sister sizes, US/UK/EU international size conversion charts, and fit guidance.",
 	canonical,
-	noindex = false 
+	noindex = false,
+	image = "https://brasizechecker.com/og-image.svg",
+	type = "website"
 } = Astro.props;
 
 // Generate canonical URL dynamically based on current path if not explicitly overridden
@@ -111,6 +115,21 @@ const jsonLdData = {
 		<meta name="msvalidate.01" content="1F7EB46675900FDE533DDDA7125754E4" />
 		<link rel="canonical" href={canonicalURL} />
 		<title>{title}</title>
+
+		<!-- Open Graph / Facebook / WhatsApp Metadata -->
+		<meta property="og:site_name" content="BraSizeChecker" />
+		<meta property="og:type" content={type} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:image" content={image} />
+
+		<!-- Twitter Card Metadata -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={image} />
+
 		<script type="application/ld+json" set:html={JSON.stringify(jsonLdData)} />
 		<script is:inline>
 			const theme = (() => {

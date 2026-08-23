@@ -2,27 +2,27 @@
 const faqs = [
   {
     question: "How often should I measure my bra size?",
-    answer: "We recommend measuring every 6 months, or whenever you experience changes in body weight, workout routines, or life events. Body measurements naturally fluctuate over time!"
+    answer: "We recommend measuring every 6 months, or whenever you experience changes in body weight, workout routines, or life events. Follow our step-by-step <a href='/#how-to-measure' class='text-primary font-medium hover:underline'>measurement guide</a> to keep your numbers up to date!"
   },
   {
     question: "What if my calculated size is different from what I currently wear?",
-    answer: "It is very common to wear a size different from your calculated size without realizing it, as sizing matrices can differ between manufacturers. Our calculator provides a dependable starting baseline based on current standards."
+    answer: "It is very common to wear a size different from your calculated size without realizing it, as sizing matrices can differ between manufacturers. Our <a href='/#calculator' class='text-primary font-medium hover:underline'>bra size calculator</a> provides a dependable starting baseline based on current standards."
   },
   {
     question: "What are 'Sister Sizes' and how do I use them?",
-    answer: "Sister sizes share the same cup volume but have different band sizes. For example, 34C, 32D, and 36B hold equivalent cup volumes. If a 34C band feels too loose, try 32D; if it feels too tight, try 36B."
+    answer: "Sister sizes share the same cup volume but have different band sizes. For example, 34C, 32D, and 36B hold equivalent cup volumes. Use our interactive <a href='/#calculator' class='text-primary font-medium hover:underline'>sister size comparison</a> to see your exact sister sizes."
   },
   {
     question: "Should I wear a bra when measuring?",
-    answer: "Yes, measure while wearing an unlined, non-padded, lightly supported bra. Avoid padded or push-up bras as they add artificial bulk, and avoid measuring over thick clothing."
+    answer: "Yes, measure while wearing an unlined, non-padded, lightly supported bra. Avoid padded or push-up bras as they add artificial bulk, and check our <a href='/#how-to-measure' class='text-primary font-medium hover:underline'>how to measure instructions</a>."
   },
   {
     question: "How should a well-fitting bra actually feel?",
-    answer: "The band should sit level across your back without riding up or digging in (providing the majority of the bra's support). The center bridge should lie flat against your breastbone, and your breasts should fill the cups smoothly without spillage or gaps."
+    answer: "The band should sit level across your back without riding up or digging in (providing the majority of the bra's support). Refer to our <a href='/#fit-guide' class='text-primary font-medium hover:underline'>fit diagnostic guide</a> if you experience band or strap slipping."
   },
   {
     question: "Why do bra sizes vary between different brands?",
-    answer: "Different manufacturers use varying sizing matrices, fabric elasticity, and wire shapes. Use your calculated size as a primary starting point and refer to brand-specific conversion charts when buying."
+    answer: "Different manufacturers use varying sizing matrices, fabric elasticity, and wire shapes. Use your calculated size as a primary starting point and refer to our <a href='/#chart-section' class='text-primary font-medium hover:underline'>international size converter chart</a> when buying."
   }
 ];
 ---
@@ -50,7 +50,7 @@ const faqs = [
           </span>
         </summary>
         <div class="mt-4 text-body text-sm md:text-base pt-4 border-t border-hairline leading-relaxed">
-          <p>{faq.answer}</p>
+          <p set:html={faq.answer} />
         </div>
       </details>
     ))}

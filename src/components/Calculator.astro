@@ -193,25 +193,63 @@
         </div>
       </div>
 
-      <!-- Sister Sizes -->
+      <!-- Sister Sizes Section (3-Card Comparison) -->
       <div class="mb-8">
-        <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-3">Sister Sizes (Alternative Fits)</h3>
-        <div class="grid grid-cols-2 gap-3 sm:gap-4 text-left">
-          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
-            <p class="text-xs text-mute font-medium uppercase mb-1">Tighter Band</p>
-            <div class="flex items-end justify-center gap-1.5">
-              <span id="sister-tight" class="text-2xl sm:text-3xl font-bold text-ink">32D</span>
+        <div class="mb-4">
+          <h3 class="text-base font-bold text-ink mb-1">Your Sister Sizes</h3>
+          <p class="text-xs text-body">
+            Sister sizes have similar cup volume but different band measurements.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-left">
+          <!-- Card 1: Smaller Band -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-2.5 py-0.5 rounded-full bg-canvas-soft-2 border border-hairline text-[11px] font-semibold text-body mb-2">
+                Smaller Band &larr;
+              </span>
+              <div id="sister-tight" class="text-2xl sm:text-3xl font-bold text-ink my-1">32D</div>
             </div>
-            <p class="text-[11px] text-body mt-1">One band size smaller, one cup size larger</p>
+            <p class="text-[11px] text-mute leading-snug mt-2 pt-2 border-t border-hairline/60">
+              If the band feels loose, try a smaller band size.
+            </p>
           </div>
 
-          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
-            <p class="text-xs text-mute font-medium uppercase mb-1">Looser Band</p>
-            <div class="flex items-end justify-center gap-1.5">
-              <span id="sister-loose" class="text-2xl sm:text-3xl font-bold text-ink">36B</span>
+          <!-- Card 2: Current Size (Highlighted Focal Card) -->
+          <div class="bg-canvas-soft-2 border-2 border-primary/40 rounded-xl p-4 text-center shadow-xs flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-bl-lg uppercase tracking-wider">
+              Recommended
             </div>
-            <p class="text-[11px] text-body mt-1">One band size larger, one cup size smaller</p>
+            <div>
+              <span class="inline-block px-2.5 py-0.5 rounded-full bg-surface border border-hairline text-[11px] font-bold text-primary mb-2">
+                Your Baseline
+              </span>
+              <div id="sister-current" class="text-3xl sm:text-4xl font-bold text-ink my-1">34C</div>
+            </div>
+            <p class="text-[11px] text-body font-medium leading-snug mt-2 pt-2 border-t border-hairline">
+              Starting point based on your measurements.
+            </p>
           </div>
+
+          <!-- Card 3: Larger Band -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-2.5 py-0.5 rounded-full bg-canvas-soft-2 border border-hairline text-[11px] font-semibold text-body mb-2">
+                &rarr; Larger Band
+              </span>
+              <div id="sister-loose" class="text-2xl sm:text-3xl font-bold text-ink my-1">36B</div>
+            </div>
+            <p class="text-[11px] text-mute leading-snug mt-2 pt-2 border-t border-hairline/60">
+              If the band feels tight, try a larger band size.
+            </p>
+          </div>
+        </div>
+
+        <!-- Educational Callout Box -->
+        <div class="mt-4 p-4 bg-surface/70 border border-hairline rounded-xl text-xs text-body leading-relaxed">
+          <strong class="text-ink font-semibold block mb-1">What are sister sizes?</strong>
+          Sister sizes share the exact same cup volume capacity. If a <strong>34C</strong> feels too tight around your ribcage, moving to a <strong>36B</strong> gives you a looser band while keeping the same cup cup volume. Conversely, if <strong>34C</strong> feels too loose, moving to a <strong>32D</strong> tightens the band while maintaining cup volume.
         </div>
       </div>
 
@@ -317,6 +355,7 @@
   const mainSizeEl = document.getElementById('main-size');
   const chipBandEl = document.getElementById('chip-band');
   const chipCupEl = document.getElementById('chip-cup');
+  const sisterCurrentEl = document.getElementById('sister-current');
   const sisterTightEl = document.getElementById('sister-tight');
   const sisterLooseEl = document.getElementById('sister-loose');
   const intlTableBody = document.getElementById('intl-table-body');
@@ -443,6 +482,7 @@
     if (mainSizeEl) mainSizeEl.textContent = result.primarySize;
     if (chipBandEl) chipBandEl.textContent = bandVal || String(result.bandUs);
     if (chipCupEl) chipCupEl.textContent = cupVal || result.cupUs;
+    if (sisterCurrentEl) sisterCurrentEl.textContent = result.primarySize;
     if (sisterTightEl) sisterTightEl.textContent = result.sisterTight;
     if (sisterLooseEl) sisterLooseEl.textContent = result.sisterLoose;
 

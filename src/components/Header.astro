@@ -22,19 +22,20 @@
   </div>
 </header>
 
-<script is:inline>
+<script>
+  // Astro bundles standard scripts and executes them when the DOM is ready.
   const themeToggleBtn = document.getElementById('theme-toggle');
 
-  // We set the initial theme in Layout.astro to prevent Flash Of Unstyled Content
-  // Here we just handle the toggle click
-  themeToggleBtn?.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.contains('dark');
-    if (isDark) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    }
-  });
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  }
 </script>

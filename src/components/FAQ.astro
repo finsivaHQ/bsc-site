@@ -1,30 +1,105 @@
 ---
 const faqs = [
   {
-    question: "How often should I measure my bra size?",
-    answer: "We recommend measuring every 6 months, or whenever you experience changes in body weight, workout routines, or life events. Follow our step-by-step <a href='/#how-to-measure' class='text-primary font-medium hover:underline'>measurement guide</a> to keep your numbers up to date!"
+    "question": "How to measure bra size calculator?",
+    "answer": "To learn how to measure bra size calculator correctly, simply take two measurements: your band size (snugly under the bust) and your bust size (loosely over the fullest part). Enter these into our tool."
   },
   {
-    question: "What if my calculated size is different from what I currently wear?",
-    answer: "It is very common to wear a size different from your calculated size without realizing it, as sizing matrices can differ between manufacturers. Our <a href='/#calculator' class='text-primary font-medium hover:underline'>bra size calculator</a> provides a dependable starting baseline based on current standards."
+    "question": "What is my bra size calculator?",
+    "answer": "If you are asking 'what is my bra size calculator?', this tool is exactly what you need. It accurately processes your measurements to determine your ideal fit based on modern sizing standards."
   },
   {
-    question: "What are 'Sister Sizes' and how do I use them?",
-    answer: "Sister sizes share the same cup volume but have different band sizes. For example, 34C, 32D, and 36B hold equivalent cup volumes. Use our interactive <a href='/#calculator' class='text-primary font-medium hover:underline'>sister size comparison</a> to see your exact sister sizes."
+    "question": "Calculator how to measure your bra size?",
+    "answer": "Using our calculator how to measure your bra size is easy. Keep your tape measure parallel to the ground and avoid pulling it too tightly across the chest."
   },
   {
-    question: "Should I wear a bra when measuring?",
-    answer: "Yes, measure while wearing an unlined, non-padded, lightly supported bra. Avoid padded or push-up bras as they add artificial bulk, and check our <a href='/#how-to-measure' class='text-primary font-medium hover:underline'>how to measure instructions</a>."
+    "question": "What's my bra size calculator? (whats my bra size calculator)",
+    "answer": "Wondering 'what's my bra size calculator'? Simply input your bust and band measurements above, and our algorithm will instantly tell you your perfect size and sister sizes."
   },
   {
-    question: "How should a well-fitting bra actually feel?",
-    answer: "The band should sit level across your back without riding up or digging in (providing the majority of the bra's support). Refer to our <a href='/#fit-guide' class='text-primary font-medium hover:underline'>fit diagnostic guide</a> if you experience band or strap slipping."
+    "question": "How to bra size calculator?",
+    "answer": "If you are confused about how to bra size calculator, just switch to inches or cm, type in the two requested numbers, and the result will instantly populate on screen."
   },
   {
-    question: "Why do bra sizes vary between different brands?",
-    answer: "Different manufacturers use varying sizing matrices, fabric elasticity, and wire shapes. Use your calculated size as a primary starting point and refer to our <a href='/#chart-section' class='text-primary font-medium hover:underline'>international size converter chart</a> when buying."
+    "question": "What bra size am I calculator?",
+    "answer": "The most common question we get is 'what bra size am I calculator?'. Our tool answers this by referencing standard international sizing charts from the US, UK, and EU."
+  },
+  {
+    "question": "How to find your bra size calculator?",
+    "answer": "Learning how to find your bra size calculator takes only a minute. All you need is a soft measuring tape and an unpadded bra."
+  },
+  {
+    "question": "What size bra do I need calculator?",
+    "answer": "If you want to know 'what size bra do I need calculator', this tool gives you both your primary size and sister sizes so you can adjust for tighter or looser bands."
+  },
+  {
+    "question": "What size bra am I calculator?",
+    "answer": "To answer 'what size bra am I calculator', make sure to measure without a shirt on or while wearing a thin, unlined bra. This ensures the most accurate tape placement."
+  },
+  {
+    "question": "How to size bra calculator?",
+    "answer": "Knowing how to size bra calculator involves ensuring your band provides 80% of the support, while the straps only provide 20%. Measure your band snugly to reflect this."
+  },
+  {
+    "question": "How measure bra size calculator?",
+    "answer": "If you are wondering how measure bra size calculator, stand straight, relax your arms, and take your measurements in a mirror to keep the tape perfectly level."
+  },
+  {
+    "question": "How to determine bra size calculator?",
+    "answer": "To understand how to determine bra size calculator, note that cup size is calculated by subtracting your band measurement from your bust measurement."
+  },
+  {
+    "question": "How to find my bra size calculator?",
+    "answer": "When searching for how to find my bra size calculator, trust a tool that uses modern sizing standards and sister sizes to dial in the perfect fit rather than outdated +4 inch methods."
+  },
+  {
+    "question": "How to measure bra cup size calculator?",
+    "answer": "To use the how to measure bra cup size calculator, you must measure the fullest part of your chest (usually across the nipples) loosely."
+  },
+  {
+    "question": "How to find bra cup size calculator?",
+    "answer": "The how to find bra cup size calculator works by mapping the difference between your bust and band to standard letter sizes (A, B, C, D, DD, etc.)."
+  },
+  {
+    "question": "How to figure out your bra size calculator?",
+    "answer": "Learning how to figure out your bra size calculator is the first step to eliminating back pain, shoulder indentations, and posture issues caused by ill-fitting bras."
+  },
+  {
+    "question": "How to measure for bra size calculator?",
+    "answer": "Before you use the how to measure for bra size calculator, ensure you are wearing a non-padded, everyday bra that gently lifts your breast tissue."
+  },
+  {
+    "question": "How is bra size calculator?",
+    "answer": "How is bra size calculator so accurate? It uses international conversion tables (US/CA, UK, EU, AU) to match your measurements to global brand standards."
+  },
+  {
+    "question": "Does this work for bra size calculator m&s, zivame, or indian bra size calculator?",
+    "answer": "Yes! Whether you need a bra size calculator m&s, a bra size calculator zivame, or a general indian bra size calculator, our international conversion charts have you covered."
+  },
+  {
+    "question": "Can I use the bra size calculator in inches or bra size calculator in cm?",
+    "answer": "Absolutely. You can use our bra size calculator in inches, bra size calculator in cm, or bra size calculator eu formats. We even support the bra size calculator in inches india."
+  },
+  {
+    "question": "Where can I find the bra size chart?",
+    "answer": "We provide a comprehensive bra size chart directly below the calculator results, comparing US, UK, EU, and AU sizing bands and cups."
   }
 ];
+
+const schemaList = faqs.map(faq => ({
+  "@type": "Question",
+  "name": faq.question,
+  "acceptedAnswer": {
+    "@type": "Answer",
+    "text": faq.answer
+  }
+}));
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": schemaList
+};
 ---
 
 <section id="faq" class="py-10 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-hairline">
@@ -32,33 +107,42 @@ const faqs = [
     <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
       FAQ
     </span>
-    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-ink mb-4">Frequently Asked Questions</h2>
-    <p class="text-sm sm:text-base md:text-lg text-body max-w-2xl">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-ink mb-4 font-sans tracking-tight">Frequently Asked Questions</h2>
+    <p class="text-sm sm:text-base md:text-lg text-body max-w-2xl font-sans">
       Everything you need to know about measuring, bra sizing, and finding your most comfortable fit.
     </p>
   </div>
 
   <div class="space-y-4">
     {faqs.map((faq) => (
-      <details class="group bg-surface border border-hairline rounded-xl p-4 sm:p-6 cursor-pointer hover:border-hairline-strong transition-all duration-200 shadow-xs">
-        <summary class="flex justify-between items-center font-bold text-base md:text-lg text-ink list-none">
-          <span class="pr-2">{faq.question}</span>
-          <span class="transition-transform duration-200 group-open:rotate-180 text-primary flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <details class="group bg-canvas-soft border border-hairline rounded-[2rem] p-5 sm:p-6 md:p-8 cursor-pointer hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-md">
+        <summary class="flex justify-between items-center font-bold text-base sm:text-lg md:text-xl text-ink list-none font-sans">
+          <span class="pr-4 sm:pr-6">{faq.question}</span>
+          <span class="transition-transform duration-300 group-open:rotate-180 text-primary bg-canvas border border-hairline p-2 rounded-full shadow-sm flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"/>
             </svg>
           </span>
         </summary>
-        <div class="mt-4 text-body text-sm md:text-base pt-4 border-t border-hairline leading-relaxed">
-          <p set:html={faq.answer} />
+        <div class="mt-4 text-body text-sm sm:text-base md:text-lg pt-4 border-t border-hairline leading-relaxed font-sans">
+          <p>{faq.answer}</p>
         </div>
       </details>
     ))}
   </div>
 </section>
 
+<!-- Inject FAQ JSON-LD for SEO -->
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
 <style>
+  /* Remove default Safari/Chrome disclosure triangle */
   details > summary::-webkit-details-marker {
     display: none;
+  }
+  
+  /* Smooth Squircle/Bubble effect */
+  details {
+    border-radius: 2rem; /* creates a soft, squircle-like bubble */
   }
 </style>

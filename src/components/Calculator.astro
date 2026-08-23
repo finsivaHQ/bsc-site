@@ -35,9 +35,12 @@
   <!-- Calculator Focal Card -->
   <div class="bg-surface border border-hairline rounded-2xl shadow-sm p-4 sm:p-6 md:p-10 mb-8 md:mb-12 transition-colors duration-300">
     <form id="calculator-form" action="#" onsubmit="event.preventDefault();">
-      <!-- Header & Unit Toggle -->
+      <!-- Step 1: Unit Toggle -->
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-hairline">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink">Measurements</h2>
+        <div>
+          <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-0.5">Step 1</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-ink">Choose Unit</h2>
+        </div>
         <div class="flex bg-canvas-soft-2 rounded-xl p-1 border border-hairline w-full sm:w-auto">
           <button type="button" id="unit-in" class="unit-btn active flex-1 sm:flex-none h-11 px-4 py-2.5 text-sm font-semibold rounded-lg bg-primary text-on-primary shadow-xs transition-all duration-200 cursor-pointer">
             Inches (in)
@@ -64,12 +67,41 @@
         <span id="calculator-error-text">Please enter valid measurements.</span>
       </div>
 
-      <!-- Inputs -->
+      <!-- Inputs: Step 2 & Step 3 -->
       <div class="grid md:grid-cols-2 gap-6 sm:gap-8 mb-8">
+        <!-- Step 2: Underbust -->
         <div>
-          <label for="overbust" class="block text-sm font-semibold text-ink mb-1.5">
-            1. Bust Size
-          </label>
+          <div class="flex items-center justify-between mb-1.5">
+            <label for="underbust" class="block text-sm font-semibold text-ink">
+              Step 2: Underbust (Band Size)
+            </label>
+            <a href="/#how-to-measure" class="text-xs text-primary font-medium hover:underline">How to measure &rarr;</a>
+          </div>
+          <p class="text-xs text-mute mb-3">Measure snugly around your ribcage, directly under your bust.</p>
+          <div class="relative">
+            <input 
+              type="number" 
+              id="underbust" 
+              inputmode="decimal"
+              step="any"
+              min="0"
+              placeholder="e.g. 32" 
+              class="w-full bg-surface border border-hairline rounded-xl h-13 px-4 pr-12 text-base text-ink placeholder:text-mute/60 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200" 
+            />
+            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-mute text-sm font-medium unit-label pointer-events-none">
+              in
+            </span>
+          </div>
+        </div>
+
+        <!-- Step 3: Bust -->
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <label for="overbust" class="block text-sm font-semibold text-ink">
+              Step 3: Bust Size
+            </label>
+            <a href="/#how-to-measure" class="text-xs text-primary font-medium hover:underline">How to measure &rarr;</a>
+          </div>
           <p class="text-xs text-mute mb-3">Measure loosely around the fullest part of your bust.</p>
           <div class="relative">
             <input 
@@ -86,32 +118,22 @@
             </span>
           </div>
         </div>
+      </div>
 
-        <div>
-          <label for="underbust" class="block text-sm font-semibold text-ink mb-1.5">
-            2. Band Size
-          </label>
-          <p class="text-xs text-mute mb-3">Measure snugly right under your breasts.</p>
-          <div class="relative">
-            <input 
-              type="number" 
-              id="underbust" 
-              inputmode="decimal"
-              step="any"
-              min="0"
-              placeholder="e.g. 32" 
-              class="w-full bg-surface border border-hairline rounded-xl h-13 px-4 pr-12 text-base text-ink placeholder:text-mute/60 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200" 
-            />
-            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-mute text-sm font-medium unit-label pointer-events-none">
-              in
-            </span>
-          </div>
-        </div>
+      <!-- Calculate Primary CTA Button -->
+      <div class="mb-2">
+        <button 
+          type="submit" 
+          id="calculate-btn"
+          class="w-full h-12 sm:h-13 bg-primary hover:bg-primary-hover active:translate-y-[1px] text-white font-bold text-base rounded-xl shadow-xs transition-all duration-200 cursor-pointer flex items-center justify-center gap-2"
+        >
+          Calculate My Bra Size
+        </button>
       </div>
     </form>
 
     <!-- Dynamic Result Area -->
-    <div id="result-area" class="hidden bg-canvas-soft-2 border border-hairline rounded-xl p-4 sm:p-6 md:p-8 transition-all duration-300">
+    <div id="result-area" class="hidden bg-canvas-soft-2 border border-hairline rounded-xl p-4 sm:p-6 md:p-8 mt-8 transition-all duration-300">
       <div class="text-center mb-8">
         <p class="text-xs text-primary font-bold uppercase tracking-widest mb-2">Your Recommended Size (US/CA)</p>
         <div id="main-size" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-ink tracking-tight mb-2">34C</div>
@@ -220,6 +242,7 @@
   import { validateAndCalculateBraSize } from '../utils/braSizing';
 
   // DOM Elements
+  const form = document.getElementById('calculator-form') as HTMLFormElement;
   const unitInBtn = document.getElementById('unit-in');
   const unitCmBtn = document.getElementById('unit-cm');
   const unitLabels = document.querySelectorAll('.unit-label');
@@ -306,7 +329,7 @@
   unitInBtn?.addEventListener('click', () => setUnit('in'));
   unitCmBtn?.addEventListener('click', () => setUnit('cm'));
   
-  const calculateSize = () => {
+  const calculateSize = (shouldScroll = false) => {
     const uRaw = underbustInput.value.trim();
     const oRaw = overbustInput.value.trim();
 
@@ -316,13 +339,13 @@
       return;
     }
 
-    if (!oRaw) {
-      showError('Please enter your bust measurement.', 'overbust');
+    if (!uRaw) {
+      showError('Please enter your band measurement.', 'underbust');
       return;
     }
 
-    if (!uRaw) {
-      showError('Please enter your band measurement.', 'underbust');
+    if (!oRaw) {
+      showError('Please enter your bust measurement.', 'overbust');
       return;
     }
 
@@ -360,8 +383,17 @@
     }
 
     resultArea?.classList.remove('hidden');
+
+    if (shouldScroll && resultArea) {
+      resultArea.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   };
 
-  underbustInput?.addEventListener('input', calculateSize);
-  overbustInput?.addEventListener('input', calculateSize);
+  underbustInput?.addEventListener('input', () => calculateSize(false));
+  overbustInput?.addEventListener('input', () => calculateSize(false));
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    calculateSize(true);
+  });
 </script>

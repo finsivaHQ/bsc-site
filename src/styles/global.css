@@ -1,18 +1,21 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Inter", "Geist", system-ui, -apple-system, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
 }
 
 :root {
-  /* Parisian Silk & Rich Bordeaux Luxury Color System */
+  /* Light Theme: Parisian Silk & Rich Bordeaux */
   --color-canvas: #FAF6F0;
   --color-canvas-soft: #FAF6F0;
   --color-canvas-soft-2: #F6EDE8;
   --color-surface: #FFFFFF;
   --color-primary: #8C2D40;
   --color-primary-hover: #702131;
+  --color-on-primary: #FFFFFF;
   --color-accent: #D89B9E;
   --color-ink: #22191C;
   --color-body: #4A3F43;
@@ -20,32 +23,30 @@
   --color-hairline: #EADFD7;
   --color-hairline-strong: #D8C8BF;
   --color-link: #8C2D40;
-  --color-success: #8C2D40;
-  --color-success-dark: #702131;
 }
 
 .dark {
-  /* Cohesive Parisian Silk & Rich Bordeaux Palette across themes */
-  --color-canvas: #FAF6F0;
-  --color-canvas-soft: #FAF6F0;
-  --color-canvas-soft-2: #F6EDE8;
-  --color-surface: #FFFFFF;
-  --color-primary: #8C2D40;
-  --color-primary-hover: #702131;
-  --color-accent: #D89B9E;
-  --color-ink: #22191C;
-  --color-body: #4A3F43;
-  --color-mute: #7E7075;
-  --color-hairline: #EADFD7;
-  --color-hairline-strong: #D8C8BF;
-  --color-link: #8C2D40;
-  --color-success: #8C2D40;
-  --color-success-dark: #702131;
+  /* Dark Theme: Noir Luxe Velvet & Rose Gold */
+  --color-canvas: #140E10;
+  --color-canvas-soft: #140E10;
+  --color-canvas-soft-2: #261B20;
+  --color-surface: #1E1519;
+  --color-primary: #E295A2;
+  --color-primary-hover: #F0B2BC;
+  --color-on-primary: #1C0A0F;
+  --color-accent: #E295A2;
+  --color-ink: #F7EFE9;
+  --color-body: #C8BABF;
+  --color-mute: #8C7B82;
+  --color-hairline: #33262A;
+  --color-hairline-strong: #4D3A40;
+  --color-link: #E295A2;
 }
 
 @theme {
   --color-primary: var(--color-primary);
   --color-primary-hover: var(--color-primary-hover);
+  --color-on-primary: var(--color-on-primary);
   --color-accent: var(--color-accent);
   --color-ink: var(--color-ink);
   --color-body: var(--color-body);

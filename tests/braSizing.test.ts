@@ -1,5 +1,5 @@
 import assert from 'node:assert';
-import { calculateBraSize, validateAndCalculateBraSize, convertKnownSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../src/utils/braSizing.js';
+import { calculateBraSize, validateAndCalculateBraSize, convertKnownSize, calculateSisterSizes, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../src/utils/braSizing.js';
 
 console.log('🧪 Running Bra Sizing Methodology, Conversion & Validation Test Suite...\n');
 
@@ -142,7 +142,24 @@ runTest('Known Size Converter Function (convertKnownSize)', () => {
   assert.strictEqual(convertKnownSize('US', 99, 'Z'), null);
 });
 
-// 9. Invalid & Boundary Measurements
+// 9. Sister Size Calculator Function (calculateSisterSizes)
+runTest('Sister Size Calculator Function (calculateSisterSizes)', () => {
+  const sisters34C = calculateSisterSizes(34, 'C');
+  assert.ok(sisters34C !== null);
+  assert.strictEqual(sisters34C.currentSize, '34C');
+  assert.strictEqual(sisters34C.sisterTight, '32D');
+  assert.strictEqual(sisters34C.sisterLoose, '36B');
+
+  const sisters32D = calculateSisterSizes(32, 'D');
+  assert.ok(sisters32D !== null);
+  assert.strictEqual(sisters32D.currentSize, '32D');
+  assert.strictEqual(sisters32D.sisterTight, '30DD');
+  assert.strictEqual(sisters32D.sisterLoose, '34C');
+
+  assert.strictEqual(calculateSisterSizes(10, 'Z'), null);
+});
+
+// 10. Invalid & Boundary Measurements
 runTest('Invalid Measurements (Zero, Negative, or Bust < Underbust)', () => {
   assert.strictEqual(calculateBraSize({ underbust: 0, overbust: 34, unit: 'in' }), null);
   assert.strictEqual(calculateBraSize({ underbust: 34, overbust: -5, unit: 'in' }), null);
@@ -150,7 +167,7 @@ runTest('Invalid Measurements (Zero, Negative, or Bust < Underbust)', () => {
   assert.strictEqual(calculateBraSize({ underbust: NaN, overbust: 34, unit: 'in' }), null);
 });
 
-// 10. Input Validation & Error Handling Tests
+// 11. Input Validation & Error Handling Tests
 runTest('Validation Error Handling (validateAndCalculateBraSize)', () => {
   // Test zero / negative
   const zeroRes = validateAndCalculateBraSize({ underbust: 0, overbust: 34, unit: 'in' });

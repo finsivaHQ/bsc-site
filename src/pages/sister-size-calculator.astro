@@ -1,0 +1,242 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { US_CUPS, BAND_CONVERSION_MATRIX } from '../utils/braSizing';
+
+const availableBands = BAND_CONVERSION_MATRIX.map(row => row.us);
+const availableCups = US_CUPS;
+---
+
+<Layout 
+  title="Sister Size Calculator — Find Bra Sister Sizes & Equivalent Cup Volumes | BraSizeChecker"
+  description="Free bra sister size calculator. Find your equivalent bra sister sizes for a tighter or looser band while preserving cup volume."
+  canonical="https://brasizechecker.com/sister-size-calculator"
+>
+  <Header />
+  <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+    <Breadcrumbs items={[{ label: 'Sister Size Calculator' }]} />
+
+    <!-- Page Header / Intro -->
+    <header class="mb-10 text-center sm:text-left">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+        Interactive Tool
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+        Sister Size Calculator
+      </h1>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
+        Sister sizes are bra sizes that hold the exact same cup volume despite having different band measurements. Enter your current bra size below to calculate your tighter-band and looser-band sister sizes.
+      </p>
+    </header>
+
+    <!-- Sister Size Calculator Form Card -->
+    <section class="bg-surface border border-hairline rounded-2xl shadow-sm p-4 sm:p-6 md:p-10 mb-12" aria-labelledby="sister-heading">
+      <h2 id="sister-heading" class="sr-only">Sister Size Calculator Form</h2>
+
+      <form id="sister-form" action="#" onsubmit="event.preventDefault();" class="space-y-6 mb-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <!-- Band Selector -->
+          <div>
+            <label for="sister-band-select" class="block text-sm font-semibold text-ink mb-1.5">
+              Current Band Size
+            </label>
+            <select 
+              id="sister-band-select" 
+              class="w-full h-12 px-4 bg-surface border border-hairline rounded-xl text-base text-ink font-medium focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 cursor-pointer transition-all"
+            >
+              {availableBands.map(b => (
+                <option value={b} selected={b === 34}>{b}</option>
+              ))}
+            </select>
+          </div>
+
+          <!-- Cup Selector -->
+          <div>
+            <label for="sister-cup-select" class="block text-sm font-semibold text-ink mb-1.5">
+              Current Cup Size
+            </label>
+            <select 
+              id="sister-cup-select" 
+              class="w-full h-12 px-4 bg-surface border border-hairline rounded-xl text-base text-ink font-medium focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 cursor-pointer transition-all"
+            >
+              {availableCups.map(c => (
+                <option value={c} selected={c === 'C'}>{c}</option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div>
+          <button 
+            type="submit" 
+            id="sister-calc-btn" 
+            class="w-full sm:w-auto h-12 px-8 bg-primary hover:bg-primary-hover active:translate-y-[1px] text-white font-bold text-base rounded-xl shadow-xs transition-all duration-200 cursor-pointer flex items-center justify-center gap-2"
+          >
+            Find My Sister Sizes
+          </button>
+        </div>
+      </form>
+
+      <!-- Results Display Card (3-Card Sister Size Grid) -->
+      <div id="sister-results-area" class="bg-canvas-soft-2 border border-hairline rounded-2xl p-5 sm:p-8 transition-all duration-300">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-hairline">
+          <div>
+            <span class="text-xs font-bold text-primary uppercase tracking-widest block mb-1">SISTER SIZES BREAKDOWN</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-ink">
+              Sister Sizes for <span id="sister-entered-label" class="text-primary font-bold">34C</span>
+            </h3>
+          </div>
+          <button 
+            type="button" 
+            id="copy-sister-btn" 
+            class="h-10 px-4 bg-surface hover:bg-canvas-soft-2 border border-hairline rounded-xl text-xs font-semibold text-ink transition-all duration-200 flex items-center gap-2 shadow-2xs cursor-pointer self-start sm:self-auto"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span id="copy-sister-text">Copy Sister Sizes</span>
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-left">
+          <!-- Card 1: Smaller Band (Tighter) -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-2.5 py-0.5 rounded-full bg-canvas-soft-2 border border-hairline text-[11px] font-semibold text-body mb-2">
+                Smaller Band &larr;
+              </span>
+              <div id="sister-tight-display" class="text-2xl sm:text-3xl font-bold text-ink my-1">32D</div>
+            </div>
+            <p class="text-[11px] text-mute leading-snug mt-2 pt-2 border-t border-hairline/60">
+              <strong>If band feels too loose:</strong> Try a smaller band size with a larger cup letter.
+            </p>
+          </div>
+
+          <!-- Card 2: Current Size (Focal Card) -->
+          <div class="bg-canvas-soft-2 border-2 border-primary/40 rounded-xl p-4 text-center shadow-xs flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-bl-lg uppercase tracking-wider">
+              Current Size
+            </div>
+            <div>
+              <span class="inline-block px-2.5 py-0.5 rounded-full bg-surface border border-hairline text-[11px] font-bold text-primary mb-2">
+                Your Baseline
+              </span>
+              <div id="sister-current-display" class="text-3xl sm:text-4xl font-bold text-ink my-1">34C</div>
+            </div>
+            <p class="text-[11px] text-body font-medium leading-snug mt-2 pt-2 border-t border-hairline">
+              Starting baseline size entered above.
+            </p>
+          </div>
+
+          <!-- Card 3: Larger Band (Looser) -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-2.5 py-0.5 rounded-full bg-canvas-soft-2 border border-hairline text-[11px] font-semibold text-body mb-2">
+                &rarr; Larger Band
+              </span>
+              <div id="sister-loose-display" class="text-2xl sm:text-3xl font-bold text-ink my-1">36B</div>
+            </div>
+            <p class="text-[11px] text-mute leading-snug mt-2 pt-2 border-t border-hairline/60">
+              <strong>If band feels too tight:</strong> Try a larger band size with a smaller cup letter.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educational Sections -->
+    <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">What Are Sister Sizes?</h2>
+        <p class="mb-4">
+          Sister sizes are bra size combinations that share the exact same cup volume capacity despite using different band sizes. Because bra cups are manufactured proportionally to the band size, cup letters are not fixed volumes.
+        </p>
+        <p>
+          When you move up one band size (e.g., 34 to 36), going down one cup letter (e.g., C to B) maintains the exact same cup volume capacity.
+        </p>
+      </section>
+
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Why Would I Use a Sister Size?</h2>
+        <div class="space-y-4">
+          <div class="p-4 bg-canvas-soft-2 rounded-xl border border-hairline">
+            <h3 class="font-bold text-ink mb-1 text-sm uppercase tracking-wider text-primary">1. When Your Band Feels Too Tight</h3>
+            <p class="text-xs sm:text-sm">If your current band digs into your ribcage or leaves uncomfortable marks, try the sister size with a <strong>larger band and smaller cup letter</strong> (e.g., move from 34C to 36B).</p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2 rounded-xl border border-hairline">
+            <h3 class="font-bold text-ink mb-1 text-sm uppercase tracking-wider text-primary">2. When Your Band Feels Too Loose</h3>
+            <p class="text-xs sm:text-sm">If your bra band rides up your back or shifts throughout the day, try the sister size with a <strong>smaller band and larger cup letter</strong> (e.g., move from 34C to 32D).</p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2 rounded-xl border border-hairline">
+            <h3 class="font-bold text-ink mb-1 text-sm uppercase tracking-wider text-primary">3. Brand & Fabric Variations</h3>
+            <p class="text-xs sm:text-sm">Some lingerie brands use firmer elastic or stiffer fabrics. Using sister sizes allows you to adjust band firmness without losing your cup fit.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Explore More Bra Sizing Tools</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Calculate your baseline starting size with our <a href="/#calculator" class="text-primary font-semibold hover:underline">Bra Size Calculator</a>.</li>
+          <li>Compare international band and cup labels on our <a href="/bra-size-chart" class="text-primary font-semibold hover:underline">Bra Size Chart</a>.</li>
+          <li>Convert known sizes between regions using our <a href="/bra-size-converter" class="text-primary font-semibold hover:underline">Bra Size Converter</a>.</li>
+          <li>Diagnose common fit issues with our comprehensive <a href="/#fit-guide" class="text-primary font-semibold hover:underline">Fit Guide</a>.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  import { calculateSisterSizes } from '../utils/braSizing';
+
+  const bandSelect = document.getElementById('sister-band-select') as HTMLSelectElement;
+  const cupSelect = document.getElementById('sister-cup-select') as HTMLSelectElement;
+  const calcBtn = document.getElementById('sister-calc-btn');
+  const copyBtn = document.getElementById('copy-sister-btn');
+  const copyTextEl = document.getElementById('copy-sister-text');
+
+  const enteredLabel = document.getElementById('sister-entered-label');
+  const currentDisplay = document.getElementById('sister-current-display');
+  const tightDisplay = document.getElementById('sister-tight-display');
+  const looseDisplay = document.getElementById('sister-loose-display');
+
+  const updateSisterSizes = () => {
+    const band = parseInt(bandSelect.value, 10);
+    const cup = cupSelect.value;
+
+    if (isNaN(band) || !cup) return;
+
+    const res = calculateSisterSizes(band, cup);
+    if (!res) return;
+
+    if (enteredLabel) enteredLabel.textContent = res.currentSize;
+    if (currentDisplay) currentDisplay.textContent = res.currentSize;
+    if (tightDisplay) tightDisplay.textContent = res.sisterTight;
+    if (looseDisplay) looseDisplay.textContent = res.sisterLoose;
+  };
+
+  bandSelect?.addEventListener('change', updateSisterSizes);
+  cupSelect?.addEventListener('change', updateSisterSizes);
+  calcBtn?.addEventListener('click', updateSisterSizes);
+
+  copyBtn?.addEventListener('click', () => {
+    const summary = `Sister Sizes for ${currentDisplay?.textContent} on BraSizeChecker.com: Smaller Band (${tightDisplay?.textContent}), Current (${currentDisplay?.textContent}), Larger Band (${looseDisplay?.textContent}).`;
+    navigator.clipboard.writeText(summary).then(() => {
+      if (copyTextEl) copyTextEl.textContent = 'Copied!';
+      setTimeout(() => {
+        if (copyTextEl) copyTextEl.textContent = 'Copy Sister Sizes';
+      }, 2000);
+    });
+  });
+
+  // Initial Calculation
+  updateSisterSizes();
+</script>

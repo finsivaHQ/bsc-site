@@ -260,3 +260,32 @@ export function convertKnownSize(
     jp: { band: bandRow.jp, cup: cleanCup(cupRow.jp), full: `${bandRow.jp}${cleanCup(cupRow.jp)}` },
   };
 }
+
+export interface SisterSizesResult {
+  currentSize: string;
+  sisterTight: string;
+  sisterLoose: string;
+}
+
+/**
+ * Calculates sister sizes for a given baseline band and cup size.
+ */
+export function calculateSisterSizes(bandVal: number, cupVal: string): SisterSizesResult | null {
+  const usCupIndex = US_CUPS.findIndex(c => c.toLowerCase() === cupVal.trim().toLowerCase());
+  if (usCupIndex === -1 || bandVal < 26 || bandVal > 56) return null;
+
+  const currentSize = `${bandVal}${US_CUPS[usCupIndex]}`;
+  const tightBand = bandVal - 2;
+  const tightCupIndex = Math.min(usCupIndex + 1, US_CUPS.length - 1);
+  const sisterTight = `${tightBand}${US_CUPS[tightCupIndex]}`;
+
+  const looseBand = bandVal + 2;
+  const looseCupIndex = Math.max(usCupIndex - 1, 0);
+  const sisterLoose = `${looseBand}${US_CUPS[looseCupIndex]}`;
+
+  return {
+    currentSize,
+    sisterTight,
+    sisterLoose,
+  };
+}

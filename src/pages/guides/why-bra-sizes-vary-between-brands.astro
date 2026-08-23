@@ -1,0 +1,70 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+---
+
+<Layout 
+  title="Why Bra Sizes Vary Between Brands: Causes & Solutions | BraSizeChecker"
+  description="Discover why a 34C in one brand fits differently than a 34C in another. Learn how fabric elasticity, wire width, and cup construction affect real-world bra fit."
+  canonical="https://brasizechecker.com/guides/why-bra-sizes-vary-between-brands"
+>
+  <Header />
+  <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+    <Breadcrumbs items={[
+      { label: 'Guides', url: '/#guides' },
+      { label: 'Brand Fit Variations' }
+    ]} />
+
+    <header class="mb-10 text-center sm:text-left">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+        Evergreen Guide
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+        Why Bra Sizes Vary Between Brands
+      </h1>
+      <div class="flex items-center gap-3 text-xs text-mute mb-4">
+        <span>By BraSizeChecker Editorial Team</span>
+        <span>&bull;</span>
+        <time datetime="2026-08-24">Updated August 2026</time>
+      </div>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
+        It can be frustrating to buy your calculated bra size only to find that different brands fit completely differently. Here is the technical breakdown of why size variation occurs across lingerie labels.
+      </p>
+    </header>
+
+    <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. Fabric Elasticity & Dye Differences</h2>
+        <p class="mb-4">
+          Lingerie fabrics vary widely in firmness. Unyielding rigid lace or powernet mesh will stretch significantly less than soft microfiber or cotton. Additionally, dark dyes (like black or navy) shrink fabric slightly more during production, making black bras feel tighter than nude or white bras of the exact same style.
+        </p>
+      </section>
+
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Cup Style & Seam Construction</h2>
+        <p class="mb-4">
+          Different bra cuts contain different tissue capacities:
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm mb-4">
+          <li><strong>Molded T-shirt Cups:</strong> Stiff foam cups hold a fixed shape that does not conform to shallow or root-heavy breasts.</li>
+          <li><strong>Seamed Cut-and-Sew Cups:</strong> Multi-part fabric seams offer projection and adapt flexibly to natural tissue.</li>
+          <li><strong>Plunge vs Balconette:</strong> Plunge cuts have low center gores that compress tissue center-ward, while balconettes push tissue vertically.</li>
+        </ul>
+      </section>
+
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. How to Adjust Between Brands</h2>
+        <p class="mb-4">
+          When trying a new brand, use your calculated size as a starting baseline and leverage sister sizes if the band runs stiff or stretchy:
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/sister-size-calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover shadow-2xs">Sister Size Tool &rarr;</a>
+          <a href="/fit-guide" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 shadow-2xs">Fit Diagnostic Guide &rarr;</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>

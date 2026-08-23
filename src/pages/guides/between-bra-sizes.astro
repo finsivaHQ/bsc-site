@@ -1,0 +1,70 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+---
+
+<Layout 
+  title="What To Do If You're Between Bra Sizes: Band & Cup Rounding | BraSizeChecker"
+  description="Practical advice for measuring between bra sizes. Learn how to handle odd underbust numbers (31, 33), half-cup differences, and hook adjustments."
+  canonical="https://brasizechecker.com/guides/between-bra-sizes"
+>
+  <Header />
+  <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+    <Breadcrumbs items={[
+      { label: 'Guides', url: '/#guides' },
+      { label: 'Between Bra Sizes' }
+    ]} />
+
+    <header class="mb-10 text-center sm:text-left">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+        Evergreen Guide
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+        What To Do If You're Between Bra Sizes
+      </h1>
+      <div class="flex items-center gap-3 text-xs text-mute mb-4">
+        <span>By BraSizeChecker Editorial Team</span>
+        <span>&bull;</span>
+        <time datetime="2026-08-24">Updated August 2026</time>
+      </div>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
+        Human bodies don't naturally come in exact 2-inch increments. If your underbust falls on an odd number (like 31 or 33 inches) or your bust falls between cup letters, here is how to find a comfortable fit.
+      </p>
+    </header>
+
+    <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. Odd Underbust Measurements (e.g., 31" or 33")</h2>
+        <p class="mb-4">
+          Standard US and UK bra bands are manufactured in even numbers (30, 32, 34, 36). If your underbust measures 31 or 33 inches:
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm mb-4">
+          <li><strong>Round Up to Nearest Even Band:</strong> In modern direct underbust sizing, round up to the nearest even number (31 underbust &rarr; 32 band).</li>
+          <li><strong>Test Sister Sizes:</strong> Test both your baseline rounded size and your smaller sister size (e.g. try both 32D and 30DD with a bra extender if needed).</li>
+        </ul>
+      </section>
+
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Between Cup Letters</h2>
+        <p class="mb-4">
+          If your bust-to-band difference falls on a half-inch (e.g., 3.5 inches difference between C and D):
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm mb-4">
+          <li>Choose stretch-lace cups that conform to half-cup variations without gaping.</li>
+          <li>Fit the larger breast if your breasts are asymmetrical, using removable cup pads for the smaller side.</li>
+        </ul>
+      </section>
+
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. Helpful Tools</h2>
+        <div class="flex flex-wrap gap-3">
+          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover shadow-2xs">Re-Calculate Size &rarr;</a>
+          <a href="/sister-size-calculator" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 shadow-2xs">Sister Size Tool &rarr;</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>

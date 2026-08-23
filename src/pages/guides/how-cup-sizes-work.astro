@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+---
+
+<Layout 
+  title="How Bra Cup Sizes Work: Relative Volume Explained | BraSizeChecker"
+  description="Dismantle the myth of fixed cup sizes. Learn how bra cup volume is relative to band size and why a 32D, 34C, and 36B hold equal volume."
+  canonical="https://brasizechecker.com/guides/how-cup-sizes-work"
+>
+  <Header />
+  <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+    <Breadcrumbs items={[
+      { label: 'Guides', url: '/#guides' },
+      { label: 'How Cup Sizes Work' }
+    ]} />
+
+    <header class="mb-10 text-center sm:text-left">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+        Evergreen Guide
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+        How Bra Cup Sizes Work: Relative Volume Capacity Explained
+      </h1>
+      <div class="flex items-center gap-3 text-xs text-mute mb-4">
+        <span>By BraSizeChecker Editorial Team</span>
+        <span>&bull;</span>
+        <time datetime="2026-08-24">Updated August 2026</time>
+      </div>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
+        One of the biggest misconceptions in apparel sizing is that a "D cup" is a specific size. In reality, <strong>cup letters represent a ratio, not a fixed volume</strong>.
+      </p>
+    </header>
+
+    <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. Cup Volume Scaled to Band Size</h2>
+        <p class="mb-4">
+          Because bra cups are scaled proportionally to the band width, a 30D cup holds significantly less physical volume than a 38D cup.
+        </p>
+        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl mb-4 text-xs sm:text-sm">
+          <p class="font-bold text-ink mb-1">CUP VOLUME COMPARISON:</p>
+          <p class="text-body">&bull; 30D Cup Volume = Approx. 390 cm³</p>
+          <p class="text-body">&bull; 34D Cup Volume = Approx. 590 cm³</p>
+          <p class="text-body">&bull; 38D Cup Volume = Approx. 850 cm³</p>
+        </div>
+      </section>
+
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Equal Volume Equivalents (Sister Sizes)</h2>
+        <p class="mb-4">
+          Because cup volume is relative, moving up a band size while moving down a cup letter preserves the exact same cup volume capacity:
+        </p>
+        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl text-center mb-6 font-bold text-ink text-sm">
+          32D = 34C = 36B = 38A (Equal Cup Volume Capacity)
+        </div>
+        <p>
+          Calculate your volume equivalents with our <a href="/sister-size-calculator" class="text-primary font-semibold hover:underline">Sister Size Calculator</a>.
+        </p>
+      </section>
+
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Related Sizing Tools</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold">
+          <a href="/bra-size-chart" class="p-3 bg-canvas-soft-2 rounded-xl text-primary hover:underline">&bull; Full Bra Size Chart</a>
+          <a href="/bra-size-converter" class="p-3 bg-canvas-soft-2 rounded-xl text-primary hover:underline">&bull; International Converter</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+---
+
+<Layout 
+  title="US vs UK Bra Sizes: Key Differences & Conversion | BraSizeChecker"
+  description="Learn the key differences between US and UK bra sizing. Understand why UK cup progression (DD, E, F, FF, G) differs from US cup progression after D cup."
+  canonical="https://brasizechecker.com/guides/us-vs-uk-bra-sizing"
+>
+  <Header />
+  <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+    <Breadcrumbs items={[
+      { label: 'Guides', url: '/#guides' },
+      { label: 'US vs UK Bra Sizing' }
+    ]} />
+
+    <header class="mb-10 text-center sm:text-left">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+        Evergreen Guide
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+        US vs UK Bra Sizes: Differences & Conversion Guide
+      </h1>
+      <div class="flex items-center gap-3 text-xs text-mute mb-4">
+        <span>By BraSizeChecker Editorial Team</span>
+        <span>&bull;</span>
+        <time datetime="2026-08-24">Updated August 2026</time>
+      </div>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
+        Shopping for underwear internationally can be confusing because US and UK sizing standards match up to a D cup, but diverge significantly starting at 5-inch bust differences.
+      </p>
+    </header>
+
+    <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. The Cup Progression Divergence</h2>
+        <p class="mb-4">
+          US manufacturers use single-letter extensions or multiple D's (`DDD/F`, `G`, `H`, `I`, `J`), whereas British brands use double-letter conventions (`DD`, `E`, `F`, `FF`, `G`, `GG`, `H`, `HH`):
+        </p>
+
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[400px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">Bust-Band Difference</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">US Cup Progression</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">UK Cup Progression</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr><td class="py-2 px-3">5 inches</td><td class="py-2 px-3 font-semibold text-ink">DD / E</td><td class="py-2 px-3 font-semibold text-primary">DD</td></tr>
+              <tr><td class="py-2 px-3">6 inches</td><td class="py-2 px-3 font-semibold text-ink">DDD / F</td><td class="py-2 px-3 font-semibold text-primary">E</td></tr>
+              <tr><td class="py-2 px-3">7 inches</td><td class="py-2 px-3 font-semibold text-ink">G</td><td class="py-2 px-3 font-semibold text-primary">F</td></tr>
+              <tr><td class="py-2 px-3">8 inches</td><td class="py-2 px-3 font-semibold text-ink">H</td><td class="py-2 px-3 font-semibold text-primary">FF</td></tr>
+              <tr><td class="py-2 px-3">9 inches</td><td class="py-2 px-3 font-semibold text-ink">I</td><td class="py-2 px-3 font-semibold text-primary">G</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Converting Your Size Instantly</h2>
+        <p class="mb-4">
+          Convert your size between American and British standards instantly with our tools:
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/bra-size-converter" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover shadow-2xs">Converter Tool &rarr;</a>
+          <a href="/uk-bra-size-guide" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 shadow-2xs">UK Sizing Guide &rarr;</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>

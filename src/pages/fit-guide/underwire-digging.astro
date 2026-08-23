@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+---
+
+<Layout 
+  title="Why Does My Bra Underwire Dig In? Causes & Relief | BraSizeChecker"
+  description="Stop bra underwires from poking or digging into your ribs, sternum, or underarms. Learn how wire radius, cup volume, and root width affect comfort."
+  canonical="https://brasizechecker.com/fit-guide/underwire-digging"
+>
+  <Header />
+  <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+    <Breadcrumbs items={[
+      { label: 'Fit Guide', url: '/fit-guide' },
+      { label: 'Underwire Digging' }
+    ]} />
+
+    <header class="mb-10 text-center sm:text-left">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+        Fit Diagnostic
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+        Why Does My Bra Underwire Dig In?
+      </h1>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
+        Underwires are meant to encapsulate and support breast tissue comfortably against your ribcage. If wires poke, pinch, or leave painful marks, your cup dimensions are incorrect.
+      </p>
+    </header>
+
+    <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <!-- Quick Answer -->
+      <section class="bg-canvas-soft-2 border-2 border-primary/30 rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-2">Quick Answer</h2>
+        <p class="text-body leading-relaxed font-medium">
+          Underwires dig in when <strong>the cup size is too small or narrow</strong>, causing the wire arc to sit on sensitive breast tissue rather than resting flush against the ribcage surrounding the breast root.
+        </p>
+      </section>
+
+      <!-- Possible Causes -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Plausible Causes</h2>
+        <div class="space-y-4">
+          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">1. Wire Arc Width Is Too Narrow</h3>
+            <p class="text-xs sm:text-sm text-body">If your cup letter is too small, the semicircular wire is too narrow and will press directly into side breast tissue or underarms.</p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">2. Underbust Band Is Too Tight</h3>
+            <p class="text-xs sm:text-sm text-body">An overly tight band stretches the underwires outward flat, altering their curve and forcing wire tips to press inward against your ribs.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- What to Check -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Practical Fit Checks</h2>
+        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
+          <li><strong>Wire Placement Check:</strong> Trace the wire with your fingers. The wire should encapsulate all breast tissue without touching soft tissue.</li>
+          <li><strong>Ribcage Clearance:</strong> Ensure the wire rests entirely on bone and rib structure beneath the breast fold (inframammary fold).</li>
+        </ul>
+      </section>
+
+      <!-- What Size Change Might Help -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Recommended Size Adjustment</h2>
+        <p class="mb-4">
+          Increase your cup letter size to obtain a wider underwire radius:
+        </p>
+        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl text-center mb-6">
+          <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">WIRE RADIUS FIX</span>
+          <p class="text-lg font-bold text-ink">If 34C underwire pokes side tissue &rarr; Try 34D for a wider wire arc</p>
+        </div>
+      </section>
+
+      <!-- Calculator CTA -->
+      <section class="bg-primary text-white rounded-2xl p-6 sm:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-1">Check Your Baseline Size</h2>
+          <p class="text-xs sm:text-sm text-canvas-soft-2">Verify underbust and bust measurements to eliminate wire discomfort.</p>
+        </div>
+        <a href="/#calculator" class="flex-shrink-0 h-12 px-6 bg-surface hover:bg-canvas-soft-2 text-primary font-bold text-sm rounded-xl shadow-xs transition-colors flex items-center gap-2">
+          <span>Calculate My Size &rarr;</span>
+        </a>
+      </section>
+
+      <!-- Related Fit Guides -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Related Fit Guides</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm font-semibold">
+          <a href="/fit-guide/center-gore" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Doesn't My Center Gore Sit Flat?</a>
+          <a href="/fit-guide/band-too-tight" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Does My Bra Band Feel Too Tight?</a>
+          <a href="/how-to-measure" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; How to Measure Guide</a>
+          <a href="/fit-guide" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Return to Fit Guide Hub</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,106 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+---
+
+<Layout 
+  title="Why Doesn't My Bra Center Gore Sit Flat? Causes & Fixes | BraSizeChecker"
+  description="Learn why your bra center gore floats away from your chest wall. Fix gore bridge floating by increasing cup volume or adjusting bridge wire height."
+  canonical="https://brasizechecker.com/fit-guide/center-gore"
+>
+  <Header />
+  <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+    <Breadcrumbs items={[
+      { label: 'Fit Guide', url: '/fit-guide' },
+      { label: 'Center Gore Floating' }
+    ]} />
+
+    <header class="mb-10 text-center sm:text-left">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+        Fit Diagnostic
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+        Why Doesn't My Bra Center Gore Sit Flat?
+      </h1>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
+        In an underwired bra, the fabric bridge between the cups (the center gore) should rest flush against your sternum. If it floats away, your cups are overloaded.
+      </p>
+    </header>
+
+    <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <!-- Quick Answer -->
+      <section class="bg-canvas-soft-2 border-2 border-primary/30 rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-2">Quick Answer</h2>
+        <p class="text-body leading-relaxed font-medium">
+          The center gore floats away from your chest wall because <strong>the cup volume is too small</strong>, forcing breast tissue to push the wire bridge outward away from your sternum.
+        </p>
+      </section>
+
+      <!-- Possible Causes -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Plausible Causes</h2>
+        <div class="space-y-4">
+          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">1. Cup Volume Is Too Small</h3>
+            <p class="text-xs sm:text-sm text-body">If the cups cannot hold your breast volume, breast tissue acts as a wedge pushing the center wire structure off your sternum.</p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">2. Close-Set Breast Roots</h3>
+            <p class="text-xs sm:text-sm text-body">If your breast roots sit very close together in the center of your chest, a wide center gore wire may rest on tissue rather than bone.</p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">3. Wireless Bra Construction</h3>
+            <p class="text-xs sm:text-sm text-body">Wireless or bralette styles lack rigid wire anchors, so center gores naturally float on soft-cup styles. (This is expected in wireless bras).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- What to Check -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Practical Fit Checks</h2>
+        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
+          <li><strong>Gore Press Test:</strong> In an underwired bra, gently press the center gore against your chest with one finger. If breast tissue overflows the cups, your cup size is too small.</li>
+        </ul>
+      </section>
+
+      <!-- What Size Change Might Help -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Recommended Size Adjustment</h2>
+        <p class="mb-4">
+          Increase your cup letter by one or two sizes to allow the gore to rest flush against your sternum:
+        </p>
+        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl text-center mb-6">
+          <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">GORE FLUSH FIX</span>
+          <p class="text-lg font-bold text-ink">If 34C center gore floats &rarr; Try a 34D or 34DD cup</p>
+        </div>
+      </section>
+
+      <!-- Calculator CTA -->
+      <section class="bg-primary text-white rounded-2xl p-6 sm:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-1">Check Your Baseline Size</h2>
+          <p class="text-xs sm:text-sm text-canvas-soft-2">Verify underbust and bust measurements to establish proper cup volume.</p>
+        </div>
+        <a href="/#calculator" class="flex-shrink-0 h-12 px-6 bg-surface hover:bg-canvas-soft-2 text-primary font-bold text-sm rounded-xl shadow-xs transition-colors flex items-center gap-2">
+          <span>Calculate My Size &rarr;</span>
+        </a>
+      </section>
+
+      <!-- Related Fit Guides -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Related Fit Guides</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm font-semibold">
+          <a href="/fit-guide/underwire-digging" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Does My Bra Underwire Dig In?</a>
+          <a href="/fit-guide/bra-spillage" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Are My Breasts Spilling Out of My Bra?</a>
+          <a href="/fit-guide/bra-cup-gaping" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Do My Bra Cups Gap?</a>
+          <a href="/fit-guide" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Return to Fit Guide Hub</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>

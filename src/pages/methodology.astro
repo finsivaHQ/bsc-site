@@ -1,0 +1,210 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { US_CUPS, UK_CUPS, EU_CUPS, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizing';
+---
+
+<Layout 
+  title="BraSizeChecker Methodology — How Bra Sizes Are Calculated | BraSizeChecker"
+  description="Transparent explanation of how BraSizeChecker calculates bra sizes, band sizes, cup letters, sister sizes, and international size conversions."
+  canonical="https://brasizechecker.com/methodology"
+>
+  <Header />
+  <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+    <Breadcrumbs items={[{ label: 'Methodology' }]} />
+
+    <!-- Page Header / Intro -->
+    <header class="mb-10 text-center sm:text-left">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+        Technical Standards
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+        BraSizeChecker Methodology
+      </h1>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
+        We believe transparency builds trust. On this page, we outline the exact mathematical algorithms, measurement rounding rules, cup progressions, sister size logic, and international conversion standards used by BraSizeChecker.com to generate your sizing recommendations.
+      </p>
+    </header>
+
+    <!-- Content Sections -->
+    <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <!-- Section 1: What the Calculator Uses -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. What the Calculator Uses</h2>
+        <p class="mb-4">
+          BraSizeChecker processes four primary inputs to determine your baseline starting size:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm uppercase tracking-wider text-primary">Underbust Measurement</h3>
+            <p class="text-xs text-body">Snug ribcage circumference directly beneath the bust (measured in inches or centimeters).</p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm uppercase tracking-wider text-primary">Bust Measurement</h3>
+            <p class="text-xs text-body">Loose circumference around the fullest point of the chest (measured in inches or centimeters).</p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm uppercase tracking-wider text-primary">Selected Unit System</h3>
+            <p class="text-xs text-body">Inches (in) or Centimeters (cm). Centimeter inputs are converted using 1 inch = 2.54 cm.</p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm uppercase tracking-wider text-primary">Sizing Convention</h3>
+            <p class="text-xs text-body">Primary baseline defaults to US/CA sizing, with secondary breakdowns for UK, EU, FR, AU, and JP.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Band Calculation -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Band Calculation Methodology</h2>
+        <p class="mb-4">
+          Bra bands are designed to provide 80% of a bra's structural support. BraSizeChecker uses the <strong>Modern Direct Underbust Sizing</strong> method for its primary US and UK band calculations:
+        </p>
+        
+        <div class="space-y-4 mb-6">
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">US & UK Band Sizing (Modern Direct Method)</h3>
+            <p class="text-xs sm:text-sm text-body">
+              Your rounded underbust measurement in inches determines your band size. If your underbust is an odd integer, +1 inch is added to reach the nearest even band size (e.g., 31 inches &rarr; 32 band). Minimum supported band is 28.
+            </p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">US & UK Traditional (+4 Method) Reference</h3>
+            <p class="text-xs sm:text-sm text-body">
+              For secondary reference, the traditional +4 method is also displayed. If the rounded underbust is even, +4 is added; if odd, +5 is added (e.g., 30 underbust &rarr; 34 band).
+            </p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">European Band Sizing (EN 13402)</h3>
+            <p class="text-xs sm:text-sm text-body">
+              EU band sizes are calculated by rounding underbust centimeters to the nearest multiple of 5 (e.g., 73 cm &rarr; 75 EU band). Minimum EU band is 60.
+            </p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">French & Australian Band Sizing</h3>
+            <p class="text-xs sm:text-sm text-body">
+              French (FR/BE/ES) band sizes equal the EU band size +15 cm (e.g., 75 EU = 90 FR). Australian (AU/NZ) dress sizes equal 8 + (US Band - 30).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Cup Calculation -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. Cup Calculation Methodology</h2>
+        <p class="mb-4">
+          Cup size is calculated from the difference (&Delta;) between your full bust measurement and your calculated band size:
+        </p>
+        <p class="font-mono text-xs sm:text-sm bg-canvas p-3 rounded-xl border border-hairline text-ink mb-6">
+          Difference (&Delta;) = Bust (inches) - Band (inches)
+        </p>
+
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[480px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">Difference (&Delta;)</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">US Cup Progression</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">UK Cup Progression</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">EU Cup Progression</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr><td class="py-2 px-3 font-medium">0 inches (0 cm)</td><td class="py-2 px-3 font-semibold text-ink">AA</td><td class="py-2 px-3 font-semibold text-ink">AA</td><td class="py-2 px-3 font-semibold text-ink">AA</td></tr>
+              <tr><td class="py-2 px-3 font-medium">1 inch (2.5 cm)</td><td class="py-2 px-3 font-semibold text-ink">A</td><td class="py-2 px-3 font-semibold text-ink">A</td><td class="py-2 px-3 font-semibold text-ink">A</td></tr>
+              <tr><td class="py-2 px-3 font-medium">2 inches (5.0 cm)</td><td class="py-2 px-3 font-semibold text-ink">B</td><td class="py-2 px-3 font-semibold text-ink">B</td><td class="py-2 px-3 font-semibold text-ink">B</td></tr>
+              <tr><td class="py-2 px-3 font-medium">3 inches (7.5 cm)</td><td class="py-2 px-3 font-semibold text-ink">C</td><td class="py-2 px-3 font-semibold text-ink">C</td><td class="py-2 px-3 font-semibold text-ink">C</td></tr>
+              <tr><td class="py-2 px-3 font-medium">4 inches (10.0 cm)</td><td class="py-2 px-3 font-semibold text-ink">D</td><td class="py-2 px-3 font-semibold text-ink">D</td><td class="py-2 px-3 font-semibold text-ink">D</td></tr>
+              <tr><td class="py-2 px-3 font-medium">5 inches (12.5 cm)</td><td class="py-2 px-3 font-semibold text-ink">DD / E</td><td class="py-2 px-3 font-semibold text-primary">DD</td><td class="py-2 px-3 font-semibold text-ink">E</td></tr>
+              <tr><td class="py-2 px-3 font-medium">6 inches (15.0 cm)</td><td class="py-2 px-3 font-semibold text-ink">DDD / F</td><td class="py-2 px-3 font-semibold text-primary">E</td><td class="py-2 px-3 font-semibold text-ink">F</td></tr>
+              <tr><td class="py-2 px-3 font-medium">7 inches (17.5 cm)</td><td class="py-2 px-3 font-semibold text-ink">G</td><td class="py-2 px-3 font-semibold text-primary">F</td><td class="py-2 px-3 font-semibold text-ink">G</td></tr>
+              <tr><td class="py-2 px-3 font-medium">8 inches (20.0 cm)</td><td class="py-2 px-3 font-semibold text-ink">H</td><td class="py-2 px-3 font-semibold text-primary">FF</td><td class="py-2 px-3 font-semibold text-ink">H</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 4: International Conversions -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. International Size Conversions</h2>
+        <p class="mb-4">
+          Because manufacturers across North America, Europe, Australia, and Asia use different size conventions, BraSizeChecker maps your baseline measurements across 6 verified national standards.
+        </p>
+        <p class="mb-4">
+          Explore our full <a href="/bra-size-chart" class="text-primary font-semibold hover:underline">Bra Size Chart</a> or convert known size labels using our <a href="/bra-size-converter" class="text-primary font-semibold hover:underline">Bra Size Converter Tool</a>.
+        </p>
+      </section>
+
+      <!-- Section 5: Sister Sizes Methodology -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">5. Sister Sizes Calculation</h2>
+        <p class="mb-4">
+          Sister sizes preserve identical cup volume capacity across band size steps. The algorithm follows an inverse step rule:
+        </p>
+        <ul class="list-disc pl-5 space-y-2 mb-4">
+          <li><strong>Tighter Sister Size:</strong> Subtract 2 inches from band, add 1 cup letter index step (e.g. 34C &rarr; 32D).</li>
+          <li><strong>Looser Sister Size:</strong> Add 2 inches to band, subtract 1 cup letter index step (e.g. 34C &rarr; 36B).</li>
+        </ul>
+        <p>
+          Calculate your exact sister sizes using our interactive <a href="/sister-size-calculator" class="text-primary font-semibold hover:underline">Sister Size Calculator</a>.
+        </p>
+      </section>
+
+      <!-- Section 6: Why Results Can Vary -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">6. Why Bra Size Results Can Vary</h2>
+        <p class="mb-4">
+          No automated formula can predict a 100% perfect fit across every bra brand because real-world lingerie manufacturing includes variable factors:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 bg-canvas-soft-2/50 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1">Fabric & Elasticity</h3>
+            <p>Firm, unyielding lace bands feel tighter than soft, stretchy microfiber bands of the exact same labeled size.</p>
+          </div>
+          <div class="p-4 bg-canvas-soft-2/50 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1">Cup Styles & Cuts</h3>
+            <p>Demis, balconettes, full-coverage, and plunge bras shape bust tissue differently even within the same cup size.</p>
+          </div>
+          <div class="p-4 bg-canvas-soft-2/50 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1">Wire Curvature</h3>
+            <p>Underwire width and arch height vary between brands, altering side support and apex positioning.</p>
+          </div>
+          <div class="p-4 bg-canvas-soft-2/50 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1">Individual Tissue Density</h3>
+            <p>Shallow vs projected breasts or firm vs soft breast tissue fill cup shapes differently.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Limitations & Disclaimer -->
+      <section class="bg-canvas-soft-2 border-2 border-primary/30 rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-2">7. Limitations & Fit Disclaimer</h2>
+        <p class="text-sm sm:text-base leading-relaxed">
+          The calculated size generated by BraSizeChecker is an <strong>educational recommendation and starting baseline size</strong> rather than a guarantee of fit. We encourage using your calculated size as a starting point when trying on bras and adjusting based on our <a href="/#fit-guide" class="text-primary font-semibold hover:underline">Fit Guide</a>.
+        </p>
+      </section>
+
+      <!-- Section 8: Reference Sources & Industry Standards -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">8. Reference Standards</h2>
+        <p class="mb-4">
+          Our sizing methodology references established international garment and sizing frameworks:
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
+          <li><strong>European Standard EN 13402:</strong> Size designation of clothes — Part 3: Measurements and intervals.</li>
+          <li><strong>ASTM D7013 / D5586 Guidelines:</strong> Standard body measurement guides for apparel sizing.</li>
+          <li><strong>Lingerie Industry Sizing Conventions:</strong> Standard US, UK, and European bra sizing matrices.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>

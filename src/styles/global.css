@@ -6,41 +6,41 @@
 }
 
 :root {
-  /* Warm Ivory + Dusty Rose + Deep Plum Visual System */
-  --color-canvas: #FAF7F4;
-  --color-canvas-soft: #FAF7F4;
-  --color-canvas-soft-2: #F4E6E8;
+  /* Parisian Silk & Rich Bordeaux Luxury Color System */
+  --color-canvas: #FAF6F0;
+  --color-canvas-soft: #FAF6F0;
+  --color-canvas-soft-2: #F6EDE8;
   --color-surface: #FFFFFF;
-  --color-primary: #A95563;
-  --color-primary-hover: #8E4451;
-  --color-accent: #C9828C;
-  --color-ink: #33252B;
-  --color-body: #66585D;
-  --color-mute: #8C7B82;
-  --color-hairline: #E8DED9;
-  --color-hairline-strong: #D5C4BD;
-  --color-link: #A95563;
-  --color-success: #A95563;
-  --color-success-dark: #8E4451;
+  --color-primary: #8C2D40;
+  --color-primary-hover: #702131;
+  --color-accent: #D89B9E;
+  --color-ink: #22191C;
+  --color-body: #4A3F43;
+  --color-mute: #7E7075;
+  --color-hairline: #EADFD7;
+  --color-hairline-strong: #D8C8BF;
+  --color-link: #8C2D40;
+  --color-success: #8C2D40;
+  --color-success-dark: #702131;
 }
 
 .dark {
-  /* Maintain cohesive warm palette across themes */
-  --color-canvas: #FAF7F4;
-  --color-canvas-soft: #FAF7F4;
-  --color-canvas-soft-2: #F4E6E8;
+  /* Cohesive Parisian Silk & Rich Bordeaux Palette across themes */
+  --color-canvas: #FAF6F0;
+  --color-canvas-soft: #FAF6F0;
+  --color-canvas-soft-2: #F6EDE8;
   --color-surface: #FFFFFF;
-  --color-primary: #A95563;
-  --color-primary-hover: #8E4451;
-  --color-accent: #C9828C;
-  --color-ink: #33252B;
-  --color-body: #66585D;
-  --color-mute: #8C7B82;
-  --color-hairline: #E8DED9;
-  --color-hairline-strong: #D5C4BD;
-  --color-link: #A95563;
-  --color-success: #A95563;
-  --color-success-dark: #8E4451;
+  --color-primary: #8C2D40;
+  --color-primary-hover: #702131;
+  --color-accent: #D89B9E;
+  --color-ink: #22191C;
+  --color-body: #4A3F43;
+  --color-mute: #7E7075;
+  --color-hairline: #EADFD7;
+  --color-hairline-strong: #D8C8BF;
+  --color-link: #8C2D40;
+  --color-success: #8C2D40;
+  --color-success-dark: #702131;
 }
 
 @theme {
@@ -64,7 +64,7 @@
     @apply bg-canvas text-body font-sans transition-colors duration-300;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply text-ink font-semibold tracking-tight;
+    @apply text-ink font-bold tracking-tight;
   }
   
   /* Hide number input arrows to prevent overlapping with units */

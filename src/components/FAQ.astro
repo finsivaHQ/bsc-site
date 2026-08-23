@@ -27,26 +27,29 @@ const faqs = [
 ];
 ---
 
-<section id="faq" class="py-24 px-6 lg:px-8 max-w-5xl mx-auto border-t border-hairline">
-  <div class="mb-12">
-    <h2 class="text-display-lg mb-4">Frequently Asked Questions</h2>
-    <p class="text-body-lg text-body max-w-2xl">
+<section id="faq" class="py-16 md:py-24 px-6 lg:px-8 max-w-5xl mx-auto border-t border-hairline">
+  <div class="mb-12 text-center md:text-left">
+    <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+      FAQ
+    </span>
+    <h2 class="text-3xl md:text-4xl font-bold text-ink mb-4">Frequently Asked Questions</h2>
+    <p class="text-base md:text-lg text-body max-w-2xl">
       Everything you need to know about measuring, bra sizing, and finding your most comfortable fit.
     </p>
   </div>
 
   <div class="space-y-4">
     {faqs.map((faq) => (
-      <details class="group bg-canvas border border-hairline rounded-md p-6 cursor-pointer hover:border-hairline-strong transition-colors">
-        <summary class="flex justify-between items-center font-medium text-body-md-strong list-none text-ink">
+      <details class="group bg-surface border border-hairline rounded-xl p-6 cursor-pointer hover:border-hairline-strong transition-all duration-200 shadow-xs">
+        <summary class="flex justify-between items-center font-bold text-base md:text-lg text-ink list-none">
           <span>{faq.question}</span>
-          <span class="transition-transform duration-200 group-open:rotate-180 text-mute group-hover:text-ink">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <span class="transition-transform duration-200 group-open:rotate-180 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"/>
             </svg>
           </span>
         </summary>
-        <div class="mt-4 text-body text-body-sm pt-4 border-t border-hairline leading-relaxed">
+        <div class="mt-4 text-body text-sm md:text-base pt-4 border-t border-hairline leading-relaxed">
           <p>{faq.answer}</p>
         </div>
       </details>

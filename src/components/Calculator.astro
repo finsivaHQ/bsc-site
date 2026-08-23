@@ -1,130 +1,168 @@
 ---
 ---
-<section id="calculator" class="py-16 md:py-24 px-6 lg:px-8 max-w-4xl mx-auto w-full">
+<section id="calculator" class="py-12 md:py-20 px-6 lg:px-8 max-w-4xl mx-auto w-full">
+  <!-- Hero / Header inside calculator area -->
   <div class="text-center mb-12">
-    <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft border border-hairline text-caption font-mono uppercase tracking-widest text-mute mb-4">Precision Fit</span>
-    <h1 class="text-display-lg md:text-display-xl mb-4">Find Your Perfect Fit.</h1>
-    <p class="text-body-lg text-body max-w-2xl mx-auto">Enter your measurements below. Our calculator instantly determines your size across international standards.</p>
+    <span class="inline-block py-1.5 px-4 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+      Precision Fit
+    </span>
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-ink tracking-tight mb-4">
+      Find Your Perfect Fit.
+    </h1>
+    <p class="text-base md:text-lg text-body max-w-2xl mx-auto leading-relaxed">
+      Enter your measurements below. Our calculator instantly determines your size across international standards.
+    </p>
   </div>
 
-  <div class="bg-canvas border border-hairline rounded-lg shadow-sm p-6 md:p-10 mb-12">
-    <div class="flex items-center justify-between mb-8 pb-4 border-b border-hairline">
-      <h2 class="text-display-sm">Measurements</h2>
-      <div class="flex bg-canvas-soft rounded-sm p-1 border border-hairline">
-        <button id="unit-in" class="unit-btn active px-3 py-1 text-sm font-medium rounded-[4px] bg-canvas shadow-sm text-ink transition-colors">Inches (in)</button>
-        <button id="unit-cm" class="unit-btn px-3 py-1 text-sm font-medium rounded-[4px] text-mute hover:text-ink transition-colors">Centimeters (cm)</button>
+  <!-- Calculator Focal Card -->
+  <div class="bg-surface border border-hairline rounded-2xl shadow-sm p-6 md:p-10 mb-12">
+    <!-- Header & Unit Toggle -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 pb-4 border-b border-hairline">
+      <h2 class="text-2xl font-bold text-ink">Measurements</h2>
+      <div class="flex bg-canvas-soft-2 rounded-xl p-1 border border-hairline w-full sm:w-auto">
+        <button id="unit-in" class="unit-btn active flex-1 sm:flex-none px-4 py-2 text-sm font-semibold rounded-lg bg-primary text-white shadow-xs transition-all duration-200">
+          Inches (in)
+        </button>
+        <button id="unit-cm" class="unit-btn flex-1 sm:flex-none px-4 py-2 text-sm font-semibold rounded-lg text-body hover:text-ink transition-all duration-200">
+          Centimeters (cm)
+        </button>
       </div>
     </div>
 
+    <!-- Inputs -->
     <div class="grid md:grid-cols-2 gap-8 mb-8">
       <div>
-        <label for="overbust" class="block text-body-sm-strong mb-2">1. Bust Size</label>
-        <p class="text-caption text-mute mb-3">Measure loosely around the fullest part.</p>
+        <label for="overbust" class="block text-sm font-semibold text-ink mb-1.5">
+          1. Bust Size
+        </label>
+        <p class="text-xs text-mute mb-3">Measure loosely around the fullest part of your bust.</p>
         <div class="relative">
-          <input type="number" id="overbust" placeholder="e.g. 35" class="w-full bg-canvas border border-hairline rounded-sm h-12 px-4 text-body-md focus:outline-none focus:border-ink transition-colors" />
-          <span class="absolute right-4 top-1/2 -translate-y-1/2 text-mute text-sm unit-label">in</span>
+          <input 
+            type="number" 
+            id="overbust" 
+            placeholder="e.g. 35" 
+            class="w-full bg-surface border border-hairline rounded-xl h-13 px-4 pr-12 text-base text-ink placeholder:text-mute/60 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200" 
+          />
+          <span class="absolute right-4 top-1/2 -translate-y-1/2 text-mute text-sm font-medium unit-label pointer-events-none">
+            in
+          </span>
         </div>
       </div>
+
       <div>
-        <label for="underbust" class="block text-body-sm-strong mb-2">2. Band Size</label>
-        <p class="text-caption text-mute mb-3">Measure snugly right under your breasts.</p>
+        <label for="underbust" class="block text-sm font-semibold text-ink mb-1.5">
+          2. Band Size
+        </label>
+        <p class="text-xs text-mute mb-3">Measure snugly right under your breasts.</p>
         <div class="relative">
-          <input type="number" id="underbust" placeholder="e.g. 32" class="w-full bg-canvas border border-hairline rounded-sm h-12 px-4 text-body-md focus:outline-none focus:border-ink transition-colors" />
-          <span class="absolute right-4 top-1/2 -translate-y-1/2 text-mute text-sm unit-label">in</span>
+          <input 
+            type="number" 
+            id="underbust" 
+            placeholder="e.g. 32" 
+            class="w-full bg-surface border border-hairline rounded-xl h-13 px-4 pr-12 text-base text-ink placeholder:text-mute/60 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200" 
+          />
+          <span class="absolute right-4 top-1/2 -translate-y-1/2 text-mute text-sm font-medium unit-label pointer-events-none">
+            in
+          </span>
         </div>
       </div>
     </div>
 
-    <!-- Result Area -->
-    <div id="result-area" class="hidden bg-canvas-soft border border-hairline rounded-md p-6 md:p-8 transition-all">
+    <!-- Dynamic Result Area -->
+    <div id="result-area" class="hidden bg-canvas-soft-2 border border-hairline rounded-xl p-6 md:p-8 transition-all duration-300">
       <div class="text-center mb-8">
-        <p class="text-body-sm text-mute uppercase tracking-widest font-mono mb-2">Primary Result (US/CA)</p>
-        <div id="main-size" class="text-[64px] leading-none font-bold text-ink tracking-tight mb-4">34C</div>
+        <p class="text-xs text-primary font-bold uppercase tracking-widest mb-2">Your Recommended Size (US/CA)</p>
+        <div id="main-size" class="text-5xl md:text-6xl lg:text-7xl font-bold text-ink tracking-tight mb-2">34C</div>
+        <p class="text-xs text-body">Based on standard sizing metrics</p>
       </div>
 
+      <!-- Sister Sizes -->
       <div class="grid grid-cols-2 gap-4 mb-8 text-left">
-        <div class="bg-canvas border border-hairline rounded-md p-4 text-center">
-          <p class="text-caption text-mute uppercase mb-1">Tighter Band</p>
+        <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-xs">
+          <p class="text-xs text-mute uppercase font-medium mb-1">Tighter Band</p>
           <div class="flex items-end justify-center gap-2">
-            <span id="sister-tight" class="text-display-md text-ink">32D</span>
+            <span id="sister-tight" class="text-2xl font-bold text-ink">32D</span>
           </div>
         </div>
-        <div class="bg-canvas border border-hairline rounded-md p-4 text-center">
-          <p class="text-caption text-mute uppercase mb-1">Looser Band</p>
+        <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-xs">
+          <p class="text-xs text-mute uppercase font-medium mb-1">Looser Band</p>
           <div class="flex items-end justify-center gap-2">
-            <span id="sister-loose" class="text-display-md text-ink">36B</span>
+            <span id="sister-loose" class="text-2xl font-bold text-ink">36B</span>
           </div>
         </div>
       </div>
 
-      <h3 class="text-lg font-semibold text-ink mb-4 border-b border-hairline pb-2">International Sizes</h3>
+      <!-- International Sizes Table -->
+      <h3 class="text-base font-bold text-ink mb-4 border-b border-hairline pb-2">International Sizes</h3>
       <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse text-sm text-body">
           <thead>
-            <tr class="border-b border-hairline">
-              <th class="py-2 font-semibold text-ink">Location</th>
-              <th class="py-2 font-semibold text-ink">Size</th>
-              <th class="py-2 font-semibold text-ink">Cup</th>
+            <tr class="border-b border-hairline text-ink">
+              <th class="py-2.5 font-semibold">Location</th>
+              <th class="py-2.5 font-semibold">Band</th>
+              <th class="py-2.5 font-semibold">Cup</th>
             </tr>
           </thead>
           <tbody id="intl-table-body">
-            <!-- Populated by JS -->
+            <!-- Populated dynamically via JS -->
           </tbody>
         </table>
       </div>
       <p class="text-xs text-mute mt-4">
-        * The calculation result is only a starting point. Fit can vary by brand and body shape.
+        * Calculation results serve as a starting point. Fit may vary depending on brand fabric, wire shape, and style.
       </p>
     </div>
   </div>
 
-  <!-- Bra Size Chart Reference -->
-  <div class="bg-canvas border border-hairline rounded-lg shadow-sm p-6 md:p-10">
-    <h2 class="text-display-sm mb-6 border-b border-hairline pb-4">Bra Size Converter Chart</h2>
-    <div class="overflow-x-auto">
-      <table class="w-full text-left text-sm text-body min-w-[600px]">
+  <!-- Bra Size Converter Chart Card -->
+  <div class="bg-surface border border-hairline rounded-2xl shadow-sm p-6 md:p-10">
+    <h2 class="text-2xl font-bold text-ink mb-6 border-b border-hairline pb-4">Bra Size Converter Chart</h2>
+    
+    <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-3">Band Conversion Matrix</h3>
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full text-left text-sm text-body min-w-[600px] border-collapse">
         <thead>
-          <tr class="border-b border-hairline bg-canvas-soft">
-            <th class="py-3 px-2 font-semibold text-ink rounded-tl-md">US/CA</th>
-            <th class="py-3 px-2 font-semibold text-ink">UK</th>
-            <th class="py-3 px-2 font-semibold text-ink">EU</th>
-            <th class="py-3 px-2 font-semibold text-ink">FR/BE/ES</th>
-            <th class="py-3 px-2 font-semibold text-ink rounded-tr-md">AU/NZ</th>
+          <tr class="bg-canvas-soft-2 text-ink border-b border-hairline">
+            <th class="py-3 px-3 font-semibold rounded-tl-lg">US/CA</th>
+            <th class="py-3 px-3 font-semibold">UK</th>
+            <th class="py-3 px-3 font-semibold">EU</th>
+            <th class="py-3 px-3 font-semibold">FR/BE/ES</th>
+            <th class="py-3 px-3 font-semibold rounded-tr-lg">AU/NZ</th>
           </tr>
         </thead>
-        <tbody>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">30</td><td class="py-2 px-2">30</td><td class="py-2 px-2">65</td><td class="py-2 px-2">80</td><td class="py-2 px-2">8</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">32</td><td class="py-2 px-2">32</td><td class="py-2 px-2">70</td><td class="py-2 px-2">85</td><td class="py-2 px-2">10</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">34</td><td class="py-2 px-2">34</td><td class="py-2 px-2">75</td><td class="py-2 px-2">90</td><td class="py-2 px-2">12</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">36</td><td class="py-2 px-2">36</td><td class="py-2 px-2">80</td><td class="py-2 px-2">95</td><td class="py-2 px-2">14</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">38</td><td class="py-2 px-2">38</td><td class="py-2 px-2">85</td><td class="py-2 px-2">100</td><td class="py-2 px-2">16</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">40</td><td class="py-2 px-2">40</td><td class="py-2 px-2">90</td><td class="py-2 px-2">105</td><td class="py-2 px-2">18</td></tr>
+        <tbody class="divide-y divide-hairline">
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">30</td><td class="py-2.5 px-3">30</td><td class="py-2.5 px-3">65</td><td class="py-2.5 px-3">80</td><td class="py-2.5 px-3">8</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">32</td><td class="py-2.5 px-3">32</td><td class="py-2.5 px-3">70</td><td class="py-2.5 px-3">85</td><td class="py-2.5 px-3">10</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">34</td><td class="py-2.5 px-3">34</td><td class="py-2.5 px-3">75</td><td class="py-2.5 px-3">90</td><td class="py-2.5 px-3">12</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">36</td><td class="py-2.5 px-3">36</td><td class="py-2.5 px-3">80</td><td class="py-2.5 px-3">95</td><td class="py-2.5 px-3">14</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">38</td><td class="py-2.5 px-3">38</td><td class="py-2.5 px-3">85</td><td class="py-2.5 px-3">100</td><td class="py-2.5 px-3">16</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">40</td><td class="py-2.5 px-3">40</td><td class="py-2.5 px-3">90</td><td class="py-2.5 px-3">105</td><td class="py-2.5 px-3">18</td></tr>
         </tbody>
       </table>
     </div>
 
-    <h3 class="text-lg font-semibold text-ink mt-8 mb-4">Cup Size Converter</h3>
+    <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-3">Cup Size Matrix</h3>
     <div class="overflow-x-auto">
-      <table class="w-full text-left text-sm text-body min-w-[600px]">
+      <table class="w-full text-left text-sm text-body min-w-[600px] border-collapse">
         <thead>
-          <tr class="border-b border-hairline bg-canvas-soft">
-            <th class="py-3 px-2 font-semibold text-ink rounded-tl-md">US/CA</th>
-            <th class="py-3 px-2 font-semibold text-ink">UK</th>
-            <th class="py-3 px-2 font-semibold text-ink">EU</th>
-            <th class="py-3 px-2 font-semibold text-ink">AU/NZ</th>
+          <tr class="bg-canvas-soft-2 text-ink border-b border-hairline">
+            <th class="py-3 px-3 font-semibold rounded-tl-lg">US/CA</th>
+            <th class="py-3 px-3 font-semibold">UK</th>
+            <th class="py-3 px-3 font-semibold">EU</th>
+            <th class="py-3 px-3 font-semibold rounded-tr-lg">AU/NZ</th>
           </tr>
         </thead>
-        <tbody>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">A</td><td class="py-2 px-2">A</td><td class="py-2 px-2">A</td><td class="py-2 px-2">A</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">B</td><td class="py-2 px-2">B</td><td class="py-2 px-2">B</td><td class="py-2 px-2">B</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">C</td><td class="py-2 px-2">C</td><td class="py-2 px-2">C</td><td class="py-2 px-2">C</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">D</td><td class="py-2 px-2">D</td><td class="py-2 px-2">D</td><td class="py-2 px-2">D</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">DD / E</td><td class="py-2 px-2">DD</td><td class="py-2 px-2">E</td><td class="py-2 px-2">DD</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">DDD / F</td><td class="py-2 px-2">E</td><td class="py-2 px-2">F</td><td class="py-2 px-2">E</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">G</td><td class="py-2 px-2">F</td><td class="py-2 px-2">G</td><td class="py-2 px-2">F</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">H</td><td class="py-2 px-2">FF</td><td class="py-2 px-2">H</td><td class="py-2 px-2">FF</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">I</td><td class="py-2 px-2">G</td><td class="py-2 px-2">I</td><td class="py-2 px-2">G</td></tr>
-          <tr class="border-b border-hairline"><td class="py-2 px-2 font-medium">J</td><td class="py-2 px-2">GG</td><td class="py-2 px-2">J</td><td class="py-2 px-2">GG</td></tr>
+        <tbody class="divide-y divide-hairline">
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">A</td><td class="py-2.5 px-3">A</td><td class="py-2.5 px-3">A</td><td class="py-2.5 px-3">A</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">B</td><td class="py-2.5 px-3">B</td><td class="py-2.5 px-3">B</td><td class="py-2.5 px-3">B</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">C</td><td class="py-2.5 px-3">C</td><td class="py-2.5 px-3">C</td><td class="py-2.5 px-3">C</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">D</td><td class="py-2.5 px-3">D</td><td class="py-2.5 px-3">D</td><td class="py-2.5 px-3">D</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">DD / E</td><td class="py-2.5 px-3">DD</td><td class="py-2.5 px-3">E</td><td class="py-2.5 px-3">DD</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">DDD / F</td><td class="py-2.5 px-3">E</td><td class="py-2.5 px-3">F</td><td class="py-2.5 px-3">E</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">G</td><td class="py-2.5 px-3">F</td><td class="py-2.5 px-3">G</td><td class="py-2.5 px-3">F</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">H</td><td class="py-2.5 px-3">FF</td><td class="py-2.5 px-3">H</td><td class="py-2.5 px-3">FF</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">I</td><td class="py-2.5 px-3">G</td><td class="py-2.5 px-3">I</td><td class="py-2.5 px-3">G</td></tr>
+          <tr class="hover:bg-canvas-soft-2/40 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">J</td><td class="py-2.5 px-3">GG</td><td class="py-2.5 px-3">J</td><td class="py-2.5 px-3">GG</td></tr>
         </tbody>
       </table>
     </div>
@@ -165,18 +203,18 @@
     currentUnit = unit;
     
     if (unit === 'in') {
-      unitInBtn.classList.add('bg-canvas', 'shadow-sm', 'text-ink');
-      unitInBtn.classList.remove('text-mute', 'hover:text-ink');
-      unitCmBtn.classList.remove('bg-canvas', 'shadow-sm', 'text-ink');
-      unitCmBtn.classList.add('text-mute', 'hover:text-ink');
+      unitInBtn.classList.add('bg-primary', 'text-white', 'shadow-xs');
+      unitInBtn.classList.remove('text-body', 'hover:text-ink');
+      unitCmBtn.classList.remove('bg-primary', 'text-white', 'shadow-xs');
+      unitCmBtn.classList.add('text-body', 'hover:text-ink');
       unitLabels.forEach(el => el.textContent = 'in');
       underbustInput.placeholder = 'e.g. 32';
       overbustInput.placeholder = 'e.g. 35';
     } else {
-      unitCmBtn.classList.add('bg-canvas', 'shadow-sm', 'text-ink');
-      unitCmBtn.classList.remove('text-mute', 'hover:text-ink');
-      unitInBtn.classList.remove('bg-canvas', 'shadow-sm', 'text-ink');
-      unitInBtn.classList.add('text-mute', 'hover:text-ink');
+      unitCmBtn.classList.add('bg-primary', 'text-white', 'shadow-xs');
+      unitCmBtn.classList.remove('text-body', 'hover:text-ink');
+      unitInBtn.classList.remove('bg-primary', 'text-white', 'shadow-xs');
+      unitInBtn.classList.add('text-body', 'hover:text-ink');
       unitLabels.forEach(el => el.textContent = 'cm');
       underbustInput.placeholder = 'e.g. 80';
       overbustInput.placeholder = 'e.g. 90';
@@ -272,40 +310,40 @@
     // Build Table
     if (intlTableBody) {
       intlTableBody.innerHTML = `
-        <tr class="border-b border-hairline hover:bg-canvas-soft-2 transition-colors">
-          <td class="py-2">US/CA</td>
-          <td class="py-2 font-medium">${usSize}</td>
-          <td class="py-2 font-medium">${usCup}</td>
+        <tr class="border-b border-hairline hover:bg-surface/70 transition-colors">
+          <td class="py-2.5 font-medium text-ink">US / CA</td>
+          <td class="py-2.5 font-semibold text-ink">${usSize}</td>
+          <td class="py-2.5 font-semibold text-primary">${usCup}</td>
         </tr>
-        <tr class="border-b border-hairline hover:bg-canvas-soft-2 transition-colors">
-          <td class="py-2">UK</td>
-          <td class="py-2 font-medium">${ukSize}</td>
-          <td class="py-2 font-medium">${ukCup}</td>
+        <tr class="border-b border-hairline hover:bg-surface/70 transition-colors">
+          <td class="py-2.5 font-medium text-ink">UK</td>
+          <td class="py-2.5 font-semibold text-ink">${ukSize}</td>
+          <td class="py-2.5 font-semibold text-primary">${ukCup}</td>
         </tr>
-        <tr class="border-b border-hairline hover:bg-canvas-soft-2 transition-colors">
-          <td class="py-2 text-mute">US/CA (Underbust +4)*</td>
-          <td class="py-2 font-medium text-mute">${plus4Band}</td>
-          <td class="py-2 font-medium text-mute">${plus4UsCup}</td>
+        <tr class="border-b border-hairline hover:bg-surface/70 transition-colors">
+          <td class="py-2.5 text-mute">US/CA (Underbust +4)*</td>
+          <td class="py-2.5 font-medium text-mute">${plus4Band}</td>
+          <td class="py-2.5 font-medium text-mute">${plus4UsCup}</td>
         </tr>
-        <tr class="border-b border-hairline hover:bg-canvas-soft-2 transition-colors">
-          <td class="py-2 text-mute">UK (Underbust +4)*</td>
-          <td class="py-2 font-medium text-mute">${plus4Band}</td>
-          <td class="py-2 font-medium text-mute">${plus4UkCup}</td>
+        <tr class="border-b border-hairline hover:bg-surface/70 transition-colors">
+          <td class="py-2.5 text-mute">UK (Underbust +4)*</td>
+          <td class="py-2.5 font-medium text-mute">${plus4Band}</td>
+          <td class="py-2.5 font-medium text-mute">${plus4UkCup}</td>
         </tr>
-        <tr class="border-b border-hairline hover:bg-canvas-soft-2 transition-colors">
-          <td class="py-2">EU (EN 13402)</td>
-          <td class="py-2 font-medium">${euBand} cm</td>
-          <td class="py-2 font-medium">${euCup}</td>
+        <tr class="border-b border-hairline hover:bg-surface/70 transition-colors">
+          <td class="py-2.5 font-medium text-ink">EU (EN 13402)</td>
+          <td class="py-2.5 font-semibold text-ink">${euBand} cm</td>
+          <td class="py-2.5 font-semibold text-primary">${euCup}</td>
         </tr>
-        <tr class="border-b border-hairline hover:bg-canvas-soft-2 transition-colors">
-          <td class="py-2">FR/BE/ES</td>
-          <td class="py-2 font-medium">${frBand} cm</td>
-          <td class="py-2 font-medium">${euCup}</td>
+        <tr class="border-b border-hairline hover:bg-surface/70 transition-colors">
+          <td class="py-2.5 font-medium text-ink">FR / BE / ES</td>
+          <td class="py-2.5 font-semibold text-ink">${frBand} cm</td>
+          <td class="py-2.5 font-semibold text-primary">${euCup}</td>
         </tr>
-        <tr class="hover:bg-canvas-soft-2 transition-colors">
-          <td class="py-2">Australia/New Zealand</td>
-          <td class="py-2 font-medium">${auBand}</td>
-          <td class="py-2 font-medium">${auCup}</td>
+        <tr class="hover:bg-surface/70 transition-colors">
+          <td class="py-2.5 font-medium text-ink">Australia / New Zealand</td>
+          <td class="py-2.5 font-semibold text-ink">${auBand}</td>
+          <td class="py-2.5 font-semibold text-primary">${auCup}</td>
         </tr>
       `;
     }

@@ -1,0 +1,167 @@
+---
+---
+<section id="calculator" class="py-16 md:py-24 px-6 lg:px-8 max-w-4xl mx-auto w-full">
+  <div class="text-center mb-12">
+    <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft border border-hairline text-caption font-mono uppercase tracking-widest text-mute mb-4">Precision Fit</span>
+    <h1 class="text-display-lg md:text-display-xl mb-4">Find Your Perfect Fit.</h1>
+    <p class="text-body-lg text-body max-w-2xl mx-auto">Enter your measurements below. Our calculator instantly determines your size and provides sister sizes for the perfect adjustments.</p>
+  </div>
+
+  <div class="bg-canvas border border-hairline rounded-lg shadow-sm p-6 md:p-10">
+    <div class="flex items-center justify-between mb-8 pb-4 border-b border-hairline">
+      <h2 class="text-display-sm">Measurements</h2>
+      <div class="flex bg-canvas-soft rounded-sm p-1 border border-hairline">
+        <button id="unit-in" class="unit-btn active px-3 py-1 text-sm font-medium rounded-[4px] bg-canvas shadow-sm text-ink transition-colors">Inches (in)</button>
+        <button id="unit-cm" class="unit-btn px-3 py-1 text-sm font-medium rounded-[4px] text-mute hover:text-ink transition-colors">Centimeters (cm)</button>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-8">
+      <div>
+        <label for="underbust" class="block text-body-sm-strong mb-2">1. Underbust</label>
+        <p class="text-caption text-mute mb-3">Measure snugly right under your breasts.</p>
+        <div class="relative">
+          <input type="number" id="underbust" placeholder="e.g. 32" class="w-full bg-canvas border border-hairline rounded-sm h-12 px-4 text-body-md focus:outline-none focus:border-ink transition-colors" />
+          <span class="absolute right-4 top-1/2 -translate-y-1/2 text-mute text-sm unit-label">in</span>
+        </div>
+      </div>
+      <div>
+        <label for="overbust" class="block text-body-sm-strong mb-2">2. Overbust</label>
+        <p class="text-caption text-mute mb-3">Measure loosely around the fullest part.</p>
+        <div class="relative">
+          <input type="number" id="overbust" placeholder="e.g. 35" class="w-full bg-canvas border border-hairline rounded-sm h-12 px-4 text-body-md focus:outline-none focus:border-ink transition-colors" />
+          <span class="absolute right-4 top-1/2 -translate-y-1/2 text-mute text-sm unit-label">in</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result Area -->
+    <div id="result-area" class="hidden bg-canvas-soft border border-hairline rounded-md p-6 md:p-8 text-center transition-all">
+      <p class="text-body-sm text-mute uppercase tracking-widest font-mono mb-2">Your Bra Size</p>
+      <div id="main-size" class="text-[64px] leading-none font-bold text-ink tracking-tight mb-4">34C</div>
+      
+      <div class="grid grid-cols-2 gap-4 mt-6 pt-6 border-t border-hairline text-left">
+        <div class="bg-canvas border border-hairline rounded-md p-4">
+          <p class="text-caption text-mute uppercase mb-1">Tighter Band</p>
+          <div class="flex items-end gap-2">
+            <span id="sister-tight" class="text-display-md text-ink">32D</span>
+            <span class="text-xs text-mute mb-1">Sister Size</span>
+          </div>
+        </div>
+        <div class="bg-canvas border border-hairline rounded-md p-4">
+          <p class="text-caption text-mute uppercase mb-1">Looser Band</p>
+          <div class="flex items-end gap-2">
+            <span id="sister-loose" class="text-display-md text-ink">36B</span>
+            <span class="text-xs text-mute mb-1">Sister Size</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // DOM Elements
+  const unitInBtn = document.getElementById('unit-in');
+  const unitCmBtn = document.getElementById('unit-cm');
+  const unitLabels = document.querySelectorAll('.unit-label');
+  const underbustInput = document.getElementById('underbust') as HTMLInputElement;
+  const overbustInput = document.getElementById('overbust') as HTMLInputElement;
+  const resultArea = document.getElementById('result-area');
+  const mainSizeEl = document.getElementById('main-size');
+  const sisterTightEl = document.getElementById('sister-tight');
+  const sisterLooseEl = document.getElementById('sister-loose');
+
+  let currentUnit = 'in';
+
+  // Toggle Units
+  const setUnit = (unit) => {
+    if (unit === currentUnit) return;
+    
+    // Convert values if present
+    if (underbustInput.value) {
+      underbustInput.value = unit === 'cm' 
+        ? (parseFloat(underbustInput.value) * 2.54).toFixed(1)
+        : (parseFloat(underbustInput.value) / 2.54).toFixed(1);
+    }
+    if (overbustInput.value) {
+      overbustInput.value = unit === 'cm' 
+        ? (parseFloat(overbustInput.value) * 2.54).toFixed(1)
+        : (parseFloat(overbustInput.value) / 2.54).toFixed(1);
+    }
+
+    currentUnit = unit;
+    
+    if (unit === 'in') {
+      unitInBtn.classList.add('bg-canvas', 'shadow-sm', 'text-ink');
+      unitInBtn.classList.remove('text-mute', 'hover:text-ink');
+      unitCmBtn.classList.remove('bg-canvas', 'shadow-sm', 'text-ink');
+      unitCmBtn.classList.add('text-mute', 'hover:text-ink');
+      unitLabels.forEach(el => el.textContent = 'in');
+      underbustInput.placeholder = 'e.g. 32';
+      overbustInput.placeholder = 'e.g. 35';
+    } else {
+      unitCmBtn.classList.add('bg-canvas', 'shadow-sm', 'text-ink');
+      unitCmBtn.classList.remove('text-mute', 'hover:text-ink');
+      unitInBtn.classList.remove('bg-canvas', 'shadow-sm', 'text-ink');
+      unitInBtn.classList.add('text-mute', 'hover:text-ink');
+      unitLabels.forEach(el => el.textContent = 'cm');
+      underbustInput.placeholder = 'e.g. 80';
+      overbustInput.placeholder = 'e.g. 90';
+    }
+    calculateSize();
+  };
+
+  unitInBtn?.addEventListener('click', () => setUnit('in'));
+  unitCmBtn?.addEventListener('click', () => setUnit('cm'));
+
+  // Calculate Logic
+  const cups = ['AA', 'A', 'B', 'C', 'D', 'DD', 'DDD', 'G', 'H', 'I', 'J'];
+  
+  const calculateSize = () => {
+    if (!underbustInput.value || !overbustInput.value) {
+      resultArea?.classList.add('hidden');
+      return;
+    }
+
+    let u = parseFloat(underbustInput.value);
+    let o = parseFloat(overbustInput.value);
+
+    // Convert cm to inches for standard calculation logic
+    if (currentUnit === 'cm') {
+      u = u / 2.54;
+      o = o / 2.54;
+    }
+
+    // Modern sizing logic:
+    // Band: round to nearest even number.
+    let band = Math.round(u);
+    if (band % 2 !== 0) band += 1;
+
+    let diff = Math.round(o - band);
+    
+    if (diff < 0) diff = 0;
+    if (diff >= cups.length) diff = cups.length - 1;
+
+    const cup = cups[diff];
+    const size = `${band}${cup}`;
+
+    // Sister Sizes
+    const tightBand = band - 2;
+    const tightCupIndex = diff + 1 < cups.length ? diff + 1 : diff;
+    const tightSize = `${tightBand}${cups[tightCupIndex]}`;
+
+    const looseBand = band + 2;
+    const looseCupIndex = diff - 1 >= 0 ? diff - 1 : 0;
+    const looseSize = `${looseBand}${cups[looseCupIndex]}`;
+
+    if (mainSizeEl) mainSizeEl.textContent = size;
+    if (sisterTightEl) sisterTightEl.textContent = tightSize;
+    if (sisterLooseEl) sisterLooseEl.textContent = looseSize;
+
+    resultArea?.classList.remove('hidden');
+  };
+
+  underbustInput?.addEventListener('input', calculateSize);
+  overbustInput?.addEventListener('input', calculateSize);
+</script>

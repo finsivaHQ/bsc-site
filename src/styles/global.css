@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 @theme {
+  --font-sans: "Geist", "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+}
+
+:root {
   --color-primary: #171717;
   --color-on-primary: #ffffff;
   --color-ink: #171717;
@@ -12,9 +17,34 @@
   --color-canvas-soft: #fafafa;
   --color-canvas-soft-2: #f5f5f5;
   --color-link: #0070f3;
+}
 
-  --font-sans: "Geist", "Inter", system-ui, -apple-system, sans-serif;
-  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+.dark {
+  --color-primary: #ffffff;
+  --color-on-primary: #000000;
+  --color-ink: #ededed;
+  --color-body: #a1a1a1;
+  --color-mute: #888888;
+  --color-hairline: #333333;
+  --color-hairline-strong: #444444;
+  --color-canvas: #000000;
+  --color-canvas-soft: #0a0a0a;
+  --color-canvas-soft-2: #111111;
+  --color-link: #3291ff;
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-on-primary: var(--color-on-primary);
+  --color-ink: var(--color-ink);
+  --color-body: var(--color-body);
+  --color-mute: var(--color-mute);
+  --color-hairline: var(--color-hairline);
+  --color-hairline-strong: var(--color-hairline-strong);
+  --color-canvas: var(--color-canvas);
+  --color-canvas-soft: var(--color-canvas-soft);
+  --color-canvas-soft-2: var(--color-canvas-soft-2);
+  --color-link: var(--color-link);
 }
 
 @layer base {

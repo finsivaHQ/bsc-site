@@ -6,18 +6,18 @@ import Footer from '../components/Footer.astro';
 
 <Layout title="Contact Us | Bra Size Calculator">
   <Header />
-  <main class="flex-1 w-full max-w-3xl mx-auto px-6 py-12 md:py-16">
+  <main class="flex-1 w-full max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
     <div class="mb-8">
       <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
         Get in Touch
       </span>
-      <h1 class="text-3xl md:text-4xl font-bold text-ink mb-4">Contact Us</h1>
-      <p class="text-body text-base leading-relaxed">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-ink mb-4">Contact Us</h1>
+      <p class="text-body text-sm sm:text-base leading-relaxed">
         Have a question or feedback? We'd love to hear from you. Please fill out the form below or email us directly at <a href="mailto:ornacasa11@gmail.com" class="text-primary font-medium hover:underline">ornacasa11@gmail.com</a>.
       </p>
     </div>
 
-    <div class="bg-surface p-8 rounded-2xl border border-hairline shadow-xs">
+    <div class="bg-surface p-4 sm:p-8 rounded-2xl border border-hairline shadow-xs">
       <div data-fs-success class="hidden mb-6 p-4 bg-canvas-soft-2 text-primary rounded-xl font-medium border border-hairline">
         Thanks for reaching out! We'll get back to you shortly.
       </div>
@@ -34,7 +34,7 @@ import Footer from '../components/Footer.astro';
             name="email" 
             data-fs-field
             required 
-            class="w-full px-4 py-3 bg-surface border border-hairline rounded-xl focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 text-ink placeholder:text-mute/60 transition-all duration-200"
+            class="w-full h-12 px-4 py-3 bg-surface border border-hairline rounded-xl focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 text-ink placeholder:text-mute/60 text-base transition-all duration-200"
             placeholder="you@example.com"
           />
           <span data-fs-error="email" class="text-primary text-sm mt-1 block"></span>
@@ -48,7 +48,7 @@ import Footer from '../components/Footer.astro';
             rows="5"
             data-fs-field
             required 
-            class="w-full px-4 py-3 bg-surface border border-hairline rounded-xl focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 text-ink placeholder:text-mute/60 transition-all duration-200"
+            class="w-full px-4 py-3 bg-surface border border-hairline rounded-xl focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 text-ink placeholder:text-mute/60 text-base transition-all duration-200"
             placeholder="How can we help?"
           ></textarea>
           <span data-fs-error="message" class="text-primary text-sm mt-1 block"></span>
@@ -57,7 +57,7 @@ import Footer from '../components/Footer.astro';
         <button 
           type="submit" 
           data-fs-submit-btn
-          class="w-full sm:w-auto px-8 py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primary-hover transition-colors shadow-xs focus:outline-none focus:ring-2 focus:ring-accent"
+          class="w-full sm:w-auto h-12 px-8 bg-primary text-white font-semibold rounded-xl hover:bg-primary-hover transition-colors shadow-xs focus:outline-none focus:ring-2 focus:ring-accent cursor-pointer"
         >
           Send Message
         </button>

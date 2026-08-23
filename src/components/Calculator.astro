@@ -1,38 +1,38 @@
 ---
 ---
-<section id="calculator" class="py-12 md:py-20 px-6 lg:px-8 max-w-4xl mx-auto w-full">
+<section id="calculator" class="py-8 sm:py-12 md:py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full">
   <!-- Hero / Header inside calculator area -->
-  <div class="text-center mb-12">
+  <div class="text-center mb-8 md:mb-12">
     <span class="inline-block py-1.5 px-4 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-4">
       Sizing Guide
     </span>
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-ink tracking-tight mb-4">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-ink tracking-tight mb-4">
       Find Your Perfect Fit.
     </h1>
-    <p class="text-base md:text-lg text-body max-w-2xl mx-auto leading-relaxed">
+    <p class="text-sm sm:text-base md:text-lg text-body max-w-2xl mx-auto leading-relaxed">
       Enter your measurements below. Our calculator instantly determines your size across international standards.
     </p>
   </div>
 
   <!-- Calculator Focal Card -->
-  <div class="bg-surface border border-hairline rounded-2xl shadow-sm p-6 md:p-10 mb-12 transition-colors duration-300">
+  <div class="bg-surface border border-hairline rounded-2xl shadow-sm p-4 sm:p-6 md:p-10 mb-8 md:mb-12 transition-colors duration-300">
     <form id="calculator-form" action="#" onsubmit="event.preventDefault();">
       <!-- Header & Unit Toggle -->
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-hairline">
-        <h2 class="text-2xl font-bold text-ink">Measurements</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink">Measurements</h2>
         <div class="flex bg-canvas-soft-2 rounded-xl p-1 border border-hairline w-full sm:w-auto">
-          <button type="button" id="unit-in" class="unit-btn active flex-1 sm:flex-none px-4 py-2 text-sm font-semibold rounded-lg bg-primary text-on-primary shadow-xs transition-all duration-200 cursor-pointer">
+          <button type="button" id="unit-in" class="unit-btn active flex-1 sm:flex-none h-11 px-4 py-2.5 text-sm font-semibold rounded-lg bg-primary text-on-primary shadow-xs transition-all duration-200 cursor-pointer">
             Inches (in)
           </button>
-          <button type="button" id="unit-cm" class="unit-btn flex-1 sm:flex-none px-4 py-2 text-sm font-semibold rounded-lg text-body hover:text-ink transition-all duration-200 cursor-pointer">
+          <button type="button" id="unit-cm" class="unit-btn flex-1 sm:flex-none h-11 px-4 py-2.5 text-sm font-semibold rounded-lg text-body hover:text-ink transition-all duration-200 cursor-pointer">
             Centimeters (cm)
           </button>
         </div>
       </div>
 
       <!-- Privacy Trust Badge -->
-      <div class="flex items-center gap-2 mb-6 bg-canvas-soft-2/80 border border-hairline py-2 px-3.5 rounded-xl w-fit text-xs text-body">
-        <span class="text-sm">🔒</span>
+      <div class="flex items-center gap-2 mb-6 bg-canvas-soft-2/80 border border-hairline py-2 px-3.5 rounded-xl w-full sm:w-fit text-xs text-body leading-snug">
+        <span class="text-sm flex-shrink-0">🔒</span>
         <span><strong class="text-ink font-semibold">Your measurements stay private.</strong> Calculated locally in your browser and never stored.</span>
       </div>
 
@@ -47,7 +47,7 @@
       </div>
 
       <!-- Inputs -->
-      <div class="grid md:grid-cols-2 gap-8 mb-8">
+      <div class="grid md:grid-cols-2 gap-6 sm:gap-8 mb-8">
         <div>
           <label for="overbust" class="block text-sm font-semibold text-ink mb-1.5">
             1. Bust Size
@@ -93,33 +93,33 @@
     </form>
 
     <!-- Dynamic Result Area -->
-    <div id="result-area" class="hidden bg-canvas-soft-2 border border-hairline rounded-xl p-6 md:p-8 transition-all duration-300">
+    <div id="result-area" class="hidden bg-canvas-soft-2 border border-hairline rounded-xl p-4 sm:p-6 md:p-8 transition-all duration-300">
       <div class="text-center mb-8">
         <p class="text-xs text-primary font-bold uppercase tracking-widest mb-2">Your Recommended Size (US/CA)</p>
-        <div id="main-size" class="text-5xl md:text-6xl lg:text-7xl font-bold text-ink tracking-tight mb-2">34C</div>
+        <div id="main-size" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-ink tracking-tight mb-2">34C</div>
         <p class="text-xs text-body">Based on standard sizing metrics</p>
       </div>
 
       <!-- Sister Sizes -->
-      <div class="grid grid-cols-2 gap-4 mb-8 text-left">
-        <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-xs">
+      <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-8 text-left">
+        <div class="bg-surface border border-hairline rounded-xl p-3.5 sm:p-4 text-center shadow-xs">
           <p class="text-xs text-mute uppercase font-medium mb-1">Tighter Band</p>
           <div class="flex items-end justify-center gap-2">
-            <span id="sister-tight" class="text-2xl font-bold text-ink">32D</span>
+            <span id="sister-tight" class="text-xl sm:text-2xl font-bold text-ink">32D</span>
           </div>
         </div>
-        <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-xs">
+        <div class="bg-surface border border-hairline rounded-xl p-3.5 sm:p-4 text-center shadow-xs">
           <p class="text-xs text-mute uppercase font-medium mb-1">Looser Band</p>
           <div class="flex items-end justify-center gap-2">
-            <span id="sister-loose" class="text-2xl font-bold text-ink">36B</span>
+            <span id="sister-loose" class="text-xl sm:text-2xl font-bold text-ink">36B</span>
           </div>
         </div>
       </div>
 
       <!-- International Sizes Table -->
       <h3 class="text-base font-bold text-ink mb-4 border-b border-hairline pb-2">International Sizes</h3>
-      <div class="overflow-x-auto">
-        <table class="w-full text-left border-collapse text-sm text-body">
+      <div class="overflow-x-auto -mx-2 px-2">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm text-body min-w-[280px]">
           <thead>
             <tr class="border-b border-hairline text-ink">
               <th class="py-2.5 font-semibold">Location</th>
@@ -139,12 +139,12 @@
   </div>
 
   <!-- Bra Size Converter Chart Card -->
-  <div class="bg-surface border border-hairline rounded-2xl shadow-sm p-6 md:p-10 transition-colors duration-300">
-    <h2 class="text-2xl font-bold text-ink mb-6 border-b border-hairline pb-4">Bra Size Converter Chart</h2>
+  <div class="bg-surface border border-hairline rounded-2xl shadow-sm p-4 sm:p-6 md:p-10 transition-colors duration-300">
+    <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6 border-b border-hairline pb-4">Bra Size Converter Chart</h2>
     
-    <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-3">Band Conversion Matrix</h3>
-    <div class="overflow-x-auto mb-8">
-      <table class="w-full text-left text-sm text-body min-w-[600px] border-collapse">
+    <h3 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider mb-3">Band Conversion Matrix</h3>
+    <div class="overflow-x-auto mb-8 -mx-2 px-2">
+      <table class="w-full text-left text-xs sm:text-sm text-body min-w-[500px] border-collapse">
         <thead>
           <tr class="bg-canvas-soft-2 text-ink border-b border-hairline">
             <th class="py-3 px-3 font-semibold rounded-tl-lg">US/CA</th>
@@ -166,9 +166,9 @@
       </table>
     </div>
 
-    <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-3">Cup Size Matrix</h3>
-    <div class="overflow-x-auto">
-      <table class="w-full text-left text-sm text-body min-w-[600px] border-collapse">
+    <h3 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider mb-3">Cup Size Matrix</h3>
+    <div class="overflow-x-auto -mx-2 px-2">
+      <table class="w-full text-left text-xs sm:text-sm text-body min-w-[500px] border-collapse">
         <thead>
           <tr class="bg-canvas-soft-2 text-ink border-b border-hairline">
             <th class="py-3 px-3 font-semibold rounded-tl-lg">US/CA</th>

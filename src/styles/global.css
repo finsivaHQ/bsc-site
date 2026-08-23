@@ -9,11 +9,11 @@
   /* Elegant Light Mode (Warm/Rose Tinted) */
   --color-primary: #835265;
   --color-on-primary: #ffffff;
-  --color-ink: #2b2326;
-  --color-body: #594d52;
-  --color-mute: #8e8086;
-  --color-hairline: #eaddd8;
-  --color-hairline-strong: #c2ada4;
+  --color-ink: #171717;
+  --color-body: #404040;
+  --color-mute: #737373;
+  --color-hairline: #e5e5e5;
+  --color-hairline-strong: #a3a3a3;
   --color-canvas: #ffffff;
   --color-canvas-soft: #fbf9f8;
   --color-canvas-soft-2: #f2ece9;
@@ -26,11 +26,11 @@
   /* Elegant Dark Mode (Deep Charcoal/Rose Gold hints) */
   --color-primary: #e6a7c1;
   --color-on-primary: #29151e;
-  --color-ink: #f0e6e9;
-  --color-body: #b8a9af;
-  --color-mute: #8e8086;
-  --color-hairline: #3b2d33;
-  --color-hairline-strong: #54444b;
+  --color-ink: #ffffff;
+  --color-body: #d4d4d4;
+  --color-mute: #a3a3a3;
+  --color-hairline: #262626;
+  --color-hairline-strong: #404040;
   --color-canvas: #120e10;
   --color-canvas-soft: #1a1517;
   --color-canvas-soft-2: #241c1f;
@@ -61,5 +61,15 @@
   }
   h1, h2, h3, h4, h5, h6 {
     @apply text-ink font-semibold tracking-tighter;
+  }
+  
+  /* Hide number input arrows to prevent overlapping with units */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
   }
 }

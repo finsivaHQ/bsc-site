@@ -18,18 +18,18 @@
 
     <div class="grid md:grid-cols-2 gap-8 mb-8">
       <div>
-        <label for="underbust" class="block text-body-sm-strong mb-2">1. Underbust</label>
-        <p class="text-caption text-mute mb-3">Measure snugly right under your breasts.</p>
+        <label for="overbust" class="block text-body-sm-strong mb-2">1. Bust Size</label>
+        <p class="text-caption text-mute mb-3">Measure loosely around the fullest part.</p>
         <div class="relative">
-          <input type="number" id="underbust" placeholder="e.g. 32" class="w-full bg-canvas border border-hairline rounded-sm h-12 px-4 text-body-md focus:outline-none focus:border-ink transition-colors" />
+          <input type="number" id="overbust" placeholder="e.g. 35" class="w-full bg-canvas border border-hairline rounded-sm h-12 px-4 text-body-md focus:outline-none focus:border-ink transition-colors" />
           <span class="absolute right-4 top-1/2 -translate-y-1/2 text-mute text-sm unit-label">in</span>
         </div>
       </div>
       <div>
-        <label for="overbust" class="block text-body-sm-strong mb-2">2. Overbust</label>
-        <p class="text-caption text-mute mb-3">Measure loosely around the fullest part.</p>
+        <label for="underbust" class="block text-body-sm-strong mb-2">2. Band Size</label>
+        <p class="text-caption text-mute mb-3">Measure snugly right under your breasts.</p>
         <div class="relative">
-          <input type="number" id="overbust" placeholder="e.g. 35" class="w-full bg-canvas border border-hairline rounded-sm h-12 px-4 text-body-md focus:outline-none focus:border-ink transition-colors" />
+          <input type="number" id="underbust" placeholder="e.g. 32" class="w-full bg-canvas border border-hairline rounded-sm h-12 px-4 text-body-md focus:outline-none focus:border-ink transition-colors" />
           <span class="absolute right-4 top-1/2 -translate-y-1/2 text-mute text-sm unit-label">in</span>
         </div>
       </div>
@@ -200,6 +200,11 @@
 
     let u_in = parseFloat(underbustInput.value);
     let o_in = parseFloat(overbustInput.value);
+
+    if (isNaN(u_in) || isNaN(o_in)) {
+      resultArea?.classList.add('hidden');
+      return;
+    }
 
     // Normalize to inches for standard US/UK math
     if (currentUnit === 'cm') {

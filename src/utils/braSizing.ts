@@ -20,9 +20,48 @@ export interface BraSizeResult {
   internationalSizes: InternationalSize[];
 }
 
+export interface BandRow {
+  us: number;
+  uk: number;
+  eu: number;
+  fr: number;
+  au: number;
+  jp: number;
+}
+
+export interface CupRow {
+  us: string;
+  uk: string;
+  eu: string;
+  au: string;
+  jp: string;
+}
+
 export const US_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'DDD', 'G', 'H', 'I', 'J', 'K', 'L'];
 export const UK_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H', 'HH', 'J'];
 export const EU_CUPS = ['AA', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
+
+export const BAND_CONVERSION_MATRIX: BandRow[] = [
+  { us: 30, uk: 30, eu: 65, fr: 80, au: 8, jp: 65 },
+  { us: 32, uk: 32, eu: 70, fr: 85, au: 10, jp: 70 },
+  { us: 34, uk: 34, eu: 75, fr: 90, au: 12, jp: 75 },
+  { us: 36, uk: 36, eu: 80, fr: 95, au: 14, jp: 80 },
+  { us: 38, uk: 38, eu: 85, fr: 100, au: 16, jp: 85 },
+  { us: 40, uk: 40, eu: 90, fr: 105, au: 18, jp: 90 },
+];
+
+export const CUP_CONVERSION_MATRIX: CupRow[] = [
+  { us: 'A', uk: 'A', eu: 'A', au: 'A', jp: 'A' },
+  { us: 'B', uk: 'B', eu: 'B', au: 'B', jp: 'B' },
+  { us: 'C', uk: 'C', eu: 'C', au: 'C', jp: 'C' },
+  { us: 'D', uk: 'D', eu: 'D', au: 'D', jp: 'D' },
+  { us: 'DD / E', uk: 'DD', eu: 'E', au: 'DD', jp: 'E' },
+  { us: 'DDD / F', uk: 'E', eu: 'F', au: 'E', jp: 'F' },
+  { us: 'G', uk: 'F', eu: 'G', au: 'F', jp: 'G' },
+  { us: 'H', uk: 'FF', eu: 'H', au: 'FF', jp: 'H' },
+  { us: 'I', uk: 'G', eu: 'I', au: 'G', jp: 'I' },
+  { us: 'J', uk: 'GG', eu: 'J', au: 'GG', jp: 'J' },
+];
 
 /**
  * Calculates bra size recommendations based on bust and underbust measurements.

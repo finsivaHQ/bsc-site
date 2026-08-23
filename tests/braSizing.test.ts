@@ -1,7 +1,7 @@
 import assert from 'node:assert';
-import { calculateBraSize } from '../src/utils/braSizing.js';
+import { calculateBraSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../src/utils/braSizing.js';
 
-console.log('🧪 Running Bra Sizing Methodology Test Suite...\n');
+console.log('🧪 Running Bra Sizing Methodology & Conversion Test Suite...\n');
 
 let passedTests = 0;
 let totalTests = 0;
@@ -88,14 +88,35 @@ runTest('All International Conversions for 34" / 37" (34C)', () => {
   assert.strictEqual(us?.cup, 'C');
   assert.strictEqual(uk?.band, '34');
   assert.strictEqual(uk?.cup, 'C');
-  assert.strictEqual(eu?.band, '85 cm'); // 34" * 2.54 = 86.36 cm -> rounded to 85 cm
-  assert.strictEqual(fr?.band, '100 cm'); // 85 + 15 = 100 cm
-  assert.strictEqual(au?.band, '12'); // 34 - 22 = 12
+  assert.strictEqual(eu?.band, '85 cm');
+  assert.strictEqual(fr?.band, '100 cm');
+  assert.strictEqual(au?.band, '12');
   assert.strictEqual(jp?.band, '85');
   assert.strictEqual(jp?.cup, 'AA');
 });
 
-// 7. Invalid & Boundary Measurements
+// 7. Conversion Matrix Integrity & Bi-directional Lookup
+runTest('Conversion Matrix Consistency (BAND & CUP matrices)', () => {
+  assert.strictEqual(BAND_CONVERSION_MATRIX.length, 6);
+  assert.strictEqual(CUP_CONVERSION_MATRIX.length, 10);
+
+  // Check 34 band row
+  const row34 = BAND_CONVERSION_MATRIX.find(r => r.us === 34);
+  assert.strictEqual(row34?.uk, 34);
+  assert.strictEqual(row34?.eu, 75);
+  assert.strictEqual(row34?.fr, 90);
+  assert.strictEqual(row34?.au, 12);
+  assert.strictEqual(row34?.jp, 75);
+
+  // Check DD cup row
+  const rowDD = CUP_CONVERSION_MATRIX.find(r => r.uk === 'DD');
+  assert.strictEqual(rowDD?.us, 'DD / E');
+  assert.strictEqual(rowDD?.eu, 'E');
+  assert.strictEqual(rowDD?.au, 'DD');
+  assert.strictEqual(rowDD?.jp, 'E');
+});
+
+// 8. Invalid & Boundary Measurements
 runTest('Invalid Measurements (Zero, Negative, or Bust < Underbust)', () => {
   assert.strictEqual(calculateBraSize({ underbust: 0, overbust: 34, unit: 'in' }), null);
   assert.strictEqual(calculateBraSize({ underbust: 34, overbust: -5, unit: 'in' }), null);

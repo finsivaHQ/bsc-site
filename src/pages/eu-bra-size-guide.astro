@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { BAND_CONVERSION_MATRIX } from '../utils/braSizing';
+---
+
+<Layout 
+  title="EU Bra Size Guide — EN 13402 European Sizing & Conversion | BraSizeChecker"
+  description="Complete European (EU) bra size guide. Learn how EN 13402 metric band sizing works (65, 70, 75, 80), 2 cm cup intervals, and convert EU sizes to US, UK, and FR."
+  canonical="https://brasizechecker.com/eu-bra-size-guide"
+>
+  <Header />
+  <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+    <Breadcrumbs items={[{ label: 'EU Bra Size Guide' }]} />
+
+    <!-- Page Header / Intro -->
+    <header class="mb-10 text-center sm:text-left">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+        Regional Sizing Guide
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+        European (EU) Bra Size Guide & EN 13402 Standard
+      </h1>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
+        European bra sizing follows the metric <strong>EN 13402 standard</strong> across Germany, Netherlands, Poland, Scandinavia, and Central Europe. Learn how metric band rounding and 2 cm cup steps function.
+      </p>
+    </header>
+
+    <!-- Content Sections -->
+    <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <!-- Section 1: How EU Sizing Works -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">How European (EU) Bra Sizing Works</h2>
+        <p class="mb-4">
+          Unlike US and UK sizing which use imperial inches, European sizing is calculated entirely in centimeters:
+        </p>
+        
+        <div class="space-y-4 mb-6">
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">1. EU Metric Band Sizes (EN 13402)</h3>
+            <p class="text-xs sm:text-sm text-body">EU band sizes are underbust measurements rounded to the nearest multiple of 5 cm (e.g. 73 cm underbust &rarr; 75 EU band). Standard band steps are 65, 70, 75, 80, 85, 90.</p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">2. EU Cup Progressions (2 cm Increments)</h3>
+            <p class="text-xs sm:text-sm text-body">EU cups increase in 2 cm step increments rather than 1-inch (2.54 cm) steps: A (12–14 cm), B (14–16 cm), C (16–18 cm), D (18–20 cm), E (20–22 cm), F (22–24 cm), G (24–26 cm).</p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">3. French (FR / BE / ES) +15 cm Offset</h3>
+            <p class="text-xs sm:text-sm text-body">French, Belgian, and Spanish brands use the exact same cup letters as EU sizing but add 15 cm to the band number (e.g., 75 EU = 90 FR, 80 EU = 95 FR).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: EU Band Conversion Table -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">EU Band Conversion Table</h2>
+        <p class="mb-4">
+          Compare EU centimeter band numbers directly against US/UK inch bands and French (FR) band labels:
+        </p>
+
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[440px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">EU Band (cm)</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">FR / BE / ES (cm)</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">US / UK (inches)</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">AU / NZ Dress Size</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              {BAND_CONVERSION_MATRIX.map(row => (
+                <tr>
+                  <td class="py-2 px-3 font-semibold text-primary">{row.eu} cm</td>
+                  <td class="py-2 px-3 font-semibold text-ink">{row.fr} cm</td>
+                  <td class="py-2 px-3 font-semibold text-ink">{row.us} in</td>
+                  <td class="py-2 px-3 font-semibold text-ink">Size {row.au}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: Converting Your EU Size -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Converting EU Sizes to US & UK</h2>
+        <p class="mb-4">
+          Use our interactive size tools to compute equivalent EU bra sizes instantly:
+        </p>
+        
+        <div class="flex flex-wrap gap-3">
+          <a href="/bra-size-converter" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
+            Open Interactive Converter &rarr;
+          </a>
+          <a href="/bra-size-chart" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Full Size Chart &rarr;
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 4: Measuring for EU Bras -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">How to Measure for European (EU) Bras</h2>
+        <ol class="list-decimal pl-5 space-y-2 text-xs sm:text-sm mb-6">
+          <li>Measure underbust in centimeters. Round to nearest multiple of 5 for your EU band size.</li>
+          <li>Measure full bust in centimeters.</li>
+          <li>Calculate difference: Difference (&Delta;) = Bust (cm) - Underbust (cm). Match difference to EU cup letter (A: 12-14 cm, B: 14-16 cm, C: 16-18 cm, D: 18-20 cm, E: 20-22 cm).</li>
+        </ol>
+
+        <a href="/how-to-measure" class="text-primary font-semibold hover:underline text-xs sm:text-sm">Read full illustrated measurement guide &rarr;</a>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>

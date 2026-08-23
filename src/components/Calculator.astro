@@ -249,7 +249,7 @@
         <!-- Educational Callout Box -->
         <div class="mt-4 p-4 bg-surface/70 border border-hairline rounded-xl text-xs text-body leading-relaxed">
           <strong class="text-ink font-semibold block mb-1">What are sister sizes?</strong>
-          Sister sizes share the exact same cup volume capacity. If a <strong>34C</strong> feels too tight around your ribcage, moving to a <strong>36B</strong> gives you a looser band while keeping the same cup cup volume. Conversely, if <strong>34C</strong> feels too loose, moving to a <strong>32D</strong> tightens the band while maintaining cup volume.
+          Sister sizes share the exact same cup volume capacity. If a <strong>34C</strong> feels too tight around your ribcage, moving to a <strong>36B</strong> gives you a looser band while keeping the same cup volume. Conversely, if <strong>34C</strong> feels too loose, moving to a <strong>32D</strong> tightens the band while maintaining cup volume.
         </div>
       </div>
 
@@ -260,9 +260,9 @@
           <table class="w-full text-left border-collapse text-xs sm:text-sm text-body min-w-[280px]">
             <thead>
               <tr class="border-b border-hairline text-ink bg-surface/50">
-                <th class="py-2.5 px-3 font-semibold rounded-l-lg">Location</th>
-                <th class="py-2.5 px-3 font-semibold">Band</th>
-                <th class="py-2.5 px-3 font-semibold rounded-r-lg">Cup</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold rounded-l-lg">Location</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Band</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold rounded-r-lg">Cup</th>
               </tr>
             </thead>
             <tbody id="intl-table-body" class="divide-y divide-hairline">
@@ -280,67 +280,84 @@
   </div>
 
   <!-- Bra Size Converter Chart Card -->
-  <div class="bg-surface border border-hairline rounded-2xl shadow-sm p-4 sm:p-6 md:p-10 transition-colors duration-300">
-    <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6 border-b border-hairline pb-4">Bra Size Converter Chart</h2>
+  <div id="chart-section" class="bg-surface border border-hairline rounded-2xl shadow-sm p-4 sm:p-6 md:p-10 transition-colors duration-300">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-4 border-b border-hairline">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink">Bra Size Converter Chart — US, UK, EU & International Sizes</h2>
+        <p class="text-xs sm:text-sm text-body mt-1">Bra sizing systems vary by country. Use this chart to compare common size labels across verified regions.</p>
+      </div>
+
+      <!-- Realtime Search Box -->
+      <div class="w-full md:w-64 flex-shrink-0">
+        <label for="matrix-search" class="sr-only">Search size</label>
+        <div class="relative">
+          <input 
+            type="text" 
+            id="matrix-search" 
+            placeholder="Search size (e.g. 34, DD, 75)..." 
+            class="w-full h-10 px-3.5 pl-9 bg-canvas border border-hairline rounded-xl text-xs text-ink placeholder:text-mute/60 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200" 
+          />
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-mute absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+      </div>
+    </div>
     
-    <h3 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider mb-3">Band Conversion Matrix</h3>
-    <div class="overflow-x-auto mb-8 -mx-2 px-2">
-      <table class="w-full text-left text-xs sm:text-sm text-body min-w-[500px] border-collapse">
-        <thead>
-          <tr class="bg-canvas-soft-2 text-ink border-b border-hairline">
-            <th class="py-3 px-3 font-semibold rounded-tl-lg">US/CA</th>
-            <th class="py-3 px-3 font-semibold">UK</th>
-            <th class="py-3 px-3 font-semibold">EU</th>
-            <th class="py-3 px-3 font-semibold">FR/BE/ES</th>
-            <th class="py-3 px-3 font-semibold">AU/NZ</th>
-            <th class="py-3 px-3 font-semibold rounded-tr-lg">JP</th>
+    <!-- Band Conversion Matrix Table -->
+    <h3 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider mb-3 flex items-center justify-between">
+      <span>Band Conversion Matrix</span>
+      <span class="text-[11px] text-mute font-normal">US / UK / EU / FR / AU / JP</span>
+    </h3>
+    <div class="overflow-x-auto mb-8 -mx-2 px-2 max-h-[360px]">
+      <table class="w-full text-left text-xs sm:text-sm text-body min-w-[500px] border-collapse relative">
+        <thead class="sticky top-0 bg-canvas-soft-2 text-ink shadow-2xs z-10">
+          <tr class="border-b border-hairline">
+            <th scope="col" class="py-3 px-3 font-semibold rounded-tl-lg">US / CA</th>
+            <th scope="col" class="py-3 px-3 font-semibold">UK</th>
+            <th scope="col" class="py-3 px-3 font-semibold">EU</th>
+            <th scope="col" class="py-3 px-3 font-semibold">FR / BE / ES</th>
+            <th scope="col" class="py-3 px-3 font-semibold">AU / NZ</th>
+            <th scope="col" class="py-3 px-3 font-semibold rounded-tr-lg">JP</th>
           </tr>
         </thead>
-        <tbody class="divide-y divide-hairline">
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">30</td><td class="py-2.5 px-3">30</td><td class="py-2.5 px-3">65</td><td class="py-2.5 px-3">80</td><td class="py-2.5 px-3">8</td><td class="py-2.5 px-3">65</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">32</td><td class="py-2.5 px-3">32</td><td class="py-2.5 px-3">70</td><td class="py-2.5 px-3">85</td><td class="py-2.5 px-3">10</td><td class="py-2.5 px-3">70</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">34</td><td class="py-2.5 px-3">34</td><td class="py-2.5 px-3">75</td><td class="py-2.5 px-3">90</td><td class="py-2.5 px-3">12</td><td class="py-2.5 px-3">75</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">36</td><td class="py-2.5 px-3">36</td><td class="py-2.5 px-3">80</td><td class="py-2.5 px-3">95</td><td class="py-2.5 px-3">14</td><td class="py-2.5 px-3">80</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">38</td><td class="py-2.5 px-3">38</td><td class="py-2.5 px-3">85</td><td class="py-2.5 px-3">100</td><td class="py-2.5 px-3">16</td><td class="py-2.5 px-3">85</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">40</td><td class="py-2.5 px-3">40</td><td class="py-2.5 px-3">90</td><td class="py-2.5 px-3">105</td><td class="py-2.5 px-3">18</td><td class="py-2.5 px-3">90</td></tr>
+        <tbody id="band-matrix-body" class="divide-y divide-hairline bg-surface">
+          <!-- Rendered dynamically from BAND_CONVERSION_MATRIX -->
         </tbody>
       </table>
     </div>
 
-    <h3 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider mb-3">Cup Size Matrix</h3>
-    <div class="overflow-x-auto -mx-2 px-2">
-      <table class="w-full text-left text-xs sm:text-sm text-body min-w-[500px] border-collapse">
-        <thead>
-          <tr class="bg-canvas-soft-2 text-ink border-b border-hairline">
-            <th class="py-3 px-3 font-semibold rounded-tl-lg">US/CA</th>
-            <th class="py-3 px-3 font-semibold">UK</th>
-            <th class="py-3 px-3 font-semibold">EU</th>
-            <th class="py-3 px-3 font-semibold">AU/NZ</th>
-            <th class="py-3 px-3 font-semibold rounded-tr-lg">JP</th>
+    <!-- Cup Size Matrix Table -->
+    <h3 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider mb-3 flex items-center justify-between">
+      <span>Cup Size Matrix</span>
+      <span class="text-[11px] text-mute font-normal">US / UK / EU / AU / JP</span>
+    </h3>
+    <div class="overflow-x-auto -mx-2 px-2 max-h-[420px]">
+      <table class="w-full text-left text-xs sm:text-sm text-body min-w-[500px] border-collapse relative">
+        <thead class="sticky top-0 bg-canvas-soft-2 text-ink shadow-2xs z-10">
+          <tr class="border-b border-hairline">
+            <th scope="col" class="py-3 px-3 font-semibold rounded-tl-lg">US / CA</th>
+            <th scope="col" class="py-3 px-3 font-semibold">UK</th>
+            <th scope="col" class="py-3 px-3 font-semibold">EU</th>
+            <th scope="col" class="py-3 px-3 font-semibold">AU / NZ</th>
+            <th scope="col" class="py-3 px-3 font-semibold rounded-tr-lg">JP</th>
           </tr>
         </thead>
-        <tbody class="divide-y divide-hairline">
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">A</td><td class="py-2.5 px-3">A</td><td class="py-2.5 px-3">A</td><td class="py-2.5 px-3">A</td><td class="py-2.5 px-3">A</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">B</td><td class="py-2.5 px-3">B</td><td class="py-2.5 px-3">B</td><td class="py-2.5 px-3">B</td><td class="py-2.5 px-3">B</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">C</td><td class="py-2.5 px-3">C</td><td class="py-2.5 px-3">C</td><td class="py-2.5 px-3">C</td><td class="py-2.5 px-3">C</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">D</td><td class="py-2.5 px-3">D</td><td class="py-2.5 px-3">D</td><td class="py-2.5 px-3">D</td><td class="py-2.5 px-3">D</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">DD / E</td><td class="py-2.5 px-3">DD</td><td class="py-2.5 px-3">E</td><td class="py-2.5 px-3">DD</td><td class="py-2.5 px-3">E</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">DDD / F</td><td class="py-2.5 px-3">E</td><td class="py-2.5 px-3">F</td><td class="py-2.5 px-3">E</td><td class="py-2.5 px-3">F</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">G</td><td class="py-2.5 px-3">F</td><td class="py-2.5 px-3">G</td><td class="py-2.5 px-3">F</td><td class="py-2.5 px-3">G</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">H</td><td class="py-2.5 px-3">FF</td><td class="py-2.5 px-3">H</td><td class="py-2.5 px-3">FF</td><td class="py-2.5 px-3">H</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">I</td><td class="py-2.5 px-3">G</td><td class="py-2.5 px-3">I</td><td class="py-2.5 px-3">G</td><td class="py-2.5 px-3">I</td></tr>
-          <tr class="hover:bg-canvas-soft-2/50 transition-colors"><td class="py-2.5 px-3 font-semibold text-ink">J</td><td class="py-2.5 px-3">GG</td><td class="py-2.5 px-3">J</td><td class="py-2.5 px-3">GG</td><td class="py-2.5 px-3">J</td></tr>
+        <tbody id="cup-matrix-body" class="divide-y divide-hairline bg-surface">
+          <!-- Rendered dynamically from CUP_CONVERSION_MATRIX -->
         </tbody>
       </table>
     </div>
-    <p class="text-xs text-mute mt-4 leading-relaxed">
+
+    <p class="text-xs text-mute mt-4 leading-relaxed border-t border-hairline pt-3">
       * Bra sizing conventions vary between brands and regions. These conversions are intended as a general sizing reference.
     </p>
   </div>
 </section>
 
 <script>
-  import { validateAndCalculateBraSize } from '../utils/braSizing';
+  import { validateAndCalculateBraSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizing';
 
   // DOM Elements
   const form = document.getElementById('calculator-form') as HTMLFormElement;
@@ -362,8 +379,93 @@
   const copyBtn = document.getElementById('copy-size-btn');
   const copyTextEl = document.getElementById('copy-size-text');
   const recalculateBtn = document.getElementById('recalculate-btn');
+  
+  // Matrix DOM Elements
+  const bandMatrixBody = document.getElementById('band-matrix-body');
+  const cupMatrixBody = document.getElementById('cup-matrix-body');
+  const matrixSearchInput = document.getElementById('matrix-search') as HTMLInputElement;
 
   let currentUnit: 'in' | 'cm' = 'in';
+  let activeUserUsBand: number | null = null;
+  let activeUserUsCup: string | null = null;
+  let currentSearchQuery = '';
+
+  // Render Band Matrix Table
+  const renderBandMatrix = () => {
+    if (!bandMatrixBody) return;
+
+    bandMatrixBody.innerHTML = BAND_CONVERSION_MATRIX.map(row => {
+      const isMatch = activeUserUsBand === row.us;
+      const q = currentSearchQuery.toLowerCase();
+      const isFiltered = q && !(
+        String(row.us).includes(q) || 
+        String(row.uk).includes(q) || 
+        String(row.eu).includes(q) || 
+        String(row.fr).includes(q) || 
+        String(row.au).includes(q) || 
+        String(row.jp).includes(q)
+      );
+
+      if (isFiltered) return '';
+
+      return `
+        <tr class="transition-colors ${isMatch ? 'bg-canvas-soft-2 font-bold text-ink border-l-4 border-primary' : 'hover:bg-canvas-soft-2/50'}">
+          <th scope="row" class="py-2.5 px-3 font-semibold text-ink flex items-center gap-2">
+            <span>${row.us}</span>
+            ${isMatch ? '<span class="px-2 py-0.5 bg-primary text-white text-[10px] font-bold rounded-full uppercase">Your Band</span>' : ''}
+          </th>
+          <td class="py-2.5 px-3">${row.uk}</td>
+          <td class="py-2.5 px-3">${row.eu}</td>
+          <td class="py-2.5 px-3">${row.fr}</td>
+          <td class="py-2.5 px-3">${row.au}</td>
+          <td class="py-2.5 px-3">${row.jp}</td>
+        </tr>
+      `;
+    }).join('');
+  };
+
+  // Render Cup Matrix Table
+  const renderCupMatrix = () => {
+    if (!cupMatrixBody) return;
+
+    cupMatrixBody.innerHTML = CUP_CONVERSION_MATRIX.map(row => {
+      const isMatch = activeUserUsCup === row.us;
+      const q = currentSearchQuery.toLowerCase();
+      const isFiltered = q && !(
+        row.us.toLowerCase().includes(q) || 
+        row.uk.toLowerCase().includes(q) || 
+        row.eu.toLowerCase().includes(q) || 
+        row.au.toLowerCase().includes(q) || 
+        row.jp.toLowerCase().includes(q)
+      );
+
+      if (isFiltered) return '';
+
+      return `
+        <tr class="transition-colors ${isMatch ? 'bg-canvas-soft-2 font-bold text-ink border-l-4 border-primary' : 'hover:bg-canvas-soft-2/50'}">
+          <th scope="row" class="py-2.5 px-3 font-semibold text-ink flex items-center gap-2">
+            <span>${row.us}</span>
+            ${isMatch ? '<span class="px-2 py-0.5 bg-primary text-white text-[10px] font-bold rounded-full uppercase">Your Cup</span>' : ''}
+          </th>
+          <td class="py-2.5 px-3">${row.uk}</td>
+          <td class="py-2.5 px-3">${row.eu}</td>
+          <td class="py-2.5 px-3">${row.au}</td>
+          <td class="py-2.5 px-3">${row.jp}</td>
+        </tr>
+      `;
+    }).join('');
+  };
+
+  // Initial Matrix Render
+  renderBandMatrix();
+  renderCupMatrix();
+
+  // Search Filter Handler
+  matrixSearchInput?.addEventListener('input', (e) => {
+    currentSearchQuery = (e.target as HTMLInputElement).value.trim();
+    renderBandMatrix();
+    renderCupMatrix();
+  });
 
   const showError = (msg: string, field?: 'underbust' | 'overbust' | 'both') => {
     resultArea?.classList.add('hidden');
@@ -443,6 +545,10 @@
     if (!uRaw && !oRaw) {
       clearError();
       resultArea?.classList.add('hidden');
+      activeUserUsBand = null;
+      activeUserUsCup = null;
+      renderBandMatrix();
+      renderCupMatrix();
       return;
     }
 
@@ -467,11 +573,22 @@
 
     if (!validation.isValid || !validation.result) {
       showError(validation.error || 'Please enter valid measurements.', validation.fieldWithError);
+      activeUserUsBand = null;
+      activeUserUsCup = null;
+      renderBandMatrix();
+      renderCupMatrix();
       return;
     }
 
     clearError();
     const result = validation.result;
+
+    activeUserUsBand = result.usBand;
+    activeUserUsCup = result.usCup;
+
+    // Highlight conversion matrix rows matching calculated size
+    renderBandMatrix();
+    renderCupMatrix();
 
     // Split primary size into band and cup (e.g. "34C" -> band: "34", cup: "C")
     const match = result.primarySize.match(/^(\d+)(.*)$/);
@@ -480,8 +597,8 @@
 
     // Update DOM
     if (mainSizeEl) mainSizeEl.textContent = result.primarySize;
-    if (chipBandEl) chipBandEl.textContent = bandVal || String(result.bandUs);
-    if (chipCupEl) chipCupEl.textContent = cupVal || result.cupUs;
+    if (chipBandEl) chipBandEl.textContent = bandVal || String(result.usBand);
+    if (chipCupEl) chipCupEl.textContent = cupVal || result.usCup;
     if (sisterCurrentEl) sisterCurrentEl.textContent = result.primarySize;
     if (sisterTightEl) sisterTightEl.textContent = result.sisterTight;
     if (sisterLooseEl) sisterLooseEl.textContent = result.sisterLoose;
@@ -538,6 +655,10 @@
     overbustInput.value = '';
     clearError();
     resultArea?.classList.add('hidden');
+    activeUserUsBand = null;
+    activeUserUsCup = null;
+    renderBandMatrix();
+    renderCupMatrix();
     underbustInput.focus();
   });
 </script>

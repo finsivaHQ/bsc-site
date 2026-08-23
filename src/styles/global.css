@@ -3,44 +3,44 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans: "Inter", "Geist", system-ui, -apple-system, sans-serif;
-  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
 }
 
 :root {
-  /* Light Theme: Parisian Silk & Rich Bordeaux */
-  --color-canvas: #FAF6F0;
-  --color-canvas-soft: #FAF6F0;
-  --color-canvas-soft-2: #F6EDE8;
-  --color-surface: #FFFFFF;
-  --color-primary: #8C2D40;
-  --color-primary-hover: #702131;
+  /* Light Theme: Warm Ivory + Dusty Rose + Deep Plum */
+  --color-canvas: #FAF7F4;          /* Warm Ivory */
+  --color-canvas-soft: #FAF7F4;
+  --color-canvas-soft-2: #F4E6E8;    /* Very Soft Rose */
+  --color-surface: #FFFFFF;          /* Pure White */
+  --color-primary: #A95563;          /* Deep Rose (Primary Action) */
+  --color-primary-hover: #8C404E;    /* Darker Rose */
   --color-on-primary: #FFFFFF;
-  --color-accent: #D89B9E;
-  --color-ink: #22191C;
-  --color-body: #4A3F43;
-  --color-mute: #7E7075;
-  --color-hairline: #EADFD7;
-  --color-hairline-strong: #D8C8BF;
-  --color-link: #8C2D40;
+  --color-accent: #C9828C;           /* Dusty Rose (Primary Accent) */
+  --color-ink: #33252B;              /* Deep Plum (Headings & Primary Text) */
+  --color-body: #66585D;             /* Muted Brown (Body & Secondary Text) */
+  --color-mute: #7A6B70;             /* Muted Muted Brown */
+  --color-hairline: #E8DED9;         /* Soft Beige (Borders & Dividers) */
+  --color-hairline-strong: #D9CCC6;  /* Stronger Soft Beige */
+  --color-link: #A95563;
 }
 
 .dark {
-  /* Dark Theme: Noir Luxe Velvet & Rose Gold */
-  --color-canvas: #140E10;
-  --color-canvas-soft: #140E10;
-  --color-canvas-soft-2: #261B20;
-  --color-surface: #1E1519;
-  --color-primary: #E295A2;
-  --color-primary-hover: #F0B2BC;
+  /* Dark Theme: Noir Velvet & Rose Gold */
+  --color-canvas: #1B1317;
+  --color-canvas-soft: #1B1317;
+  --color-canvas-soft-2: #281B21;
+  --color-surface: #23171C;
+  --color-primary: #D9949F;
+  --color-primary-hover: #E6A8B2;
   --color-on-primary: #1C0A0F;
-  --color-accent: #E295A2;
-  --color-ink: #F7EFE9;
-  --color-body: #C8BABF;
-  --color-mute: #8C7B82;
-  --color-hairline: #33262A;
-  --color-hairline-strong: #4D3A40;
-  --color-link: #E295A2;
+  --color-accent: #D9949F;
+  --color-ink: #F9F3F5;
+  --color-body: #D0C2C7;
+  --color-mute: #998990;
+  --color-hairline: #3D2D34;
+  --color-hairline-strong: #543E48;
+  --color-link: #D9949F;
 }
 
 @theme {

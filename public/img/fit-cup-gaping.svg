@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" rx="16" fill="#FAF7F4" stroke="#E8DED9" stroke-width="2"/>
+  <circle cx="200" cy="110" r="85" fill="#C9828C" fill-opacity="0.12" filter="blur(16px)"/>
+  
+  <!-- Profile View Bust and Cup Gaping Space -->
+  <path d="M160 50 C160 90, 230 110, 160 170" stroke="#33252B" stroke-width="3" fill="none"/>
+  <!-- Rigid Outer Molded Cup with Gap -->
+  <path d="M160 60 C200 90, 250 110, 160 170" stroke="#A95563" stroke-width="4" stroke-dasharray="6 3" fill="none"/>
+  
+  <!-- Empty Gap Callout Indicator -->
+  <path d="M185 85 L220 70" stroke="#C0392B" stroke-width="2"/>
+  <rect x="210" y="55" width="100" height="22" rx="6" fill="#C0392B"/>
+  <text x="260" y="70" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">EMPTY GAP SPACE</text>
+
+  <rect x="110" y="195" width="180" height="26" rx="13" fill="#F4E6E8" stroke="#E8DED9" stroke-width="1.5"/>
+  <text x="200" y="212" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#33252B" text-anchor="middle">CUP VOLUME EXCEEDS BREAST TISSUE</text>
+</svg>

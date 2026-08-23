@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" rx="16" fill="#FAF7F4" stroke="#E8DED9" stroke-width="2"/>
+  <circle cx="200" cy="110" r="85" fill="#C9828C" fill-opacity="0.12" filter="blur(16px)"/>
+  
+  <!-- Profile View Quad-Boob Spillage Contour -->
+  <path d="M160 50 C190 70, 240 85, 210 110 C230 130, 220 150, 160 170" stroke="#33252B" stroke-width="3" fill="none"/>
+  <!-- Too Small Cup Boundary Line -->
+  <path d="M160 90 C180 110, 200 135, 160 170" stroke="#A95563" stroke-width="4" fill="none"/>
+  
+  <!-- Spillage Callout -->
+  <path d="M210 90 L245 75" stroke="#C0392B" stroke-width="2"/>
+  <rect x="235" y="60" width="120" height="22" rx="6" fill="#C0392B"/>
+  <text x="295" y="75" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">QUAD-BOOB OVERFLOW</text>
+
+  <rect x="110" y="195" width="180" height="26" rx="13" fill="#F4E6E8" stroke="#E8DED9" stroke-width="1.5"/>
+  <text x="200" y="212" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#33252B" text-anchor="middle">SMALL CUP FORCES TISSUE OVERFLOW</text>
+</svg>

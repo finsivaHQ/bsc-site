@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" rx="16" fill="#FAF7F4" stroke="#E8DED9" stroke-width="2"/>
+  
+  <!-- 3 Equal Volume Boxes -->
+  <!-- Box 1: 32D -->
+  <g transform="translate(30, 40)">
+    <rect x="0" y="0" width="100" height="110" rx="10" fill="#FFFFFF" stroke="#E8DED9" stroke-width="2"/>
+    <rect x="15" y="15" width="70" height="50" rx="6" fill="#C9828C" fill-opacity="0.3"/>
+    <text x="50" y="45" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#A95563" text-anchor="middle">590 cm³</text>
+    <text x="50" y="82" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="700" fill="#33252B" text-anchor="middle">32D</text>
+    <text x="50" y="98" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#A95563" text-anchor="middle">Smaller Band</text>
+  </g>
+
+  <!-- Box 2: 34C (Baseline) -->
+  <g transform="translate(150, 30)">
+    <rect x="0" y="0" width="100" height="130" rx="10" fill="#FFFFFF" stroke="#A95563" stroke-width="3"/>
+    <rect x="15" y="20" width="70" height="50" rx="6" fill="#A95563" fill-opacity="0.4"/>
+    <text x="50" y="50" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#33252B" text-anchor="middle">590 cm³</text>
+    <text x="50" y="92" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="700" fill="#33252B" text-anchor="middle">34C</text>
+    <text x="50" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#A95563" text-anchor="middle">BASELINE</text>
+  </g>
+
+  <!-- Box 3: 36B -->
+  <g transform="translate(270, 40)">
+    <rect x="0" y="0" width="100" height="110" rx="10" fill="#FFFFFF" stroke="#E8DED9" stroke-width="2"/>
+    <rect x="15" y="15" width="70" height="50" rx="6" fill="#C9828C" fill-opacity="0.3"/>
+    <text x="50" y="45" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#A95563" text-anchor="middle">590 cm³</text>
+    <text x="50" y="82" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="700" fill="#33252B" text-anchor="middle">36B</text>
+    <text x="50" y="98" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#A95563" text-anchor="middle">Larger Band</text>
+  </g>
+
+  <rect x="90" y="195" width="220" height="26" rx="13" fill="#F4E6E8" stroke="#E8DED9" stroke-width="1.5"/>
+  <text x="200" y="212" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#33252B" text-anchor="middle">EQUAL CUP VOLUME CAPACITY (SISTER SIZES)</text>
+</svg>

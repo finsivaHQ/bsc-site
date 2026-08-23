@@ -52,14 +52,14 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
           <!-- Visual SVG Diagram 1 -->
           <div class="w-full md:w-80 flex-shrink-0 bg-canvas border border-hairline rounded-xl p-3 text-center">
             <img 
-              src="/img/measure-underbust.svg" 
-              alt="Vector illustration demonstrating snug measuring tape placement around ribcage underbust" 
+              src="/img/measure-underbust-correct.svg" 
+              alt="Vector diagram demonstrating correct level underbust tape placement snug around ribcage" 
               width="400" 
               height="240" 
               class="w-full h-auto rounded-lg" 
               loading="eager"
             />
-            <span class="text-[11px] text-mute mt-2 block font-medium">Underbust: Snug around ribcage</span>
+            <span class="text-[11px] text-mute mt-2 block font-medium">Figure 1: Correct level underbust placement</span>
           </div>
         </div>
       </section>
@@ -87,14 +87,14 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
           <!-- Visual SVG Diagram 2 -->
           <div class="w-full md:w-80 flex-shrink-0 bg-canvas border border-hairline rounded-xl p-3 text-center">
             <img 
-              src="/img/measure-bust.svg" 
-              alt="Vector illustration demonstrating loose measuring tape placement across the fullest bust line" 
+              src="/img/measure-bust-correct.svg" 
+              alt="Vector diagram demonstrating correct loose bust tape placement across fullest point" 
               width="400" 
               height="240" 
               class="w-full h-auto rounded-lg" 
               loading="eager"
             />
-            <span class="text-[11px] text-mute mt-2 block font-medium">Bust: Loose around fullest point</span>
+            <span class="text-[11px] text-mute mt-2 block font-medium">Figure 2: Correct loose bust placement</span>
           </div>
         </div>
       </section>
@@ -180,9 +180,27 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
           <p>Double-check your measuring tape units (`in` vs `cm`) before selecting the unit toggle in the calculator.</p>
         </div>
 
-        <div class="p-4 bg-canvas-soft-2/50 border border-hairline rounded-xl">
+        <div class="p-4 bg-canvas-soft-2/50 border border-hairline rounded-xl md:col-span-2">
           <h3 class="font-bold text-ink mb-1">6. Swapping underbust and bust inputs</h3>
           <p>Make sure your smaller underbust number goes into Step 2 and your larger bust number goes into Step 3.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-hairline">
+        <h3 class="font-bold text-ink text-sm sm:text-base mb-4">Visual Measurement Comparison</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="bg-canvas border border-hairline rounded-xl p-3 text-center">
+            <img src="/img/measuring-tape-level.svg" alt="Vector diagram showing level measuring tape vs sagging measuring tape" width="400" height="240" class="w-full h-auto rounded-lg" loading="lazy"/>
+            <span class="text-[11px] text-mute mt-2 block font-medium">Tape Level vs Sagging</span>
+          </div>
+          <div class="bg-canvas border border-hairline rounded-xl p-3 text-center">
+            <img src="/img/measure-underbust-incorrect.svg" alt="Vector diagram showing incorrect sagging underbust tape placement" width="400" height="240" class="w-full h-auto rounded-lg" loading="lazy"/>
+            <span class="text-[11px] text-mute mt-2 block font-medium">Incorrect: Sagging Tape</span>
+          </div>
+          <div class="bg-canvas border border-hairline rounded-xl p-3 text-center">
+            <img src="/img/measure-bust-incorrect.svg" alt="Vector diagram showing incorrect tight bust tape placement squishing tissue" width="400" height="240" class="w-full h-auto rounded-lg" loading="lazy"/>
+            <span class="text-[11px] text-mute mt-2 block font-medium">Incorrect: Squishing Bust</span>
+          </div>
         </div>
       </div>
     </section>

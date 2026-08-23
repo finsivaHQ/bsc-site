@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" rx="16" fill="#FAF7F4" stroke="#E8DED9" stroke-width="2"/>
+  
+  <!-- Left Panel: Level -->
+  <g transform="translate(10, 0)">
+    <rect x="20" y="30" width="160" height="150" rx="12" fill="#FFFFFF" stroke="#E8DED9"/>
+    <path d="M50 80 L150 80" stroke="#2D7A46" stroke-width="4" stroke-dasharray="4 3"/>
+    <text x="100" y="115" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#2D7A46" text-anchor="middle">✓ Level (Parallel)</text>
+    <text x="100" y="135" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#33252B" text-anchor="middle">Accurate Ribcage Size</text>
+  </g>
+
+  <!-- Right Panel: Sagging -->
+  <g transform="translate(190, 0)">
+    <rect x="20" y="30" width="160" height="150" rx="12" fill="#FFFFFF" stroke="#E8DED9"/>
+    <path d="M50 70 Q100 110 150 70" stroke="#C0392B" stroke-width="4" stroke-dasharray="4 3" fill="none"/>
+    <text x="100" y="115" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#C0392B" text-anchor="middle">✕ Sagging at Back</text>
+    <text x="100" y="135" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#33252B" text-anchor="middle">Adds 2–3 Extra Inches</text>
+  </g>
+
+  <rect x="100" y="195" width="200" height="26" rx="13" fill="#F4E6E8" stroke="#E8DED9" stroke-width="1.5"/>
+  <text x="200" y="212" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#33252B" text-anchor="middle">TAPE HORIZONTAL ALIGNMENT COMPARISON</text>
+</svg>

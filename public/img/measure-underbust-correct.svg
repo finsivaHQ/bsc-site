@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" rx="16" fill="#FAF7F4" stroke="#E8DED9" stroke-width="2"/>
+  <circle cx="200" cy="115" r="85" fill="#C9828C" fill-opacity="0.12" filter="blur(16px)"/>
+  <path d="M140 40 C140 40, 160 50, 200 50 C240 50, 260 40, 260 40 L265 90 C265 105, 255 125, 245 135 C240 140, 235 180, 235 210 L165 210 C165 180, 160 140, 155 135 C145 125, 135 105, 135 90 Z" fill="#FFFFFF" stroke="#33252B" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M140 85 C145 115, 185 125, 200 125 C215 125, 255 115, 260 85" stroke="#A95563" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Correct Level Tape Line -->
+  <path d="M130 130 L270 130" stroke="#2D7A46" stroke-width="4" stroke-dasharray="6 4" stroke-linecap="round"/>
+  <rect x="155" y="118" width="90" height="24" rx="12" fill="#2D7A46"/>
+  <text x="200" y="134" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓ CORRECT: LEVEL</text>
+  <rect x="120" y="190" width="160" height="26" rx="13" fill="#F4E6E8" stroke="#E8DED9" stroke-width="1.5"/>
+  <text x="200" y="207" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#33252B" text-anchor="middle">SNUG RIB-CAGE ALIGNMENT</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" rx="16" fill="#FAF7F4" stroke="#E8DED9" stroke-width="2"/>
+  <circle cx="200" cy="110" r="85" fill="#C9828C" fill-opacity="0.12" filter="blur(16px)"/>
+  
+  <!-- Narrow Underwire Digging Into Soft Tissue -->
+  <path d="M140 70 C140 140, 240 140, 240 70" stroke="#33252B" stroke-width="2.5" fill="none"/>
+  <!-- Underwire Arc resting on soft tissue inside root -->
+  <path d="M155 85 C155 130, 225 130, 225 85" stroke="#C0392B" stroke-width="4" fill="none"/>
+  
+  <circle cx="155" cy="100" r="8" fill="#C0392B" fill-opacity="0.3" stroke="#C0392B" stroke-width="2"/>
+  <text x="90" y="104" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#C0392B">NARROW WIRE DIGS</text>
+
+  <rect x="110" y="195" width="180" height="26" rx="13" fill="#F4E6E8" stroke="#E8DED9" stroke-width="1.5"/>
+  <text x="200" y="212" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#33252B" text-anchor="middle">WIRE SITS ON TISSUE INSTEAD OF RIB</text>
+</svg>

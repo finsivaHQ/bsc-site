@@ -1,0 +1,237 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<Layout 
+  title="How to Measure Your Bra Size at Home — Step-by-Step Guide | BraSizeChecker"
+  description="Learn how to measure your bra size at home accurately in 4 simple steps. Clear underbust and bust measurement instructions, visual diagrams, and mistake fixes."
+  canonical="https://brasizechecker.com/how-to-measure"
+>
+  <Header />
+  <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+    <Breadcrumbs items={[{ label: 'How to Measure' }]} />
+
+    <!-- Page Header / Intro -->
+    <header class="mb-10 text-center sm:text-left">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+        Comprehensive Measurement Guide
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+        How to Measure Your Bra Size at Home
+      </h1>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
+        Finding your ideal bra size starts with taking two basic measurements: your <strong>underbust (band)</strong> and your <strong>full bust</strong>. Using a soft fabric measuring tape, follow these four simple steps to establish your baseline size.
+      </p>
+    </header>
+
+    <!-- Step-by-Step Guide Grid -->
+    <div class="space-y-8 mb-12">
+      <!-- Step 1: Measure Your Underbust -->
+      <section class="bg-surface border border-hairline rounded-2xl p-5 sm:p-8 shadow-xs relative overflow-hidden" aria-labelledby="step-1-title">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="flex-1">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-9 h-9 rounded-xl bg-canvas-soft-2 border border-hairline flex items-center justify-center text-primary font-bold text-sm">
+                01
+              </span>
+              <h2 id="step-1-title" class="text-xl sm:text-2xl font-bold text-ink">Step 1: Measure Your Underbust (Band Size)</h2>
+            </div>
+            <p class="text-sm sm:text-base text-body leading-relaxed mb-4">
+              Stand upright with your arms relaxed at your sides. Wrap the measuring tape <strong>snugly</strong> around your ribcage, directly beneath your bust where your bra band sits.
+            </p>
+            <ul class="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-body">
+              <li><strong>Tape position:</strong> Keep the tape level across your back, parallel to the floor.</li>
+              <li><strong>Tension:</strong> Pull the tape snug against your ribcage without compressing your lungs.</li>
+              <li><strong>Posture:</strong> Exhale normally and relax your shoulders while reading the number.</li>
+            </ul>
+          </div>
+
+          <!-- Visual SVG Diagram 1 -->
+          <div class="w-full md:w-80 flex-shrink-0 bg-canvas border border-hairline rounded-xl p-3 text-center">
+            <img 
+              src="/img/measure-underbust.svg" 
+              alt="Vector illustration demonstrating snug measuring tape placement around ribcage underbust" 
+              width="400" 
+              height="240" 
+              class="w-full h-auto rounded-lg" 
+              loading="eager"
+            />
+            <span class="text-[11px] text-mute mt-2 block font-medium">Underbust: Snug around ribcage</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 2: Measure Your Bust -->
+      <section class="bg-surface border border-hairline rounded-2xl p-5 sm:p-8 shadow-xs relative overflow-hidden" aria-labelledby="step-2-title">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="flex-1">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-9 h-9 rounded-xl bg-canvas-soft-2 border border-hairline flex items-center justify-center text-primary font-bold text-sm">
+                02
+              </span>
+              <h2 id="step-2-title" class="text-xl sm:text-2xl font-bold text-ink">Step 2: Measure Your Bust Size</h2>
+            </div>
+            <p class="text-sm sm:text-base text-body leading-relaxed mb-4">
+              Wrap the measuring tape <strong>loosely</strong> around the fullest part of your bust (usually across the nipples).
+            </p>
+            <ul class="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-body">
+              <li><strong>Tape position:</strong> Ensure the tape remains level across your back without drooping.</li>
+              <li><strong>Tension:</strong> The tape should rest lightly against your skin without indenting or squishing your bust.</li>
+              <li><strong>Posture:</strong> Stand naturally without holding your breath or arching your chest forward.</li>
+            </ul>
+          </div>
+
+          <!-- Visual SVG Diagram 2 -->
+          <div class="w-full md:w-80 flex-shrink-0 bg-canvas border border-hairline rounded-xl p-3 text-center">
+            <img 
+              src="/img/measure-bust.svg" 
+              alt="Vector illustration demonstrating loose measuring tape placement across the fullest bust line" 
+              width="400" 
+              height="240" 
+              class="w-full h-auto rounded-lg" 
+              loading="eager"
+            />
+            <span class="text-[11px] text-mute mt-2 block font-medium">Bust: Loose around fullest point</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 3: Enter Your Measurements CTA Card -->
+      <section class="bg-canvas-soft-2 border-2 border-primary/30 rounded-2xl p-6 sm:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6" aria-labelledby="step-3-title">
+        <div>
+          <span class="text-xs font-bold text-primary uppercase tracking-widest block mb-1">STEP 3</span>
+          <h2 id="step-3-title" class="text-xl sm:text-2xl font-bold text-ink mb-1">Enter Your Measurements into the Calculator</h2>
+          <p class="text-xs sm:text-sm text-body">Ready with your numbers? Input your underbust and bust measurements for an instant starting size.</p>
+        </div>
+        <a 
+          href="/#calculator" 
+          class="flex-shrink-0 h-12 px-6 bg-primary hover:bg-primary-hover text-white font-bold text-sm rounded-xl shadow-xs transition-colors flex items-center gap-2"
+        >
+          <span>Calculate My Size</span>
+          <span>&rarr;</span>
+        </a>
+      </section>
+
+      <!-- Step 4: Understand Your Results -->
+      <section class="bg-surface border border-hairline rounded-2xl p-5 sm:p-8 shadow-xs" aria-labelledby="step-4-title">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-9 h-9 rounded-xl bg-canvas-soft-2 border border-hairline flex items-center justify-center text-primary font-bold text-sm">
+            04
+          </span>
+          <h2 id="step-4-title" class="text-xl sm:text-2xl font-bold text-ink">Step 4: Understand Your Results</h2>
+        </div>
+        <p class="text-sm sm:text-base text-body leading-relaxed mb-6">
+          Once calculated, your baseline bra size provides four important pieces of information:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">1. Baseline Band & Cup</h3>
+            <p class="text-xs text-body">Your recommended starting size (e.g. 34C in US/CA sizing).</p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">2. Sister Sizes</h3>
+            <p class="text-xs text-body">Equivalent cup volumes with tighter or looser band options (<a href="/sister-size-calculator" class="text-primary font-semibold hover:underline">Sister Size Tool</a>).</p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">3. International Equivalents</h3>
+            <p class="text-xs text-body">Equivalent size labels for UK, EU, FR, AU, and JP (<a href="/bra-size-converter" class="text-primary font-semibold hover:underline">Converter Tool</a>).</p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink mb-1 text-sm">4. Fit Adjustments</h3>
+            <p class="text-xs text-body">Diagnostic checks for band riding up or cup gaping (<a href="/#fit-guide" class="text-primary font-semibold hover:underline">Fit Guide</a>).</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Common Measurement Mistakes -->
+    <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8 mb-12">
+      <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">7 Common Measurement Mistakes to Avoid</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-body">
+        <div class="p-4 bg-canvas-soft-2/50 border border-hairline rounded-xl">
+          <h3 class="font-bold text-ink mb-1">1. Measuring over thick clothing</h3>
+          <p>Always measure over bare skin or a thin, non-padded unlined bra to avoid adding extra inches.</p>
+        </div>
+
+        <div class="p-4 bg-canvas-soft-2/50 border border-hairline rounded-xl">
+          <h3 class="font-bold text-ink mb-1">2. Measuring tape sagging at the back</h3>
+          <p>Check in a mirror to ensure the tape remains strictly level and parallel to the floor all around.</p>
+        </div>
+
+        <div class="p-4 bg-canvas-soft-2/50 border border-hairline rounded-xl">
+          <h3 class="font-bold text-ink mb-1">3. Pulling the bust tape too tight</h3>
+          <p>The bust measurement tape must rest lightly against your skin without flattening tissue.</p>
+        </div>
+
+        <div class="p-4 bg-canvas-soft-2/50 border border-hairline rounded-xl">
+          <h3 class="font-bold text-ink mb-1">4. Holding your breath</h3>
+          <p>Inhale and exhale normally so your ribcage is at its natural baseline size when reading the band number.</p>
+        </div>
+
+        <div class="p-4 bg-canvas-soft-2/50 border border-hairline rounded-xl">
+          <h3 class="font-bold text-ink mb-1">5. Mixing up inches and centimeters</h3>
+          <p>Double-check your measuring tape units (`in` vs `cm`) before selecting the unit toggle in the calculator.</p>
+        </div>
+
+        <div class="p-4 bg-canvas-soft-2/50 border border-hairline rounded-xl">
+          <h3 class="font-bold text-ink mb-1">6. Swapping underbust and bust inputs</h3>
+          <p>Make sure your smaller underbust number goes into Step 2 and your larger bust number goes into Step 3.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Measurement FAQs Accordions -->
+    <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+      <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="group border border-hairline rounded-xl p-4 transition-colors">
+          <summary class="font-bold text-ink cursor-pointer text-sm sm:text-base flex items-center justify-between list-none">
+            <span>Should I measure with a bra on?</span>
+            <span class="text-primary font-semibold text-lg transition-transform group-open:rotate-180">&darr;</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-body mt-3 pt-3 border-t border-hairline leading-relaxed">
+            Yes, ideally measure while wearing an unpadded, non-push-up bra that holds your bust in a natural position without compressing tissue. If you don't have one, measuring on bare skin is also fine.
+          </p>
+        </details>
+
+        <details class="group border border-hairline rounded-xl p-4 transition-colors">
+          <summary class="font-bold text-ink cursor-pointer text-sm sm:text-base flex items-center justify-between list-none">
+            <span>Should the tape be pulled tight?</span>
+            <span class="text-primary font-semibold text-lg transition-transform group-open:rotate-180">&darr;</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-body mt-3 pt-3 border-t border-hairline leading-relaxed">
+            The tape should be <strong>snug</strong> around your underbust (ribcage) so the band provides proper support, but <strong>loose and light</strong> around your bust so tissue isn't squished.
+          </p>
+        </details>
+
+        <details class="group border border-hairline rounded-xl p-4 transition-colors">
+          <summary class="font-bold text-ink cursor-pointer text-sm sm:text-base flex items-center justify-between list-none">
+            <span>What if I am between band sizes?</span>
+            <span class="text-primary font-semibold text-lg transition-transform group-open:rotate-180">&darr;</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-body mt-3 pt-3 border-t border-hairline leading-relaxed">
+            If your underbust measurement falls on an odd number (such as 31 or 33 inches), round up to the nearest even number (32 or 34) and check both your baseline and sister sizes.
+          </p>
+        </details>
+
+        <details class="group border border-hairline rounded-xl p-4 transition-colors">
+          <summary class="font-bold text-ink cursor-pointer text-sm sm:text-base flex items-center justify-between list-none">
+            <span>Why does my calculated size differ from my current bra?</span>
+            <span class="text-primary font-semibold text-lg transition-transform group-open:rotate-180">&darr;</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-body mt-3 pt-3 border-t border-hairline leading-relaxed">
+            Many people wear bra bands that are too loose or cups that are too small due to outdated sizing rules (+4 method). Your calculated size establishes a true modern baseline.
+          </p>
+        </details>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -15,9 +15,88 @@ const {
 	noindex = false 
 } = Astro.props;
 
-// Generate canonical URL dynamically based on the current path if not explicitly overridden
+// Generate canonical URL dynamically based on current path if not explicitly overridden
 const defaultCanonical = new URL(Astro.url.pathname, 'https://brasizechecker.com').toString().replace(/\/$/, '');
 const canonicalURL = canonical || defaultCanonical || 'https://brasizechecker.com';
+
+const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';
+
+// Structured Data (JSON-LD Graph)
+const schemaGraph: any[] = [
+	{
+		"@type": "WebSite",
+		"@id": "https://brasizechecker.com/#website",
+		"url": "https://brasizechecker.com",
+		"name": "BraSizeChecker",
+		"description": "An independent tool for finding and understanding your recommended bra size.",
+		"publisher": {
+			"@id": "https://brasizechecker.com/#organization"
+		}
+	},
+	{
+		"@type": "Organization",
+		"@id": "https://brasizechecker.com/#organization",
+		"name": "BraSizeChecker",
+		"url": "https://brasizechecker.com",
+		"logo": "https://brasizechecker.com/favicon.svg"
+	},
+	{
+		"@type": "WebPage",
+		"@id": `${canonicalURL}#webpage`,
+		"url": canonicalURL,
+		"name": title,
+		"description": description,
+		"isPartOf": {
+			"@id": "https://brasizechecker.com/#website"
+		}
+	}
+];
+
+// Add WebApplication schema on homepage
+if (isHomepage) {
+	schemaGraph.push({
+		"@type": "WebApplication",
+		"@id": "https://brasizechecker.com/#calculator-app",
+		"name": "Bra Size Calculator",
+		"url": "https://brasizechecker.com",
+		"applicationCategory": "HealthApplication",
+		"operatingSystem": "All",
+		"offers": {
+			"@type": "Offer",
+			"price": "0",
+			"priceCurrency": "USD"
+		},
+		"description": "Free, private bra size calculator that calculates baseline bra sizes, sister sizes, and international conversions."
+	});
+}
+
+// Add BreadcrumbList schema on indexable subpages
+if (!isHomepage && !noindex) {
+	const pageName = title.split('—')[0].trim();
+	schemaGraph.push({
+		"@type": "BreadcrumbList",
+		"@id": `${canonicalURL}#breadcrumb`,
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://brasizechecker.com"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": pageName,
+				"item": canonicalURL
+			}
+		]
+	});
+}
+
+const jsonLdData = {
+	"@context": "https://schema.org",
+	"@graph": schemaGraph
+};
 ---
 
 <!doctype html>
@@ -32,6 +111,7 @@ const canonicalURL = canonical || defaultCanonical || 'https://brasizechecker.co
 		<meta name="msvalidate.01" content="1F7EB46675900FDE533DDDA7125754E4" />
 		<link rel="canonical" href={canonicalURL} />
 		<title>{title}</title>
+		<script type="application/ld+json" set:html={JSON.stringify(jsonLdData)} />
 		<script is:inline>
 			const theme = (() => {
 				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {

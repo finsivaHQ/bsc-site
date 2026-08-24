@@ -2,7 +2,7 @@
 title: "Can You Use a Bra Size Calculator Without Measurements?"
 description: "Wondering if a bra size calculator by picture or without measuring tape works? Here is the truth about visual bra fitting."
 pubDate: 2026-08-15
-heroImage: "https://images.unsplash.com/photo-1558769132-cb1fac084092?q=80&w=2000&auto=format&fit=crop"
+heroImage: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop"
 doctorVerified: false
 tags: ["visual fitting","no tape","bra size"]
 author: "BraSizeChecker Expert Team"

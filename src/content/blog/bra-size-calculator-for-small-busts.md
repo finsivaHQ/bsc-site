@@ -2,7 +2,7 @@
 title: "Bra Size Calculator & Guide for Small Busts"
 description: "Struggling with cup gaps? Here is the best bra size calculator and style guide for small, athletic, or wide-set breasts."
 pubDate: 2026-08-24
-heroImage: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2000&auto=format&fit=crop"
+heroImage: "https://images.unsplash.com/photo-1555529733-0e670560f0e1?q=80&w=1200&auto=format&fit=crop"
 doctorVerified: false
 tags: ["small bust","petite","bra gaps"]
 author: "BraSizeChecker Expert Team"

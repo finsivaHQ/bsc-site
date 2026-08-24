@@ -2,7 +2,7 @@
 title: "What Size Bra Should I Wear? Stop Guessing!"
 description: "Constantly wondering \"what size bra should I wear?\" Our accurate calculator and guide will solve your fitting woes forever."
 pubDate: 2026-08-11
-heroImage: "https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=2000&auto=format&fit=crop"
+heroImage: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1200&auto=format&fit=crop"
 doctorVerified: false
 tags: ["bra fitting","size guide","measurements"]
 author: "BraSizeChecker Expert Team"

@@ -2,7 +2,7 @@
 title: "Bra Size Calculator for Plus Size & Large Breasts"
 description: "Finding a bra for large breasts shouldn't be hard. Our plus size bra size calculator ensures you get the support you need."
 pubDate: 2026-08-10
-heroImage: "https://images.unsplash.com/photo-1558769132-cb1fac084092?q=80&w=2000&auto=format&fit=crop"
+heroImage: "https://images.unsplash.com/photo-1605663738580-c13f6311bdc7?q=80&w=1200&auto=format&fit=crop"
 doctorVerified: true
 tags: ["plus size","large bust","bra support"]
 author: "BraSizeChecker Expert Team"

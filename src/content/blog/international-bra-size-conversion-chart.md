@@ -2,7 +2,7 @@
 title: "International Bra Size Conversion Chart & Calculator"
 description: "Convert your bra size instantly across US, UK, EU, and Indian standards using our international bra size conversion chart."
 pubDate: 2026-08-02
-heroImage: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=2000&auto=format&fit=crop"
+heroImage: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1200&auto=format&fit=crop"
 doctorVerified: false
 tags: ["bra size chart","bra size conversion","international bra sizes"]
 author: "BraSizeChecker Expert Team"

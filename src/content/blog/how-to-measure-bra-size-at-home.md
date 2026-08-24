@@ -2,7 +2,7 @@
 title: "How to Measure Your Bra Size at Home (No Tape Measure Needed)"
 description: "Discover how to measure your bra size at home accurately. Whether you use inches or cm, our guide makes it easy."
 pubDate: 2026-08-03
-heroImage: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=2000&auto=format&fit=crop"
+heroImage: "https://images.unsplash.com/photo-1518331647614-7e1f8073a4b6?q=80&w=1200&auto=format&fit=crop"
 doctorVerified: false
 tags: ["how to measure","bra fitting","at home"]
 author: "BraSizeChecker Expert Team"

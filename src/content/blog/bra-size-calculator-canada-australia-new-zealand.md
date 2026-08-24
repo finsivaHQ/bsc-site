@@ -2,7 +2,7 @@
 title: "Bra Sizing in Canada, Australia, and New Zealand"
 description: "An international deep dive into how bra sizes work in Canada, Australia (AUS), and New Zealand (NZ)."
 pubDate: 2026-08-22
-heroImage: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=2000&auto=format&fit=crop"
+heroImage: "https://images.unsplash.com/photo-1524275529452-2fb4a849bbfa?q=80&w=1200&auto=format&fit=crop"
 doctorVerified: true
 tags: ["canada","australia","new zealand"]
 author: "BraSizeChecker Expert Team"

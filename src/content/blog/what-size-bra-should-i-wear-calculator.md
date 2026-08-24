@@ -1,6 +1,6 @@
 ---
 title: "What Size Bra Should I Wear? Stop Guessing!"
-description: "Constantly wondering "what size bra should I wear?" Our accurate calculator and guide will solve your fitting woes forever."
+description: "Constantly wondering \"what size bra should I wear?\" Our accurate calculator and guide will solve your fitting woes forever."
 pubDate: 2026-08-11
 heroImage: "https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=2000&auto=format&fit=crop"
 doctorVerified: false

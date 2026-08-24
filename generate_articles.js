@@ -195,8 +195,8 @@ const imageList = [
 
 topics.forEach((t, i) => {
   const mdContent = `---
-title: "${t.title}"
-description: "${t.desc}"
+title: ${JSON.stringify(t.title)}
+description: ${JSON.stringify(t.desc)}
 pubDate: 2026-08-${String((i % 28) + 1).padStart(2, '0')}
 heroImage: "${imageList[i % imageList.length]}"
 doctorVerified: ${i % 3 === 0 ? 'true' : 'false'}

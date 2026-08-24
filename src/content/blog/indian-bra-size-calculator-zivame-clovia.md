@@ -2,7 +2,7 @@
 title: "Indian Bra Size Calculator: Zivame, Clovia, & More"
 description: "An in-depth guide to Indian bra sizing. Convert your measurements perfectly for Zivame, Clovia, and other top Indian brands."
 pubDate: 2026-08-12
-heroImage: "https://images.unsplash.com/photo-1434389678396-51e897645b23?q=80&w=1200&auto=format&fit=crop"
+heroImage: "https://loremflickr.com/1200/800/india,fashion?lock=12"
 doctorVerified: false
 tags: ["india","bra brands","zivame"]
 author: "BraSizeChecker Expert Team"

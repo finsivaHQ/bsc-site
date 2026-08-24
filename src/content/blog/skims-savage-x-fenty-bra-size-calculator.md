@@ -2,7 +2,7 @@
 title: "Skims & Savage X Fenty Bra Size Calculator Guide"
 description: "Shopping celebrity brands? Here is how to navigate the Skims bra size calculator and the Savage X Fenty sizing charts."
 pubDate: 2026-08-23
-heroImage: "https://images.unsplash.com/photo-1485230895920-ee9f6b95c325?q=80&w=1200&auto=format&fit=crop"
+heroImage: "https://loremflickr.com/1200/800/model,fashion?lock=23"
 doctorVerified: false
 tags: ["skims","fenty","celebrity brands"]
 author: "BraSizeChecker Expert Team"

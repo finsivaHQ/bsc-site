@@ -2,7 +2,7 @@
 title: "Bust Size to Bra Size Calculator: The Math Behind the Cup"
 description: "How exactly does a bust measurement become a cup letter? Learn the math behind the bust size to bra size calculator."
 pubDate: 2026-08-18
-heroImage: "https://images.unsplash.com/photo-1550614000-4b95d1011853?q=80&w=1200&auto=format&fit=crop"
+heroImage: "https://loremflickr.com/1200/800/math,calculator?lock=18"
 doctorVerified: false
 tags: ["bra math","measurements","cup calculation"]
 author: "BraSizeChecker Expert Team"

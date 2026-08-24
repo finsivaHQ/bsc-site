@@ -2,7 +2,7 @@
 title: "The Ultimate Bra Size Chart With Pictures Explained"
 description: "Visual learner? We break down the standard bra size chart with pictures, explaining cup volumes from A to G and beyond."
 pubDate: 2026-08-16
-heroImage: "https://images.unsplash.com/photo-1575052814086-f671203b573d?q=80&w=1200&auto=format&fit=crop"
+heroImage: "https://loremflickr.com/1200/800/chart,design?lock=16"
 doctorVerified: true
 tags: ["bra size chart","visual guide","cup volumes"]
 author: "BraSizeChecker Expert Team"

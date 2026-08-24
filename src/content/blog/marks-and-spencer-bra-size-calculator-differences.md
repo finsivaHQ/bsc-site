@@ -2,7 +2,7 @@
 title: "Marks & Spencer Bra Size Calculator: How It Differs"
 description: "Shopping at M&S? Here is everything you need to know about the M&S bra size calculator and how it compares to standard sizing."
 pubDate: 2026-08-09
-heroImage: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1200&auto=format&fit=crop"
+heroImage: "https://loremflickr.com/1200/800/shopping,uk?lock=9"
 doctorVerified: false
 tags: ["marks and spencer","uk sizing","brand guide"]
 author: "BraSizeChecker Expert Team"

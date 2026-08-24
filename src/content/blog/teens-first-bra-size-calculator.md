@@ -2,7 +2,7 @@
 title: "First Bra Size Calculator: A Guide for Teens"
 description: "A comprehensive, easy-to-understand guide and bra size calculator specifically designed for teens buying their first bra."
 pubDate: 2026-08-14
-heroImage: "https://images.unsplash.com/photo-1560930777-6e6b528a4128?q=80&w=1200&auto=format&fit=crop"
+heroImage: "https://loremflickr.com/1200/800/teen,fashion?lock=14"
 doctorVerified: false
 tags: ["teens","first bra","youth sizing"]
 author: "BraSizeChecker Expert Team"

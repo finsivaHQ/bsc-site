@@ -14,7 +14,7 @@ const topics = [
     desc: 'Stop struggling with tape measures. Learn how to use our highly accurate bra size calculator in inches for the best fit.',
     tags: ['bra size calculator', 'bra size calculator in inches', 'most accurate bra size calculator'],
     kw: ['bra size calculator in inches', 'bra size calculator usa', 'bra size calculator us inches', 'accurate bra size calculator reddit', 'best bra size calculator in inches'],
-    image: '1515347619149-a1b6510d96d7'
+    image: 'measuring,tape?lock=1'
   },
   {
     slug: 'international-bra-size-conversion-chart',
@@ -22,7 +22,7 @@ const topics = [
     desc: 'Convert your bra size instantly across US, UK, EU, and Indian standards using our international bra size conversion chart.',
     tags: ['bra size chart', 'bra size conversion', 'international bra sizes'],
     kw: ['bra size chart us vs uk', 'bra size calculator eu', 'indian bra size calculator', 'bra size calculator uk in cm', 'bra size calculator india in inches', 'what is my bra size calculator canada'],
-    image: '1529626455594-4ff0802cfb7e'
+    image: 'world,map?lock=2'
   },
   {
     slug: 'how-to-measure-bra-size-at-home',
@@ -30,7 +30,7 @@ const topics = [
     desc: 'Discover how to measure your bra size at home accurately. Whether you use inches or cm, our guide makes it easy.',
     tags: ['how to measure', 'bra fitting', 'at home'],
     kw: ['how to measure bra size calculator', 'how to measure bra size at home calculator', 'how to measure bra size calculator in inches', 'how measure bra size calculator', 'bra size calculator without measuring tape'],
-    image: '1518331647614-7e1f8073a4b6'
+    image: 'livingroom,fashion?lock=3'
   },
   {
     slug: 'sister-sizes-explained',
@@ -38,7 +38,7 @@ const topics = [
     desc: 'What is a sister size? Learn how to use sister sizes when your band is too tight or your cup size gaps.',
     tags: ['sister sizes', 'bra fit', 'cup size'],
     kw: ['sister bra size calculator', 'bra size difference chart', 'bra size chart difference', 'bra size alternative chart', 'bra size comparison calculator'],
-    image: '1583391733975-6809c9162fa9'
+    image: 'friends,fashion?lock=4'
   },
   {
     slug: 'what-cup-size-am-i-calculator',
@@ -46,7 +46,7 @@ const topics = [
     desc: 'Are you an A, B, C, D, or DD? Use our cup size calculator to find out exactly what cup size you are.',
     tags: ['cup size', 'calculator', 'bra fit'],
     kw: ['what cup size am i calculator', 'how to find bra cup size calculator', 'determining bra cup size calculator', 'how is bra cup size calculator', 'what is my cup size calculator'],
-    image: '1620799140408-edc6dcb6d633'
+    image: 'lingerie,fashion?lock=5'
   },
   {
     slug: 'sports-bra-size-calculator-guide',
@@ -54,7 +54,7 @@ const topics = [
     desc: 'A sports bra needs to fit differently. Learn how to calculate your sports bra size for maximum support and minimum bounce.',
     tags: ['sports bra', 'bra size calculator', 'fitness'],
     kw: ['sports bra size calculator', 'bra size calculator for sports bra', 'what size sports bra do i need calculator', 'sports bra size calculator uk'],
-    image: '1603808033192-082d6919d3e1'
+    image: 'sports,bra?lock=6'
   },
   {
     slug: 'victoria-secret-bra-size-calculator-comparison',
@@ -62,7 +62,7 @@ const topics = [
     desc: 'Why is your Victoria\'s Secret size different? Compare VS sizing with our accurate standard bra size calculator.',
     tags: ['brand comparison', 'victoria secret', 'bra size calculator'],
     kw: ['victoria secret bra size calculator', 'bra size chart victoria secret', 'bra size calculator usa victoria secret', 'bra size guide vs', 'why are all bra size calculators different'],
-    image: '1512436991641-6745cdb1723f'
+    image: 'boutique,fashion?lock=7'
   },
   {
     slug: 'maternity-nursing-bra-size-calculator',
@@ -70,7 +70,7 @@ const topics = [
     desc: 'Your breasts change during pregnancy. Learn how to accurately calculate your maternity and nursing bra size.',
     tags: ['maternity', 'nursing', 'pregnancy'],
     kw: ['maternity bra size calculator', 'nursing bra size calculator', 'pregnancy bra size calculator', 'nursing bra size calculator in inches'],
-    image: '1523451672322-1d5423f668fc'
+    image: 'maternity,fashion?lock=8'
   },
   {
     slug: 'marks-and-spencer-bra-size-calculator-differences',
@@ -78,7 +78,7 @@ const topics = [
     desc: 'Shopping at M&S? Here is everything you need to know about the M&S bra size calculator and how it compares to standard sizing.',
     tags: ['marks and spencer', 'uk sizing', 'brand guide'],
     kw: ['bra size calculator m&s', 'bra size calculator m&s inches', 'bra size calculator marks and spencer', 'm&s online bra size calculator', 'best bra size calculator uk'],
-    image: '1595950653106-6c9ebd614d3a'
+    image: 'shopping,uk?lock=9'
   },
   {
     slug: 'bra-size-calculator-plus-size-large-breasts',
@@ -86,7 +86,7 @@ const topics = [
     desc: 'Finding a bra for large breasts shouldn\'t be hard. Our plus size bra size calculator ensures you get the support you need.',
     tags: ['plus size', 'large bust', 'bra support'],
     kw: ['bra size calculator for plus size', 'bra size calculator for large bust', 'bra size calculator large breasts', 'bra size chart large', 'extra large bra size calculator'],
-    image: '1605663738580-c13f6311bdc7'
+    image: 'plussize,fashion?lock=10'
   },
   {
     slug: 'what-size-bra-should-i-wear-calculator',
@@ -94,7 +94,7 @@ const topics = [
     desc: 'Constantly wondering "what size bra should I wear?" Our accurate calculator and guide will solve your fitting woes forever.',
     tags: ['bra fitting', 'size guide', 'measurements'],
     kw: ['what size bra should i wear calculator', 'what size bra do i need calculator', 'what bra size am i calculator', 'what is my bra size calculator'],
-    image: '1492691527719-9d1e07e534b4'
+    image: 'wardrobe,fashion?lock=11'
   },
   {
     slug: 'indian-bra-size-calculator-zivame-clovia',
@@ -102,7 +102,7 @@ const topics = [
     desc: 'An in-depth guide to Indian bra sizing. Convert your measurements perfectly for Zivame, Clovia, and other top Indian brands.',
     tags: ['india', 'bra brands', 'zivame'],
     kw: ['indian bra size calculator', 'bra size calculator india', 'zivame bra size calculator', 'clovia bra size calculator india', 'bra size calculator in inches india'],
-    image: '1434389678396-51e897645b23'
+    image: 'india,fashion?lock=12'
   },
   {
     slug: 'how-to-know-if-your-bra-size-calculator-is-accurate',
@@ -110,7 +110,7 @@ const topics = [
     desc: 'Are bra size calculators actually accurate? Learn the signs of a bad fit and how to properly verify your calculated bra size.',
     tags: ['accurate fit', 'bra problems', 'bra calculator'],
     kw: ['is bra size calculator accurate', 'are bra calculators accurate', 'true bra size calculator', 'reliable bra size calculator', 'bra size calculator wrong'],
-    image: '1558769132-cb1fac084092'
+    image: 'mirror,fashion?lock=13'
   },
   {
     slug: 'teens-first-bra-size-calculator',
@@ -118,7 +118,7 @@ const topics = [
     desc: 'A comprehensive, easy-to-understand guide and bra size calculator specifically designed for teens buying their first bra.',
     tags: ['teens', 'first bra', 'youth sizing'],
     kw: ['bra size calculator for teens', 'teen bra size calculator', 'first bra size calculator', 'bra size for teen girls', 'bra size calculator for tweens'],
-    image: '1560930777-6e6b528a4128'
+    image: 'teen,fashion?lock=14'
   },
   {
     slug: 'bra-size-calculator-without-measurements',
@@ -126,7 +126,7 @@ const topics = [
     desc: 'Wondering if a bra size calculator by picture or without measuring tape works? Here is the truth about visual bra fitting.',
     tags: ['visual fitting', 'no tape', 'bra size'],
     kw: ['bra size calculator without measurements', 'bra size calculator by picture', 'bra size calculator without measuring tape', 'bra size calculator visual', 'image bra size calculator'],
-    image: '1515886657613-9f3515b0c78f'
+    image: 'smartphone,fashion?lock=15'
   },
   {
     slug: 'bra-size-chart-with-pictures-explained',
@@ -134,7 +134,7 @@ const topics = [
     desc: 'Visual learner? We break down the standard bra size chart with pictures, explaining cup volumes from A to G and beyond.',
     tags: ['bra size chart', 'visual guide', 'cup volumes'],
     kw: ['bra size chart with pictures', 'bra size chart with pictures usa', 'bra size chart diagram', 'bra size chart visual', 'bra size measurement diagram'],
-    image: '1575052814086-f671203b573d'
+    image: 'chart,design?lock=16'
   },
   {
     slug: 'uk-nhs-bra-size-calculator-standards',
@@ -142,7 +142,7 @@ const topics = [
     desc: 'The NHS provides guidelines on properly fitting bras for breast health. Here is how our UK bra size calculator aligns with them.',
     tags: ['uk sizing', 'nhs', 'breast health'],
     kw: ['best bra size calculator uk nhs', 'bra size calculator uk inches nhs', 'free online bra size calculator uk nhs', 'best bra size calculator uk'],
-    image: '1581594693702-fbdc51b2763b'
+    image: 'health,uk?lock=17'
   },
   {
     slug: 'bust-size-to-bra-size-calculator',
@@ -150,7 +150,7 @@ const topics = [
     desc: 'How exactly does a bust measurement become a cup letter? Learn the math behind the bust size to bra size calculator.',
     tags: ['bra math', 'measurements', 'cup calculation'],
     kw: ['bust size to bra size calculator', 'bra size calculator bust and underbust', 'bra size calculator band and bust', 'calculation for bra size', 'how to calculate proper bra size'],
-    image: '1550614000-4b95d1011853'
+    image: 'math,calculator?lock=18'
   },
   {
     slug: 'bra-size-calculator-for-trans-women',
@@ -158,7 +158,7 @@ const topics = [
     desc: 'A specialized guide and bra size calculator for trans women (MTF) to find the perfect band width and cup depth.',
     tags: ['transgender', 'mtf', 'bra fitting'],
     kw: ['bra size calculator for trans women', 'trans woman bra size calculator', 'mtf bra size calculator', 'bra size calculator trans'],
-    image: '1598550880155-20165509ba2c'
+    image: 'lgbt,fashion?lock=19'
   },
   {
     slug: 'bra-size-calculator-for-sagging-breasts',
@@ -166,7 +166,7 @@ const topics = [
     desc: 'Gravity happens! Learn how to use a bra size calculator for sagging or pendulous breasts and which bra styles offer the best lift.',
     tags: ['sagging breasts', 'bra lift', 'breast shape'],
     kw: ['bra size calculator for sagging breast', 'bra size calculator for teardrop shape', 'bra size calculator leaning bust', 'bra size calculator leaning'],
-    image: '1573883430060-7053e144a107'
+    image: 'confidence,woman?lock=20'
   },
   {
     slug: 'bra-size-calculator-reddit-a-bra-that-fits',
@@ -174,7 +174,7 @@ const topics = [
     desc: 'Why is the Reddit \'A Bra That Fits\' calculator so popular? We review their 6-measurement method versus our simplified tool.',
     tags: ['reddit', 'a bra that fits', 'reviews'],
     kw: ['bra size calculator reddit', 'bra size calculator a bra that fits', 'abtf bra size calculator', 'best bra size calculator reddit', 'bra size calculator accurate reddit'],
-    image: '1483985988355-763728e1935b'
+    image: 'laptop,community?lock=21'
   },
   {
     slug: 'bra-size-calculator-canada-australia-new-zealand',
@@ -182,7 +182,7 @@ const topics = [
     desc: 'An international deep dive into how bra sizes work in Canada, Australia (AUS), and New Zealand (NZ).',
     tags: ['canada', 'australia', 'new zealand'],
     kw: ['bra size calculator canada', 'bra size calculator aus', 'bra size calculator nz', 'australian bra size calculator', 'bra size calculator new zealand'],
-    image: '1524275529452-2fb4a849bbfa'
+    image: 'sydney,canada?lock=22'
   },
   {
     slug: 'skims-savage-x-fenty-bra-size-calculator',
@@ -190,7 +190,7 @@ const topics = [
     desc: 'Shopping celebrity brands? Here is how to navigate the Skims bra size calculator and the Savage X Fenty sizing charts.',
     tags: ['skims', 'fenty', 'celebrity brands'],
     kw: ['skims bra size calculator', 'savage x fenty bra size calculator', 'bra size calculator for skims', 'fenty bra size calculator', 'savage x fenty bra size chart'],
-    image: '1485230895920-ee9f6b95c325'
+    image: 'model,fashion?lock=23'
   },
   {
     slug: 'bra-size-calculator-for-small-busts',
@@ -198,7 +198,7 @@ const topics = [
     desc: 'Struggling with cup gaps? Here is the best bra size calculator and style guide for small, athletic, or wide-set breasts.',
     tags: ['small bust', 'petite', 'bra gaps'],
     kw: ['bra size calculator for small bust', 'bra size calculator petite', 'bra size calculator a b c', 'what cup size am i calculator'],
-    image: '1555529733-0e670560f0e1'
+    image: 'petite,fashion?lock=24'
   },
   {
     slug: 'bra-size-chart-xl-xxl-sml',
@@ -206,7 +206,7 @@ const topics = [
     desc: 'Many modern bralettes use S, M, L, XL, XXL sizing. Here is how to convert your traditional band and cup into shirt-sized bras.',
     tags: ['bralettes', 'sml sizing', 'lounge bras'],
     kw: ['bra size chart sml xl', 'bra size chart xl', 'bra size chart xxl', 'bra size calculator xl', 'lounge bra size calculator'],
-    image: '1520005721731-8da12d1b714b'
+    image: 'lounge,wear?lock=25'
   }
 ];
 
@@ -215,7 +215,7 @@ topics.forEach((t, i) => {
 title: ${JSON.stringify(t.title)}
 description: ${JSON.stringify(t.desc)}
 pubDate: 2026-08-${String((i % 28) + 1).padStart(2, '0')}
-heroImage: "https://images.unsplash.com/photo-${t.image}?q=80&w=1200&auto=format&fit=crop"
+heroImage: "https://loremflickr.com/1200/800/${t.image}"
 doctorVerified: ${i % 3 === 0 ? 'true' : 'false'}
 tags: ${JSON.stringify(t.tags)}
 author: "BraSizeChecker Expert Team"

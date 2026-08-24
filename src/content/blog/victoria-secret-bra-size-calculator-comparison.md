@@ -2,7 +2,7 @@
 title: "Victoria's Secret Bra Size Calculator vs Standard Sizing"
 description: "Why is your Victoria's Secret size different? Compare VS sizing with our accurate standard bra size calculator."
 pubDate: 2026-08-07
-heroImage: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop"
+heroImage: "https://loremflickr.com/1200/800/boutique,fashion?lock=7"
 doctorVerified: true
 tags: ["brand comparison","victoria secret","bra size calculator"]
 author: "BraSizeChecker Expert Team"

@@ -2,7 +2,7 @@
 title: "S/M/L vs Traditional Cup Sizing: The XL/XXL Bra Size Chart"
 description: "Many modern bralettes use S, M, L, XL, XXL sizing. Here is how to convert your traditional band and cup into shirt-sized bras."
 pubDate: 2026-08-25
-heroImage: "https://images.unsplash.com/photo-1520005721731-8da12d1b714b?q=80&w=1200&auto=format&fit=crop"
+heroImage: "https://loremflickr.com/1200/800/lounge,wear?lock=25"
 doctorVerified: true
 tags: ["bralettes","sml sizing","lounge bras"]
 author: "BraSizeChecker Expert Team"

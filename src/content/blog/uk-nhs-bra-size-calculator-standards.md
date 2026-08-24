@@ -2,7 +2,7 @@
 title: "Understanding UK NHS Bra Size Calculator Standards"
 description: "The NHS provides guidelines on properly fitting bras for breast health. Here is how our UK bra size calculator aligns with them."
 pubDate: 2026-08-17
-heroImage: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=1200&auto=format&fit=crop"
+heroImage: "https://loremflickr.com/1200/800/health,uk?lock=17"
 doctorVerified: false
 tags: ["uk sizing","nhs","breast health"]
 author: "BraSizeChecker Expert Team"

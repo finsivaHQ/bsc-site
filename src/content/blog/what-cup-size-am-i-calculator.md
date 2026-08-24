@@ -2,7 +2,7 @@
 title: "What Cup Size Am I? The Ultimate Cup Size Calculator"
 description: "Are you an A, B, C, D, or DD? Use our cup size calculator to find out exactly what cup size you are."
 pubDate: 2026-08-05
-heroImage: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1200&auto=format&fit=crop"
+heroImage: "https://loremflickr.com/1200/800/lingerie,fashion?lock=5"
 doctorVerified: false
 tags: ["cup size","calculator","bra fit"]
 author: "BraSizeChecker Expert Team"

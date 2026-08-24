@@ -2,7 +2,7 @@
 title: "Bra Sister Sizes Explained: The Ultimate Fit Guide"
 description: "What is a sister size? Learn how to use sister sizes when your band is too tight or your cup size gaps."
 pubDate: 2026-08-04
-heroImage: "https://images.unsplash.com/photo-1583391733975-6809c9162fa9?q=80&w=1200&auto=format&fit=crop"
+heroImage: "https://loremflickr.com/1200/800/friends,fashion?lock=4"
 doctorVerified: true
 tags: ["sister sizes","bra fit","cup size"]
 author: "BraSizeChecker Expert Team"

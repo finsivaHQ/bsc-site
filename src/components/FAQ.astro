@@ -1,24 +1,28 @@
 ---
 const faqs = [
   {
-    "question": "How to measure bra size calculator?",
-    "answer": "To learn how to measure bra size calculator correctly, simply take two measurements: your band size (snugly under the bust) and your bust size (loosely over the fullest part). Enter these into our tool."
+    "question": "How do I measure my bra size accurately at home?",
+    "answer": "Take two measurements using a soft tape measure: your band size (snugly under the bust) and your bust size (loosely over the fullest part). Enter these into our calculator for an instant recommended size."
   },
   {
-    "question": "What is my bra size calculator?",
-    "answer": "If you are asking 'what is my bra size calculator?', this tool is exactly what you need. It accurately processes your measurements to determine your ideal fit based on modern sizing standards."
+    "question": "How does the bra size calculator determine my size?",
+    "answer": "Our calculator compares your bust and band measurements against modern international sizing standards (US, UK, EU, AU) to provide your baseline size and exact sister sizes."
   },
   {
-    "question": "Calculator how to measure your bra size?",
-    "answer": "Using our calculator how to measure your bra size is easy. Keep your tape measure parallel to the ground and avoid pulling it too tightly across the chest."
+    "question": "What are sister sizes and how do I use them?",
+    "answer": "Sister sizes are bras with the same cup volume but different band sizes (e.g., 34C and 32D). If a band feels too loose or tight, stepping up or down to a sister size maintains your cup fit."
   },
   {
-    "question": "What's my bra size calculator? (whats my bra size calculator)",
-    "answer": "Wondering 'what's my bra size calculator'? Simply input your bust and band measurements above, and our algorithm will instantly tell you your perfect size and sister sizes."
+    "question": "Should I measure bra size in inches or cm?",
+    "answer": "You can use either! Our calculator supports both inches and centimeters, as well as US/CA, UK, EU, and AU international sizing standards."
   },
   {
-    "question": "How to bra size calculator?",
-    "answer": "If you are confused about how to bra size calculator, just switch to inches or cm, type in the two requested numbers, and the result will instantly populate on screen."
+    "question": "How often should I re-measure my bra size?",
+    "answer": "We recommend measuring every 6 months, or whenever you experience weight fluctuations, hormonal shifts, pregnancy, or changes in exercise routines."
+  },
+  {
+    "question": "Where can I find the full international bra size conversion chart?",
+    "answer": "We provide a complete, interactive bra size chart on our Size Chart page comparing US, UK, EU, and AU sizing bands and cups."
   },
   {
     "question": "What bra size am I calculator?",
@@ -79,10 +83,6 @@ const faqs = [
   {
     "question": "Can I use the bra size calculator in inches or bra size calculator in cm?",
     "answer": "Absolutely. You can use our bra size calculator in inches, bra size calculator in cm, or bra size calculator eu formats. We even support the bra size calculator in inches india."
-  },
-  {
-    "question": "Where can I find the bra size chart?",
-    "answer": "We provide a comprehensive bra size chart directly below the calculator results, comparing US, UK, EU, and AU sizing bands and cups."
   }
 ];
 
@@ -102,47 +102,95 @@ const jsonLd = {
 };
 ---
 
-<section id="faq" class="py-10 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-hairline">
-  <div class="mb-8 sm:mb-12 text-center md:text-left">
-    <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+<section id="faq" class="py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-hairline">
+  <div class="mb-6 sm:mb-8 text-center md:text-left">
+    <span class="inline-block py-0.5 px-2.5 rounded-full bg-canvas-soft-2 border border-hairline text-[11px] font-semibold uppercase tracking-widest text-primary mb-2">
       FAQ
     </span>
-    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-ink mb-4 font-sans tracking-tight">Frequently Asked Questions</h2>
-    <p class="text-sm sm:text-base md:text-lg text-body max-w-2xl font-sans">
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-ink mb-2 font-sans tracking-tight">Frequently Asked Questions</h2>
+    <p class="text-xs sm:text-sm text-body max-w-xl font-sans">
       Everything you need to know about measuring, bra sizing, and finding your most comfortable fit.
     </p>
   </div>
 
-  <div class="space-y-4">
-    {faqs.map((faq) => (
-      <details class="group bg-canvas-soft border border-hairline rounded-[2rem] p-5 sm:p-6 md:p-8 cursor-pointer hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-md">
-        <summary class="flex justify-between items-center font-bold text-base sm:text-lg md:text-xl text-ink list-none font-sans">
-          <span class="pr-4 sm:pr-6">{faq.question}</span>
-          <span class="transition-transform duration-300 group-open:rotate-180 text-primary bg-canvas border border-hairline p-2 rounded-full shadow-sm flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 items-start">
+    {faqs.map((faq, index) => (
+      <details 
+        class={`group bg-canvas-soft border border-hairline rounded-2xl p-3.5 sm:p-4 cursor-pointer hover:border-primary/50 transition-all duration-200 shadow-xs hover:shadow-sm ${index >= 6 ? 'faq-extra hidden' : ''}`}
+      >
+        <summary class="flex justify-between items-center font-semibold text-xs sm:text-sm text-ink list-none font-sans leading-snug">
+          <span class="pr-3">{faq.question}</span>
+          <span class="transition-transform duration-200 group-open:rotate-180 text-primary bg-canvas border border-hairline p-1 rounded-full shadow-xs flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"/>
             </svg>
           </span>
         </summary>
-        <div class="mt-4 text-body text-sm sm:text-base md:text-lg pt-4 border-t border-hairline leading-relaxed font-sans">
+        <div class="mt-2.5 text-body text-xs sm:text-sm pt-2.5 border-t border-hairline leading-relaxed font-sans">
           <p>{faq.answer}</p>
         </div>
       </details>
     ))}
   </div>
+
+  {faqs.length > 6 && (
+    <div class="mt-6 text-center">
+      <button 
+        id="toggle-faq-btn" 
+        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface border border-hairline text-xs font-semibold text-ink hover:text-primary hover:border-primary/50 transition-all shadow-xs cursor-pointer"
+      >
+        <span id="toggle-faq-text">View All {faqs.length} Questions</span>
+        <svg id="toggle-faq-icon" class="w-3.5 h-3.5 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+    </div>
+  )}
 </section>
 
 <!-- Inject FAQ JSON-LD for SEO -->
 <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
+<script is:inline>
+  function setupFaqToggle() {
+    const btn = document.getElementById('toggle-faq-btn');
+    if (!btn) return;
+    
+    let expanded = false;
+    btn.onclick = () => {
+      expanded = !expanded;
+      const extras = document.querySelectorAll('.faq-extra');
+      const textSpan = document.getElementById('toggle-faq-text');
+      const iconSvg = document.getElementById('toggle-faq-icon');
+      
+      extras.forEach(el => {
+        if (expanded) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+      
+      if (textSpan) {
+        textSpan.textContent = expanded ? 'Show Fewer Questions' : 'View All 21 Questions';
+      }
+      if (iconSvg) {
+        iconSvg.style.transform = expanded ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
+    };
+  }
+
+  document.addEventListener('astro:page-load', setupFaqToggle);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupFaqToggle);
+  } else {
+    setupFaqToggle();
+  }
+</script>
+
 <style>
   /* Remove default Safari/Chrome disclosure triangle */
   details > summary::-webkit-details-marker {
     display: none;
-  }
-  
-  /* Smooth Squircle/Bubble effect */
-  details {
-    border-radius: 2rem; /* creates a soft, squircle-like bubble */
   }
 </style>

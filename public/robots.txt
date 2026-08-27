@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://brasizechecker.com/sitemap.xml
+Sitemap: https://brasizechecker.com/sitemap-index.xml

@@ -19,6 +19,21 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', 
   description={frontmatter.description}
   type="article"
 >
+  {frontmatter.faqs && frontmatter.faqs.length > 0 && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": frontmatter.faqs.map((faq: any) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    })} />
+  )}
+
   <Header />
 
   <main class="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">

@@ -139,6 +139,8 @@ const jsonLdData = {
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={image} />
 
+		<slot name="head" />
+
 		<script type="application/ld+json" set:html={JSON.stringify(jsonLdData)} />
 		<script is:inline>
 			const theme = (() => {

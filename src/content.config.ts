@@ -11,6 +11,10 @@ const blogCollection = defineCollection({
     doctorVerified: z.boolean().default(false),
     author: z.string().default('BraSizeChecker Expert Team'),
     tags: z.array(z.string()).default([]),
+    faqs: z.array(z.object({
+      question: z.string(),
+      answer: z.string(),
+    })).optional(),
   }),
 });
 

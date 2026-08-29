@@ -7,8 +7,8 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
 ---
 
 <Layout 
-  title="Bra Size Chart — US, UK, EU & International Size Conversion Guide | BraSizeChecker"
-  description="Comprehensive international bra size chart. Compare US, UK, EU, FR, AU, and JP band and cup sizes, learn how bra sizes work, and find your recommended fit."
+  title="Bra Size Chart — US, UK, EU, AU, JP, IN, HK, South Korea, SG & International Conversion Guide | BraSizeChecker"
+  description="Comprehensive international bra size chart. Compare US, UK, EU, FR, AU, JP, IN, HK, South Korea, and Singapore band and cup sizes."
   canonical="https://brasizechecker.com/bra-size-chart"
 >
   <Header />
@@ -21,10 +21,10 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
         Reference Guide
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        Bra Size Chart — US, UK, EU & International Conversions
+        Bra Size Chart — US, UK, EU, AU, JP, IN, HK, KR, SG & International Conversions
       </h1>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        Navigating bra sizing across different brands and countries can be confusing. Every bra size consists of a <strong>band number</strong> (the ribcage measurement) and a <strong>cup letter</strong> (the volume difference between bust and underbust). Use this reference chart to compare sizes across verified international sizing systems.
+        Navigating bra sizing across different brands and countries can be confusing. Every bra size consists of a <strong>band number</strong> (the ribcage measurement) and a <strong>cup letter</strong> (the volume difference between bust and underbust). Use this reference chart to compare sizes across verified international sizing systems including US, UK, EU, France, Australia, Japan, India, Hong Kong, South Korea, and Singapore.
       </p>
     </header>
 
@@ -58,10 +58,10 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
       <div class="mb-8">
         <h3 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider mb-3 flex items-center justify-between">
           <span>Band Size Conversion Matrix</span>
-          <span class="text-[11px] text-mute font-normal">US / UK / EU / FR / AU / JP</span>
+          <span class="text-[11px] text-mute font-normal">US / UK / EU / FR / AU / JP / IN / HK / KR / SG</span>
         </h3>
         <div class="overflow-x-auto -mx-2 px-2 max-h-[380px] rounded-xl border border-hairline">
-          <table class="w-full text-left text-xs sm:text-sm text-body min-w-[520px] border-collapse relative">
+          <table class="w-full text-left text-xs sm:text-sm text-body min-w-[720px] border-collapse relative">
             <thead class="sticky top-0 bg-canvas-soft-2 text-ink shadow-2xs z-10">
               <tr class="border-b border-hairline">
                 <th scope="col" class="py-3 px-3.5 font-semibold">US / CA</th>
@@ -70,6 +70,10 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
                 <th scope="col" class="py-3 px-3.5 font-semibold">FR / BE / ES</th>
                 <th scope="col" class="py-3 px-3.5 font-semibold">AU / NZ</th>
                 <th scope="col" class="py-3 px-3.5 font-semibold">JP</th>
+                <th scope="col" class="py-3 px-3.5 font-semibold">India (IN)</th>
+                <th scope="col" class="py-3 px-3.5 font-semibold">Hong Kong (HK)</th>
+                <th scope="col" class="py-3 px-3.5 font-semibold">South Korea (KR)</th>
+                <th scope="col" class="py-3 px-3.5 font-semibold">Singapore (SG)</th>
               </tr>
             </thead>
             <tbody id="page-band-matrix-body" class="divide-y divide-hairline bg-surface">
@@ -81,6 +85,10 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
                   <td class="py-3 px-3.5">{row.fr}</td>
                   <td class="py-3 px-3.5">{row.au}</td>
                   <td class="py-3 px-3.5">{row.jp}</td>
+                  <td class="py-3 px-3.5">{row.in}</td>
+                  <td class="py-3 px-3.5">{row.hk}</td>
+                  <td class="py-3 px-3.5">{row.kr}</td>
+                  <td class="py-3 px-3.5">{row.sg}</td>
                 </tr>
               ))}
             </tbody>
@@ -92,10 +100,10 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
       <div>
         <h3 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider mb-3 flex items-center justify-between">
           <span>Cup Size Conversion Matrix</span>
-          <span class="text-[11px] text-mute font-normal">US / UK / EU / AU / JP</span>
+          <span class="text-[11px] text-mute font-normal">US / UK / EU / AU / JP / IN / HK / KR / SG</span>
         </h3>
         <div class="overflow-x-auto -mx-2 px-2 max-h-[440px] rounded-xl border border-hairline">
-          <table class="w-full text-left text-xs sm:text-sm text-body min-w-[520px] border-collapse relative">
+          <table class="w-full text-left text-xs sm:text-sm text-body min-w-[720px] border-collapse relative">
             <thead class="sticky top-0 bg-canvas-soft-2 text-ink shadow-2xs z-10">
               <tr class="border-b border-hairline">
                 <th scope="col" class="py-3 px-3.5 font-semibold">US / CA</th>
@@ -103,6 +111,10 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
                 <th scope="col" class="py-3 px-3.5 font-semibold">EU</th>
                 <th scope="col" class="py-3 px-3.5 font-semibold">AU / NZ</th>
                 <th scope="col" class="py-3 px-3.5 font-semibold">JP</th>
+                <th scope="col" class="py-3 px-3.5 font-semibold">India (IN)</th>
+                <th scope="col" class="py-3 px-3.5 font-semibold">Hong Kong (HK)</th>
+                <th scope="col" class="py-3 px-3.5 font-semibold">South Korea (KR)</th>
+                <th scope="col" class="py-3 px-3.5 font-semibold">Singapore (SG)</th>
               </tr>
             </thead>
             <tbody id="page-cup-matrix-body" class="divide-y divide-hairline bg-surface">
@@ -113,6 +125,10 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
                   <td class="py-3 px-3.5">{row.eu}</td>
                   <td class="py-3 px-3.5">{row.au}</td>
                   <td class="py-3 px-3.5">{row.jp}</td>
+                  <td class="py-3 px-3.5">{row.in}</td>
+                  <td class="py-3 px-3.5">{row.hk}</td>
+                  <td class="py-3 px-3.5">{row.kr}</td>
+                  <td class="py-3 px-3.5">{row.sg}</td>
                 </tr>
               ))}
             </tbody>
@@ -148,7 +164,7 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
         <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Understanding Sister Sizes</h2>
         <p class="mb-4">
-          Sister sizes are bra sizes that hold the exact same cup volume capacity despite having different band measurements. When you go up one band size and down one cup letter (or vice versa), the physical volume inside the cup remains identical.
+          Sister sizes have equivalent cup volumes despite different band sizes. If your band is uncomfortable but the cup volume feels right, move up a band size and down a cup letter (or vice versa).
         </p>
         <div class="p-4 bg-canvas-soft-2 rounded-xl border border-hairline mb-4">
           <p class="font-bold text-ink mb-2">Sister Size Example for 34C:</p>
@@ -207,7 +223,11 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
           String(row.eu).includes(q) || 
           String(row.fr).includes(q) || 
           String(row.au).includes(q) || 
-          String(row.jp).includes(q)
+          String(row.jp).includes(q) || 
+          String(row.in).includes(q) || 
+          String(row.hk).includes(q) || 
+          String(row.kr).includes(q) || 
+          String(row.sg).includes(q)
         );
         const isFiltered = q && !isMatch;
         if (isFiltered) return '';
@@ -220,6 +240,10 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
             <td class="py-3 px-3.5">${row.fr}</td>
             <td class="py-3 px-3.5">${row.au}</td>
             <td class="py-3 px-3.5">${row.jp}</td>
+            <td class="py-3 px-3.5">${row.in}</td>
+            <td class="py-3 px-3.5">${row.hk}</td>
+            <td class="py-3 px-3.5">${row.kr}</td>
+            <td class="py-3 px-3.5">${row.sg}</td>
           </tr>
         `;
       }).join('');
@@ -232,7 +256,11 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
           row.uk.toLowerCase().includes(q) || 
           row.eu.toLowerCase().includes(q) || 
           row.au.toLowerCase().includes(q) || 
-          row.jp.toLowerCase().includes(q)
+          row.jp.toLowerCase().includes(q) || 
+          row.in.toLowerCase().includes(q) || 
+          row.hk.toLowerCase().includes(q) || 
+          row.kr.toLowerCase().includes(q) || 
+          row.sg.toLowerCase().includes(q)
         );
         const isFiltered = q && !isMatch;
         if (isFiltered) return '';
@@ -244,6 +272,10 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
             <td class="py-3 px-3.5">${row.eu}</td>
             <td class="py-3 px-3.5">${row.au}</td>
             <td class="py-3 px-3.5">${row.jp}</td>
+            <td class="py-3 px-3.5">${row.in}</td>
+            <td class="py-3 px-3.5">${row.hk}</td>
+            <td class="py-3 px-3.5">${row.kr}</td>
+            <td class="py-3 px-3.5">${row.sg}</td>
           </tr>
         `;
       }).join('');

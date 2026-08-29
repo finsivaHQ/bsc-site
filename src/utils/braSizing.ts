@@ -34,6 +34,10 @@ export interface BandRow {
   fr: number;
   au: number;
   jp: number;
+  in: number;
+  hk: number;
+  kr: number;
+  sg: number;
 }
 
 export interface CupRow {
@@ -42,6 +46,10 @@ export interface CupRow {
   eu: string;
   au: string;
   jp: string;
+  in: string;
+  hk: string;
+  kr: string;
+  sg: string;
 }
 
 export const US_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'DDD', 'G', 'H', 'I', 'J', 'K', 'L'];
@@ -49,25 +57,25 @@ export const UK_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG
 export const EU_CUPS = ['AA', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
 
 export const BAND_CONVERSION_MATRIX: BandRow[] = [
-  { us: 30, uk: 30, eu: 65, fr: 80, au: 8, jp: 65 },
-  { us: 32, uk: 32, eu: 70, fr: 85, au: 10, jp: 70 },
-  { us: 34, uk: 34, eu: 75, fr: 90, au: 12, jp: 75 },
-  { us: 36, uk: 36, eu: 80, fr: 95, au: 14, jp: 80 },
-  { us: 38, uk: 38, eu: 85, fr: 100, au: 16, jp: 85 },
-  { us: 40, uk: 40, eu: 90, fr: 105, au: 18, jp: 90 },
+  { us: 30, uk: 30, eu: 65, fr: 80, au: 8, jp: 65, in: 30, hk: 65, kr: 65, sg: 65 },
+  { us: 32, uk: 32, eu: 70, fr: 85, au: 10, jp: 70, in: 32, hk: 70, kr: 70, sg: 70 },
+  { us: 34, uk: 34, eu: 75, fr: 90, au: 12, jp: 75, in: 34, hk: 75, kr: 75, sg: 75 },
+  { us: 36, uk: 36, eu: 80, fr: 95, au: 14, jp: 80, in: 36, hk: 80, kr: 80, sg: 80 },
+  { us: 38, uk: 38, eu: 85, fr: 100, au: 16, jp: 85, in: 38, hk: 85, kr: 85, sg: 85 },
+  { us: 40, uk: 40, eu: 90, fr: 105, au: 18, jp: 90, in: 40, hk: 90, kr: 90, sg: 90 },
 ];
 
 export const CUP_CONVERSION_MATRIX: CupRow[] = [
-  { us: 'A', uk: 'A', eu: 'A', au: 'A', jp: 'A' },
-  { us: 'B', uk: 'B', eu: 'B', au: 'B', jp: 'B' },
-  { us: 'C', uk: 'C', eu: 'C', au: 'C', jp: 'C' },
-  { us: 'D', uk: 'D', eu: 'D', au: 'D', jp: 'D' },
-  { us: 'DD / E', uk: 'DD', eu: 'E', au: 'DD', jp: 'E' },
-  { us: 'DDD / F', uk: 'E', eu: 'F', au: 'E', jp: 'F' },
-  { us: 'G', uk: 'F', eu: 'G', au: 'F', jp: 'G' },
-  { us: 'H', uk: 'FF', eu: 'H', au: 'FF', jp: 'H' },
-  { us: 'I', uk: 'G', eu: 'I', au: 'G', jp: 'I' },
-  { us: 'J', uk: 'GG', eu: 'J', au: 'GG', jp: 'J' },
+  { us: 'A', uk: 'A', eu: 'A', au: 'A', jp: 'A', in: 'A', hk: 'A', kr: 'A', sg: 'A' },
+  { us: 'B', uk: 'B', eu: 'B', au: 'B', jp: 'B', in: 'B', hk: 'B', kr: 'B', sg: 'B' },
+  { us: 'C', uk: 'C', eu: 'C', au: 'C', jp: 'C', in: 'C', hk: 'C', kr: 'C', sg: 'C' },
+  { us: 'D', uk: 'D', eu: 'D', au: 'D', jp: 'D', in: 'D', hk: 'D', kr: 'D', sg: 'D' },
+  { us: 'DD / E', uk: 'DD', eu: 'E', au: 'DD', jp: 'E', in: 'DD / E', hk: 'E', kr: 'E', sg: 'E' },
+  { us: 'DDD / F', uk: 'E', eu: 'F', au: 'E', jp: 'F', in: 'E / F', hk: 'F', kr: 'F', sg: 'F' },
+  { us: 'G', uk: 'F', eu: 'G', au: 'F', jp: 'G', in: 'F / G', hk: 'G', kr: 'G', sg: 'G' },
+  { us: 'H', uk: 'FF', eu: 'H', au: 'FF', jp: 'H', in: 'G / H', hk: 'H', kr: 'H', sg: 'H' },
+  { us: 'I', uk: 'G', eu: 'I', au: 'G', jp: 'I', in: 'H', hk: 'I', kr: 'I', sg: 'I' },
+  { us: 'J', uk: 'GG', eu: 'J', au: 'GG', jp: 'J', in: 'I', hk: 'J', kr: 'J', sg: 'J' },
 ];
 
 /**
@@ -187,6 +195,22 @@ export function calculateBraSize(input: BraSizeInput): BraSizeResult | null {
   let jpBand = euBand;
   const jpCup = euCup;
 
+  // --- India (IN) ---
+  let inBand = usBand;
+  const inCup = usCup;
+
+  // --- Hong Kong (HK) ---
+  let hkBand = euBand;
+  const hkCup = euCup;
+
+  // --- South Korea (KR) ---
+  let krBand = euBand;
+  const krCup = euCup;
+
+  // --- Singapore (SG) ---
+  let sgBand = euBand;
+  const sgCup = euCup;
+
   const primarySize = `${usBand}${usCup}`;
   const tightSize = `${usBand - 2}${US_CUPS[Math.min(usCupIndex + 1, US_CUPS.length - 1)]}`;
   const looseSize = `${usBand + 2}${US_CUPS[Math.max(usCupIndex - 1, 0)]}`;
@@ -200,6 +224,10 @@ export function calculateBraSize(input: BraSizeInput): BraSizeResult | null {
     { location: 'FR / BE / ES', band: `${frBand} cm`, cup: euCup },
     { location: 'Australia / New Zealand', band: `${auBand}`, cup: auCup },
     { location: 'Japan (JP)', band: `${jpBand}`, cup: jpCup },
+    { location: 'India (IN)', band: `${inBand}`, cup: inCup },
+    { location: 'Hong Kong (HK)', band: `${hkBand} cm`, cup: hkCup },
+    { location: 'South Korea (KR)', band: `${krBand} cm`, cup: krCup },
+    { location: 'Singapore (SG)', band: `${sgBand} cm`, cup: sgCup },
   ];
 
   return {
@@ -219,13 +247,17 @@ export interface ConvertKnownSizeResult {
   fr: { band: number; cup: string; full: string };
   au: { band: number; cup: string; full: string };
   jp: { band: number; cup: string; full: string };
+  in: { band: number; cup: string; full: string };
+  hk: { band: number; cup: string; full: string };
+  kr: { band: number; cup: string; full: string };
+  sg: { band: number; cup: string; full: string };
 }
 
 /**
  * Converts a known bra size from one system to all supported international systems using authoritative matrices.
  */
 export function convertKnownSize(
-  systemKey: 'US' | 'UK' | 'EU' | 'FR' | 'AU' | 'JP',
+  systemKey: 'US' | 'UK' | 'EU' | 'FR' | 'AU' | 'JP' | 'IN' | 'HK' | 'KR' | 'SG',
   bandVal: number,
   cupVal: string
 ): ConvertKnownSizeResult | null {
@@ -258,6 +290,10 @@ export function convertKnownSize(
     fr: { band: bandRow.fr, cup: cleanCup(cupRow.eu), full: `${bandRow.fr}${cleanCup(cupRow.eu)}` },
     au: { band: bandRow.au, cup: cleanCup(cupRow.au), full: `${bandRow.au}${cleanCup(cupRow.au)}` },
     jp: { band: bandRow.jp, cup: cleanCup(cupRow.jp), full: `${bandRow.jp}${cleanCup(cupRow.jp)}` },
+    in: { band: bandRow.in, cup: cleanCup(cupRow.in), full: `${bandRow.in}${cleanCup(cupRow.in)}` },
+    hk: { band: bandRow.hk, cup: cleanCup(cupRow.hk), full: `${bandRow.hk}${cleanCup(cupRow.hk)}` },
+    kr: { band: bandRow.kr, cup: cleanCup(cupRow.kr), full: `${bandRow.kr}${cleanCup(cupRow.kr)}` },
+    sg: { band: bandRow.sg, cup: cleanCup(cupRow.sg), full: `${bandRow.sg}${cleanCup(cupRow.sg)}` },
   };
 }
 

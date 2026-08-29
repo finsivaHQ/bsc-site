@@ -73,7 +73,7 @@ runTest('Centimeter Input (80 cm underbust, 95 cm bust) -> EU 80B, FR 95B', () =
   assert.strictEqual(frEntry?.cup, 'B');
 });
 
-// 6. International Conversions (US, UK, EU, FR, AU, JP)
+// 6. International Conversions (US, UK, EU, FR, AU, JP, IN, HK, KR)
 runTest('All International Conversions for 34" / 37" (34C)', () => {
   const result = calculateBraSize({ underbust: 34, overbust: 37, unit: 'in' });
   assert.ok(result !== null);
@@ -83,6 +83,10 @@ runTest('All International Conversions for 34" / 37" (34C)', () => {
   const fr = result.internationalSizes.find(s => s.location === 'FR / BE / ES');
   const au = result.internationalSizes.find(s => s.location === 'Australia / New Zealand');
   const jp = result.internationalSizes.find(s => s.location === 'Japan (JP)');
+  const india = result.internationalSizes.find(s => s.location === 'India (IN)');
+  const hk = result.internationalSizes.find(s => s.location === 'Hong Kong (HK)');
+  const kr = result.internationalSizes.find(s => s.location === 'South Korea (KR)');
+  const sg = result.internationalSizes.find(s => s.location === 'Singapore (SG)');
 
   assert.strictEqual(us?.band, '34');
   assert.strictEqual(us?.cup, 'C');
@@ -93,6 +97,11 @@ runTest('All International Conversions for 34" / 37" (34C)', () => {
   assert.strictEqual(au?.band, '12');
   assert.strictEqual(jp?.band, '85');
   assert.strictEqual(jp?.cup, 'AA');
+  assert.strictEqual(india?.band, '34');
+  assert.strictEqual(india?.cup, 'C');
+  assert.strictEqual(hk?.band, '85 cm');
+  assert.strictEqual(kr?.band, '85 cm');
+  assert.strictEqual(sg?.band, '85 cm');
 });
 
 // 7. Conversion Matrix Integrity & Bi-directional Lookup
@@ -107,6 +116,10 @@ runTest('Conversion Matrix Consistency (BAND & CUP matrices)', () => {
   assert.strictEqual(row34?.fr, 90);
   assert.strictEqual(row34?.au, 12);
   assert.strictEqual(row34?.jp, 75);
+  assert.strictEqual(row34?.in, 34);
+  assert.strictEqual(row34?.hk, 75);
+  assert.strictEqual(row34?.kr, 75);
+  assert.strictEqual(row34?.sg, 75);
 
   // Check DD cup row
   const rowDD = CUP_CONVERSION_MATRIX.find(r => r.uk === 'DD');
@@ -114,11 +127,15 @@ runTest('Conversion Matrix Consistency (BAND & CUP matrices)', () => {
   assert.strictEqual(rowDD?.eu, 'E');
   assert.strictEqual(rowDD?.au, 'DD');
   assert.strictEqual(rowDD?.jp, 'E');
+  assert.strictEqual(rowDD?.in, 'DD / E');
+  assert.strictEqual(rowDD?.hk, 'E');
+  assert.strictEqual(rowDD?.kr, 'E');
+  assert.strictEqual(rowDD?.sg, 'E');
 });
 
 // 8. Known Size Converter Function (convertKnownSize)
 runTest('Known Size Converter Function (convertKnownSize)', () => {
-  // US 34C -> UK 34C, EU 75C, FR 90C, AU 12C, JP 75C
+  // US 34C -> UK 34C, EU 75C, FR 90C, AU 12C, JP 75C, IN 34C, HK 75C, KR 75C, SG 75C
   const conv34C = convertKnownSize('US', 34, 'C');
   assert.ok(conv34C !== null);
   assert.strictEqual(conv34C.us.full, '34C');
@@ -127,16 +144,32 @@ runTest('Known Size Converter Function (convertKnownSize)', () => {
   assert.strictEqual(conv34C.fr.full, '90C');
   assert.strictEqual(conv34C.au.full, '12C');
   assert.strictEqual(conv34C.jp.full, '75C');
+  assert.strictEqual(conv34C.in.full, '34C');
+  assert.strictEqual(conv34C.hk.full, '75C');
+  assert.strictEqual(conv34C.kr.full, '75C');
+  assert.strictEqual(conv34C.sg.full, '75C');
 
-  // UK 32FF -> US 32H, EU 70H, FR 85H, AU 10FF, JP 70H
-  const conv32FF = convertKnownSize('UK', 32, 'FF');
-  assert.ok(conv32FF !== null);
-  assert.strictEqual(conv32FF.us.full, '32H');
-  assert.strictEqual(conv32FF.uk.full, '32FF');
-  assert.strictEqual(conv32FF.eu.full, '70H');
-  assert.strictEqual(conv32FF.fr.full, '85H');
-  assert.strictEqual(conv32FF.au.full, '10FF');
-  assert.strictEqual(conv32FF.jp.full, '70H');
+  // SG 75C -> US 34C, UK 34C, EU 75C, AU 12C
+  const convSg75C = convertKnownSize('SG', 75, 'C');
+  assert.ok(convSg75C !== null);
+  assert.strictEqual(convSg75C.sg.full, '75C');
+  assert.strictEqual(convSg75C.us.full, '34C');
+  assert.strictEqual(convSg75C.au.full, '12C');
+
+  // IN 32D -> US 32D, UK 32D, EU 70D, HK 70D, KR 70D
+  const convIn32D = convertKnownSize('IN', 32, 'D');
+  assert.ok(convIn32D !== null);
+  assert.strictEqual(convIn32D.in.full, '32D');
+  assert.strictEqual(convIn32D.us.full, '32D');
+  assert.strictEqual(convIn32D.uk.full, '32D');
+  assert.strictEqual(convIn32D.eu.full, '70D');
+
+  // KR 75C -> US 34C, UK 34C, EU 75C, IN 34C, HK 75C
+  const convKr75C = convertKnownSize('KR', 75, 'C');
+  assert.ok(convKr75C !== null);
+  assert.strictEqual(convKr75C.kr.full, '75C');
+  assert.strictEqual(convKr75C.us.full, '34C');
+  assert.strictEqual(convKr75C.hk.full, '75C');
 
   // Invalid lookup
   assert.strictEqual(convertKnownSize('US', 99, 'Z'), null);

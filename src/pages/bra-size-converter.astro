@@ -53,6 +53,10 @@ const defaultCup = 'C';
               <option value="FR">France / Belgium / Spain (FR)</option>
               <option value="AU">Australia / New Zealand (AU)</option>
               <option value="JP">Japan (JP)</option>
+              <option value="IN">India (IN)</option>
+              <option value="HK">Hong Kong (HK)</option>
+              <option value="KR">South Korea (KR)</option>
+              <option value="SG">Singapore (SG)</option>
             </select>
           </div>
 
@@ -117,7 +121,7 @@ const defaultCup = 'C';
           </button>
         </div>
 
-        <!-- 6-Card Grid Display -->
+        <!-- 10-Card Grid Display -->
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 text-left">
           <!-- US/CA Card -->
           <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
@@ -153,6 +157,30 @@ const defaultCup = 'C';
           <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
             <span class="text-[11px] font-semibold text-mute uppercase tracking-wider block mb-1">Japan (JP)</span>
             <div id="res-jp" class="text-2xl sm:text-3xl font-bold text-ink">75C</div>
+          </div>
+
+          <!-- IN Card -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
+            <span class="text-[11px] font-semibold text-mute uppercase tracking-wider block mb-1">India (IN)</span>
+            <div id="res-in" class="text-2xl sm:text-3xl font-bold text-ink">34C</div>
+          </div>
+
+          <!-- HK Card -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
+            <span class="text-[11px] font-semibold text-mute uppercase tracking-wider block mb-1">Hong Kong (HK)</span>
+            <div id="res-hk" class="text-2xl sm:text-3xl font-bold text-ink">75C</div>
+          </div>
+
+          <!-- KR Card -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
+            <span class="text-[11px] font-semibold text-mute uppercase tracking-wider block mb-1">South Korea (KR)</span>
+            <div id="res-kr" class="text-2xl sm:text-3xl font-bold text-ink">75C</div>
+          </div>
+
+          <!-- SG Card -->
+          <div class="bg-surface border border-hairline rounded-xl p-4 text-center shadow-2xs">
+            <span class="text-[11px] font-semibold text-mute uppercase tracking-wider block mb-1">Singapore (SG)</span>
+            <div id="res-sg" class="text-2xl sm:text-3xl font-bold text-ink">75C</div>
           </div>
         </div>
 
@@ -232,9 +260,13 @@ const defaultCup = 'C';
   const resFr = document.getElementById('res-fr');
   const resAu = document.getElementById('res-au');
   const resJp = document.getElementById('res-jp');
+  const resIn = document.getElementById('res-in');
+  const resHk = document.getElementById('res-hk');
+  const resKr = document.getElementById('res-kr');
+  const resSg = document.getElementById('res-sg');
 
   const populateSelectors = () => {
-    const sys = (systemSelect.value || 'US') as 'US' | 'UK' | 'EU' | 'FR' | 'AU' | 'JP';
+    const sys = (systemSelect.value || 'US') as 'US' | 'UK' | 'EU' | 'FR' | 'AU' | 'JP' | 'IN' | 'HK' | 'KR' | 'SG';
     const key = (sys === 'FR' ? 'fr' : sys.toLowerCase()) as keyof typeof BAND_CONVERSION_MATRIX[0];
     const cupKey = (sys === 'FR' ? 'eu' : sys.toLowerCase()) as keyof typeof CUP_CONVERSION_MATRIX[0];
 
@@ -251,7 +283,7 @@ const defaultCup = 'C';
   };
 
   const handleConvert = () => {
-    const sys = (systemSelect.value || 'US') as 'US' | 'UK' | 'EU' | 'FR' | 'AU' | 'JP';
+    const sys = (systemSelect.value || 'US') as 'US' | 'UK' | 'EU' | 'FR' | 'AU' | 'JP' | 'IN' | 'HK' | 'KR' | 'SG';
     const bandVal = parseInt(bandSelect.value, 10);
     const cupVal = cupSelect.value;
 
@@ -267,6 +299,10 @@ const defaultCup = 'C';
     if (resFr) resFr.textContent = result.fr.full;
     if (resAu) resAu.textContent = result.au.full;
     if (resJp) resJp.textContent = result.jp.full;
+    if (resIn) resIn.textContent = result.in.full;
+    if (resHk) resHk.textContent = result.hk.full;
+    if (resKr) resKr.textContent = result.kr.full;
+    if (resSg) resSg.textContent = result.sg.full;
   };
 
   systemSelect?.addEventListener('change', () => {
@@ -280,7 +316,7 @@ const defaultCup = 'C';
 
   // Copy Results Button
   copyBtn?.addEventListener('click', () => {
-    const summary = `Converted Bra Size on BraSizeChecker.com: ${enteredSizeDisplay?.textContent} => US: ${resUs?.textContent}, UK: ${resUk?.textContent}, EU: ${resEu?.textContent}, FR: ${resFr?.textContent}, AU: ${resAu?.textContent}, JP: ${resJp?.textContent}.`;
+    const summary = `Converted Bra Size on BraSizeChecker.com: ${enteredSizeDisplay?.textContent} => US: ${resUs?.textContent}, UK: ${resUk?.textContent}, EU: ${resEu?.textContent}, FR: ${resFr?.textContent}, AU: ${resAu?.textContent}, JP: ${resJp?.textContent}, IN: ${resIn?.textContent}, HK: ${resHk?.textContent}, KR: ${resKr?.textContent}, SG: ${resSg?.textContent}.`;
     navigator.clipboard.writeText(summary).then(() => {
       if (copyTextEl) copyTextEl.textContent = 'Copied!';
       setTimeout(() => {

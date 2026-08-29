@@ -291,10 +291,10 @@ import { validateAndCalculateBraSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MAT
     <!-- Band Conversion Matrix Table -->
     <h3 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider mb-3 flex items-center justify-between">
       <span>Band Conversion Matrix</span>
-      <span class="text-[11px] text-mute font-normal">US / UK / EU / FR / AU / JP</span>
+      <span class="text-[11px] text-mute font-normal">US / UK / EU / FR / AU / JP / IN / HK / KR / SG</span>
     </h3>
     <div class="overflow-x-auto mb-8 -mx-2 px-2 max-h-[360px]">
-      <table class="w-full text-left text-xs sm:text-sm text-body min-w-[500px] border-collapse relative">
+      <table class="w-full text-left text-xs sm:text-sm text-body min-w-[720px] border-collapse relative">
         <thead class="sticky top-0 bg-canvas-soft-2 text-ink shadow-2xs z-10">
           <tr class="border-b border-hairline">
             <th scope="col" class="py-3 px-3 font-semibold rounded-tl-lg">US / CA</th>
@@ -302,7 +302,11 @@ import { validateAndCalculateBraSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MAT
             <th scope="col" class="py-3 px-3 font-semibold">EU</th>
             <th scope="col" class="py-3 px-3 font-semibold">FR / BE / ES</th>
             <th scope="col" class="py-3 px-3 font-semibold">AU / NZ</th>
-            <th scope="col" class="py-3 px-3 font-semibold rounded-tr-lg">JP</th>
+            <th scope="col" class="py-3 px-3 font-semibold">JP</th>
+            <th scope="col" class="py-3 px-3 font-semibold">India (IN)</th>
+            <th scope="col" class="py-3 px-3 font-semibold">Hong Kong (HK)</th>
+            <th scope="col" class="py-3 px-3 font-semibold">South Korea (KR)</th>
+            <th scope="col" class="py-3 px-3 font-semibold rounded-tr-lg">Singapore (SG)</th>
           </tr>
         </thead>
         <tbody id="band-matrix-body" class="divide-y divide-hairline bg-surface">
@@ -314,17 +318,21 @@ import { validateAndCalculateBraSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MAT
     <!-- Cup Size Matrix Table -->
     <h3 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider mb-3 flex items-center justify-between">
       <span>Cup Size Matrix</span>
-      <span class="text-[11px] text-mute font-normal">US / UK / EU / AU / JP</span>
+      <span class="text-[11px] text-mute font-normal">US / UK / EU / AU / JP / IN / HK / KR / SG</span>
     </h3>
     <div class="overflow-x-auto -mx-2 px-2 max-h-[420px]">
-      <table class="w-full text-left text-xs sm:text-sm text-body min-w-[500px] border-collapse relative">
+      <table class="w-full text-left text-xs sm:text-sm text-body min-w-[720px] border-collapse relative">
         <thead class="sticky top-0 bg-canvas-soft-2 text-ink shadow-2xs z-10">
           <tr class="border-b border-hairline">
             <th scope="col" class="py-3 px-3 font-semibold rounded-tl-lg">US / CA</th>
             <th scope="col" class="py-3 px-3 font-semibold">UK</th>
             <th scope="col" class="py-3 px-3 font-semibold">EU</th>
             <th scope="col" class="py-3 px-3 font-semibold">AU / NZ</th>
-            <th scope="col" class="py-3 px-3 font-semibold rounded-tr-lg">JP</th>
+            <th scope="col" class="py-3 px-3 font-semibold">JP</th>
+            <th scope="col" class="py-3 px-3 font-semibold">India (IN)</th>
+            <th scope="col" class="py-3 px-3 font-semibold">Hong Kong (HK)</th>
+            <th scope="col" class="py-3 px-3 font-semibold">South Korea (KR)</th>
+            <th scope="col" class="py-3 px-3 font-semibold rounded-tr-lg">Singapore (SG)</th>
           </tr>
         </thead>
         <tbody id="cup-matrix-body" class="divide-y divide-hairline bg-surface">
@@ -399,7 +407,11 @@ import { validateAndCalculateBraSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MAT
         String(row.eu).includes(q) || 
         String(row.fr).includes(q) || 
         String(row.au).includes(q) || 
-        String(row.jp).includes(q)
+        String(row.jp).includes(q) || 
+        String(row.in).includes(q) || 
+        String(row.hk).includes(q) || 
+        String(row.kr).includes(q) || 
+        String(row.sg).includes(q)
       );
 
       if (isFiltered) return '';
@@ -415,6 +427,10 @@ import { validateAndCalculateBraSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MAT
           <td class="py-2.5 px-3">${row.fr}</td>
           <td class="py-2.5 px-3">${row.au}</td>
           <td class="py-2.5 px-3">${row.jp}</td>
+          <td class="py-2.5 px-3">${row.in}</td>
+          <td class="py-2.5 px-3">${row.hk}</td>
+          <td class="py-2.5 px-3">${row.kr}</td>
+          <td class="py-2.5 px-3">${row.sg}</td>
         </tr>
       `;
     }).join('');
@@ -432,7 +448,11 @@ import { validateAndCalculateBraSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MAT
         row.uk.toLowerCase().includes(q) || 
         row.eu.toLowerCase().includes(q) || 
         row.au.toLowerCase().includes(q) || 
-        row.jp.toLowerCase().includes(q)
+        row.jp.toLowerCase().includes(q) || 
+        row.in.toLowerCase().includes(q) || 
+        row.hk.toLowerCase().includes(q) || 
+        row.kr.toLowerCase().includes(q) || 
+        row.sg.toLowerCase().includes(q)
       );
 
       if (isFiltered) return '';
@@ -447,6 +467,10 @@ import { validateAndCalculateBraSize, BAND_CONVERSION_MATRIX, CUP_CONVERSION_MAT
           <td class="py-2.5 px-3">${row.eu}</td>
           <td class="py-2.5 px-3">${row.au}</td>
           <td class="py-2.5 px-3">${row.jp}</td>
+          <td class="py-2.5 px-3">${row.in}</td>
+          <td class="py-2.5 px-3">${row.hk}</td>
+          <td class="py-2.5 px-3">${row.kr}</td>
+          <td class="py-2.5 px-3">${row.sg}</td>
         </tr>
       `;
     }).join('');

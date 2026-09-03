@@ -3,13 +3,46 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What should I do if my ribcage measures an odd number like 31 or 33 inches?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your underbust falls on an odd number, your baseline band size is generally rounded up to the nearest even number (31 underbust -> 32 band). However, depending on ribcage squishiness and brand elasticity, you can also test the smaller band size (30 band) paired with a 2-hook bra extender until the elastic naturally breaks in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I size up or down if I am between cup sizes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always size UP to the larger cup size if you are wearing structured or moulded t-shirt bras to avoid tissue spillage and quad-boobing. If you prefer unlined stretch lace cups (like balconettes), you can often stay in the smaller cup as the elastic lace will stretch to accommodate your bust shape without gaping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I fit bras if one breast is larger than the other?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always fit the bra cup to your larger breast. A cup that is too small will cause painful underwire digging and quad-boobing. You can easily fill out the cup on your smaller side using a subtle removable bra pad (cookie) or adjusting the shoulder strap slightly shorter."
+      }
+    }
+  ]
+};
 ---
 
 <Layout 
-  title="What To Do If You're Between Bra Sizes: Band & Cup Rounding | BraSizeChecker"
-  description="Practical advice for measuring between bra sizes. Learn how to handle odd underbust numbers (31, 33), half-cup differences, and hook adjustments."
+  title="Between Bra Sizes? How to Handle Odd Underbusts & Half-Cups | BraSizeChecker"
+  description="Expert solutions for being between bra sizes. What to do with 31 or 33 inch underbusts, half-cup differences, asymmetric breasts, and band extender matrices."
   canonical="https://brasizechecker.com/guides/between-bra-sizes"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <Header />
   <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[
@@ -19,49 +52,166 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
     <header class="mb-10 text-center sm:text-left">
       <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-        Evergreen Guide
+        Fitting Solutions
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        What To Do If You're Between Bra Sizes
+        What To Do If You Are Between Bra Sizes: Band & Cup Master Guide
       </h1>
       <div class="flex items-center gap-3 text-xs text-mute mb-4">
-        <span>By BraSizeChecker Editorial Team</span>
+        <span>By BraSizeChecker Technical Advisory Team</span>
         <span>&bull;</span>
-        <time datetime="2026-08-24">Updated August 2026</time>
+        <time datetime="2026-09-04">Updated September 2026</time>
       </div>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        Human bodies don't naturally come in exact 2-inch increments. If your underbust falls on an odd number (like 31 or 33 inches) or your bust falls between cup letters, here is how to find a comfortable fit.
+        Human anatomy is continuous, but bra manufacturing operates in rigid 2-inch band steps and 1-inch cup deltas. If your ribcage measures an odd number (such as 31 or 33 inches) or your bust falls on a 0.5-inch boundary, this guide provides exact mathematical and practical solutions.
       </p>
     </header>
 
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <!-- Section 1: Odd Underbust Measurement Decisions -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. Odd Underbust Measurements (e.g., 31" or 33")</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. Odd Underbust Measurements (31", 33", 35", 37")</h2>
         <p class="mb-4">
-          Standard US and UK bra bands are manufactured in even numbers (30, 32, 34, 36). If your underbust measures 31 or 33 inches:
+          Because standard bra bands in the US and UK are produced exclusively in even numbers (30, 32, 34, 36, 38), measuring an odd underbust leaves you exactly halfway between two band sizes. The decision to size up or size down depends on two critical factors: <strong>ribcage squish (tissue compressibility)</strong> and <strong>brand band firmness</strong>.
         </p>
-        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm mb-4">
-          <li><strong>Round Up to Nearest Even Band:</strong> In modern direct underbust sizing, round up to the nearest even number (31 underbust &rarr; 32 band).</li>
-          <li><strong>Test Sister Sizes:</strong> Test both your baseline rounded size and your smaller sister size (e.g. try both 32D and 30DD with a bra extender if needed).</li>
-        </ul>
+
+        <!-- Decision Table 1: Odd Underbust Matrix -->
+        <h3 class="text-lg font-bold text-ink mt-6 mb-3">Odd Underbust Decision Matrix</h3>
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[500px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">Underbust Measure</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Ribcage Squish Factor</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Recommended Band</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Cup Adjustment Required</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">31 inches</td>
+                <td class="py-2.5 px-3">High (subcutaneous padding)</td>
+                <td class="py-2.5 px-3 font-semibold text-primary">Size Down to 30 Band</td>
+                <td class="py-2.5 px-3">Go UP 1 cup letter (e.g. 32C &rarr; 30D)</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">31 inches</td>
+                <td class="py-2.5 px-3">Low (muscular / boned ribcage)</td>
+                <td class="py-2.5 px-3 font-semibold text-ink">Size Up to 32 Band</td>
+                <td class="py-2.5 px-3">Maintain calculated cup letter (e.g. 32C)</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">33 inches</td>
+                <td class="py-2.5 px-3">High (subcutaneous padding)</td>
+                <td class="py-2.5 px-3 font-semibold text-primary">Size Down to 32 Band</td>
+                <td class="py-2.5 px-3">Go UP 1 cup letter (e.g. 34D &rarr; 32DD)</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">33 inches</td>
+                <td class="py-2.5 px-3">Low (muscular / boned ribcage)</td>
+                <td class="py-2.5 px-3 font-semibold text-ink">Size Up to 34 Band</td>
+                <td class="py-2.5 px-3">Maintain calculated cup letter (e.g. 34D)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
+      <!-- Section 2: Half-Cup Differences & Asymmetrical Breasts -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Between Cup Letters</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Half-Cup Differences & Breast Asymmetry</h2>
         <p class="mb-4">
-          If your bust-to-band difference falls on a half-inch (e.g., 3.5 inches difference between C and D):
+          It is completely normal for breast tissue measurements to fall between integer inches (e.g. a 3.5-inch difference between bust and underbust, putting you right between a C cup and a D cup). Furthermore, over 70% of individuals have natural volume asymmetry between their left and right breasts.
         </p>
-        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm mb-4">
-          <li>Choose stretch-lace cups that conform to half-cup variations without gaping.</li>
-          <li>Fit the larger breast if your breasts are asymmetrical, using removable cup pads for the smaller side.</li>
-        </ul>
+
+        <!-- Solution Matrix 2: Cup Boundary Solutions -->
+        <div class="space-y-4 mb-6">
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink text-sm mb-1">Strategy A: The Cup Style Selection Rule</h3>
+            <p class="text-xs sm:text-sm text-body">
+              For structured, stiff foam/moulded cups, always round UP to the larger cup size (e.g., 34D instead of 34C) to eliminate top edge spilling (quad-boobing). For stretch lace unlined cups (balconette styles), you can round DOWN as the lace will stretch smoothly over half-inch variations.
+            </p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink text-sm mb-1">Strategy B: Golden Rule of Asymmetry Fitting</h3>
+            <p class="text-xs sm:text-sm text-body">
+              Always fit your bra cup to your LARGER breast. An underwire that sits on breast tissue on your larger side causes pain and tissue displacement. To fill any slight gap on the smaller side, shorten that side's shoulder strap or place a removable insert ("cookie") under the smaller breast.
+            </p>
+          </div>
+        </div>
       </section>
 
+      <!-- Section 3: Bra Extenders vs. Sister Sizing -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. Helpful Tools</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. When to Use a Bra Extender vs. Sister Sizing</h2>
+        <p class="mb-4">
+          A non-stretch bra extender is an inexpensive tool that adds 0.5 to 2 inches of length to your bra's hooks. Compare when an extender is preferable over purchasing a larger band size:
+        </p>
+
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[480px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">Scenario</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Best Solution</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Rationale</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr>
+                <td class="py-2.5 px-3">New firm bra band (e.g., Panache) feels tight during break-in.</td>
+                <td class="py-2.5 px-3 font-semibold text-primary">Use 2-Hook Extender</td>
+                <td class="py-2.5 px-3">Allows band to stretch naturally after 3-5 wears without losing support long-term.</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3">Permanent ribcage measurement on odd number (33 underbust).</td>
+                <td class="py-2.5 px-3 font-semibold text-primary">Sister Size + Extender</td>
+                <td class="py-2.5 px-3">32 band + 1-hook extender offers superior anchorage compared to a loose 34 band.</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3">Red marks and breathing restriction after 1 hour.</td>
+                <td class="py-2.5 px-3 font-semibold text-ink">Sister Size Up Band</td>
+                <td class="py-2.5 px-3">Band is fundamentally too small. Move up 1 band size and down 1 cup letter.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 4: Tools & Interactive Calculators -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. Find Your Ideal Intermediate Size</h2>
+        <p class="mb-6">
+          Run your measurements through our primary calculator and sister size generator:
+        </p>
+        
         <div class="flex flex-wrap gap-3">
-          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover shadow-2xs">Re-Calculate Size &rarr;</a>
-          <a href="/sister-size-calculator" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 shadow-2xs">Sister Size Tool &rarr;</a>
+          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
+            Calculator Tool &rarr;
+          </a>
+          <a href="/sister-size-calculator" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Sister Size Matrix &rarr;
+          </a>
+          <a href="/fit-guide" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Fit Guide Hub &rarr;
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 5: FAQ Section -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqSchema.mainEntity.map(item => (
+            <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
+              <summary class="font-bold text-ink flex justify-between items-center list-none">
+                <span>{item.name}</span>
+                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+              </summary>
+              <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+            </details>
+          ))}
         </div>
       </section>
     </div>

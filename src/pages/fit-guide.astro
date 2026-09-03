@@ -4,6 +4,29 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I know if my bra fitting issue is caused by the band or the cup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Perform the independent band test: put your bra on backwards and upside down with the cups hanging down your back. If the band feels comfortably snug on the loosest hook, your band size is correct and any tightness or gap when worn normally is caused by incorrect cup volume or cup shape."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most common bra fitting mistake?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common fitting mistake is wearing a band that is too loose (e.g. 36 band instead of 32) paired with a cup that is too small (e.g. B cup instead of E/DD). This causes the band to ride up your back and forces shoulder straps to carry all the bust weight."
+      }
+    }
+  ]
+};
+
 const fitProblems = [
   {
     id: 'band-rides-up',
@@ -11,136 +34,162 @@ const fitProblems = [
     symptom: 'The back of your bra pulls upward toward your shoulder blades instead of remaining level across your ribcage.',
     cause: 'The band size is too large or the elastic has stretched out over time, causing straps to carry the weight.',
     solution: 'Try a smaller band size with a larger cup letter to preserve cup volume (e.g., move from 36C to 34D).',
-    linkText: 'Calculate Sister Size',
-    linkUrl: '/sister-size-calculator'
+    linkText: 'Read Full Band Rides Up Guide',
+    linkUrl: '/fit-guide/band-rides-up'
   },
   {
     id: 'band-too-tight',
     title: 'Band Feels Too Tight or Digs In',
     symptom: 'The band leaves painful red indents, restricts deep breathing, or feels uncomfortably constricting.',
     cause: 'The band size is too small, or the cups are too small causing breast tissue to push the band outward.',
-    solution: 'First test the band backwards with cups hanging down your back. If it still feels tight, try a larger band size with a smaller cup (e.g., 34C to 36B).',
-    linkText: 'Check Sister Sizes',
-    linkUrl: '/sister-size-calculator'
+    solution: 'Test the band backwards. If it feels fine backwards, your cups are too small. Otherwise, try a larger band size (e.g. 34C to 36B).',
+    linkText: 'Read Full Band Too Tight Guide',
+    linkUrl: '/fit-guide/band-too-tight'
   },
   {
-    id: 'cups-gape',
+    id: 'bra-cup-gaping',
     title: 'Cups Gape or Have Empty Space',
     symptom: 'Wrinkling, puckering, or visible space exists between the top of the bra cups and your chest.',
     cause: 'The cup volume is too large, or the bra style (like a full-coverage cup) does not suit your breast shape.',
     solution: 'Try going down one cup letter (e.g., 34D to 34C) or try a demi / balconette cut with lower apex coverage.',
-    linkText: 'Recalculate Size',
-    linkUrl: '/#calculator'
+    linkText: 'Read Full Cup Gaping Guide',
+    linkUrl: '/fit-guide/bra-cup-gaping'
   },
   {
-    id: 'tissue-spills',
+    id: 'bra-spillage',
     title: 'Breast Tissue Spills Over Cups ("Quad-Boob")',
     symptom: 'Breasts bulge over the top, sides, or underarms of the bra cups, creating visible lines under clothing.',
     cause: 'The cup volume is too small, forcing breast tissue out of the cup boundaries.',
     solution: 'Keep your band size identical and increase your cup letter by one or two sizes (e.g., move from 34B to 34C or 34D).',
-    linkText: 'Recalculate Size',
-    linkUrl: '/#calculator'
+    linkText: 'Read Full Spillage Guide',
+    linkUrl: '/fit-guide/bra-spillage'
   },
   {
-    id: 'underwire-digs',
+    id: 'underwire-digging',
     title: 'Underwire Digs Into Ribs or Underarms',
     symptom: 'Metal or plastic underwires poke, pinch, or dig into breast tissue near your sternum or underarm.',
     cause: 'The cup width is too narrow, the cup volume is too small, or the wire contour doesn\'t match your root.',
     solution: 'Increase your cup size so underwires enclose breast tissue completely without resting on top of tissue.',
-    linkText: 'How to Measure Correctly',
-    linkUrl: '/how-to-measure'
+    linkText: 'Read Full Underwire Digging Guide',
+    linkUrl: '/fit-guide/underwire-digging'
   },
   {
-    id: 'straps-fall',
+    id: 'straps-falling-down',
     title: 'Straps Fall Down or Dig Into Shoulders',
     symptom: 'Straps constantly slip off your shoulders or leave deep, painful grooves in your skin.',
     cause: 'Slipping straps usually indicate a band that is too loose. Digging straps indicate straps are taking support weight.',
     solution: 'Remember 80% of support comes from the band. Tighten straps slightly, or move to a tighter band size.',
-    linkText: 'Sister Size Guide',
-    linkUrl: '/sister-size-calculator'
+    linkText: 'Read Full Strap Slipping Guide',
+    linkUrl: '/fit-guide/straps-falling-down'
   },
   {
-    id: 'gore-not-flat',
+    id: 'center-gore',
     title: 'Center Gore Doesn\'t Sit Flat Against Sternum',
     symptom: 'The center fabric bridge (gore) between the cups floats away from your chest wall or rests on breast tissue.',
     cause: 'The cups are too small, preventing breasts from fully settling into the cup bases.',
     solution: 'Increase your cup size until the center bridge touches your sternum comfortably (in wired bras).',
-    linkText: 'Check Size Converter',
-    linkUrl: '/bra-size-converter'
-  },
-  {
-    id: 'cups-too-small',
-    title: 'Cups Feel Too Small Overall',
-    symptom: 'The bra feels squished, restrictive, and wire ends poke underarm tissue.',
-    cause: 'Underestimation of cup volume difference between underbust and bust.',
-    solution: 'Re-measure your bust loosely across the fullest point and try the next cup letter.',
-    linkText: 'Re-measure Bust',
-    linkUrl: '/how-to-measure'
-  },
-  {
-    id: 'cups-too-large',
-    title: 'Cups Feel Too Large Overall',
-    symptom: 'Fabric feels loose, lacks support, and underwires extend far past your ribcage width.',
-    cause: 'Cup volume capacity exceeds natural breast volume.',
-    solution: 'Try a smaller cup letter or explore padded contour cups designed for shallower root shapes.',
-    linkText: 'Bra Size Chart',
-    linkUrl: '/bra-size-chart'
+    linkText: 'Read Full Center Gore Guide',
+    linkUrl: '/fit-guide/center-gore'
   }
 ];
 ---
 
 <Layout 
-  title="Bra Fit Guide — Diagnose & Fix Common Bra Fitting Problems | BraSizeChecker"
-  description="Comprehensive bra fit guide and diagnostic tool. Fix band riding up, cup gaping, spillage, digging underwires, slipping straps, and cup volume issues."
+  title="Bra Fit Diagnostic Hub: Troubleshoot & Fix 7 Fitting Problems | BraSizeChecker"
+  description="Master bra fitting troubleshooting. Diagnose band riding up, cup gaping, quad-boob spillage, underwire digging, slipping straps, and floating gores."
   canonical="https://brasizechecker.com/fit-guide"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <Header />
   <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[{ label: 'Fit Guide' }]} />
 
-    <!-- Page Header / Intro -->
     <header class="mb-10 text-center sm:text-left">
       <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-        Fit Diagnostic Hub
+        Interactive Diagnostic Hub
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        Bra Fit Guide
+        Bra Fit Diagnostic Hub: Solve Every Fitting Problem
       </h1>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        A correct starting size is only part of finding a comfortable fit. Different lingerie brands, cuts, fabrics, and breast shapes can fit differently. Use our diagnostic guide below to identify your specific bra fitting issue and find the right solution.
+        Calculating your baseline size is only the first step. Because brand elasticity, wire width, cup cut, and breast shape vary widely, minor fit issues can still occur. Use our master diagnostic decision matrix to isolate the root cause of your discomfort and apply instant solutions.
       </p>
     </header>
 
-    <!-- Quick Diagnostic Selector / Jump Menu -->
-    <section class="bg-surface border border-hairline rounded-2xl p-5 sm:p-8 mb-12 shadow-xs" aria-labelledby="diagnostic-heading">
-      <h2 id="diagnostic-heading" class="text-xl sm:text-2xl font-bold text-ink mb-3">What's Wrong With Your Bra?</h2>
-      <p class="text-xs sm:text-sm text-body mb-6">Select your primary fitting complaint to jump directly to causes and solutions:</p>
-      
-      <div class="flex flex-wrap gap-2 sm:gap-3">
-        {fitProblems.map(p => (
-          <a 
-            href={`#${p.id}`} 
-            class="px-3.5 py-2 bg-canvas-soft-2 hover:bg-surface border border-hairline hover:border-accent rounded-xl text-xs font-semibold text-ink transition-all duration-200 shadow-2xs flex items-center gap-1.5"
-          >
-            <span>&bull;</span>
-            <span>{p.title}</span>
-          </a>
-        ))}
+    <!-- Master Diagnostic Decision Tree Matrix -->
+    <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8 mb-12 shadow-xs">
+      <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Master Fit Diagnostic Decision Matrix</h2>
+      <div class="overflow-x-auto -mx-2 px-2 mb-6">
+        <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[540px]">
+          <thead>
+            <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+              <th scope="col" class="py-2.5 px-3 font-semibold">Primary Symptom</th>
+              <th scope="col" class="py-2.5 px-3 font-semibold">Root Cause Location</th>
+              <th scope="col" class="py-2.5 px-3 font-semibold">Immediate Corrective Action</th>
+              <th scope="col" class="py-2.5 px-3 font-semibold">Detailed Guide</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline">
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-primary">Band rides up spine</td>
+              <td class="py-2.5 px-3">Band too large / loose</td>
+              <td class="py-2.5 px-3">Sister size DOWN in band, UP in cup (36C &rarr; 34D)</td>
+              <td class="py-2.5 px-3"><a href="/fit-guide/band-rides-up" class="text-primary font-bold hover:underline">Band Rides Up &rarr;</a></td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-primary">Band digs / painful red marks</td>
+              <td class="py-2.5 px-3">Band too small OR Cup too small</td>
+              <td class="py-2.5 px-3">Test backwards test; try 2-hook extender or sister size UP band</td>
+              <td class="py-2.5 px-3"><a href="/fit-guide/band-too-tight" class="text-primary font-bold hover:underline">Band Too Tight &rarr;</a></td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-primary">Cups gape / pucker at top</td>
+              <td class="py-2.5 px-3">Cup volume too large OR shallow root</td>
+              <td class="py-2.5 px-3">Size down 1 cup letter or switch to balconette cut</td>
+              <td class="py-2.5 px-3"><a href="/fit-guide/bra-cup-gaping" class="text-primary font-bold hover:underline">Cup Gaping &rarr;</a></td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-primary">Tissue spills ("Quad-boob")</td>
+              <td class="py-2.5 px-3">Cup volume too small</td>
+              <td class="py-2.5 px-3">Increase cup letter by 1-2 steps while keeping band same</td>
+              <td class="py-2.5 px-3"><a href="/fit-guide/bra-spillage" class="text-primary font-bold hover:underline">Bra Spillage &rarr;</a></td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-primary">Underwire pokes ribs/armpit</td>
+              <td class="py-2.5 px-3">Wire width too narrow / small cup</td>
+              <td class="py-2.5 px-3">Increase cup size to widen wire arch to enclose tissue</td>
+              <td class="py-2.5 px-3"><a href="/fit-guide/underwire-digging" class="text-primary font-bold hover:underline">Underwire Digging &rarr;</a></td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-primary">Straps slip off shoulders</td>
+              <td class="py-2.5 px-3">Band too loose / unsupported base</td>
+              <td class="py-2.5 px-3">Size down in band; check strap adjustment & placement</td>
+              <td class="py-2.5 px-3"><a href="/fit-guide/straps-falling-down" class="text-primary font-bold hover:underline">Straps Falling &rarr;</a></td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-primary">Gore floats away from sternum</td>
+              <td class="py-2.5 px-3">Cup volume too small</td>
+              <td class="py-2.5 px-3">Size up in cup letter until bridge tacks flat against sternum</td>
+              <td class="py-2.5 px-3"><a href="/fit-guide/center-gore" class="text-primary font-bold hover:underline">Center Gore &rarr;</a></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
-    <!-- 9 Fit Problem Cards Grid -->
+    <!-- 7 Fit Problem Cards Grid -->
     <div class="space-y-6 mb-12">
       {fitProblems.map((item, idx) => (
-        <section id={item.id} class="bg-surface border border-hairline rounded-2xl p-5 sm:p-8 shadow-xs scroll-mt-24 transition-all duration-200 hover:border-hairline-strong" aria-labelledby={`heading-${item.id}`}>
+        <section id={item.id} class="bg-surface border border-hairline rounded-2xl p-5 sm:p-8 shadow-xs scroll-mt-24 transition-all duration-200 hover:border-hairline-strong">
           <div class="flex items-start justify-between gap-4 mb-3">
             <div class="flex items-center gap-3">
               <span class="w-8 h-8 rounded-lg bg-canvas-soft-2 border border-hairline flex items-center justify-center text-primary font-bold text-xs">
                 {String(idx + 1).padStart(2, '0')}
               </span>
-              <h2 id={`heading-${item.id}`} class="text-lg sm:text-xl font-bold text-ink">{item.title}</h2>
+              <h2 class="text-lg sm:text-xl font-bold text-ink">{item.title}</h2>
             </div>
-            <a href={`#${item.id}`} class="text-xs text-mute hover:text-primary transition-colors hidden sm:block">#permalink</a>
+            <a href={item.linkUrl} class="text-xs font-bold text-primary hover:underline">Read Full Guide &rarr;</a>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm my-4">
@@ -168,10 +217,10 @@ const fitProblems = [
     </div>
 
     <!-- Calculator CTA Card -->
-    <section class="bg-primary text-white rounded-2xl p-6 sm:p-10 mb-12 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md" aria-labelledby="calc-cta-heading">
+    <section class="bg-primary text-white rounded-2xl p-6 sm:p-10 mb-12 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
       <div>
-        <span class="text-xs font-bold uppercase tracking-widest text-accent-soft block mb-1">BASELINE SIZING</span>
-        <h2 id="calc-cta-heading" class="text-2xl sm:text-3xl font-bold text-white mb-2">Check Your Bra Size Today</h2>
+        <span class="text-xs font-bold uppercase tracking-widest text-accent-soft block mb-1">ACCURATE FITTING BASELINE</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Check Your Bra Size Today</h2>
         <p class="text-xs sm:text-sm text-canvas-soft-2 max-w-xl">
           If your current bra causes discomfort, establish an accurate modern direct measurement baseline in seconds.
         </p>
@@ -185,37 +234,19 @@ const fitProblems = [
       </a>
     </section>
 
-    <!-- Sister Size & Related Tools Section -->
-    <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8 space-y-6">
-      <h2 class="text-xl sm:text-2xl font-bold text-ink mb-2">Sister Size & Sizing Tools Connection</h2>
-      <p class="text-body text-sm sm:text-base leading-relaxed">
-        Many fit issues are best solved using <strong>sister sizes</strong> — bra sizes that hold the exact same cup volume capacity while adjusting band tightness:
-      </p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <a href="/sister-size-calculator" class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl hover:border-accent transition-all group">
-          <h3 class="font-bold text-ink group-hover:text-primary transition-colors text-sm mb-1">Sister Size Calculator &rarr;</h3>
-          <p class="text-xs text-mute">Find equivalent cup volumes for tighter or looser band options.</p>
-        </a>
-
-        <a href="/bra-size-converter" class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl hover:border-accent transition-all group">
-          <h3 class="font-bold text-ink group-hover:text-primary transition-colors text-sm mb-1">Bra Size Converter &rarr;</h3>
-          <p class="text-xs text-mute">Convert known sizes across US, UK, EU, FR, AU, and JP standards.</p>
-        </a>
-
-        <a href="/bra-size-chart" class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl hover:border-accent transition-all group">
-          <h3 class="font-bold text-ink group-hover:text-primary transition-colors text-sm mb-1">Bra Size Chart &rarr;</h3>
-          <p class="text-xs text-mute">View complete international band and cup conversion tables.</p>
-        </a>
-      </div>
-
-      <div class="pt-4 border-t border-hairline">
-        <h3 class="font-bold text-ink text-sm mb-3">Related Educational Guides</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
-          <a href="/guides/how-cup-sizes-work" class="p-3 bg-canvas-soft-2 rounded-xl text-primary font-semibold hover:underline">&bull; How Cup Sizes Work</a>
-          <a href="/guides/why-bra-sizes-vary-between-brands" class="p-3 bg-canvas-soft-2 rounded-xl text-primary font-semibold hover:underline">&bull; Why Sizes Vary Between Brands</a>
-          <a href="/guides/between-bra-sizes" class="p-3 bg-canvas-soft-2 rounded-xl text-primary font-semibold hover:underline">&bull; What To Do If Between Sizes</a>
-        </div>
+    <!-- FAQ Section -->
+    <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+      <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        {faqSchema.mainEntity.map(item => (
+          <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
+            <summary class="font-bold text-ink flex justify-between items-center list-none">
+              <span>{item.name}</span>
+              <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+            </summary>
+            <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+          </details>
+        ))}
       </div>
     </section>
   </main>

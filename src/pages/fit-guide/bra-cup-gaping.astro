@@ -3,13 +3,38 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do my bra cups gap at the top even though my calculated size matches?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cup gaping is frequently caused by a mismatch in cup shape rather than volume. Rigid, moulded foam t-shirt cups hold a fixed synthetic dome shape that gapes on teardrop or bottom-heavy breasts. Additionally, the 'Orange in a Glass' effect occurs when underwires are too narrow, preventing breast tissue from settling into the cup base and leaving empty space at the top."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Scoop and Swoop technique?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Scoop and Swoop is an essential bra fitting step: lean forward at 45 degrees, reach your opposite hand inside the cup, and pull all breast tissue forward from under your arm and side ribcage into the center of the cup. This ensures the underwire sits flush in your inframammary fold and often eliminates cup gaping instantly."
+      }
+    }
+  ]
+};
 ---
 
 <Layout 
-  title="Why Do My Bra Cups Gap? Causes & Solutions | BraSizeChecker"
-  description="Discover why your bra cups gap or pucker at the top. Learn how cup volume, breast shape, molded styles, and scoop-and-swoop techniques fix cup gaping."
+  title="Why Do My Bra Cups Gap? Causes & Fixes | BraSizeChecker"
+  description="Discover why your bra cups gap or pucker. Master the Scoop & Swoop technique, Orange in a Glass analysis, breast shape matching, and cup selection charts."
   canonical="https://brasizechecker.com/fit-guide/bra-cup-gaping"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <Header />
   <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[
@@ -19,100 +44,121 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
     <header class="mb-10 text-center sm:text-left">
       <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-        Fit Diagnostic
+        Fit Diagnostic Guide
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        Why Do My Bra Cups Gap?
+        Why Do My Bra Cups Gap? Shape & Volume Master Analysis
       </h1>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        Empty space, wrinkling, or puckering at the top of your bra cups is one of the most frustrating fit issues. Here is how to diagnose whether it is caused by cup volume or style mismatch.
+        Empty space, puckering, or wrinkling at the top edge of your bra cups is one of the most common and confusing fitting problems. Many assume gaping automatically means their cups are too big, but it is frequently caused by cup shape mismatches or underwires that are too narrow.
       </p>
     </header>
 
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
-      <!-- Quick Answer -->
-      <section class="bg-canvas-soft-2 border-2 border-primary/30 rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-2">Quick Answer</h2>
-        <p class="text-body leading-relaxed font-medium mb-4">
-          Bra cups gap when <strong>the cup volume is too large</strong>, when <strong>the bra style doesn't match your natural breast shape</strong>, or counter-intuitively, when a band is too tight pushing cups away from the body.
+      <!-- Section 1: Vector Diagram & Orange in a Glass Effect -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. The "Orange in a Glass" Effect Explained</h2>
+        <p class="mb-4">
+          Imagine trying to push an orange into a tall, narrow drinking glass. Because the orange is wider than the glass opening, it gets stuck near the top, leaving a completely empty air gap at the bottom of the glass.
         </p>
-        <div class="max-w-md mx-auto my-4">
+
+        <!-- Diagram -->
+        <div class="max-w-md mx-auto my-6">
           <img 
             src="/img/fit-cup-gaping.svg" 
             alt="Vector diagram demonstrating cup gaping and empty space at top of molded bra cup" 
             width="400" 
             height="240" 
-            class="w-full h-auto rounded-xl border border-hairline" 
+            class="w-full h-auto rounded-xl border border-hairline shadow-2xs" 
             loading="lazy"
           />
-          <span class="text-center text-xs text-mute mt-2 block font-medium">Figure 1: Empty gap space at top of bra cup</span>
+          <span class="text-center text-xs text-mute mt-2 block font-medium">Figure 1: Empty gap space caused by stiff moulded cup contours</span>
         </div>
-      </section>
 
-      <!-- Possible Causes -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Plausible Causes</h2>
-        <div class="space-y-4">
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">1. Cup Volume Is Too Large</h3>
-            <p class="text-xs sm:text-sm text-body">If your breast tissue doesn't fill the cup capacity, fabric or foam will pucker at the apex or neckline.</p>
-          </div>
-
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">2. Molded Foam Cup Misalignment</h3>
-            <p class="text-xs sm:text-sm text-body">Pre-shaped T-shirt bras hold a rigid form. If your natural breast root is teardrop or shallow-topped, stiff foam cups will gape at the top edge even if the volume is correct.</p>
-          </div>
-
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">3. Band Is Too Small (Orange in a Glass Effect)</h3>
-            <p class="text-xs sm:text-sm text-body">If a band or underwire is too narrow, your breast tissue cannot sink into the base of the cup, leaving empty space in the upper cup.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- What to Check -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Practical Fit Checks</h2>
-        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
-          <li><strong>Scoop and Swoop:</strong> Lean forward, place your hand inside the cup, and pull side breast tissue forward from under your arm into the center of the cup.</li>
-          <li><strong>Posture Test:</strong> Sit naturally and lean slightly back. If gaping occurs only when slouching, the bra style may be too tall for your torso.</li>
-        </ul>
-      </section>
-
-      <!-- What Size Change Might Help -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Recommended Size Adjustment</h2>
         <p class="mb-4">
-          If your scoop-and-swoop test still leaves empty cup space, try decreasing your cup letter by one size while keeping the band size identical:
-        </p>
-        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl text-center mb-6">
-          <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">CUP SIZE ADJUSTMENT</span>
-          <p class="text-lg font-bold text-ink">If 34D gaps after swooping &rarr; Try a 34C cup</p>
-        </div>
-        <p>
-          Alternatively, try unlined stretch-lace plunge or balconette styles that conform to natural breast tissue.
+          In bra mechanics, if a bra's underwire is too narrow for your breast root, your breast tissue cannot physically enter the base of the cup. The tissue sits outside the underwire arch, causing the top edge of the cup to tilt outward and gape—even though the cup volume is actually <em>too small</em>!
         </p>
       </section>
 
-      <!-- Calculator CTA -->
-      <section class="bg-primary text-white rounded-2xl p-6 sm:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
-        <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-white mb-1">Calculate Your Baseline Size</h2>
-          <p class="text-xs sm:text-sm text-canvas-soft-2">Verify your measurements using our direct underbust sizing calculator.</p>
-        </div>
-        <a href="/#calculator" class="flex-shrink-0 h-12 px-6 bg-surface hover:bg-canvas-soft-2 text-primary font-bold text-sm rounded-xl shadow-xs transition-colors flex items-center gap-2">
-          <span>Calculate My Size &rarr;</span>
-        </a>
-      </section>
-
-      <!-- Related Fit Guides -->
+      <!-- Section 2: Three Main Causes of Gaping -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Related Fit Guides</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm font-semibold">
-          <a href="/fit-guide/bra-spillage" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Are My Breasts Spilling Out of My Bra?</a>
-          <a href="/fit-guide/underwire-digging" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Does My Bra Underwire Dig In?</a>
-          <a href="/sister-size-calculator" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Sister Size Calculator</a>
-          <a href="/fit-guide" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Return to Fit Guide Hub</a>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Three Primary Causes of Cup Gaping</h2>
+        
+        <!-- Data Table 1: Gaping Diagnostic Matrix -->
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[500px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">Diagnostic Cause</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Physical Mechanism</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Corrective Fix</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-primary">Moulded Foam Stiff Shape</td>
+                <td class="py-2.5 px-3">Pre-formed synthetic dome does not adapt to soft tissue or shallow upper roots.</td>
+                <td class="py-2.5 px-3">Switch to unlined 3-part seamed stretch lace cups (balconette).</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-primary">Excess Cup Volume</td>
+                <td class="py-2.5 px-3">Overbust measurement was overestimated; cup capacity exceeds bust volume.</td>
+                <td class="py-2.5 px-3">Decrease cup size by 1 letter (e.g. 34D &rarr; 34C).</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-primary">Short Breast Root Height</td>
+                <td class="py-2.5 px-3">Full-coverage cups are too tall for short torso distance between IMF and collarbone.</td>
+                <td class="py-2.5 px-3">Choose demi cups or low-apex plunge cuts.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: The Scoop and Swoop Protocol -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. The 30-Second Scoop and Swoop Protocol</h2>
+        <p class="mb-4">
+          Before deciding a bra cup is too large, you must perform the mandatory fitting maneuver:
+        </p>
+
+        <ol class="list-decimal pl-5 space-y-2 text-xs sm:text-sm mb-6">
+          <li>Lean forward from your waist at a 45-degree angle so gravity pulls breast tissue into the cups.</li>
+          <li>Reach inside the left cup with your right hand. Gently scoop your breast tissue from under your arm and side ribcage, pulling it forward and up into the center of the cup.</li>
+          <li>Adjust the underwire so it rests flush inside your inframammary fold (the crease under your breast).</li>
+          <li>Repeat for the right side. Now check the cup top—in 50% of cases, gaping disappears instantly!</li>
+        </ol>
+      </section>
+
+      <!-- Section 4: Interactive Sizing Tools -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. Re-Calculate Your Correct Cup Size</h2>
+        <div class="flex flex-wrap gap-3">
+          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
+            Calculate Size Baseline &rarr;
+          </a>
+          <a href="/sister-size-calculator" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Sister Size Matrix &rarr;
+          </a>
+          <a href="/fit-guide" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Return to Fit Diagnostic Hub &rarr;
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 5: FAQ Section -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqSchema.mainEntity.map(item => (
+            <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
+              <summary class="font-bold text-ink flex justify-between items-center list-none">
+                <span>{item.name}</span>
+                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+              </summary>
+              <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+            </details>
+          ))}
         </div>
       </section>
     </div>

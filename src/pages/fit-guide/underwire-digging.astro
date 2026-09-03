@@ -3,13 +3,38 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do underwires poke or dig into underarm tissue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Underwires poke side armpit tissue when the cup size is too small or narrow. As cup size increases, underwires are graded with a wider radius and longer channeling that safely encapsulates breast tissue up to the ribcage without pinching soft tissue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the inframammary fold (IMF)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The inframammary fold (IMF) is the anatomical crease where the underside of your breast meets your ribcage wall. An underwire must sit flush inside this exact fold. If the wire sits below the fold, your band is too loose or cups are too shallow."
+      }
+    }
+  ]
+};
 ---
 
 <Layout 
   title="Why Does My Bra Underwire Dig In? Causes & Relief | BraSizeChecker"
-  description="Stop bra underwires from poking or digging into your ribs, sternum, or underarms. Learn how wire radius, cup volume, and root width affect comfort."
+  description="Stop bra underwires from poking or digging into your ribs, sternum, or underarms. Master IMF placement, wire radius grading, and root width matching."
   canonical="https://brasizechecker.com/fit-guide/underwire-digging"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <Header />
   <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[
@@ -19,92 +44,129 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
     <header class="mb-10 text-center sm:text-left">
       <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-        Fit Diagnostic
+        Fit Diagnostic Guide
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        Why Does My Bra Underwire Dig In?
+        Why Does My Bra Underwire Dig In? IMF & Wire Radius Guide
       </h1>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        Underwires are meant to encapsulate and support breast tissue comfortably against your ribcage. If wires poke, pinch, or leave painful marks, your cup dimensions are incorrect.
+        Metal or plastic underwires are designed to encapsulate breast tissue and transfer support load to your ribcage band. If underwires poke, pinch, or leave painful bruises under your arms or sternum, your bra wire geometry is mismatched to your body.
       </p>
     </header>
 
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
-      <!-- Quick Answer -->
-      <section class="bg-canvas-soft-2 border-2 border-primary/30 rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-2">Quick Answer</h2>
-        <p class="text-body leading-relaxed font-medium mb-4">
-          Underwires dig in when <strong>the cup size is too small or narrow</strong>, causing the wire arc to sit on sensitive breast tissue rather than resting flush against the ribcage surrounding the breast root.
+      <!-- Section 1: Vector Diagram & IMF Alignment -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. Inframammary Fold (IMF) Alignment Physics</h2>
+        <p class="mb-4">
+          The <strong>Inframammary Fold (IMF)</strong> is the natural anatomical crease where the bottom curvature of your breast meets your torso. In a correctly fitted bra, the underwire channel sits directly inside this crease.
         </p>
-        <div class="max-w-md mx-auto my-4">
+
+        <!-- Diagram -->
+        <div class="max-w-md mx-auto my-6">
           <img 
             src="/img/fit-underwire-digging.svg" 
             alt="Vector diagram demonstrating narrow underwire arc digging into soft side breast tissue" 
             width="400" 
             height="240" 
-            class="w-full h-auto rounded-xl border border-hairline" 
+            class="w-full h-auto rounded-xl border border-hairline shadow-2xs" 
             loading="lazy"
           />
-          <span class="text-center text-xs text-mute mt-2 block font-medium">Figure 1: Narrow underwire resting on tissue instead of ribcage bone</span>
+          <span class="text-center text-xs text-mute mt-2 block font-medium">Figure 1: Narrow underwire resting on soft breast tissue instead of ribcage bone</span>
         </div>
-      </section>
 
-      <!-- Possible Causes -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Plausible Causes</h2>
-        <div class="space-y-4">
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">1. Wire Arc Width Is Too Narrow</h3>
-            <p class="text-xs sm:text-sm text-body">If your cup letter is too small, the semicircular wire is too narrow and will press directly into side breast tissue or underarms.</p>
-          </div>
-
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">2. Underbust Band Is Too Tight</h3>
-            <p class="text-xs sm:text-sm text-body">An overly tight band stretches the underwires outward flat, altering their curve and forcing wire tips to press inward against your ribs.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- What to Check -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Practical Fit Checks</h2>
-        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
-          <li><strong>Wire Placement Check:</strong> Trace the wire with your fingers. The wire should encapsulate all breast tissue without touching soft tissue.</li>
-          <li><strong>Ribcage Clearance:</strong> Ensure the wire rests entirely on bone and rib structure beneath the breast fold (inframammary fold).</li>
-        </ul>
-      </section>
-
-      <!-- What Size Change Might Help -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Recommended Size Adjustment</h2>
         <p class="mb-4">
-          Increase your cup letter size to obtain a wider underwire radius:
+          If the underwire arc is too narrow for your breast root, the wire is forced to rest <em>on top of sensitive glandular breast tissue</em> rather than on rib bone. This causes intense pinching, wire poking, and potential tissue inflammation.
         </p>
-        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl text-center mb-6">
-          <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">WIRE RADIUS FIX</span>
-          <p class="text-lg font-bold text-ink">If 34C underwire pokes side tissue &rarr; Try 34D for a wider wire arc</p>
-        </div>
       </section>
 
-      <!-- Calculator CTA -->
-      <section class="bg-primary text-white rounded-2xl p-6 sm:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
-        <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-white mb-1">Check Your Baseline Size</h2>
-          <p class="text-xs sm:text-sm text-canvas-soft-2">Verify underbust and bust measurements to eliminate wire discomfort.</p>
-        </div>
-        <a href="/#calculator" class="flex-shrink-0 h-12 px-6 bg-surface hover:bg-canvas-soft-2 text-primary font-bold text-sm rounded-xl shadow-xs transition-colors flex items-center gap-2">
-          <span>Calculate My Size &rarr;</span>
-        </a>
-      </section>
-
-      <!-- Related Fit Guides -->
+      <!-- Section 2: Three Causes of Wire Pain -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Related Fit Guides</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm font-semibold">
-          <a href="/fit-guide/center-gore" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Doesn't My Center Gore Sit Flat?</a>
-          <a href="/fit-guide/band-too-tight" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Does My Bra Band Feel Too Tight?</a>
-          <a href="/how-to-measure" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; How to Measure Guide</a>
-          <a href="/fit-guide" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Return to Fit Guide Hub</a>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Three Structural Causes of Underwire Pain</h2>
+        
+        <!-- Data Table 1: Wire Digging Matrix -->
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[500px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">Pain Location</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Underlying Root Cause</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Corrective Fix</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-primary">Side Underarm / Armpit Poking</td>
+                <td class="py-2.5 px-3">Wire radius is too narrow; cup letter is 1-2 sizes undersized.</td>
+                <td class="py-2.5 px-3">Increase cup letter (e.g. 34C &rarr; 34D/DD) for a wider wire arch.</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Center Sternum Digging</td>
+                <td class="py-2.5 px-3">Wire bridge is too tall or sternum bone has shallow projection.</td>
+                <td class="py-2.5 px-3">Switch from high balconettes to low-gore plunge styles.</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Bottom Ribcage Sliding / Pinching</td>
+                <td class="py-2.5 px-3">Band is too loose; wires slide down below the IMF crease onto stomach.</td>
+                <td class="py-2.5 px-3">Sister size DOWN in band, UP in cup (e.g. 36B &rarr; 34C).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: Wire Width Grading by Brand -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. Selecting the Right Wire Radius for Your Root</h2>
+        <p class="mb-4">
+          Breast root shapes fall into two distinct anatomical categories:
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 mb-6">
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink text-sm mb-1">Wide Breast Root</h3>
+            <p class="text-xs sm:text-sm text-body">
+              Breast tissue extends far sideways under the armpits. Best fitted with American or French brands (like Wacoal, Elomi, or Chantelle) that use wide crescent underwires.
+            </p>
+          </div>
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-primary text-sm mb-1">Narrow Breast Root</h3>
+            <p class="text-xs sm:text-sm text-body">
+              Breast tissue is concentrated forward on the front of the chest. Best fitted with British or Polish brands (like Panache or Cleo) that utilize narrow U-shaped underwires.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Interactive Sizing Tools -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. Re-Calculate Your Correct Cup Size Baseline</h2>
+        <div class="flex flex-wrap gap-3">
+          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
+            Calculate Size Baseline &rarr;
+          </a>
+          <a href="/sister-size-calculator" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Sister Size Matrix &rarr;
+          </a>
+          <a href="/fit-guide" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Return to Fit Diagnostic Hub &rarr;
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 5: FAQ Section -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqSchema.mainEntity.map(item => (
+            <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
+              <summary class="font-bold text-ink flex justify-between items-center list-none">
+                <span>{item.name}</span>
+                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+              </summary>
+              <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+            </details>
+          ))}
         </div>
       </section>
     </div>

@@ -4,71 +4,106 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { CUP_CONVERSION_MATRIX, BAND_CONVERSION_MATRIX } from '../utils/braSizing';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is UK bra sizing considered the global benchmark for fuller busts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UK lingerie brands (such as Panache, Freya, Elomi, and Curvy Kate) standardized double-letter cup progressions (DD, E, F, FF, G, GG, H, HH, J, JJ, K, KK) to provide precise 1-inch volume steps up to a 17-inch bust delta. In contrast, US brands use inconsistent multi-D naming schemes that lack uniformity above a D cup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a UK G cup the same size as a US G cup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No! A UK G cup represents a 9-inch difference between bust and underbust (the 9th cup size). A US G cup represents a 7-inch difference (the 7th cup size). Therefore, a UK G cup is TWO full cup volumes LARGER than a US G cup."
+      }
+    }
+  ]
+};
 ---
 
 <Layout 
   title="UK Bra Size Guide — UK Cup Progression & US Conversion | BraSizeChecker"
-  description="Complete UK bra size guide. Learn how UK cup sizing works (DD, E, F, FF, G, GG, H, HH), UK band measurements, and convert UK bra sizes to US, EU, and AU."
+  description="Complete UK bra size guide. Master UK double-letter cup progressions (DD, E, F, FF, G, GG, H, HH, J, JJ, K), British brand fitting profiles, and international conversions."
   canonical="https://brasizechecker.com/uk-bra-size-guide"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <Header />
   <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[{ label: 'UK Bra Size Guide' }]} />
 
-    <!-- Page Header / Intro -->
     <header class="mb-10 text-center sm:text-left">
       <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
         Regional Sizing Guide
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        UK Bra Size Guide & International Conversion
+        United Kingdom (UK) Bra Size Guide & Global Conversion Matrix
       </h1>
+      <div class="flex items-center gap-3 text-xs text-mute mb-4">
+        <span>By BraSizeChecker Global Fitting Laboratory</span>
+        <span>&bull;</span>
+        <time datetime="2026-09-04">Updated September 2026</time>
+      </div>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        UK bra sizing is recognized worldwide for its precision in full-bust lingerie. Renowned brands like Panache, Freya, Elomi, and Curvy Kate use British sizing conventions. Learn how UK band and cup progressions work and how to convert your size.
+        British lingerie manufacturers are globally celebrated for producing some of the most supportive, structurally engineered full-bust bras in the world. Brands like Panache, Freya, Elomi, Fantasie, and Curvy Kate follow standardized UK sizing rules. This master guide explains exact UK cup progressions and how to convert UK sizes to US, EU, and AU standards.
       </p>
     </header>
 
-    <!-- Content Sections -->
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
       <!-- Section 1: How UK Sizing Works -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">How UK Bra Sizing Works</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. How UK Bra Sizing Works Mechanics</h2>
         <p class="mb-4">
-          Like US sizing, UK bra band numbers use direct underbust measurements in inches (30, 32, 34, 36, 38, 40). However, <strong>UK cup sizing diverges significantly from US sizing after D cups</strong> by utilizing double-letter progressions (`DD`, `FF`, `GG`, `HH`, `JJ`).
+          Like American sizing, UK band numbers represent your snug underbust measurement in inches (28, 30, 32, 34, 36, 38, 40, 42, 44). However, <strong>UK cup sizing uses a standardized double-letter progression system past D cup</strong>:
         </p>
         
         <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl mb-6">
           <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">UK CUP PROGRESSION ORDER</span>
-          <p class="text-sm font-bold text-ink tracking-wide">
-            AA &rarr; A &rarr; B &rarr; C &rarr; D &rarr; <span class="text-primary">DD</span> &rarr; E &rarr; <span class="text-primary">F</span> &rarr; <span class="text-primary">FF</span> &rarr; G &rarr; <span class="text-primary">GG</span> &rarr; H &rarr; <span class="text-primary">HH</span> &rarr; J
+          <p class="text-sm sm:text-base font-bold text-ink tracking-wide">
+            A &rarr; B &rarr; C &rarr; D &rarr; <span class="text-primary">DD</span> &rarr; E &rarr; <span class="text-primary">F</span> &rarr; <span class="text-primary">FF</span> &rarr; G &rarr; <span class="text-primary">GG</span> &rarr; H &rarr; <span class="text-primary">HH</span> &rarr; J &rarr; <span class="text-primary">JJ</span> &rarr; K &rarr; <span class="text-primary">KK</span>
           </p>
         </div>
+
+        <p class="mb-4">
+          Notice how the letters <code class="bg-canvas px-1.5 py-0.5 rounded text-primary">EE</code> and <code class="bg-canvas px-1.5 py-0.5 rounded text-primary">II</code> do NOT exist in the UK system. Instead, the progression proceeds systematically through <code class="bg-canvas px-1.5 py-0.5 rounded text-primary">E &rarr; F &rarr; FF &rarr; G &rarr; GG &rarr; H &rarr; HH &rarr; J &rarr; JJ</code>. Each double letter step adds exactly 1 inch (2.54 cm) of breast depth displacement.
+        </p>
       </section>
 
-      <!-- Section 2: UK vs US Cup Comparison Table -->
+      <!-- Section 2: UK vs US & Global Conversion Matrix Table -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">UK vs US Cup Size Comparison</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. UK vs. US vs. EU Cup Conversion Matrix</h2>
         <p class="mb-4">
-          Because US sizing uses `DDD/F`, `G`, `H`, `I`, `J` while UK sizing uses `DD`, `E`, `F`, `FF`, `G`, `GG`, a 34G in UK sizing is two cup volumes larger than a 34G in US sizing!
+          Because American manufacturers switch to letters like <code class="bg-canvas px-1.5 py-0.5 rounded text-ink">DDD, G, H, I, J</code> while British brands use <code class="bg-canvas px-1.5 py-0.5 rounded text-primary">DD, E, F, FF, G</code>, purchasing an American bra using your UK letter will result in severe sizing errors!
         </p>
 
+        <!-- Data Table 1: Master Cup Matrix -->
         <div class="overflow-x-auto -mx-2 px-2 mb-6">
-          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[440px]">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[520px]">
             <thead>
               <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
-                <th scope="col" class="py-2.5 px-3 font-semibold">Bust-Band Diff</th>
-                <th scope="col" class="py-2.5 px-3 font-semibold">UK Cup Label</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Bust-Band Delta</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">UK Standard Cup</th>
                 <th scope="col" class="py-2.5 px-3 font-semibold">US / CA Equivalent</th>
-                <th scope="col" class="py-2.5 px-3 font-semibold">EU / JP Equivalent</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">EU Metric Cup</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">AU / NZ Cup</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-hairline">
               {CUP_CONVERSION_MATRIX.map(row => (
                 <tr>
-                  <td class="py-2 px-3 font-medium">{row.uk} cup volume</td>
+                  <td class="py-2 px-3 font-semibold text-ink">{row.uk === 'A' ? '1 inch' : row.uk === 'B' ? '2 inches' : row.uk === 'C' ? '3 inches' : row.uk === 'D' ? '4 inches' : row.uk === 'DD' ? '5 inches' : row.uk === 'E' ? '6 inches' : row.uk === 'F' ? '7 inches' : row.uk === 'FF' ? '8 inches' : row.uk === 'G' ? '9 inches' : '10+ inches'}</td>
                   <td class="py-2 px-3 font-semibold text-primary">{row.uk}</td>
                   <td class="py-2 px-3 font-semibold text-ink">{row.us}</td>
                   <td class="py-2 px-3 font-semibold text-ink">{row.eu}</td>
+                  <td class="py-2 px-3 font-semibold text-ink">{row.uk}</td>
                 </tr>
               ))}
             </tbody>
@@ -76,18 +111,56 @@ import { CUP_CONVERSION_MATRIX, BAND_CONVERSION_MATRIX } from '../utils/braSizin
         </div>
       </section>
 
-      <!-- Section 3: Converting Your UK Size -->
+      <!-- Section 3: Popular UK Brand Profiles -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">How to Convert UK Sizes to Other Regions</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. British Brand Fitting Profiles</h2>
         <p class="mb-4">
-          When buying British lingerie brands from outside the UK, use these conversion guidelines:
+          When ordering iconic British lingerie labels, keep these expert brand characteristics in mind:
         </p>
-        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm mb-6">
-          <li><strong>UK to US:</strong> Keep the same band number (e.g. 34 stays 34). Cup letters match up to D cup. For E cup and above, check our conversion matrix.</li>
-          <li><strong>UK to EU:</strong> Multiply your UK band in inches by 2.54 and round to nearest 5 cm (e.g. 34 UK = 75 EU).</li>
-          <li><strong>UK to AU/NZ:</strong> UK band 30 = AU 8, 32 = AU 10, 34 = AU 12, 36 = AU 14, 38 = AU 16. Cup letters remain identical.</li>
-        </ul>
 
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[500px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">UK Lingerie Brand</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Band Stretch Property</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Cup Projection & Seams</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Fitting Recommendation</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Panache (Envy, Jasmine, Ana)</td>
+                <td class="py-2.5 px-3">Firm power-mesh; low stretch</td>
+                <td class="py-2.5 px-3">Deep projection; 3-part stretch lace</td>
+                <td class="py-2.5 px-3 font-semibold text-primary">Order exact UK size; firm support anchor.</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Freya (Starlight, Deco, Offbeat)</td>
+                <td class="py-2.5 px-3">Soft elastic; generous stretch</td>
+                <td class="py-2.5 px-3">Rounded, forward projection</td>
+                <td class="py-2.5 px-3 font-semibold text-ink">If between band sizes, size down in band.</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Elomi (Matilda, Morgan, Cate)</td>
+                <td class="py-2.5 px-3">Firm plus-size band support</td>
+                <td class="py-2.5 px-3">Wide underwires with side support panels</td>
+                <td class="py-2.5 px-3 font-semibold text-primary">Ideal for fuller busts and broader breast roots.</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Curvy Kate (CK Star, Victory)</td>
+                <td class="py-2.5 px-3">True-to-size stretch</td>
+                <td class="py-2.5 px-3">Vibrant cuts, low plunge apexes</td>
+                <td class="py-2.5 px-3 font-semibold text-ink">Excellent for projected, fuller-on-bottom shapes.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 4: Interactive Tools -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. Calculate & Convert Your UK Bra Size</h2>
         <div class="flex flex-wrap gap-3">
           <a href="/bra-size-converter" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
             Open Interactive Converter &rarr;
@@ -95,22 +168,26 @@ import { CUP_CONVERSION_MATRIX, BAND_CONVERSION_MATRIX } from '../utils/braSizin
           <a href="/bra-size-chart" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
             Full Size Chart &rarr;
           </a>
+          <a href="/sister-size-calculator" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Sister Size Tool &rarr;
+          </a>
         </div>
       </section>
 
-      <!-- Section 4: How to Measure for UK Bras -->
+      <!-- Section 5: FAQ Section -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">How to Measure for UK Bras</h2>
-        <p class="mb-4">
-          UK sizing works best with <strong>Modern Direct Underbust Measurement</strong> (no adding 4 inches):
-        </p>
-        <ol class="list-decimal pl-5 space-y-2 text-xs sm:text-sm mb-6">
-          <li>Measure your underbust snugly in inches. Round to nearest even number for your band size.</li>
-          <li>Measure your bust loosely across the fullest point in inches.</li>
-          <li>Subtract underbust from bust. Each 1-inch difference represents one UK cup letter (1" = A, 2" = B, 3" = C, 4" = D, 5" = DD, 6" = E, 7" = F, 8" = FF, 9" = G).</li>
-        </ol>
-
-        <a href="/how-to-measure" class="text-primary font-semibold hover:underline text-xs sm:text-sm">Read full illustrated measurement instructions &rarr;</a>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqSchema.mainEntity.map(item => (
+            <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
+              <summary class="font-bold text-ink flex justify-between items-center list-none">
+                <span>{item.name}</span>
+                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+              </summary>
+              <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+            </details>
+          ))}
+        </div>
       </section>
     </div>
   </main>

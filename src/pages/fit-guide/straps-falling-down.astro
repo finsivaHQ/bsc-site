@@ -3,13 +3,38 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do my bra straps keep slipping off my shoulders even after tightening them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Slipping straps are usually caused by an oversized bra band. When a band is too large, the strap attachment points across your back are positioned too wide near the edge of your shoulders. Additionally, over-tightening straps pulls a loose back band upward, reducing strap tension and causing them to fall off continuously."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What bra styles work best for narrow or sloped shoulders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you have sloped or narrow shoulders, avoid wide-set balconette straps. Instead, choose center-pull straps (where straps attach closer to the center of the cup), racerback styles, or use a strap converter clip (J-hook) on the back."
+      }
+    }
+  ]
+};
 ---
 
 <Layout 
-  title="Why Do My Bra Straps Keep Falling Down? Causes & Fixes | BraSizeChecker"
-  description="Stop bra straps from slipping off your shoulders. Discover why loose bands cause wide strap placement and how tightening bands solves shoulder slippage."
+  title="Why Do My Bra Straps Keep Falling Down? Causes & Solutions | BraSizeChecker"
+  description="Stop bra straps from slipping off your shoulders. Master shoulder slope physics, strap placement tables, racerback conversion tips, and band anchor mechanics."
   canonical="https://brasizechecker.com/fit-guide/straps-falling-down"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <Header />
   <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[
@@ -19,86 +44,107 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
     <header class="mb-10 text-center sm:text-left">
       <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-        Fit Diagnostic
+        Fit Diagnostic Guide
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        Why Do My Bra Straps Keep Falling Down?
+        Why Do My Bra Straps Keep Falling Down? Causes & Fixes
       </h1>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        Slipping shoulder straps are annoying and force you to adjust your bra constantly. Here is why straps slip and how fixing your band size solves it.
+        Shoulder straps that constantly slip off your shoulders throughout the day are extremely annoying. Most people assume the straps themselves are defective, but slipping straps are almost always a symptom of an undersized cup or an oversized underbust band.
       </p>
     </header>
 
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
-      <!-- Quick Answer -->
-      <section class="bg-canvas-soft-2 border-2 border-primary/30 rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-2">Quick Answer</h2>
-        <p class="text-body leading-relaxed font-medium">
-          Bra straps fall down primarily because <strong>the bra band is too large</strong> (placing strap origin points too far apart across your back) or because <strong>slider buckles have loosened over time</strong>.
-        </p>
-      </section>
-
-      <!-- Possible Causes -->
+      <!-- Section 1: Band Anchor Mechanics & Strap Placement -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Plausible Causes</h2>
-        <div class="space-y-4">
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">1. Oversized Band Width</h3>
-            <p class="text-xs sm:text-sm text-body">A larger band size has wider-set back wings. This positions the shoulder straps near the edge of your shoulders where they easily slide off.</p>
-          </div>
-
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">2. Stretched Elastic or Loose Adjusters</h3>
-            <p class="text-xs sm:text-sm text-body">Strap elastic stretches during washing and daily wear, while plastic adjusters can slide down over time.</p>
-          </div>
-
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">3. Narrow or Sloped Shoulder Frame</h3>
-            <p class="text-xs sm:text-sm text-body">Standard wide-set balconette straps may sit too wide for narrow shoulder frames. Racerback or center-pull straps fit sloped shoulders better.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- What to Check -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Practical Fit Checks</h2>
-        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
-          <li><strong>Two-Finger Strap Tension:</strong> Adjust straps so you can comfortably slide two fingers under each strap at the top of your shoulder.</li>
-          <li><strong>Band Stability Check:</strong> If your band rides up when you raise your arms, your slipping straps are a symptom of a loose band.</li>
-        </ul>
-      </section>
-
-      <!-- What Size Change Might Help -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Recommended Size Adjustment</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. Why Band Size Controls Strap Positioning</h2>
         <p class="mb-4">
-          If adjusting strap sliders doesn't prevent slipping, move down one band size and up one cup letter:
+          Remember the fundamental rule of lingerie engineering: <strong>80% of support comes from the band, while straps carry only 20%</strong>.
         </p>
-        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl text-center mb-6">
-          <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">BAND DOWNSIZING SOLUTION</span>
-          <p class="text-lg font-bold text-ink">If 36B straps slip &rarr; Try a 34C sister size for closer strap positioning</p>
-        </div>
+        <p class="mb-4">
+          When you wear a band size that is too large (e.g., a 36 band instead of a 32 band), the back wing fabric is engineered wider. This pushes the rear strap attachment hooks outward toward your acromion process (the outer edge of your shoulder joint). On narrow or sloped shoulders, the straps have zero flat surface area to rest upon, causing them to slide off constantly.
+        </p>
       </section>
 
-      <!-- Calculator CTA -->
-      <section class="bg-primary text-white rounded-2xl p-6 sm:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
-        <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-white mb-1">Check Your Bra Size</h2>
-          <p class="text-xs sm:text-sm text-canvas-soft-2">Verify your true underbust baseline to stop shoulder strap slippage.</p>
-        </div>
-        <a href="/#calculator" class="flex-shrink-0 h-12 px-6 bg-surface hover:bg-canvas-soft-2 text-primary font-bold text-sm rounded-xl shadow-xs transition-colors flex items-center gap-2">
-          <span>Calculate My Size &rarr;</span>
-        </a>
-      </section>
-
-      <!-- Related Fit Guides -->
+      <!-- Section 2: Shoulder Frame & Strap Attachment Styles -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Related Fit Guides</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm font-semibold">
-          <a href="/fit-guide/band-rides-up" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Does My Bra Band Ride Up?</a>
-          <a href="/fit-guide/band-too-tight" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Does My Bra Band Feel Too Tight?</a>
-          <a href="/sister-size-calculator" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Sister Size Calculator</a>
-          <a href="/fit-guide" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Return to Fit Guide Hub</a>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Shoulder Anatomy & Strap Style Comparison</h2>
+        
+        <!-- Data Table 1: Strap Placement Matrix -->
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[500px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">Strap Cut / Style</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Attachment Position</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Anatomical Suitability</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Slippage Risk Level</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Wide Balconette / Square Neck</td>
+                <td class="py-2.5 px-3">Outer edge of apex & back wing</td>
+                <td class="py-2.5 px-3">Broad / square shoulder frames</td>
+                <td class="py-2.5 px-3 font-semibold text-primary">HIGH on narrow shoulders</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Center-Pull Full Coverage</td>
+                <td class="py-2.5 px-3">Centered over apex & spine</td>
+                <td class="py-2.5 px-3">Average / sloped shoulder frames</td>
+                <td class="py-2.5 px-3 text-green-600 font-bold">LOW</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Racerback / J-Hook Convertible</td>
+                <td class="py-2.5 px-3">Anchored together near spine</td>
+                <td class="py-2.5 px-3">Petite, narrow, or steep sloped frames</td>
+                <td class="py-2.5 px-3 text-green-600 font-bold">ZERO (Physically cannot slip)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: Diagnostic Step-by-Step Fixes -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. Step-by-Step Slippage Solutions</h2>
+
+        <ol class="list-decimal pl-5 space-y-3 text-xs sm:text-sm mb-6">
+          <li><strong>Step 1: Perform the Band Anchor Check.</strong> Raise your arms overhead. If the band slides up, downsize your band size and upsize your cup letter (e.g. 36B &rarr; 34C sister size).</li>
+          <li><strong>Step 2: Adjust Slider Buckles Properly.</strong> Adjust straps so you can comfortably slide two fingers under each strap at the apex of your shoulder. Over-tightening straps causes back-band lift!</li>
+          <li><strong>Step 3: Utilize a Racerback Converter Clip (J-Hook).</strong> Convert standard vertical straps into a cross-back racerback configuration using a 2-inch plastic racerback clip.</li>
+        </ol>
+      </section>
+
+      <!-- Section 4: Interactive Sizing Tools -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. Re-Calculate Your Correct Size Baseline</h2>
+        <div class="flex flex-wrap gap-3">
+          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
+            Calculate Size Baseline &rarr;
+          </a>
+          <a href="/sister-size-calculator" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Sister Size Matrix &rarr;
+          </a>
+          <a href="/fit-guide" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Return to Fit Diagnostic Hub &rarr;
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 5: FAQ Section -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqSchema.mainEntity.map(item => (
+            <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
+              <summary class="font-bold text-ink flex justify-between items-center list-none">
+                <span>{item.name}</span>
+                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+              </summary>
+              <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+            </details>
+          ))}
         </div>
       </section>
     </div>

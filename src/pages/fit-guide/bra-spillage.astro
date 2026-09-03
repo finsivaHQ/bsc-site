@@ -3,13 +3,38 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What causes 'quad-boob' or double-bust lines under t-shirts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quad-boobing is caused when bra cup volume is 1 to 2 sizes too small. The upper edge of the elastic cup cuts directly across soft breast tissue, pinching it into two distinct upper and lower bulges that show clearly under thin clothing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between top spillage and side armpit spillage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Top spillage indicates insufficient cup depth, forcing breast tissue over the neckline. Side spillage (underarm bulging) indicates underwires that are too narrow or underbust bands that are too loose, allowing breast tissue to migrate toward your back armpits."
+      }
+    }
+  ]
+};
 ---
 
 <Layout 
   title="Why Are My Breasts Spilling Out of My Bra? ('Quad-Boob') Fixes | BraSizeChecker"
-  description="Fix breast spillage over top or side bra cups. Learn why small cup volume causes double-bust outlines and how sizing up cups eliminates quad-boob."
+  description="Fix breast spillage over top or side bra cups. Master quad-boob diagnostics, side spillage migration, cup volume expansion tables, and t-shirt fit checks."
   canonical="https://brasizechecker.com/fit-guide/bra-spillage"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <Header />
   <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[
@@ -19,92 +44,117 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
     <header class="mb-10 text-center sm:text-left">
       <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-        Fit Diagnostic
+        Fit Diagnostic Guide
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        Why Are My Breasts Spilling Out of My Bra?
+        Why Are My Breasts Spilling Out of My Bra? Quad-Boob & Side Fixes
       </h1>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        Spillage—often creating a visible double-bust ridge ("quad-boob") under t-shirts—is a clear indicator that your bra cups are overloaded.
+        Breast tissue bulging over the top, sides, or center gore of your bra cups—commonly creating a double-bust ridge known as "quad-boobing"—is an undeniable signal that your bra cups are overloaded beyond their volumetric capacity.
       </p>
     </header>
 
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
-      <!-- Quick Answer -->
-      <section class="bg-canvas-soft-2 border-2 border-primary/30 rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-2">Quick Answer</h2>
-        <p class="text-body leading-relaxed font-medium mb-4">
-          Breasts spill over the top, sides, or underarms of a bra because <strong>the cup volume is too small</strong> to contain your breast tissue.
+      <!-- Section 1: Vector Diagram & Spillage Anatomy -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. Anatomy of Cup Overflow & Quad-Boobing</h2>
+        <p class="mb-4">
+          Breast tissue is soft, displacement-prone tissue. When you compress 700 cc of breast volume inside a 500 cc bra cup, the displaced tissue has no option but to overflow past the rigid boundaries of the cup.
         </p>
-        <div class="max-w-md mx-auto my-4">
+
+        <!-- Diagram -->
+        <div class="max-w-md mx-auto my-6">
           <img 
             src="/img/fit-cup-spillage.svg" 
             alt="Vector diagram demonstrating breast spillage and quad-boob overflow over top bra cup boundary" 
             width="400" 
             height="240" 
-            class="w-full h-auto rounded-xl border border-hairline" 
+            class="w-full h-auto rounded-xl border border-hairline shadow-2xs" 
             loading="lazy"
           />
-          <span class="text-center text-xs text-mute mt-2 block font-medium">Figure 1: Quad-boob tissue overflow due to small cup volume</span>
+          <span class="text-center text-xs text-mute mt-2 block font-medium">Figure 1: Quad-boob tissue overflow caused by undersized cup volume</span>
         </div>
       </section>
 
-      <!-- Possible Causes -->
+      <!-- Section 2: Top vs Side Spillage Diagnostic Matrix -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Plausible Causes</h2>
-        <div class="space-y-4">
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">1. Cup Volume Is 1 to 2 Sizes Too Small</h3>
-            <p class="text-xs sm:text-sm text-body">When cup depth is insufficient, breast tissue is forced up and out over the cup neckline or out the sides into underarm area.</p>
-          </div>
-
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">2. Wearing a Plunge Style on High-Volume Tops</h3>
-            <p class="text-xs sm:text-sm text-body">Low-cut plunge bras have shorter center gores. Full-on-top breasts can spill inward toward the center seam.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- What to Check -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Practical Fit Checks</h2>
-        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
-          <li><strong>T-shirt Test:</strong> Put on a snug fitted t-shirt over your bra. Look for a visible bump or line across your chest.</li>
-          <li><strong>Underarm Check:</strong> Look under your arms for breast tissue being pinched out past the wire.</li>
-        </ul>
-      </section>
-
-      <!-- What Size Change Might Help -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Recommended Size Adjustment</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Top Spillage vs. Side Spillage Matrix</h2>
         <p class="mb-4">
-          Keep your band size constant and increase your cup letter by one or two steps:
+          Different types of spillage stem from different mechanical flaws in cup cut and underwire width:
         </p>
-        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl text-center mb-6">
-          <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">CUP INCREASE EXAMPLE</span>
-          <p class="text-lg font-bold text-ink">If 34C causes spillage &rarr; Try a 34D or 34DD cup</p>
+
+        <!-- Data Table 1: Spillage Matrix -->
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[520px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">Spillage Type</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Visual Symptom</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Underlying Root Cause</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Recommended Fix</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-primary">Top Neckline Spillage ("Quad-Boob")</td>
+                <td class="py-2.5 px-3">Bulging horizontal ridge above top cup edge under t-shirts.</td>
+                <td class="py-2.5 px-3">Cup volume is 1 to 2 sizes too small.</td>
+                <td class="py-2.5 px-3">Increase cup letter by 1-2 steps (e.g. 34C &rarr; 34DD).</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Side Underarm Spillage</td>
+                <td class="py-2.5 px-3">Tissue rolls bulging out under armpits behind underwires.</td>
+                <td class="py-2.5 px-3">Underwire arch is too narrow; wire rests on tissue.</td>
+                <td class="py-2.5 px-3">Choose wide-root cups (e.g. Elomi or Wacoal) in larger cup size.</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Center Gore Spillage</td>
+                <td class="py-2.5 px-3">Tissue pushing together and popping over low center bridge.</td>
+                <td class="py-2.5 px-3">Low-cut plunge bra worn on full-on-top breasts.</td>
+                <td class="py-2.5 px-3">Switch to high-gore balconette or full-coverage cups.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
-      <!-- Calculator CTA -->
-      <section class="bg-primary text-white rounded-2xl p-6 sm:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
-        <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-white mb-1">Recalculate Your Bra Size</h2>
-          <p class="text-xs sm:text-sm text-canvas-soft-2">Re-measure your bust loosely across the fullest point to find your baseline.</p>
-        </div>
-        <a href="/#calculator" class="flex-shrink-0 h-12 px-6 bg-surface hover:bg-canvas-soft-2 text-primary font-bold text-sm rounded-xl shadow-xs transition-colors flex items-center gap-2">
-          <span>Calculate My Size &rarr;</span>
-        </a>
-      </section>
-
-      <!-- Related Fit Guides -->
+      <!-- Section 3: Tissue Migration & Recovery -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Related Fit Guides</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm font-semibold">
-          <a href="/fit-guide/bra-cup-gaping" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Do My Bra Cups Gap?</a>
-          <a href="/fit-guide/underwire-digging" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Does My Bra Underwire Dig In?</a>
-          <a href="/fit-guide/center-gore" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Doesn't My Center Gore Sit Flat?</a>
-          <a href="/fit-guide" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Return to Fit Guide Hub</a>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. Tissue Migration & Proper Cup Containment</h2>
+        <p class="mb-4">
+          Wearing undersized cups for years forces migratory breast tissue outward into the underarm and upper back regions. When you move into a properly sized cup and perform the daily <em>Scoop and Swoop</em>, this tissue gradually migrates back into the main breast mound over 4 to 8 weeks.
+        </p>
+      </section>
+
+      <!-- Section 4: Interactive Sizing Tools -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. Re-Calculate Your Correct Cup Size</h2>
+        <div class="flex flex-wrap gap-3">
+          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
+            Calculate Size Baseline &rarr;
+          </a>
+          <a href="/sister-size-calculator" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Sister Size Matrix &rarr;
+          </a>
+          <a href="/fit-guide" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Return to Fit Diagnostic Hub &rarr;
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 5: FAQ Section -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqSchema.mainEntity.map(item => (
+            <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
+              <summary class="font-bold text-ink flex justify-between items-center list-none">
+                <span>{item.name}</span>
+                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+              </summary>
+              <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+            </details>
+          ))}
         </div>
       </section>
     </div>

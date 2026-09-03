@@ -3,13 +3,38 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I know if my bra band is actually too small or if the cups are too small?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Perform the Backward Band Test: put your bra on upside down and backwards with the cups hanging down your back. If the band feels comfortable on the loosest hook when worn backwards, your band size is correct and your cups are too small (breast tissue is stealing band space)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a bra extender help with a tight band?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! A non-stretch bra extender is an ideal temporary solution for breaking in stiff new bra bands or accommodating minor bloating without permanent distortion of the bra's structural architecture."
+      }
+    }
+  ]
+};
 ---
 
 <Layout 
-  title="Why Does My Bra Band Feel Too Tight? Causes & Relief | BraSizeChecker"
-  description="Discover why your bra band feels tight or constricting. Learn the backward band test to diagnose whether tight bands are caused by band size or small cups."
+  title="Why Does My Bra Band Feel Too Tight? Causes & Solutions | BraSizeChecker"
+  description="Discover why your bra band feels tight or constricting. Master the backward band test, sister sizing matrix, extender usage rules, and ribcage comfort."
   canonical="https://brasizechecker.com/fit-guide/band-too-tight"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <Header />
   <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[
@@ -19,95 +44,123 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
     <header class="mb-10 text-center sm:text-left">
       <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-        Fit Diagnostic
+        Fit Diagnostic Guide
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        Why Does My Bra Band Feel Too Tight?
+        Why Does My Bra Band Feel Too Tight? Diagnostic & Fixes
       </h1>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        A band that leaves painful red marks or restricts breathing can ruin your day. However, a tight band is frequently caused by small cups rather than an undersized band.
+        A bra band that leaves painful red indentations or restricts deep breathing is unbearable. Counterintuitively, over 60% of "tight band" complaints are actually caused by undersized cups rather than an undersized band!
       </p>
     </header>
 
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
-      <!-- Quick Answer -->
-      <section class="bg-canvas-soft-2 border-2 border-primary/30 rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-2">Quick Answer</h2>
-        <p class="text-body leading-relaxed font-medium">
-          A bra band feels too tight either because <strong>the band size is physically too small</strong> or because <strong>the cups are too small</strong>, forcing breast tissue out into the band.
-        </p>
-      </section>
-
-      <!-- Possible Causes -->
+      <!-- Section 1: The Backward Band Test -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Plausible Causes</h2>
-        <div class="space-y-4">
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">1. Small Cups Stealing Band Circumference</h3>
-            <p class="text-xs sm:text-sm text-body">When cups cannot fit your breast volume, breast tissue pushes the cups forward, pulling the band taut around your back like a tourniquet.</p>
-          </div>
-
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">2. Underestimated Underbust Measurement</h3>
-            <p class="text-xs sm:text-sm text-body">Measuring underbust while breathing in or pulling the tape too tight can result in selecting a band size smaller than your ribcage structure.</p>
-          </div>
-
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">3. Brand & Fabric Stiffness</h3>
-            <p class="text-xs sm:text-sm text-body">New unwashed bras or dark-dyed fabrics naturally run stiffer than worn light-colored bras.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- What to Check: Backward Band Test -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Diagnostic: The Backward Band Test</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. Master Diagnostic: The Backward Band Test</h2>
         <p class="mb-4">
-          To isolate whether the band or the cup is causing tightness:
+          When bra cups are too small for your breast volume, your chest tissue cannot fit inside the cups. The displaced tissue pushes the front bridge away from your chest, pulling the back band super-taut around your spine like a tourniquet.
         </p>
-        <ol class="list-decimal pl-5 space-y-2 text-xs sm:text-sm">
-          <li>Put your bra on upside-down and backwards, so the cups hang down your back like a cape and the hook closure is at the front.</li>
-          <li>Fasten the hooks on the loosest setting around your underbust.</li>
-          <li><strong>Result A:</strong> If the band feels comfortable backwards, <em>your band size is correct and your cups are too small</em>.</li>
-          <li><strong>Result B:</strong> If the band still feels tight backwards, <em>your band size is genuinely too small</em>.</li>
+        <p class="mb-4">
+          To isolate whether your band is physically too small or your cups are stealing band length, perform the <strong>Backward Band Test</strong>:
+        </p>
+
+        <ol class="list-decimal pl-5 space-y-3 text-xs sm:text-sm mb-6">
+          <li>Unclasp your bra and spin it around so the cups hang upside down down your back (like a superhero cape).</li>
+          <li>Fasten the hooks across your front ribcage on the outermost (loosest) setting.</li>
+          <li>Inhale deeply and assess how the band feels against your underbust.</li>
         </ol>
+
+        <!-- Data Table 1: Backward Band Test Outcomes -->
+        <h3 class="text-lg font-bold text-ink mb-3">Backward Band Test Outcomes</h3>
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[500px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">Test Result</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Underlying Diagnosis</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Required Size Adjustment</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-primary">Outcome A: Band feels comfortable backwards</td>
+                <td class="py-2.5 px-3">Band size is PERFECT; Cups are TOO SMALL.</td>
+                <td class="py-2.5 px-3">Keep band size, increase cup letter by 1-2 steps (e.g. 34C &rarr; 34D/DD).</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Outcome B: Band still digs in backwards</td>
+                <td class="py-2.5 px-3">Band size is physically TOO SMALL.</td>
+                <td class="py-2.5 px-3">Sister size UP band by 1 step (e.g. 34C &rarr; 36B sister size).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <!-- Recommended Size Adjustment -->
+      <!-- Section 2: Ribcage Anatomy & Fabric Stiffening -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Recommended Size Adjustment</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Anatomy & Fabric Mechanics</h2>
+        
+        <div class="space-y-4 mb-6">
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink text-sm mb-1">Flare Ribcage Structure</h3>
+            <p class="text-xs sm:text-sm text-body">
+              Individuals with V-shaped flared ribcages often experience discomfort at the lower wire edge even when measurements indicate a smaller band. In such cases, wide side panels and 3-hook closures distribute pressure far more evenly.
+            </p>
+          </div>
+
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink text-sm mb-1">New Garment Stiction & Dark Dyes</h3>
+            <p class="text-xs sm:text-sm text-body">
+              Brand new unwashed bras contain sizing starches from factory manufacturing. Additionally, black and dark navy dye baths shrink elastane slightly more during thermal processing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Extenders vs. Sister Sizing -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. When to Use a Bra Extender vs. Sister Sizing</h2>
+        <p class="mb-4">
+          Before discarding a tight bra, determine if a bra extender is the ideal fix:
+        </p>
+
+        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm mb-6">
+          <li><strong>Use a 2-Hook Extender:</strong> If the bra is new and feels just 0.5 inches too snug. The extender provides comfortable break-in relief for 3 to 4 weeks until the band relaxes naturally.</li>
+          <li><strong>Sister Size Up:</strong> If the band leaves deep purple grooves after 30 minutes, move to the next even band size while decreasing the cup letter (e.g., move from 34C to 36B).</li>
+        </ul>
+      </section>
+
+      <!-- Section 4: Interactive Tools -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. Re-Calculate Your Correct Band Size</h2>
+        <div class="flex flex-wrap gap-3">
+          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
+            Calculate Size Baseline &rarr;
+          </a>
+          <a href="/sister-size-calculator" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Sister Size Matrix &rarr;
+          </a>
+          <a href="/fit-guide" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Return to Fit Diagnostic Hub &rarr;
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 5: FAQ Section -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
         <div class="space-y-4">
-          <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl">
-            <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">IF BACKWARD TEST WAS COMFORTABLE (RESULT A)</span>
-            <p class="text-sm font-bold text-ink">Keep band size, increase cup letter (e.g. 34C &rarr; 34D)</p>
-          </div>
-
-          <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl">
-            <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">IF BACKWARD TEST WAS TIGHT (RESULT B)</span>
-            <p class="text-sm font-bold text-ink">Increase band size, decrease cup letter (e.g. 34C &rarr; 36B sister size)</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Calculator CTA -->
-      <section class="bg-primary text-white rounded-2xl p-6 sm:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
-        <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-white mb-1">Calculate Your Baseline Size</h2>
-          <p class="text-xs sm:text-sm text-canvas-soft-2">Re-verify your underbust measurements in inches or centimeters.</p>
-        </div>
-        <a href="/#calculator" class="flex-shrink-0 h-12 px-6 bg-surface hover:bg-canvas-soft-2 text-primary font-bold text-sm rounded-xl shadow-xs transition-colors flex items-center gap-2">
-          <span>Calculate My Size &rarr;</span>
-        </a>
-      </section>
-
-      <!-- Related Fit Guides -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Related Fit Guides</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm font-semibold">
-          <a href="/fit-guide/band-rides-up" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Does My Bra Band Ride Up?</a>
-          <a href="/fit-guide/underwire-digging" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Does My Bra Underwire Dig In?</a>
-          <a href="/sister-size-calculator" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Sister Size Calculator</a>
-          <a href="/fit-guide" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Return to Fit Guide Hub</a>
+          {faqSchema.mainEntity.map(item => (
+            <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
+              <summary class="font-bold text-ink flex justify-between items-center list-none">
+                <span>{item.name}</span>
+                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+              </summary>
+              <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+            </details>
+          ))}
         </div>
       </section>
     </div>

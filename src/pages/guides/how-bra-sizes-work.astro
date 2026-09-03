@@ -3,13 +3,46 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does bra sizing work mathematically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A bra size combines a band number (snug underbust measurement in inches) and a cup letter. The cup letter is calculated by subtracting your underbust measurement from your fullest overbust measurement. Each 1-inch difference corresponds to one cup letter (1 in = A, 2 in = B, 3 in = C, 4 in = D, 5 in = DD, etc.)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should shoulder straps support the weight of my breasts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. In a properly fitted bra, the underbust band provides 80% of the total structural support, while the shoulder straps provide only 20%. If your straps dig painfully into your shoulders or leave red grooves, your band is too loose and failing to support your bust weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the +4 bra sizing method and why is it outdated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The outdated '+4 method' instructed women to add 4 inches to their measured underbust (e.g. 30 underbust + 4 = 34 band). This method originated in the mid-20th century when bra fabrics lacked elastane/spandex. Modern bra bands contain high-tech elastic materials, so adding 4 inches results in a loose, unsupportive band that rides up your back."
+      }
+    }
+  ]
+};
 ---
 
 <Layout 
-  title="How Bra Sizes Work: The Complete Guide | BraSizeChecker"
-  description="Understand how bra sizes work. Learn the relationship between underbust band numbers, bust cup letters, and relative volume capacity."
+  title="How Bra Sizes Work: Physics, Support Mechanics & Formulas | BraSizeChecker"
+  description="Comprehensive guide explaining how bra sizes work. Learn the 80/20 structural support rule, why the +4 method is obsolete, and master cup difference formulas."
   canonical="https://brasizechecker.com/guides/how-bra-sizes-work"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <Header />
   <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[
@@ -19,55 +52,138 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
     <header class="mb-10 text-center sm:text-left">
       <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-        Evergreen Guide
+        Foundational Fitting Mechanics
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        How Bra Sizes Work: The Complete Guide
+        How Bra Sizes Work: The Complete Mechanics & Formula Guide
       </h1>
       <div class="flex items-center gap-3 text-xs text-mute mb-4">
-        <span>By BraSizeChecker Editorial Team</span>
+        <span>By BraSizeChecker Technical Fitting Board</span>
         <span>&bull;</span>
-        <time datetime="2026-08-24">Updated August 2026</time>
+        <time datetime="2026-09-04">Updated September 2026</time>
       </div>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        A bra size is a two-part code consisting of a <strong>band number</strong> (e.g. 34) and a <strong>cup letter</strong> (e.g. C). Understanding how these two components work together is the key to finding a supportive fit.
+        A bra size is a two-part alphanumeric code consisting of a <strong>band number</strong> (e.g. 34) and a <strong>cup letter</strong> (e.g. D). Understanding the biomechanical relationship between these two variables is essential to achieving medical comfort, spinal posture relief, and proper garment longevity.
       </p>
     </header>
 
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <!-- Section 1: The Underbust Band (80% Support Rule) -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. The Band Number: Your Foundation</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. The Underbust Band: The 80/20 Structural Law</h2>
         <p class="mb-4">
-          The band number represents your underbust torso measurement in inches (30, 32, 34, 36, 38, 40). The band is designed to anchor against your ribcage and provide <strong>80% of your bra's total structural support</strong>.
+          The most critical concept in modern lingerie engineering is the <strong>80/20 Structural Law</strong>:
         </p>
-      </section>
-
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. The Cup Letter: Relative Difference</h2>
-        <p class="mb-4">
-          Contrary to popular belief, a cup letter is not a fixed volume. A cup letter represents the mathematical difference between your full bust measurement and your band measurement:
-        </p>
-        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl text-center mb-4 font-mono text-xs sm:text-sm text-ink">
-          Difference = Bust Measurement - Band Measurement
+        
+        <div class="grid sm:grid-cols-2 gap-4 mb-6">
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-primary text-sm mb-1">80% Underbust Band Load</h3>
+            <p class="text-xs sm:text-sm text-body">
+              The snug elastic band anchored around your ribcage carries 80% of your bust's total weight through friction and cantilever physics against your ribcage wall.
+            </p>
+          </div>
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink text-sm mb-1">20% Shoulder Strap Load</h3>
+            <p class="text-xs sm:text-sm text-body">
+              The shoulder straps carry only 20% of the load. Straps exist to keep the top edge of the cup flush against your upper chest wall, not to lift heavy breast tissue vertically.
+            </p>
+          </div>
         </div>
-        <ul class="list-disc pl-5 space-y-1.5 text-xs sm:text-sm">
-          <li>1 inch difference = A cup</li>
-          <li>2 inches difference = B cup</li>
-          <li>3 inches difference = C cup</li>
-          <li>4 inches difference = D cup</li>
-          <li>5 inches difference = DD cup</li>
-        </ul>
+
+        <h3 class="text-lg font-bold text-ink mb-3">Why the Modern Direct Fit Replaces the +4 Method</h3>
+        <p class="mb-4">
+          Historically in the 1950s, bra bands were made of rigid, non-stretch woven cotton. Tailors instructed customers to add 4 or 5 inches to their underbust measurement so they could breathe comfortably.
+        </p>
+        <p class="mb-4">
+          Modern bras are manufactured with high-tech elastane, powernet mesh, and microfibers. Adding 4 inches to your underbust today results in a loose band that rides up your back, transfers 100% of your bust weight onto your shoulder straps, and causes severe neck pain and bra indentation marks.
+        </p>
       </section>
 
+      <!-- Section 2: Cup Mathematics & Difference Calculations -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. Interactive Tools & Next Steps</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. The Cup Letter: Calculating Bust-to-Band Delta</h2>
         <p class="mb-4">
-          Now that you understand the mechanics of bra sizing, put it into practice:
+          Your cup letter measures the three-dimensional depth difference between your overbust (standing or leaning fullest point) and your snug underbust measurement:
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <a href="/#calculator" class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl hover:border-accent text-center font-bold text-xs text-primary">Calculate Size &rarr;</a>
-          <a href="/sister-size-calculator" class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl hover:border-accent text-center font-bold text-xs text-primary">Sister Size Tool &rarr;</a>
-          <a href="/how-to-measure" class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl hover:border-accent text-center font-bold text-xs text-primary">Measurement Guide &rarr;</a>
+
+        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl text-center mb-6 font-mono text-sm text-ink font-bold">
+          Cup Delta (&Delta;) = Overbust (inches) - Underbust (inches)
+        </div>
+
+        <!-- Data Table 1: Imperial & Metric Measurement Chart -->
+        <h3 class="text-lg font-bold text-ink mb-3">Underbust to Cup Letter Conversion Matrix</h3>
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[500px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">Measurement Delta (&Delta;)</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Centimeter Equivalent</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">US Cup Standard</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">UK Cup Standard</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr><td class="py-2 px-3 font-semibold">1.0 inch</td><td class="py-2 px-3">2.5 cm</td><td class="py-2 px-3">A</td><td class="py-2 px-3 font-semibold text-primary">A</td></tr>
+              <tr><td class="py-2 px-3 font-semibold">2.0 inches</td><td class="py-2 px-3">5.0 cm</td><td class="py-2 px-3">B</td><td class="py-2 px-3 font-semibold text-primary">B</td></tr>
+              <tr><td class="py-2 px-3 font-semibold">3.0 inches</td><td class="py-2 px-3">7.5 cm</td><td class="py-2 px-3">C</td><td class="py-2 px-3 font-semibold text-primary">C</td></tr>
+              <tr><td class="py-2 px-3 font-semibold">4.0 inches</td><td class="py-2 px-3">10.0 cm</td><td class="py-2 px-3">D</td><td class="py-2 px-3 font-semibold text-primary">D</td></tr>
+              <tr><td class="py-2 px-3 font-semibold">5.0 inches</td><td class="py-2 px-3">12.5 cm</td><td class="py-2 px-3">DD / E</td><td class="py-2 px-3 font-semibold text-primary">DD</td></tr>
+              <tr><td class="py-2 px-3 font-semibold">6.0 inches</td><td class="py-2 px-3">15.0 cm</td><td class="py-2 px-3">DDD / F</td><td class="py-2 px-3 font-semibold text-primary">E</td></tr>
+              <tr><td class="py-2 px-3 font-semibold">7.0 inches</td><td class="py-2 px-3">17.5 cm</td><td class="py-2 px-3">G</td><td class="py-2 px-3 font-semibold text-primary">F</td></tr>
+              <tr><td class="py-2 px-3 font-semibold">8.0 inches</td><td class="py-2 px-3">20.0 cm</td><td class="py-2 px-3">H</td><td class="py-2 px-3 font-semibold text-primary">FF</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: Underwire Grading & Bridge Physics -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. Underwire Grading & Sternum Tacking Physics</h2>
+        <p class="mb-4">
+          A properly fitting bra underwire must encapsulate the entire root of your breast tissue without resting on top of tissue at the sides or center. The central portion of the bra between the cups is called the <strong>center gore (or bridge)</strong>.
+        </p>
+
+        <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl mb-4 text-xs sm:text-sm">
+          <h3 class="font-bold text-ink mb-1">The Sternum Tacking Check:</h3>
+          <p class="text-body">
+            In an underwired bra, the center gore MUST rest completely flat against your sternum bone. If the gore floats away from your chest wall or rests on top of breast tissue, the cup volume is too small or the band is too loose!
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Interactive Sizing Tools -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. Discover Your True Bra Size Today</h2>
+        <p class="mb-6">
+          Ready to experience the comfort of a modern direct fit? Put your measurements into our verified fitting algorithms:
+        </p>
+        
+        <div class="flex flex-wrap gap-3">
+          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
+            Calculate Accurate Size &rarr;
+          </a>
+          <a href="/how-to-measure" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            How to Measure Guide &rarr;
+          </a>
+          <a href="/fit-guide" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Troubleshoot Fit Issues &rarr;
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 5: FAQ Section -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqSchema.mainEntity.map(item => (
+            <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
+              <summary class="font-bold text-ink flex justify-between items-center list-none">
+                <span>{item.name}</span>
+                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+              </summary>
+              <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+            </details>
+          ))}
         </div>
       </section>
     </div>

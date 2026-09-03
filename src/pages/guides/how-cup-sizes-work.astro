@@ -3,13 +3,46 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a D cup considered large?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, a D cup simply means a 4-inch difference between bust and underbust measurements. On a 30 band size (30D), a D cup represents a small-to-average volume (approx 390 cc), whereas on a 38 band size (38D), it represents a significantly larger physical volume (approx 850 cc)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a 34C fit the same breast volume as a 32D?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bra cup dimensions are relative to the wire circumference and band size. When you decrease the band size by 2 inches (from 34 to 32), the underwire shrinks. To maintain the same physical cup volume, you must increase the cup letter by one step (from C to D)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is bra cup size measured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cup size is calculated by subtracting your snug underbust measurement (in inches) from your fullest overbust measurement. A 1-inch difference corresponds to an A cup, 2 inches to a B cup, 3 inches to a C cup, 4 inches to a D cup, and so on."
+      }
+    }
+  ]
+};
 ---
 
 <Layout 
-  title="How Bra Cup Sizes Work: Relative Volume Explained | BraSizeChecker"
-  description="Dismantle the myth of fixed cup sizes. Learn how bra cup volume is relative to band size and why a 32D, 34C, and 36B hold equal volume."
+  title="How Bra Cup Sizes Work: Relative Volume Physics & Calculation | BraSizeChecker"
+  description="Dismantle the myth of fixed cup sizes. Learn how bra cup volume scales with band size, explore cup volume displacement charts in cc/ml, and master sister size physics."
   canonical="https://brasizechecker.com/guides/how-cup-sizes-work"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <Header />
   <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[
@@ -19,53 +52,134 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
     <header class="mb-10 text-center sm:text-left">
       <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-        Evergreen Guide
+        Masterclass Guide
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        How Bra Cup Sizes Work: Relative Volume Capacity Explained
+        How Bra Cup Sizes Work: Relative Volume & Physics Explained
       </h1>
       <div class="flex items-center gap-3 text-xs text-mute mb-4">
-        <span>By BraSizeChecker Editorial Team</span>
+        <span>By BraSizeChecker Ergonomics & Fitting Lab</span>
         <span>&bull;</span>
-        <time datetime="2026-08-24">Updated August 2026</time>
+        <time datetime="2026-09-04">Updated September 2026</time>
       </div>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        One of the biggest misconceptions in apparel sizing is that a "D cup" is a specific size. In reality, <strong>cup letters represent a ratio, not a fixed volume</strong>.
+        One of the most persistent misconceptions in fashion and anatomical measurement is that a "D cup" or "C cup" represents an absolute physical size. In truth, <strong>cup letters represent a ratio, not a fixed volume</strong>. A cup letter is meaningless without its accompanying band size.
       </p>
     </header>
 
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      <!-- Section 1: The Mathematics of Cup Volume -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. Cup Volume Scaled to Band Size</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. The Mathematics of Cup Volume & Wire Scaling</h2>
         <p class="mb-4">
-          Because bra cups are scaled proportionally to the band width, a 30D cup holds significantly less physical volume than a 38D cup.
+          A bra cup is a three-dimensional geometric hemisphere mounted on a circular or elliptical underwire. When manufacturers increase the band size of a bra (e.g., from 30 inches to 38 inches), the width and radius of the underwire expand proportionally to wrap around a wider ribcage.
         </p>
-        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl mb-4 text-xs sm:text-sm">
-          <p class="font-bold text-ink mb-1">CUP VOLUME COMPARISON:</p>
-          <p class="text-body">&bull; 30D Cup Volume = Approx. 390 cm³</p>
-          <p class="text-body">&bull; 34D Cup Volume = Approx. 590 cm³</p>
-          <p class="text-body">&bull; 38D Cup Volume = Approx. 850 cm³</p>
+        <p class="mb-4">
+          Consequently, a <strong>30D bra cup holds dramatically less physical volumetric displacement than a 38D bra cup</strong>, even though both have the exact same 4-inch difference between overbust and underbust!
+        </p>
+
+        <!-- Data Table 1: Volumetric Displacement Matrix -->
+        <h3 class="text-lg font-bold text-ink mt-6 mb-3">Estimated Breast Tissue Displacement (in Cubic Centimeters / cc)</h3>
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[520px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">Band Size</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">B Cup Vol (cc)</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">C Cup Vol (cc)</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">D Cup Vol (cc)</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">DD Cup Vol (cc)</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">E / DDD Vol (cc)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr><td class="py-2 px-3 font-semibold">30 Band</td><td class="py-2 px-3">approx 240 cc</td><td class="py-2 px-3">approx 310 cc</td><td class="py-2 px-3 font-semibold text-primary">approx 390 cc</td><td class="py-2 px-3">approx 480 cc</td><td class="py-2 px-3">approx 590 cc</td></tr>
+              <tr><td class="py-2 px-3 font-semibold">32 Band</td><td class="py-2 px-3">approx 310 cc</td><td class="py-2 px-3">approx 390 cc</td><td class="py-2 px-3 font-semibold text-primary">approx 480 cc</td><td class="py-2 px-3">approx 590 cc</td><td class="py-2 px-3">approx 710 cc</td></tr>
+              <tr><td class="py-2 px-3 font-semibold">34 Band</td><td class="py-2 px-3">approx 390 cc</td><td class="py-2 px-3">approx 480 cc</td><td class="py-2 px-3 font-semibold text-primary">approx 590 cc</td><td class="py-2 px-3">approx 710 cc</td><td class="py-2 px-3">approx 850 cc</td></tr>
+              <tr><td class="py-2 px-3 font-semibold">36 Band</td><td class="py-2 px-3">approx 480 cc</td><td class="py-2 px-3">approx 590 cc</td><td class="py-2 px-3 font-semibold text-primary">approx 710 cc</td><td class="py-2 px-3">approx 850 cc</td><td class="py-2 px-3">approx 1000 cc</td></tr>
+              <tr><td class="py-2 px-3 font-semibold">38 Band</td><td class="py-2 px-3">approx 590 cc</td><td class="py-2 px-3">approx 710 cc</td><td class="py-2 px-3 font-semibold text-primary">approx 850 cc</td><td class="py-2 px-3">approx 1000 cc</td><td class="py-2 px-3">approx 1170 cc</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-mute italic">
+          *Note: Volumetric estimates based on standard standardized underwire curvature models. Individual breast density and shape distribution will vary slightly.
+        </p>
+      </section>
+
+      <!-- Section 2: Equal Volume Equivalent Systems (Sister Sizes) -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Equal Volume Equivalents: The Sister Size Rule</h2>
+        <p class="mb-4">
+          Notice in the volumetric table above how diagonal cells match in volume:
+        </p>
+        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl text-center mb-6 font-bold text-ink text-sm sm:text-base">
+          30E (590 cc) &equiv; 32DD (590 cc) &equiv; 34D (590 cc) &equiv; 36C (590 cc) &equiv; 38B (590 cc)
+        </div>
+        <p class="mb-4">
+          This relationship forms the core law of bra fitting known as <strong>Sister Sizing</strong>. If a bra's cup fits your breast tissue perfectly, but the band is either too tight or too loose, you can adjust the band while keeping the exact same cup volume by applying this inverted rule:
+        </p>
+        <ul class="list-disc pl-5 space-y-2 mb-6">
+          <li><strong>To increase band size by 1 step:</strong> Go UP 1 band size and DOWN 1 cup letter (e.g., 32D &rarr; 34C).</li>
+          <li><strong>To decrease band size by 1 step:</strong> Go DOWN 1 band size and UP 1 cup letter (e.g., 34D &rarr; 32DD).</li>
+        </ul>
+      </section>
+
+      <!-- Section 3: Breast Shape Factors Beyond Cup Letters -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. Breast Tissue Distribution & Root Shapes</h2>
+        <p class="mb-4">
+          Two individuals with identical 34D measurements can experience completely different fits depending on breast root anatomy and distribution:
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 mb-6">
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink text-sm mb-1">Shallow / Broad Root</h3>
+            <p class="text-xs sm:text-sm text-body">
+              Tissue is spread widely across the chest wall with minimal forward projection. Best fitted with demi cups, plunge styles, and wider underwires to avoid cup gaping at the top.
+            </p>
+          </div>
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink text-sm mb-1">Projected / Narrow Root</h3>
+            <p class="text-xs sm:text-sm text-body">
+              Tissue projects significantly forward from a narrow chest base. Best fitted with multi-part unlined cups (balconette or full-coverage) that offer deep cup depth at the bridge.
+            </p>
+          </div>
         </div>
       </section>
 
+      <!-- Section 4: Related Tools & Calculators -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Equal Volume Equivalents (Sister Sizes)</h2>
-        <p class="mb-4">
-          Because cup volume is relative, moving up a band size while moving down a cup letter preserves the exact same cup volume capacity:
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. Test Your Size with Our Free Calculators</h2>
+        <p class="mb-6">
+          Use our interactive algorithms to compute your precise cup letter, sister size matrix, and global conversions instantly:
         </p>
-        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl text-center mb-6 font-bold text-ink text-sm">
-          32D = 34C = 36B = 38A (Equal Cup Volume Capacity)
+        
+        <div class="flex flex-wrap gap-3">
+          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
+            Calculate Primary Size &rarr;
+          </a>
+          <a href="/sister-size-calculator" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Sister Size Calculator &rarr;
+          </a>
+          <a href="/bra-size-chart" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Bra Size Chart &rarr;
+          </a>
         </div>
-        <p>
-          Calculate your volume equivalents with our <a href="/sister-size-calculator" class="text-primary font-semibold hover:underline">Sister Size Calculator</a>.
-        </p>
       </section>
 
+      <!-- Section 5: FAQ Section -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Related Sizing Tools</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold">
-          <a href="/bra-size-chart" class="p-3 bg-canvas-soft-2 rounded-xl text-primary hover:underline">&bull; Full Bra Size Chart</a>
-          <a href="/bra-size-converter" class="p-3 bg-canvas-soft-2 rounded-xl text-primary hover:underline">&bull; International Converter</a>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqSchema.mainEntity.map(item => (
+            <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
+              <summary class="font-bold text-ink flex justify-between items-center list-none">
+                <span>{item.name}</span>
+                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+              </summary>
+              <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+            </details>
+          ))}
         </div>
       </section>
     </div>

@@ -3,13 +3,38 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should a bra center gore touch your sternum bone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in an underwired bra, the central fabric bridge (center gore) should sit completely flat ('tack') against your sternum. If it floats away from your chest wall, your cups are too small or the band is too loose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it normal for a wireless bra gore to float?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Wireless bras and bralettes lack rigid steel underwires, so their center bridges naturally rest over breast tissue without tacking flush against the sternum. Tacking is a structural requirement only for underwired bras."
+      }
+    }
+  ]
+};
 ---
 
 <Layout 
   title="Why Doesn't My Bra Center Gore Sit Flat? Causes & Fixes | BraSizeChecker"
-  description="Learn why your bra center gore floats away from your chest wall. Fix gore bridge floating by increasing cup volume or adjusting bridge wire height."
+  description="Learn why your bra center gore floats away from your chest wall. Master sternum tacking physics, close-set bridge selection, plunge vs balconette gore height."
   canonical="https://brasizechecker.com/fit-guide/center-gore"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <Header />
   <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[
@@ -19,85 +44,115 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
     <header class="mb-10 text-center sm:text-left">
       <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-        Fit Diagnostic
+        Fit Diagnostic Guide
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        Why Doesn't My Bra Center Gore Sit Flat?
+        Why Doesn't My Bra Center Gore Sit Flat Against My Sternum?
       </h1>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        In an underwired bra, the fabric bridge between the cups (the center gore) should rest flush against your sternum. If it floats away, your cups are overloaded.
+        In an underwired bra, the central fabric and wire bridge between the cups (the center gore) should sit completely flush—a state bra fitters call "tacking"—against your sternum bone. A floating gore indicates severe cup overloading or band instability.
       </p>
     </header>
 
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
-      <!-- Quick Answer -->
-      <section class="bg-canvas-soft-2 border-2 border-primary/30 rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-2">Quick Answer</h2>
-        <p class="text-body leading-relaxed font-medium">
-          The center gore floats away from your chest wall because <strong>the cup volume is too small</strong>, forcing breast tissue to push the wire bridge outward away from your sternum.
-        </p>
-      </section>
-
-      <!-- Possible Causes -->
+      <!-- Section 1: Biomechanics of Gore Tacking -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Plausible Causes</h2>
-        <div class="space-y-4">
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">1. Cup Volume Is Too Small</h3>
-            <p class="text-xs sm:text-sm text-body">If the cups cannot hold your breast volume, breast tissue acts as a wedge pushing the center wire structure off your sternum.</p>
-          </div>
-
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">2. Close-Set Breast Roots</h3>
-            <p class="text-xs sm:text-sm text-body">If your breast roots sit very close together in the center of your chest, a wide center gore wire may rest on tissue rather than bone.</p>
-          </div>
-
-          <div class="p-4 bg-canvas-soft-2/60 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink mb-1 text-sm">3. Wireless Bra Construction</h3>
-            <p class="text-xs sm:text-sm text-body">Wireless or bralette styles lack rigid wire anchors, so center gores naturally float on soft-cup styles. (This is expected in wireless bras).</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- What to Check -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Practical Fit Checks</h2>
-        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
-          <li><strong>Gore Press Test:</strong> In an underwired bra, gently press the center gore against your chest with one finger. If breast tissue overflows the cups, your cup size is too small.</li>
-        </ul>
-      </section>
-
-      <!-- What Size Change Might Help -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Recommended Size Adjustment</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. The Biomechanics of Sternum Tacking</h2>
         <p class="mb-4">
-          Increase your cup letter by one or two sizes to allow the gore to rest flush against your sternum:
+          Underwire bras act as a suspension bridge. The underwires enclose each breast mound separately, transferring bust weight to the underbust band anchored around your ribcage.
         </p>
-        <div class="p-4 bg-canvas-soft-2 border border-hairline rounded-xl text-center mb-6">
-          <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-1">GORE FLUSH FIX</span>
-          <p class="text-lg font-bold text-ink">If 34C center gore floats &rarr; Try a 34D or 34DD cup</p>
-        </div>
+        <p class="mb-4">
+          When your cup volume matches your breast tissue, the underwire tips press comfortably flat against your sternum bone between your breasts. If the cups are too small, your breast tissue cannot sink into the cups and acts like a hydraulic wedge, forcing the center gore 0.5 to 2 inches away from your chest wall.
+        </p>
       </section>
 
-      <!-- Calculator CTA -->
-      <section class="bg-primary text-white rounded-2xl p-6 sm:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
-        <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-white mb-1">Check Your Baseline Size</h2>
-          <p class="text-xs sm:text-sm text-canvas-soft-2">Verify underbust and bust measurements to establish proper cup volume.</p>
-        </div>
-        <a href="/#calculator" class="flex-shrink-0 h-12 px-6 bg-surface hover:bg-canvas-soft-2 text-primary font-bold text-sm rounded-xl shadow-xs transition-colors flex items-center gap-2">
-          <span>Calculate My Size &rarr;</span>
-        </a>
-      </section>
-
-      <!-- Related Fit Guides -->
+      <!-- Section 2: Three Reasons Why Gores Float -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Related Fit Guides</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm font-semibold">
-          <a href="/fit-guide/underwire-digging" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Does My Bra Underwire Dig In?</a>
-          <a href="/fit-guide/bra-spillage" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Are My Breasts Spilling Out of My Bra?</a>
-          <a href="/fit-guide/bra-cup-gaping" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Why Do My Bra Cups Gap?</a>
-          <a href="/fit-guide" class="p-3 bg-canvas-soft-2 rounded-xl hover:text-primary transition-colors">&bull; Return to Fit Guide Hub</a>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Three Primary Reasons Why Gores Float</h2>
+        
+        <!-- Data Table 1: Gore Floating Matrix -->
+        <div class="overflow-x-auto -mx-2 px-2 mb-6">
+          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[500px]">
+            <thead>
+              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                <th scope="col" class="py-2.5 px-3 font-semibold">Root Cause</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Anatomical Symptom</th>
+                <th scope="col" class="py-2.5 px-3 font-semibold">Corrective Fix</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-hairline">
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-primary">Insufficient Cup Volume</td>
+                <td class="py-2.5 px-3">Gore floats 1+ inches off chest; breasts press together in middle.</td>
+                <td class="py-2.5 px-3">Increase cup letter by 1-2 steps (e.g. 34C &rarr; 34D or 34DD).</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Close-Set Breast Anatomy</td>
+                <td class="py-2.5 px-3">Breasts touch in center with &lt; 1 finger space between roots.</td>
+                <td class="py-2.5 px-3">Switch from high balconette gores to low-wire plunge styles.</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 px-3 font-semibold text-ink">Pectus Carinatum / Excavatum</td>
+                <td class="py-2.5 px-3">Sternum bone protrudes or dips abnormally.</td>
+                <td class="py-2.5 px-3">Use flexible plunge wires or soft-foam wireless cups.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: Plunge vs Balconette Gore Selection -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. Plunge vs. Balconette Gore Height Guide</h2>
+        <p class="mb-4">
+          Gore height varies significantly across bra cuts:
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 mb-6">
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-ink text-sm mb-1">Balconette & Full Coverage Gores</h3>
+            <p class="text-xs sm:text-sm text-body">
+              Tall center bridges (2.5 to 3.5 inches tall). Ideal for wide-set or projected breast tissue where maximum separation and lift are required.
+            </p>
+          </div>
+          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
+            <h3 class="font-bold text-primary text-sm mb-1">Plunge Cut Low Gores</h3>
+            <p class="text-xs sm:text-sm text-body">
+              Short center bridges (0.5 to 1.5 inches tall). Essential for close-set breast roots where tall underwire channels dig into breast tissue.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Interactive Sizing Tools -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. Re-Calculate Your Baseline Cup Size</h2>
+        <div class="flex flex-wrap gap-3">
+          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
+            Calculate Size Baseline &rarr;
+          </a>
+          <a href="/sister-size-calculator" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Sister Size Matrix &rarr;
+          </a>
+          <a href="/fit-guide" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Return to Fit Diagnostic Hub &rarr;
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 5: FAQ Section -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqSchema.mainEntity.map(item => (
+            <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
+              <summary class="font-bold text-ink flex justify-between items-center list-none">
+                <span>{item.name}</span>
+                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+              </summary>
+              <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+            </details>
+          ))}
         </div>
       </section>
     </div>

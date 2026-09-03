@@ -4,6 +4,29 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizing';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I read an international bra size chart?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Locate your snug underbust measurement in either inches or centimeters on the band matrix row. This reveals your equivalent band size across regions (e.g. 34 in US/UK = 75 in EU = 90 in FR = 12 in AU). Next, locate your bust-to-band delta in the cup matrix to find your regional cup letter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do Asian bra sizes (Japan, Hong Kong, Korea, Singapore) use metric band numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Asian bra sizing systems (such as Japan JIS L 4006 and South Korea KS K 9404) follow metric EN 13402 specifications, using underbust centimeters for band numbers (65, 70, 75, 80) and 2.5 cm cup delta increments."
+      }
+    }
+  ]
+};
 ---
 
 <Layout 
@@ -11,6 +34,8 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
   description="Comprehensive international bra size chart. Compare US, UK, EU, FR, AU, JP, IN, HK, South Korea, and Singapore band and cup sizes."
   canonical="https://brasizechecker.com/bra-size-chart"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <Header />
   <main class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[{ label: 'Bra Size Chart' }]} />
@@ -18,13 +43,18 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
     <!-- Page Header / Intro -->
     <header class="mb-10 text-center sm:text-left">
       <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-        Reference Guide
+        Master Reference Guide
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        Bra Size Chart — US, UK, EU, AU, JP, IN, HK, KR, SG & International Conversions
+        Master Bra Size Chart: US, UK, EU, AU, JP, IN & International Matrix
       </h1>
+      <div class="flex items-center gap-3 text-xs text-mute mb-4">
+        <span>By BraSizeChecker Anthropometric Lab</span>
+        <span>&bull;</span>
+        <time datetime="2026-09-04">Updated September 2026</time>
+      </div>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        Navigating bra sizing across different brands and countries can be confusing. Every bra size consists of a <strong>band number</strong> (the ribcage measurement) and a <strong>cup letter</strong> (the volume difference between bust and underbust). Use this reference chart to compare sizes across verified international sizing systems including US, UK, EU, France, Australia, Japan, India, Hong Kong, South Korea, and Singapore.
+        Navigating international bra sizing standards across different regions and manufacturers can be daunting. Every bra size consists of a <strong>band number</strong> (representing ribcage circumference) and a <strong>cup letter</strong> (representing cup volume displacement). Use our master chart below to cross-reference sizes across 10 global regions.
       </p>
     </header>
 
@@ -139,66 +169,50 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
 
     <!-- Educational Sections -->
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
-      <!-- Section: How to Read a Bra Size -->
+      <!-- Section 1: How to Measure & Read Chart -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">How to Read a Bra Size</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. How to Read & Use This Master Chart</h2>
         <p class="mb-4">
-          A standard bra size consists of two parts: the <strong>Band Size</strong> (a number such as 34 or 75) and the <strong>Cup Size</strong> (a letter such as C, D, or DD).
+          Follow these 3 simple steps to find your exact size in any international brand:
         </p>
-        <div class="grid md:grid-cols-2 gap-4 my-6">
-          <div class="p-4 bg-canvas-soft-2 rounded-xl border border-hairline">
-            <h3 class="font-bold text-ink mb-1 text-sm uppercase tracking-wider text-primary">1. Band Size (Number)</h3>
-            <p class="text-xs sm:text-sm">Represents your snug ribcage measurement directly beneath your bust. In US/UK sizing, bands run in even numbers (30, 32, 34, 36). In EU sizing, bands are measured in centimeters (65, 70, 75, 80).</p>
-          </div>
-          <div class="p-4 bg-canvas-soft-2 rounded-xl border border-hairline">
-            <h3 class="font-bold text-ink mb-1 text-sm uppercase tracking-wider text-primary">2. Cup Size (Letter)</h3>
-            <p class="text-xs sm:text-sm">Represents the volume difference between your full bust measurement and your underbust band measurement. Each letter step generally corresponds to 1 inch (or 2.5 cm) of bust volume difference.</p>
-          </div>
-        </div>
-        <p class="text-xs sm:text-sm text-mute italic bg-canvas p-3 rounded-lg border border-hairline">
-          💡 <strong>Key Concept:</strong> Cup letters do not represent fixed volumes on their own. A 32D cup holds less volume than a 38D cup. Cup letter size is always relative to band size.
-        </p>
-      </section>
 
-      <!-- Section: Understanding Sister Sizes -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Understanding Sister Sizes</h2>
-        <p class="mb-4">
-          Sister sizes have equivalent cup volumes despite different band sizes. If your band is uncomfortable but the cup volume feels right, move up a band size and down a cup letter (or vice versa).
-        </p>
-        <div class="p-4 bg-canvas-soft-2 rounded-xl border border-hairline mb-4">
-          <p class="font-bold text-ink mb-2">Sister Size Example for 34C:</p>
-          <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm">
-            <li><strong>32D</strong> (Smaller Band, Larger Cup Letter &rarr; Tight Band, Same Volume)</li>
-            <li><strong>34C</strong> (Your Baseline Starting Size)</li>
-            <li><strong>36B</strong> (Larger Band, Smaller Cup Letter &rarr; Loose Band, Same Volume)</li>
-          </ul>
-        </div>
-        <p>
-          To calculate your exact baseline size and see your 3-card sister size breakdown automatically, use our free <a href="/#calculator" class="text-primary font-semibold hover:underline">Bra Size Calculator</a>.
-        </p>
-      </section>
-
-      <!-- Section: How to Find Your Size -->
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">How to Find Your Recommended Bra Size</h2>
-        <p class="mb-4">
-          Establishing your baseline bra size takes less than two minutes using a soft measuring tape:
-        </p>
-        <ol class="list-decimal pl-5 space-y-2 mb-6">
-          <li>Measure your <strong>underbust</strong> snugly around your ribcage directly beneath your bust.</li>
-          <li>Measure your <strong>bust</strong> loosely around the fullest part of your chest.</li>
-          <li>Enter your measurements into our <a href="/#calculator" class="text-primary font-semibold hover:underline">Bra Size Calculator</a>.</li>
-          <li>Review our step-by-step <a href="/#how-to-measure" class="text-primary font-semibold hover:underline">How to Measure Guide</a> for measuring tips.</li>
+        <ol class="list-decimal pl-5 space-y-2 text-xs sm:text-sm mb-6">
+          <li><strong>Find Your Band Row:</strong> Locate your snug underbust measurement in either inches or centimeters on the Band Size Conversion Matrix above.</li>
+          <li><strong>Find Your Cup Column:</strong> Locate your calculated bust-to-band delta in the Cup Size Conversion Matrix to identify your regional letter.</li>
+          <li><strong>Cross-Reference Destination Region:</strong> Read horizontally across the row to find your target country's equivalent size tag.</li>
         </ol>
       </section>
 
-      <!-- Section: Important Fit Note -->
-      <section class="bg-canvas-soft-2 border-2 border-primary/30 rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-2">Important Fit Note</h2>
-        <p class="text-sm sm:text-base leading-relaxed">
-          Your calculated bra size is a recommended starting point. Because sizing conventions, band elasticity, cup cuts, and wire shapes vary between manufacturers and styles, you may find that your best-fitting size shifts slightly between different brands. Use our <a href="/#fit-guide" class="text-primary font-semibold hover:underline">Fit Guide</a> to diagnose common fit issues such as band riding up, gaping cups, or digging wires.
-        </p>
+      <!-- Section 2: Related Tools -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Interactive Tools & Calculators</h2>
+        <div class="flex flex-wrap gap-3">
+          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
+            Primary Calculator Tool &rarr;
+          </a>
+          <a href="/bra-size-converter" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Bra Size Converter &rarr;
+          </a>
+          <a href="/sister-size-calculator" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
+            Sister Size Matrix &rarr;
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 3: FAQ Section -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqSchema.mainEntity.map(item => (
+            <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
+              <summary class="font-bold text-ink flex justify-between items-center list-none">
+                <span>{item.name}</span>
+                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+              </summary>
+              <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+            </details>
+          ))}
+        </div>
       </section>
     </div>
   </main>
@@ -206,83 +220,34 @@ import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizin
 </Layout>
 
 <script>
-  import { BAND_CONVERSION_MATRIX, CUP_CONVERSION_MATRIX } from '../utils/braSizing';
+  document.addEventListener('astro:page-load', () => {
+    const searchInput = document.getElementById('page-matrix-search') as HTMLInputElement;
+    const bandRows = document.querySelectorAll('#page-band-matrix-body tr');
+    const cupRows = document.querySelectorAll('#page-cup-matrix-body tr');
 
-  const searchInput = document.getElementById('page-matrix-search') as HTMLInputElement;
-  const bandBody = document.getElementById('page-band-matrix-body');
-  const cupBody = document.getElementById('page-cup-matrix-body');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.trim().toLowerCase();
 
-  const renderTables = (query: string) => {
-    const q = query.toLowerCase().trim();
+        function filterRows(rows: NodeListOf<Element>) {
+          rows.forEach(row => {
+            const text = row.textContent?.toLowerCase() || '';
+            if (!query || text.includes(query)) {
+              (row as HTMLElement).style.display = '';
+              if (query && text.includes(query)) {
+                (row as HTMLElement).classList.add('bg-accent/15');
+              } else {
+                (row as HTMLElement).classList.remove('bg-accent/15');
+              }
+            } else {
+              (row as HTMLElement).style.display = 'none';
+            }
+          });
+        }
 
-    if (bandBody) {
-      bandBody.innerHTML = BAND_CONVERSION_MATRIX.map(row => {
-        const isMatch = q && (
-          String(row.us).includes(q) || 
-          String(row.uk).includes(q) || 
-          String(row.eu).includes(q) || 
-          String(row.fr).includes(q) || 
-          String(row.au).includes(q) || 
-          String(row.jp).includes(q) || 
-          String(row.in).includes(q) || 
-          String(row.hk).includes(q) || 
-          String(row.kr).includes(q) || 
-          String(row.sg).includes(q)
-        );
-        const isFiltered = q && !isMatch;
-        if (isFiltered) return '';
-
-        return `
-          <tr class="transition-colors ${isMatch ? 'bg-canvas-soft-2 font-bold text-ink border-l-4 border-primary' : 'hover:bg-canvas-soft-2/50'}">
-            <th scope="row" class="py-3 px-3.5 font-semibold text-ink">${row.us}</th>
-            <td class="py-3 px-3.5">${row.uk}</td>
-            <td class="py-3 px-3.5">${row.eu}</td>
-            <td class="py-3 px-3.5">${row.fr}</td>
-            <td class="py-3 px-3.5">${row.au}</td>
-            <td class="py-3 px-3.5">${row.jp}</td>
-            <td class="py-3 px-3.5">${row.in}</td>
-            <td class="py-3 px-3.5">${row.hk}</td>
-            <td class="py-3 px-3.5">${row.kr}</td>
-            <td class="py-3 px-3.5">${row.sg}</td>
-          </tr>
-        `;
-      }).join('');
+        filterRows(bandRows);
+        filterRows(cupRows);
+      });
     }
-
-    if (cupBody) {
-      cupBody.innerHTML = CUP_CONVERSION_MATRIX.map(row => {
-        const isMatch = q && (
-          row.us.toLowerCase().includes(q) || 
-          row.uk.toLowerCase().includes(q) || 
-          row.eu.toLowerCase().includes(q) || 
-          row.au.toLowerCase().includes(q) || 
-          row.jp.toLowerCase().includes(q) || 
-          row.in.toLowerCase().includes(q) || 
-          row.hk.toLowerCase().includes(q) || 
-          row.kr.toLowerCase().includes(q) || 
-          row.sg.toLowerCase().includes(q)
-        );
-        const isFiltered = q && !isMatch;
-        if (isFiltered) return '';
-
-        return `
-          <tr class="transition-colors ${isMatch ? 'bg-canvas-soft-2 font-bold text-ink border-l-4 border-primary' : 'hover:bg-canvas-soft-2/50'}">
-            <th scope="row" class="py-3 px-3.5 font-semibold text-ink">${row.us}</th>
-            <td class="py-3 px-3.5">${row.uk}</td>
-            <td class="py-3 px-3.5">${row.eu}</td>
-            <td class="py-3 px-3.5">${row.au}</td>
-            <td class="py-3 px-3.5">${row.jp}</td>
-            <td class="py-3 px-3.5">${row.in}</td>
-            <td class="py-3 px-3.5">${row.hk}</td>
-            <td class="py-3 px-3.5">${row.kr}</td>
-            <td class="py-3 px-3.5">${row.sg}</td>
-          </tr>
-        `;
-      }).join('');
-    }
-  };
-
-  searchInput?.addEventListener('input', (e) => {
-    renderTables((e.target as HTMLInputElement).value);
   });
 </script>

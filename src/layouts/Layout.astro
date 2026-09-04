@@ -21,8 +21,9 @@ const {
 } = Astro.props;
 
 // Generate canonical URL dynamically based on current path if not explicitly overridden
-const defaultCanonical = new URL(Astro.url.pathname, 'https://brasizechecker.com').toString().replace(/\/$/, '');
-const canonicalURL = canonical || defaultCanonical || 'https://brasizechecker.com';
+const cleanPath = Astro.url.pathname.replace(/\/$/, '');
+const defaultCanonical = cleanPath === '' ? 'https://brasizechecker.com/' : `https://brasizechecker.com${cleanPath}`;
+const canonicalURL = canonical || defaultCanonical;
 
 const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';
 
@@ -131,6 +132,7 @@ const jsonLdData = {
 		<meta name="generator" content={Astro.generator} />
 		<meta name="msvalidate.01" content="1F7EB46675900FDE533DDDA7125754E4" />
 		<link rel="canonical" href={canonicalURL} />
+		<link rel="alternate" type="application/rss+xml" title="BraSizeChecker RSS Feed" href="https://brasizechecker.com/rss.xml" />
 		<link rel="dns-prefetch" href="https://unpkg.com" />
 		<ClientRouter />
 		<title>{title}</title>

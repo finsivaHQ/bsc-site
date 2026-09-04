@@ -78,7 +78,7 @@ Teenagers frequently ask: *"What should my bra size be at 13 or 15?"*
 There is **no single "normal" bra size** for teenagers. Breast development begins during puberty (typically between ages 9 and 14) and varies widely based on genetics, body mass index (BMI), and hormone timing. 
 - At age 13, sizes often range anywhere from 30AA to 34C or larger.
 - At age 15, breasts are still maturing, and sizing can change every few months.
-- **Advice for Parents & Teens**: Avoid rigid wired bras during early puberty. Opt for flexible bralettes or wireless contour bras that adapt to rapid growth. Read our guide for [Teens' First Bra Size Calculator](/blog/teens-first-bra-size-calculator).
+- **Advice for Parents & Teens**: Avoid rigid wired bras during early puberty. Opt for flexible bralettes or wireless contour bras that adapt to rapid growth. Learn how to take accurate measurements in our [How to Measure Guide](/how-to-measure).
 
 ---
 

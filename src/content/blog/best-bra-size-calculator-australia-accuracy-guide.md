@@ -130,14 +130,14 @@ Use our main [Bra Size Chart](/bra-size-chart) to cross-reference all internatio
 ## Suggested Articles & Further Reading
 
 <div class="grid sm:grid-cols-2 gap-6 my-8">
-  <a href="/blog/kmart-bra-size-calculator-australia-brand-guide" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">
-    <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Retail Brands</span>
-    <h4 class="font-bold text-ink text-lg group-hover:text-primary transition-colors mb-2">Kmart Bra Size Calculator & Australian Brand Guide</h4>
-    <p class="text-sm text-body line-clamp-2">Sizing guide for Kmart Anko, M&S Australia, EU imports, and converting 34C to AU 12C.</p>
+  <a href="/bra-size-converter" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">
+    <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Interactive Tool</span>
+    <h4 class="font-bold text-ink text-lg group-hover:text-primary transition-colors mb-2">International Bra Size Converter</h4>
+    <p class="text-sm text-body line-clamp-2">Convert your Australian dress size to US, UK, EU, and French sizing instantly.</p>
   </a>
-  <a href="/blog/fuller-bust-small-ribcage-bra-calculator-australia" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">
+  <a href="/blog/bra-size-calculator-plus-size-large-breasts" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">
     <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Body Shapes</span>
-    <h4 class="font-bold text-ink text-lg group-hover:text-primary transition-colors mb-2">Fuller Bust & Small Ribcage Bra Guide Australia</h4>
-    <p class="text-sm text-body line-clamp-2">Reddit r/ABraThatFits AU consensus guide for small ribcages (AU 6-8) and plus sizes.</p>
+    <h4 class="font-bold text-ink text-lg group-hover:text-primary transition-colors mb-2">Fuller Bust & Large Breasts Fitting Guide</h4>
+    <p class="text-sm text-body line-clamp-2">Master fitting advice for small ribcages with fuller busts and plus-size support.</p>
   </a>
 </div>

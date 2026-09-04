@@ -161,21 +161,21 @@ US brands (such as Victoria's Secret, SKIMS, or Savage X Fenty) share identical 
   </p>
 </div>
 
-If you find that your bra band rides up your back or the shoulder straps dig in to support your bust, test your measurements using our step-by-step [How to Measure Bra Size at Home](/blog/how-to-measure-bra-size-at-home-guide) tutorial.
+If you find that your bra band rides up your back or the shoulder straps dig in to support your bust, test your measurements using our step-by-step [How to Measure Bra Size](/how-to-measure) tutorial.
 
 ---
 
 ## Continue Reading & Suggested Guides
 
 <div class="grid sm:grid-cols-2 gap-6 my-8">
-  <a href="/blog/jockey-zivame-enamor-clovia-bra-size-guide-india" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">
-    <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Brand Sizing</span>
-    <h4 class="font-bold text-ink text-lg group-hover:text-primary transition-colors mb-2">Indian Brand Sizing Guide: Jockey, Zivame & Clovia</h4>
-    <p class="text-sm text-body line-clamp-2">Detailed cup and band sizing differences across top lingerie brands in India.</p>
-  </a>
-  <a href="/blog/how-to-measure-bra-size-india-inches-cm" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">
+  <a href="/how-to-measure" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">
     <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Measurement Guide</span>
-    <h4 class="font-bold text-ink text-lg group-hover:text-primary transition-colors mb-2">How to Measure Bra Size in India (Inches vs Cm)</h4>
+    <h4 class="font-bold text-ink text-lg group-hover:text-primary transition-colors mb-2">How to Measure Bra Size at Home</h4>
     <p class="text-sm text-body line-clamp-2">Complete step-by-step tape measurement guide in both inches and centimeters.</p>
+  </a>
+  <a href="/bra-size-converter" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">
+    <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Interactive Tool</span>
+    <h4 class="font-bold text-ink text-lg group-hover:text-primary transition-colors mb-2">International Bra Size Converter</h4>
+    <p class="text-sm text-body line-clamp-2">Convert Indian bra sizes to US, UK, EU, and French sizing instantly.</p>
   </a>
 </div>

@@ -171,4 +171,4 @@ Read our full guide on [Sister Sizes Explained](/blog/sister-sizes-explained) or
 1. Take your measurements with a flexible tape measure.
 2. Use our free, private [Canada Bra Size Calculator](/#calculator).
 3. Review our [Bra Fit Guide](/fit-guide) to troubleshoot band ride-up, cup gaping, or underwire digging.
-4. Explore our specialized guides for [Plus Size Bras in Canada](/blog/plus-size-bras-canada-fit-guide) and [Bras for Large Busts](/blog/bras-for-large-busts-canada-guide).
+4. Explore our specialized guide for [Plus Size Bras & Large Breasts](/blog/bra-size-calculator-plus-size-large-breasts).

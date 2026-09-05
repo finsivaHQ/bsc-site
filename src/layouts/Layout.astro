@@ -21,8 +21,8 @@ const {
 } = Astro.props;
 
 // Generate canonical URL dynamically based on current path if not explicitly overridden
-const cleanPath = Astro.url.pathname.replace(/\/$/, '');
-const defaultCanonical = cleanPath === '' ? 'https://brasizechecker.com/' : `https://brasizechecker.com${cleanPath}`;
+const cleanPath = Astro.url.pathname.replace(/\/$/, '').replace(/\/index\.html$/, '');
+const defaultCanonical = (cleanPath === '' || cleanPath === '/') ? 'https://brasizechecker.com/' : `https://brasizechecker.com${cleanPath}`;
 const canonicalURL = canonical || defaultCanonical;
 
 const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';

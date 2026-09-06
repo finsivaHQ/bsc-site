@@ -3,7 +3,7 @@ title: "Unveiling the Truth: What is the Average Bra Size in the UK?"
 description: "Explore the evolution of bra sizing, discover what the true average UK bra size is today, and learn why finding your unique fit is more important than statistics."
 pubDate: 2026-09-06
 heroImage: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-doctorVerified: true
+fitReviewed: true
 tags: ["average size", "uk bra size", "bra fitting", "lingerie statistics"]
 author: "Industry Analyst"
 faqs:

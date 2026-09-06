@@ -3,7 +3,7 @@ title: "The Ultimate Guide to Converting Specific Bra Sizes: 75B, 105D, 70B, and
 description: "Master the art of international bra size conversion with our premium guide. Learn how to accurately convert 105D in UK bra size, find your 75B bra size in UK standards, and perfectly translate a 70B bra size."
 pubDate: 2026-09-06
 heroImage: "https://images.unsplash.com/photo-1596751303335-eca78c52086b?auto=format&fit=crop&w=1200&q=80"
-doctorVerified: true
+fitReviewed: true
 tags: ["Bra Sizing", "EU to UK", "Size Conversion", "Lingerie Fit"]
 author: "BSC Fit Experts"
 faqs:

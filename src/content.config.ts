@@ -8,7 +8,7 @@ const blogCollection = defineCollection({
     description: z.string(),
     pubDate: z.date(),
     heroImage: z.string().optional(),
-    doctorVerified: z.boolean().default(false),
+    fitReviewed: z.boolean().default(false),
     author: z.string().default('BraSizeChecker Expert Team'),
     tags: z.array(z.string()).default([]),
     faqs: z.array(z.object({

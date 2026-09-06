@@ -3,14 +3,14 @@ title: "Maternity & Nursing Bra Size Calculator"
 description: "Your breasts change during pregnancy. Learn how to accurately calculate your maternity and nursing bra size."
 pubDate: 2026-08-08
 heroImage: "https://loremflickr.com/1200/800/maternity,fashion?lock=8"
-doctorVerified: false
+fitReviewed: false
 tags: ["maternity","nursing","pregnancy"]
 author: "BraSizeChecker Expert Team"
 ---
 
 ## Key Facts About Maternity & Nursing Bra Size Calculator
 
-*   **Accuracy is Everything:** 80% of individuals wear the wrong size because they haven't measured recently.
+*   **Regular Measurements:** Rechecking your measurements periodically accounts for natural body changes during pregnancy.
 *   **Measurements Matter:** To get the best results, you need a precise underbust (band) and overbust (cup) measurement.
 *   **Brands Vary:** Standard calculators provide a baseline, but specific brands (like Victoria's Secret or M&S) may differ slightly.
 

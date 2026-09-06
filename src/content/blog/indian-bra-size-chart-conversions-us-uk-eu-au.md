@@ -3,7 +3,7 @@ title: "Indian Bra Size Chart & Conversion Guide: US, UK, EU & Australia Sizing 
 description: "Master Indian bra size conversion across US, UK, European (EU), French (FR), and Australian (AU) standards. Includes band & cup conversion tables, 32/80 tag decoder, and calculator guidance."
 pubDate: 2026-08-29
 heroImage: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=1200&q=80"
-doctorVerified: true
+fitReviewed: true
 tags: ["bra size chart india", "international bra conversion", "us to india bra size", "uk bra size india"]
 author: "BraSizeChecker Expert Team"
 faqs:

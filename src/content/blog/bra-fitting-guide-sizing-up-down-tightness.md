@@ -3,7 +3,7 @@ title: "Bra Fitting Guide: Should You Size Up or Down? Tightness & Fitting FAQs"
 description: "Not sure if your bra is too tight or loose? Learn when to go up a bra size, whether sports or strapless bras need sizing up/down, age-appropriate fitting, and store policies."
 pubDate: 2026-08-28
 heroImage: "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1200&auto=format&fit=crop"
-doctorVerified: true
+fitReviewed: true
 author: "BraSizeChecker Expert Fitting Team"
 tags: ["bra fitting guide", "should i size up bra", "sports bra fit", "bra tightness"]
 faqs:
@@ -96,13 +96,11 @@ While high-street retailers often stock A through G cups, specialist lingerie ma
 
 ---
 
-## Medical & Ergonomic Guidance
+## Fit & Comfort Guidance
 
 > [!NOTE]
-> **Doctor & Medical Expert Advice**:
-> Wearing a bra band that is excessively tight can compress the intercostal nerves along the ribs, causing localized neuralgia and reflux-like symptoms. Conversely, wearing an overly loose band forces shoulder straps to bear the weight, contributing to tension headaches and upper back tightness.
-
-Explore further posture and spinal health guidelines on [PubMed / NCBI](https://pubmed.ncbi.nlm.nih.gov/).
+> **Fit & Comfort Tip**:
+> An excessively tight band can cause uncomfortable rib-cage pressure, skin indentation, or general discomfort. Conversely, wearing an overly loose band forces shoulder straps to bear the weight, which can lead to shoulder pressure and slipping straps.
 
 ---
 

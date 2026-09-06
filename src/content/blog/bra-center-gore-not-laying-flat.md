@@ -3,7 +3,7 @@ title: "The Floating Gore: Why Your Bra Center Gore Isn't Laying Flat"
 description: "Understand the function of the center gore, why a floating gore compromises support, and how to find a bra that tacks perfectly against your sternum."
 pubDate: 2026-09-06
 heroImage: "https://images.unsplash.com/photo-1522080356525-4148b3b3a0e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-doctorVerified: true
+fitReviewed: true
 tags: ["center gore", "bra fitting", "floating gore", "support"]
 author: "Fit & Construction Expert"
 faqs:

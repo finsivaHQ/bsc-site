@@ -25,64 +25,24 @@ const faqs = [
     "answer": "We provide a complete, interactive bra size chart on our Size Chart page comparing US, UK, EU, and AU sizing bands and cups."
   },
   {
-    "question": "What bra size am I calculator?",
-    "answer": "The most common question we get is 'what bra size am I calculator?'. Our tool answers this by referencing standard international sizing charts from the US, UK, and EU."
+    "question": "What if my measurements fall between two band sizes?",
+    "answer": "If your underbust measurement falls between even sizes (for example, 31 inches), we recommend trying both the adjacent band size (32) and exploring sister sizes to find your preferred firmness."
   },
   {
-    "question": "How to find your bra size calculator?",
-    "answer": "Learning how to find your bra size calculator takes only a minute. All you need is a soft measuring tape and an unpadded bra."
+    "question": "Why does my recommended bra size vary between different brands?",
+    "answer": "Bra sizes vary across manufacturers due to differences in fabric elasticity, underwire curvature, cup depth, and regional sizing conventions. Our calculator provides an objective baseline to help you adjust."
   },
   {
-    "question": "What size bra do I need calculator?",
-    "answer": "If you want to know 'what size bra do I need calculator', this tool gives you both your primary size and sister sizes so you can adjust for tighter or looser bands."
+    "question": "How do I know if my bra band is fitting correctly?",
+    "answer": "A well-fitted band should sit level around your ribcage, firm enough that you can slide two fingers comfortably underneath. If the band rides up your back, it is likely too loose."
   },
   {
-    "question": "What size bra am I calculator?",
-    "answer": "To answer 'what size bra am I calculator', make sure to measure without a shirt on or while wearing a thin, unlined bra. This ensures the most accurate tape placement."
+    "question": "Can I convert my size across US, UK, EU, and Australian sizing systems?",
+    "answer": "Yes. Our tool automatically converts your recommended baseline size across US/CA, UK, EU, and AU sizing systems so you can shop international lingerie brands with confidence."
   },
   {
-    "question": "How to size bra calculator?",
-    "answer": "Knowing how to size bra calculator involves ensuring your band provides 80% of the support, while the straps only provide 20%. Measure your band snugly to reflect this."
-  },
-  {
-    "question": "How measure bra size calculator?",
-    "answer": "If you are wondering how measure bra size calculator, stand straight, relax your arms, and take your measurements in a mirror to keep the tape perfectly level."
-  },
-  {
-    "question": "How to determine bra size calculator?",
-    "answer": "To understand how to determine bra size calculator, note that cup size is calculated by subtracting your band measurement from your bust measurement."
-  },
-  {
-    "question": "How to find my bra size calculator?",
-    "answer": "When searching for how to find my bra size calculator, trust a tool that uses modern sizing standards and sister sizes to dial in the perfect fit rather than outdated +4 inch methods."
-  },
-  {
-    "question": "How to measure bra cup size calculator?",
-    "answer": "To use the how to measure bra cup size calculator, you must measure the fullest part of your chest (usually across the nipples) loosely."
-  },
-  {
-    "question": "How to find bra cup size calculator?",
-    "answer": "The how to find bra cup size calculator works by mapping the difference between your bust and band to standard letter sizes (A, B, C, D, DD, etc.)."
-  },
-  {
-    "question": "How to figure out your bra size calculator?",
-    "answer": "Learning how to figure out your bra size calculator is the first step to eliminating back pain, shoulder indentations, and posture issues caused by ill-fitting bras."
-  },
-  {
-    "question": "How to measure for bra size calculator?",
-    "answer": "Before you use the how to measure for bra size calculator, ensure you are wearing a non-padded, everyday bra that gently lifts your breast tissue."
-  },
-  {
-    "question": "How is bra size calculator?",
-    "answer": "How is bra size calculator so accurate? It uses international conversion tables (US/CA, UK, EU, AU) to match your measurements to global brand standards."
-  },
-  {
-    "question": "Does this work for bra size calculator m&s, zivame, or indian bra size calculator?",
-    "answer": "Yes! Whether you need a bra size calculator m&s, a bra size calculator zivame, or a general indian bra size calculator, our international conversion charts have you covered."
-  },
-  {
-    "question": "Can I use the bra size calculator in inches or bra size calculator in cm?",
-    "answer": "Absolutely. You can use our bra size calculator in inches, bra size calculator in cm, or bra size calculator eu formats. We even support the bra size calculator in inches india."
+    "question": "Should I re-measure my bra size when my body measurements change?",
+    "answer": "Yes. Re-measuring every 6 months or after weight shifts, fitness changes, pregnancy, or postpartum transitions helps ensure your garments continue to provide comfortable support."
   }
 ];
 
@@ -172,7 +132,7 @@ const jsonLd = {
       });
       
       if (textSpan) {
-        textSpan.textContent = expanded ? 'Show Fewer Questions' : 'View All 21 Questions';
+        textSpan.textContent = expanded ? 'Show Fewer Questions' : `View All ${extras.length + 6} Questions`;
       }
       if (iconSvg) {
         iconSvg.style.transform = expanded ? 'rotate(180deg)' : 'rotate(0deg)';

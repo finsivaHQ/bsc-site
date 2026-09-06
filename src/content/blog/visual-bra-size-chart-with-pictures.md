@@ -3,7 +3,7 @@ title: "The Ultimate Visual Bra Size Chart with Pictures"
 description: "Demystify lingerie shopping with our definitive visual bra size chart with pictures uk, offering clear bra size comparisons to help you visualize true fit."
 pubDate: 2026-09-06
 heroImage: "https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?q=80&w=1000&auto=format&fit=crop"
-doctorVerified: true
+fitReviewed: true
 tags: ["visual size chart", "bra comparison", "bra fit pictures"]
 author: "FinsivaHQ"
 faqs:

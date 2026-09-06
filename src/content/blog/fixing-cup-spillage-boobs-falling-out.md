@@ -3,7 +3,7 @@ title: "Fixing Cup Spillage: Stop Boobs Falling Out of the Top"
 description: "Discover the causes behind bra cup spillage, understand cup size differences, and learn how to banish quad-boob and gaping for a smooth silhouette."
 pubDate: 2026-09-06
 heroImage: "https://images.unsplash.com/photo-1521572008054-962cefac9294?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-doctorVerified: true
+fitReviewed: true
 tags: ["cup spillage", "bra fitting", "quad boob", "bra cup sizes"]
 author: "Style & Fit Editor"
 faqs:

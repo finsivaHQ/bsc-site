@@ -3,12 +3,12 @@ title: "Canada Bra Size Calculator: The Complete Sizing & Measurement Guide (Inc
 description: "Find your exact bra size in Canada using our accurate bra size calculator. Learn how to take proper bra measurements in inches and cm, compare Canadian sizing to international standards, and find your perfect fit."
 pubDate: 2026-09-01
 heroImage: "https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1200&auto=format&fit=crop"
-doctorVerified: true
-author: "Sarah Jenkins, Master Bra Fitter & Ergonomics Specialist"
+fitReviewed: true
+author: "BraSizeChecker Editorial Team"
 tags: ["bra size calculator canada", "bra size canada", "bra size guide canada", "how to measure", "canada bra fitting"]
 faqs:
   - question: "What is the average bra size in Canada?"
-    answer: "The average bra size in Canada is currently estimated between 34DD and 36D. However, due to widespread mis-sizing and traditional +4 fitting methods used by department stores, up to 80% of Canadian women are wearing a band size that is too large and a cup size that is too small."
+    answer: "While retail sales historically centered around 34B or 34C, modern fitting data suggests that when measured accurately without the outdated +4 method, many Canadian shoppers calculate to band sizes 32–36 and cup sizes in the D–DD+ spectrum due to proper cup-volume distribution."
   - question: "How does bra sizing in Canada differ from US and UK sizing?"
     answer: "Canada primarily follows the US bra sizing system (inches for band size, with cup progression A, B, C, D, DD/E, DDD/F, G, H, I, J). UK sizing uses the same band numbers but diverges after D cups (DD, E, F, FF, G, GG, H). European (EU) sizing uses centimeters for band sizes (70, 75, 80) with 2cm cup progressions."
   - question: "Should I measure my bra size in inches or centimeters in Canada?"
@@ -45,15 +45,15 @@ Use our interactive [Canada Bra Size Calculator](/#calculator) to input your mea
 
 ## Why Accurate Bra Fitting Matters in Canada
 
-Statistics show that up to **80% of women across Canada are wearing the wrong bra size**. The most common fitting error is wearing a band that is 2 to 4 inches **too loose** paired with cups that are 2 to 3 sizes **too small** (for example, wearing a 36B when your true measurement calls for a 32DD).
+Many individuals across Canada wear an incorrect bra size without realizing it. The most common fitting error is wearing a band that is 2 to 4 inches **too loose** paired with cups that are 2 to 3 sizes **too small** (for example, wearing a 36B when your true measurement calls for a 32DD).
 
-Wearing an ill-fitting bra is not just an aesthetic issue—it directly impacts health, posture, and daily comfort:
+Wearing an ill-fitting bra is not just an aesthetic issue—it directly impacts posture, garment longevity, and daily comfort:
 
-- **Neck and Shoulder Strain:** When a bra band is too loose, 80% of breast weight shifts to the shoulder straps, digging into muscle tissue and causing tension headaches.
+- **Neck and Shoulder Strain:** When a bra band is too loose, shoulder straps are forced to bear excess weight, digging into muscle tissue and causing discomfort.
 - **Underwire Digging & Breast Tissue Migration:** Cups that are too small force wires onto delicate breast tissue rather than sitting flat against the ribcage.
 - **Posture Deficits:** Proper band support lifts breast weight closer to the body's center of gravity, reducing lumbar curve strain.
 
-> **Expert Fit Tip:** Your bra band should provide **80% of the support**, while the shoulder straps provide only 20%. If you slip off your shoulder straps and your bra band slides down, your band size is too large!
+> **Expert Fit Tip:** The vast majority of support should come from the band around your ribcage, with shoulder straps providing secondary positioning. If you slip off your shoulder straps and your bra band slides down, your band size is too large!
 
 ---
 

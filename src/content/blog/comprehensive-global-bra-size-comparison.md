@@ -3,7 +3,7 @@ title: "A World of Fit: The Comprehensive Global Bra Size Comparison"
 description: "Navigate international lingerie flawlessly. Discover the ultimate bra size comparison, utilize our international bra size converter, and easily translate aus bra size to uk standards."
 pubDate: 2026-09-06
 heroImage: "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&w=1200&q=80"
-doctorVerified: true
+fitReviewed: true
 tags: ["Global Sizing", "Size Comparison", "International Converter", "AUS to UK"]
 author: "BSC Fit Experts"
 faqs:

@@ -3,7 +3,7 @@ title: "The Complete Guide to UK Sister Sizes: Unlocking the Secret to a Perfect
 description: "Master the art of sister sizes uk. Our sophisticated sister bra size chart uk empowers you to find equivalent bra sizes for unparalleled comfort and flawless elegance."
 pubDate: 2026-09-06
 heroImage: "https://images.unsplash.com/photo-1599387737672-87000e3f7fcc?w=800&q=80"
-doctorVerified: true
+fitReviewed: true
 tags: ["sister bra size chart uk", "bra sister sizes uk", "sister sizes uk", "equivalent bra sizes"]
 author: "Aura Intimates"
 faqs:

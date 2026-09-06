@@ -3,7 +3,7 @@ title: "The Ultimate Guide to Using the 'A Bra That Fits' Calculator"
 description: "Discover how to find your perfect fit with our comprehensive guide to using the renowned A Bra That Fits Calculator, ensuring comfort and confidence all day."
 pubDate: 2026-09-06
 heroImage: "https://images.unsplash.com/photo-1582213768878-1a5c108bb6b3?q=80&w=1000&auto=format&fit=crop"
-doctorVerified: true
+fitReviewed: true
 tags: ["bra calculator", "a bra that fits", "fitting guide"]
 author: "FinsivaHQ"
 faqs:

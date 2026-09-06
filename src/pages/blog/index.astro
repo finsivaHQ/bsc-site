@@ -38,10 +38,10 @@ const posts = (await getCollection('blog')).sort(
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy" 
                 />
-                {post.data.doctorVerified && (
+                {post.data.fitReviewed && (
                   <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full border border-white flex items-center gap-1 shadow-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" class="text-green-600" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <span class="text-[10px] font-bold text-green-700 uppercase tracking-wider">Verified</span>
+                    <span class="text-[10px] font-bold text-green-700 uppercase tracking-wider">Fit Reviewed</span>
                   </div>
                 )}
               </div>

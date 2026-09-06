@@ -3,7 +3,7 @@ title: "The Mathematics of Fit: Determining Your Bra Cup Size"
 description: "Unlock the secrets of perfect fit mathematics. Learn how to calculate my bra size flawlessly, utilize a determining bra cup size calculator, and understand the logic to calculate bra size UK."
 pubDate: 2026-09-06
 heroImage: "https://images.unsplash.com/photo-1582236940801-b8449c0667da?auto=format&fit=crop&w=1200&q=80"
-doctorVerified: true
+fitReviewed: true
 tags: ["Mathematics", "Cup Size Calculator", "UK Sizing", "Fit Guide"]
 author: "BSC Fit Experts"
 faqs:

@@ -2,7 +2,7 @@
 title: "Troubleshooting the Perfect Fit: Is Your Bra Band Too Tight?"
 description: "Learn how to diagnose a tight bra band, the difference between snug support and painful constriction, and how to find your ideal fit."
 pubDate: 2026-09-06
-heroImage: "https://images.unsplash.com/photo-1582293041079-7814c2f12063?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+heroImage: "/img/bra-strap-fit-guide.jpg"
 fitReviewed: true
 tags: ["bra band", "fit troubleshooting", "comfort", "bra sizing"]
 author: "BraSizeChecker Editorial Team"

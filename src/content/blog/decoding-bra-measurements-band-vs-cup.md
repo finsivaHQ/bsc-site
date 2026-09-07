@@ -2,7 +2,7 @@
 title: "Decoding Bra Measurements: Band vs Cup Masterclass"
 description: "Master the art of bra sizing with our in-depth look at band versus cup measurements, featuring a comprehensive bra measurements uk chart."
 pubDate: 2026-09-06
-heroImage: "https://images.unsplash.com/photo-1620794341491-9f93933c0993?q=80&w=1000&auto=format&fit=crop"
+heroImage: "/img/bra-strap-fit-guide.jpg"
 fitReviewed: true
 tags: ["bra measurements", "uk chart", "bra sizing"]
 author: "FinsivaHQ"

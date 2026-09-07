@@ -2,7 +2,7 @@
 title: "Small Band, Large Cup: Navigating Unique Proportions"
 description: "Explore the elegant intricacies of small band, large cup sizing. Find out how to beautifully accommodate unique proportions and discover your perfect premium fit."
 pubDate: 2026-09-06
-heroImage: "https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?q=80&w=1000&auto=format&fit=crop"
+heroImage: "/img/bra-band-fit-guide.jpg"
 fitReviewed: true
 tags: ["small band large cup", "bra proportions", "uk sizes"]
 author: "FinsivaHQ"

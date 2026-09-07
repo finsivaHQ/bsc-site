@@ -2,7 +2,7 @@
 title: "Understanding Large Cup Sizes: A Deep Dive into F, FF, G, and GG"
 description: "Demystify fuller busts with our premium guide to large cup sizes. Explore the nuances of the bra cup size f, ff cup size, size g, and the gg bra size."
 pubDate: 2026-09-06
-heroImage: "https://images.unsplash.com/photo-1616117361137-f050ce9510e1?w=800&q=80"
+heroImage: "/img/bra-band-fit-guide.jpg"
 fitReviewed: true
 tags: ["gg bra size", "size g", "bra cup size f", "double g bra size", "bra size cup g", "ff cup size"]
 author: "Aura Intimates"

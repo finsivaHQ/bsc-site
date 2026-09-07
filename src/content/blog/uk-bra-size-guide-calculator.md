@@ -2,7 +2,7 @@
 title: "The Ultimate UK Bra Size Guide and Calculator: Find Your Perfect Fit"
 description: "Discover how to precisely calculate your bra size in the UK. Our premium guide takes the guesswork out of finding your ideal fit, ensuring comfort and elegance all day long."
 pubDate: 2026-09-06
-heroImage: "https://images.unsplash.com/photo-1582236355938-f1e1a5f45851?w=800&q=80"
+heroImage: "/img/bra-measure-dos-donts.jpg"
 fitReviewed: true
 tags: ["bra size calculator uk", "uk bra size calculator", "how to calculate your bra size uk", "what is my bra size uk"]
 author: "Aura Intimates"

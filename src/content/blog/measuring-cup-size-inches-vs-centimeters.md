@@ -2,7 +2,7 @@
 title: "Measuring Perfection: Bra Cup Size in Inches vs. Centimeters"
 description: "Discover the premium approach to finding your perfect fit. Explore our comprehensive bra size chart in inches, understand cup sizes in inches, and master your cup measurement bra technique."
 pubDate: 2026-09-06
-heroImage: "https://images.unsplash.com/photo-1616422285623-1384f50682ba?auto=format&fit=crop&w=1200&q=80"
+heroImage: "/img/bra-cup-fit-guide.jpg"
 fitReviewed: true
 tags: ["Measurement", "Inches vs Centimeters", "Cup Size", "Fit Guide"]
 author: "BSC Fit Experts"

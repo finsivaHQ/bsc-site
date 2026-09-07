@@ -2,7 +2,7 @@
 title: "The Comprehensive International Bra Size Conversion Guide: UK, US, and EU"
 description: "Navigate global lingerie shopping with our premium international bra size converter. Learn the exact us to uk bra size chart and euro bra size to uk conversions."
 pubDate: 2026-09-06
-heroImage: "https://images.unsplash.com/photo-1598504780517-8e6da5a2db3b?w=800&q=80"
+heroImage: "/img/bra-measure-dos-donts.jpg"
 fitReviewed: true
 tags: ["bra converter", "us to uk bra size chart", "euro bra size to uk", "american bra sizes to uk", "international bra size converter"]
 author: "Aura Intimates"

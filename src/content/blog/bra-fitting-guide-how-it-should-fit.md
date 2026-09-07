@@ -2,7 +2,7 @@
 title: "The Ultimate Bra Fitting Guide: How It Should Flawlessly Fit"
 description: "Ensure your lingerie provides unparalleled comfort and support with our premium bra fitting guide uk, detailing exactly how your intimates should sit on your body."
 pubDate: 2026-09-06
-heroImage: "https://images.unsplash.com/photo-1616239474706-963e6396b27e?q=80&w=1000&auto=format&fit=crop"
+heroImage: "/img/bra-band-fit-guide.jpg"
 fitReviewed: true
 tags: ["bra fitting", "fitting guide", "fit calculator"]
 author: "FinsivaHQ"

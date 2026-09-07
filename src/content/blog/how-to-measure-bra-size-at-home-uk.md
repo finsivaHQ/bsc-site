@@ -2,7 +2,7 @@
 title: "How to Measure Your Bra Size at Home in the UK: A Masterclass in Precision"
 description: "Learn how to measure bra size uk with our premium step-by-step guide. Discover the precise techniques for measuring your bra size uk from the comfort of your home."
 pubDate: 2026-09-06
-heroImage: "https://images.unsplash.com/photo-1518002054494-3a6f94352e9d?w=800&q=80"
+heroImage: "/img/bra-cup-fit-guide.jpg"
 fitReviewed: true
 tags: ["measuring your bra size uk", "how to measure bra size uk", "how do you measure your bra size uk", "measure for bra uk"]
 author: "Aura Intimates"

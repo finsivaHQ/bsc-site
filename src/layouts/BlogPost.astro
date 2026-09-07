@@ -94,7 +94,8 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', 
             src={frontmatter.heroImage} 
             alt={frontmatter.title} 
             class="w-full h-full object-cover"
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
             decoding="async"
           />
         </div>

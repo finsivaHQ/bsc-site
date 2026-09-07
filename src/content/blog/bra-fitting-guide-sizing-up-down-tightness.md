@@ -2,7 +2,7 @@
 title: "Bra Fitting Guide: Should You Size Up or Down? Tightness & Fitting FAQs"
 description: "Not sure if your bra is too tight or loose? Learn when to go up a bra size, whether sports or strapless bras need sizing up/down, age-appropriate fitting, and store policies."
 pubDate: 2026-08-28
-heroImage: "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1200&auto=format&fit=crop"
+heroImage: "/img/bra-cup-fit-guide.jpg"
 fitReviewed: true
 author: "BraSizeChecker Expert Fitting Team"
 tags: ["bra fitting guide", "should i size up bra", "sports bra fit", "bra tightness"]

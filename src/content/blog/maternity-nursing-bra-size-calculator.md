@@ -2,7 +2,7 @@
 title: "Maternity & Nursing Bra Size Calculator"
 description: "Your breasts change during pregnancy. Learn how to accurately calculate your maternity and nursing bra size."
 pubDate: 2026-08-08
-heroImage: "https://loremflickr.com/1200/800/maternity,fashion?lock=8"
+heroImage: "/img/bra-band-fit-guide.jpg"
 fitReviewed: false
 tags: ["maternity","nursing","pregnancy"]
 author: "BraSizeChecker Expert Team"

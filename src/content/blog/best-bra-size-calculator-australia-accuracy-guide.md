@@ -130,7 +130,7 @@ Use our main [Bra Size Chart](/bra-size-chart) to cross-reference all internatio
 ## Suggested Articles & Further Reading
 
 <div class="grid sm:grid-cols-2 gap-6 my-8">
-  <a href="/bra-size-converter" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">
+  <a href="/bra-size-converter/" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">
     <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Interactive Tool</span>
     <h4 class="font-bold text-ink text-lg group-hover:text-primary transition-colors mb-2">International Bra Size Converter</h4>
     <p class="text-sm text-body line-clamp-2">Convert your Australian dress size to US, UK, EU, and French sizing instantly.</p>

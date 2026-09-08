@@ -1,10 +1,10 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 
 const distDir = path.join(__dirname, '../dist');
 const API_KEY = '62641cbe99e74c19b0a00651f7cd4941';
 const HOST = 'brasizechecker.com';
-const KEY_LOCATION = "https://$HOST/$API_KEY.txt";
+const KEY_LOCATION = `https://${HOST}/${API_KEY}.txt`;
 
 async function submitIndexNow() {
   try {
@@ -20,7 +20,7 @@ async function submitIndexNow() {
           let relativePath = path.relative(distDir, filepath).replace(/\\/g, '/');
           
           if (relativePath === 'index.html') {
-            urlList.push("https://$HOST/");
+            urlList.push(`https://${HOST}/`);
             continue;
           }
           
@@ -28,7 +28,7 @@ async function submitIndexNow() {
             relativePath = relativePath.slice(0, -10);
           }
           
-          urlList.push("https://$HOST/$relativePath");
+          urlList.push(`https://${HOST}/${relativePath}`);
         }
       }
     }
@@ -40,7 +40,7 @@ async function submitIndexNow() {
       return;
     }
 
-    console.log("Found " + urlList.length + " URLs. Submitting to IndexNow...");
+    console.log(`Found ${urlList.length} URLs. Submitting to IndexNow...`);
 
     const payload = {
       host: HOST,
@@ -58,15 +58,15 @@ async function submitIndexNow() {
     });
 
     if (response.ok || response.status === 200 || response.status === 202) {
-      console.log("[$HOST] Successfully submitted to IndexNow. Status:", response.status);
+      console.log(`[${HOST}] Successfully submitted to IndexNow. Status:`, response.status);
     } else {
-      console.error("[$HOST] Failed to submit. Status:", response.status);
+      console.error(`[${HOST}] Failed to submit. Status:`, response.status);
       const text = await response.text();
       console.error('Response:', text);
     }
 
   } catch (error) {
-    console.error("[$HOST] Error submitting to IndexNow:", error);
+    console.error(`[${HOST}] Error submitting to IndexNow:`, error);
   }
 }
 

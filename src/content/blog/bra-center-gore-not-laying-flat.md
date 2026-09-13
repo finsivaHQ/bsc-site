@@ -17,7 +17,7 @@ faqs:
 
 # The Floating Gore: Why Your Bra Center Gore Isn't Laying Flat
 
-In the architecture of a well-crafted bra, every component serves a distinct structural purpose. The **center gore**—that small triangular piece of fabric connecting the two underwired cups at the front—is not merely decorative. It is the keystone of the bra's support system. When you notice your **bra gore not flat** against your sternum, it is a glaring indicator that the fundamental engineering of the garment is failing to support you correctly.
+In the architecture of a well-crafted bra, every component serves a distinct structural purpose. The **center gore**—that small triangular piece of fabric connecting the two underwired cups at the front—is not merely decorative. It is the keystone of the bra's support system. When you notice your bra gore not flat against your sternum, it is a glaring indicator that the fundamental engineering of the garment is failing to support you correctly.
 
 ## The Purpose of the Center Gore
 
@@ -39,7 +39,7 @@ It is important to note that the rule of the tacking gore applies strictly to un
 
 ## Diagnosing and Fixing the Issue
 
-If you are dealing with a **bra gore not flat**, follow this diagnostic checklist to find your perfect fit:
+If you are dealing with a bra gore not flat, follow this diagnostic checklist to find your perfect fit:
 
 | Issue | Diagnosis | Solution |
 | :--- | :--- | :--- |

@@ -21,13 +21,13 @@ faqs:
     answer: "In Canadian stores, 34C and 36C are the most frequently requested off-the-rack sizes, though professional fitters find that most shoppers actually belong in 30E, 32DD, or 34DDD once measured correctly."
 ---
 
-# Canada Bra Size Calculator: The Complete Sizing & Measurement Guide (Inches & CM)
+# Canada [Bra Size Calculator](/#calculator): The Complete Sizing & Measurement Guide (Inches & CM)
 
-Finding the **correct bra size in Canada** can feel surprisingly complicated. While Canadians use the metric system for temperature and distances, the Canadian lingerie industry operates on standard imperial sizing—meaning band sizes are labeled in inches (32, 34, 36, 38, etc.) while fabric tape measures in Canadian households often feature centimeters on one side and inches on the other.
+Finding the correct bra size in Canada can feel surprisingly complicated. While Canadians use the metric system for temperature and distances, the Canadian lingerie industry operates on standard imperial sizing—meaning band sizes are labeled in inches (32, 34, 36, 38, etc.) while fabric tape measures in Canadian households often feature centimeters on one side and inches on the other.
 
-Whether you are shopping online at major Canadian retailers like La Senza, Knix, Wonderbra, Penningtons, or Change Lingerie, or looking to calculate your exact fit from home, this comprehensive **Canada bra size guide** will explain everything you need to know.
+Whether you are shopping online at major Canadian retailers like La Senza, Knix, Wonderbra, Penningtons, or Change Lingerie, or looking to calculate your exact fit from home, this comprehensive Canada bra size guide will explain everything you need to know.
 
-Use our interactive [Canada Bra Size Calculator](/#calculator) to input your measurements in either inches or centimeters and calculate your true baseline size, sister sizes, and international conversions in seconds.
+Use our interactive [Canada Bra Size Calculator](/#calculator) to input your measurements in either inches or centimeters and calculate your true baseline size, [sister size](/sister-size-calculator/)s, and [international conver](/bra-size-converter/)sions in seconds.
 
 ---
 
@@ -59,7 +59,7 @@ Wearing an ill-fitting bra is not just an aesthetic issue—it directly impacts 
 
 ## How to Take Your Bra Measurements Step-by-Step
 
-To **find your bra size in Canada**, you only need a flexible tailor's measuring tape and 2 minutes in front of a mirror. Wear an unpadded, non-push-up bra during measurement.
+To find your bra size in Canada, you only need a flexible tailor's measuring tape and 2 minutes in front of a mirror. Wear an unpadded, non-push-up bra during measurement.
 
 ```
        Step 1: Underbust (Band)             Step 2: Fullest Bust (Cup)
@@ -86,7 +86,7 @@ To **find your bra size in Canada**, you only need a flexible tailor's measuring
 
 ## Bra Size Calculator: Inches vs Centimeters in Canada
 
-When using a **bra size calculator in Canada**, selecting the correct measurement unit ensures accurate results:
+When using a bra size calculator in Canada, selecting the correct measurement unit ensures accurate results:
 
 | Measurement Metric | How It Works in Canada | Example Conversion |
 | :--- | :--- | :--- |
@@ -105,9 +105,9 @@ If you measured using centimeters:
 Many shoppers ask: *What is the average bra size in Canada?*
 
 While older surveys cited 34B or 34C, modern professional fitting data shows:
-- **Average Bra Size in Canada:** Approximately **34DD to 36D**.
-- **Most Common Off-the-Shelf Size Purchased:** **34C** (due to store availability limiting larger cup sizes).
-- **Most Common True Measured Size:** **30E / 32F / 34DD** (when measured using modern underbust-to-bust difference formulas).
+- Average Bra Size in Canada: Approximately **34DD to 36D**.
+- Most Common Off-the-Shelf Size Purchased: **34C** (due to store availability limiting larger cup sizes).
+- Most Common True Measured Size: **30E / 32F / 34DD** (when measured using modern underbust-to-bust difference formulas).
 
 As body awareness, inclusive sizing brands, and proper fitting education spread across Canadian cities like Toronto, Vancouver, Montreal, Calgary, and Halifax, more shoppers are discovering their true cup size is in the DD+ spectrum!
 
@@ -115,7 +115,7 @@ As body awareness, inclusive sizing brands, and proper fitting education spread 
 
 ## The Math Behind Canadian Bra Sizing
 
-How does a **bra calculator in Canada** determine your cup letter from your numbers? The formula is straightforward:
+How does a bra calculator in Canada determine your cup letter from your numbers? The formula is straightforward:
 
 $$\text{Cup Size (Inches Difference)} = \text{Bust Measurement} - \text{Underbust Measurement}$$
 
@@ -155,7 +155,7 @@ Because Canadian shoppers frequently purchase lingerie online from international
 
 ## Common Fit Problems & How Sister Sizes Help
 
-If you've calculated your bra size using our [correct bra size calculator Canada](/#calculator), but find that a specific brand runs tight in the band or shallow in the cup, **Sister Sizes** are your secret tool.
+If you've calculated your bra size using our [correct bra size calculator Canada](/#calculator), but find that a specific brand runs tight in the band or shallow in the cup, Sister Sizes are your secret tool.
 
 Sister sizes retain the **exact same cup volume** while changing the band tightness:
 
@@ -170,5 +170,5 @@ Read our full guide on [Sister Sizes Explained](/blog/sister-sizes-explained) or
 
 1. Take your measurements with a flexible tape measure.
 2. Use our free, private [Canada Bra Size Calculator](/#calculator).
-3. Review our [Bra Fit Guide](/fit-guide) to troubleshoot band ride-up, cup gaping, or underwire digging.
+3. Review our [Bra [Fit Guide](/fit-guide/)](/fit-guide) to troubleshoot band ride-up, cup gaping, or underwire digging.
 4. Explore our specialized guide for [Plus Size Bras & Large Breasts](/blog/bra-size-calculator-plus-size-large-breasts).

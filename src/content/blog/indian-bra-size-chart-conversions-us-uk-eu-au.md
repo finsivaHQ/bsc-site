@@ -64,9 +64,9 @@ faqs:
 * **Dual Tag Confusion:** Labels marking **32/80**, **34/85**, or **36/90** combine Indian/US inch band numbers with French (FR) centimeter underbust standards.
 * **Metric Equivalents:** An Indian 34 band equals **75 cm in EU/Japan/Hong Kong/Korea**, **90 cm in France**, and **AU 12 in Australia**.
 
-Shopping for lingerie in India or ordering international brands online often introduces sizing confusion. Whether you are searching for a **bra size chart India to Australia**, converting a **bra size chart Us to India**, or trying to determine what a **32/80 bra size in India** means, understanding global conversion matrices ensures a supportive fit.
+Shopping for lingerie in India or ordering [international brands online often introduces sizing confusion. Whether you are searching for a [bra size chart](/bra-size-chart/) India to Australia, conver](/bra-size-converter/)ting a bra size chart Us to India, or trying to determine what a 32/80 bra size in India means, understanding global conversion matrices ensures a supportive fit.
 
-To calculate your exact baseline size across all systems immediately, use our free [Bra Size Calculator India](/#calculator) or convert a known size using our interactive [Bra Size Converter](/bra-size-converter).
+To calculate your exact baseline size across all systems immediately, use our free [[Bra Size Calculator](/#calculator) India](/#calculator) or convert a known size using our interactive [Bra Size Converter](/bra-size-converter).
 
 ---
 
@@ -121,12 +121,12 @@ Bust-to-Underbust Difference Scale (Inches):
 6" diff  --> DDD/F (US)       | E Cup (UK) | F Cup (EU/IN)
 ```
 
-When using an **indian bra size calculator uk**, **indian bra size calculator usa**, or **indian bra size calculator canada**, note that:
+When using an indian bra size calculator uk, indian bra size calculator usa, or indian bra size calculator canada, note that:
 1. **India & UK:** Use single-letter progressions after D (D -> DD -> E -> F -> FF -> G).
 2. **United States & Canada:** Use double-letter notation (D -> DD/E -> DDD/F -> G -> H).
 3. **Europe, Japan & Korea:** Use sequential single letters without double letters (A -> B -> C -> D -> E -> F -> G -> H).
 
-Learn more about volume equivalence by exploring our [Sister Sizes Explained](/blog/sister-sizes-explained) guide.
+Learn more about volume equivalence by exploring our [[Sister Size](/sister-size-calculator/)s Explained](/blog/sister-sizes-explained) guide.
 
 ---
 
@@ -161,7 +161,7 @@ US brands (such as Victoria's Secret, SKIMS, or Savage X Fenty) share identical 
   </p>
 </div>
 
-If you find that your bra band rides up your back or the shoulder straps dig in to support your bust, test your measurements using our step-by-step [How to Measure Bra Size](/how-to-measure) tutorial.
+If you find that your bra band rides up your back or the shoulder straps dig in to support your bust, test your measurements using our step-by-step [[How to Measure](/how-to-measure/) Bra Size](/how-to-measure) tutorial.
 
 ---
 

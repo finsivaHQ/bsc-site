@@ -30,10 +30,10 @@ faqs:
     },
     {
       "@type": "Question",
-      "name": "Which Australian bra size calculator is known for being most accurate?",
+      "name": "Which Australian [bra size calculator](/#calculator) is known for being most accurate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The most accurate Australian bra size calculators use direct underbust measurement formulas without adding 4 inches. They evaluate net underbust and fullest overbust differences, providing both primary dress size band recommendations and sister sizes."
+        "text": "The most accurate Australian bra size calculators use direct underbust measurement formulas without adding 4 inches. They evaluate net underbust and fullest overbust differences, providing both primary dress size band recommendations and [sister size](/sister-size-calculator/)s."
       }
     },
     {
@@ -50,11 +50,11 @@ faqs:
 
 ## Key Takeaways
 
-* **Dress Size Band Conversion:** Australian bra band numbers correspond to national women's apparel dress sizes (AU 8, 10, 12, 14, 16, 18).
+* Dress Size Band Conversion: Australian bra band numbers correspond to national women's apparel dress sizes (AU 8, 10, 12, 14, 16, 18).
 * **Mathematical Formula:** `AU Dress Band = 8 + (US/UK Band - 30)`. An underbust of 32" = AU 10, 34" = AU 12, 36" = AU 14.
 * **Direct Underbust Accuracy:** Professional Australian lingerie fitters recommend direct underbust algorithms (no +4 inches addition) to prevent bands riding up.
 
-Finding the **best bra size calculator for Australian women** requires understanding how Australian sizing conventions differ from US, UK, and European standards. While North American and British brands label bands in inches (30, 32, 34, 36) and European brands label bands in centimeters (65, 70, 75, 80), Australia uses dress size numbers (AU 8, 10, 12, 14, 16).
+Finding the best bra size calculator for Australian women requires understanding how Australian sizing conventions differ from US, UK, and European standards. While North American and British brands label bands in inches (30, 32, 34, 36) and European brands label bands in centimeters (65, 70, 75, 80), Australia uses dress size numbers (AU 8, 10, 12, 14, 16).
 
 To calculate your exact baseline size across all systems immediately, use our free [Bra Size Calculator Australia](/#calculator) or convert known sizes using our interactive [Bra Size Converter](/bra-size-converter).
 
@@ -86,13 +86,13 @@ The Australian bra sizing framework (derived from Australian Standard AS 1344 fo
 
 ## Comparing the Top Bra Size Calculator Algorithms in Australia
 
-When evaluating which **Australian bra size calculator is known for being accurate**, calculation formulas generally fall into three categories:
+When evaluating which Australian bra size calculator is known for being accurate, calculation formulas generally fall into three categories:
 
 | Calculator Algorithm Type | Underbust Handling | Cup Calculation Method | Fit Accuracy Rating | Common Trade-Offs |
 | :--- | :--- | :--- | :--- | :--- |
-| **1. Direct Underbust (BraSizeChecker)** | Net underbust (no +4 addition) | Direct (Bust - Underbust) difference | ⭐️⭐️⭐️⭐️⭐️ (98% High) | Requires snug tape measurement; firm initial fit. |
+| 1. Direct Underbust (BraSizeChecker) | Net underbust (no +4 addition) | Direct (Bust - Underbust) difference | ⭐️⭐️⭐️⭐️⭐️ (98% High) | Requires snug tape measurement; firm initial fit. |
 | **2. Traditional (+4 Inches Method)** | Adds 4 inches to underbust | (Bust - Adjusted Band) difference | ⭐️⭐️ (45% Poor) | Band rides up back; straps dig into shoulders. |
-| **3. Brand-Specific Retail Calculators** | Varies by retailer elastic | Proprietary chart mapping | ⭐️⭐️⭐️⭐️ (80% Moderate) | Works well for that specific brand only. |
+| 3. Brand-Specific Retail Calculators | Varies by retailer elastic | Proprietary chart mapping | ⭐️⭐️⭐️⭐️ (80% Moderate) | Works well for that specific brand only. |
 
 ### Research-Backed Accuracy
 Scientific studies published in ergonomic and apparel engineering journals demonstrate that **direct underbust calculation algorithms** produce statistically reliable support because 80% of breast weight support comes from a snug, level underbust band.
@@ -103,8 +103,8 @@ Scientific studies published in ergonomic and apparel engineering journals demon
 
 If your underbust measurement falls between two Australian band sizes (for example, 31 inches, which lies between AU Size 10 and AU Size 12):
 
-1. **Test Both Primary and Sister Sizes:** Use our [Sister Size Calculator](/sister-size-calculator) to determine equivalent cup volumes.
-2. **Sister Size Rule:**
+1. Test Both Primary and Sister Sizes: Use our [Sister Size Calculator](/sister-size-calculator) to determine equivalent cup volumes.
+2. Sister Size Rule:
    - **AU 10C** holds the exact same cup volume as **AU 12B** and **AU 8D**.
    - If an AU 10 band feels uncomfortably tight on the first hook, step up to an **AU 12B** to maintain proper cup capacity.
 
@@ -123,7 +123,7 @@ When shopping online for international brands in Australia, keep these key trade
 * **AU vs US Sizing:** US band numbers use inches (30, 32, 34), whereas AU uses dress sizes (8, 10, 12). Cup letters are identical up to D cups.
 * **AU vs EU Sizing:** European brands (like Triumph AU, Hunkemöller, or Chantelle) measure bands in centimeters (70, 75, 80). An AU Size 12 equals **75 cm EU** and **90 cm French (FR)**.
 
-Use our main [Bra Size Chart](/bra-size-chart) to cross-reference all international columns before checking out.
+Use our main [[Bra Size Chart](/bra-size-chart/)](/bra-size-chart) to cross-reference all international columns before checking out.
 
 ---
 
@@ -132,7 +132,7 @@ Use our main [Bra Size Chart](/bra-size-chart) to cross-reference all internatio
 <div class="grid sm:grid-cols-2 gap-6 my-8">
   <a href="/bra-size-converter/" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">
     <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Interactive Tool</span>
-    <h4 class="font-bold text-ink text-lg group-hover:text-primary transition-colors mb-2">International Bra Size Converter</h4>
+    <h4 class="font-bold text-ink text-lg group-hover:text-primary transition-colors mb-2">[International Bra Size Conver](/bra-size-converter/)ter</h4>
     <p class="text-sm text-body line-clamp-2">Convert your Australian dress size to US, UK, EU, and French sizing instantly.</p>
   </a>
   <a href="/blog/bra-size-calculator-plus-size-large-breasts" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">

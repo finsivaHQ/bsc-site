@@ -24,7 +24,7 @@ Buying a bra is only half the battle; ensuring it **fits correctly in daily life
 Questions like *"Should I go up a bra size?"*, *"Should a bra feel tight?"*, or *"Should I size up in a sports bra?"* pop up constantly. In this complete fitting guide, we solve common fit dilemmas, provide age-specific advice for teens (ages 13–15), and explain store policies.
 
 > [!TIP]
-> **Solve Your Fit Problem**: Experiencing gaping or digging? Calculate your true baseline size with our [Bra Size Calculator](/#calculator) or diagnose specific fit issues using our interactive [Fit Guide](/fit-guide).
+> **Solve Your Fit Problem**: Experiencing gaping or digging? Calculate your true baseline size with our [[Bra Size Calculator](/#calculator)](/#calculator) or diagnose specific fit issues using our interactive [[Fit Guide](/fit-guide/)](/fit-guide).
 
 ---
 
@@ -36,7 +36,7 @@ If you experience any of the following symptoms, it's time to size up:
 Fit Issue                        | What It Means                         | Corrective Action
 ---------------------------------|---------------------------------------|--------------------------------------
 Quad-boob / Tissue Overflow       | Cup is too small                     | Go UP 1-2 Cup Letters (e.g., 34C -> 34DD)
-Underwires digging into tissue   | Cup wire width is too narrow         | Go UP Cup Size or sister size
+Underwires digging into tissue   | Cup wire width is too narrow         | Go UP Cup Size or [sister size](/sister-size-calculator/)
 Band leaves painful deep marks   | Band is too tight                    | Go UP 1 Band Size (e.g., 32D -> 34C)
 Shoulder straps digging red      | Band too loose (straps taking weight)| Go DOWN Band Size, UP Cup Letter
 Center bridge (gore) floating    | Cups too shallow                     | Go UP 1-2 Cup Letters
@@ -62,11 +62,11 @@ Always fit a new bra on the **outermost (loosest) hook**. Over 6 to 12 months of
 
 ### 1. Should I Size Up in a Sports Bra?
 **No.** A sports bra needs to hold breast tissue firmly to minimize bounce during high-impact movement. However, buying a sports bra that is *too small* compresses your diaphragm and restricts breathing during cardio.
-- **Rule**: Buy your exact measured bra size in an **encapsulation-style sports bra** (which separates and supports each breast individually) rather than a cheap compression band.
+- **Rule**: Buy your exact measured bra size in an encapsulation-style sports bra (which separates and supports each breast individually) rather than a cheap compression band.
 
 ### 2. Strapless Bra: Should I Size Down?
 Because a strapless bra lacks shoulder straps, 100% of the support relies on band tension and silicone grip strips.
-- **Pro Tip**: Try your **sister size with a smaller band**. If you normally wear a 34C, try a **32D**. The firmer band stops the strapless bra from sliding down your waist!
+- **Pro Tip**: Try your sister size with a smaller band. If you normally wear a 34C, try a **32D**. The firmer band stops the strapless bra from sliding down your waist!
 
 ---
 
@@ -75,10 +75,10 @@ Because a strapless bra lacks shoulder straps, 100% of the support relies on ban
 Teenagers frequently ask: *"What should my bra size be at 13 or 15?"*
 
 ### The Biological Truth
-There is **no single "normal" bra size** for teenagers. Breast development begins during puberty (typically between ages 9 and 14) and varies widely based on genetics, body mass index (BMI), and hormone timing. 
+There is no single "normal" bra size for teenagers. Breast development begins during puberty (typically between ages 9 and 14) and varies widely based on genetics, body mass index (BMI), and hormone timing. 
 - At age 13, sizes often range anywhere from 30AA to 34C or larger.
 - At age 15, breasts are still maturing, and sizing can change every few months.
-- **Advice for Parents & Teens**: Avoid rigid wired bras during early puberty. Opt for flexible bralettes or wireless contour bras that adapt to rapid growth. Learn how to take accurate measurements in our [How to Measure Guide](/how-to-measure).
+- **Advice for Parents & Teens**: Avoid rigid wired bras during early puberty. Opt for flexible bralettes or wireless contour bras that adapt to rapid growth. Learn how to take accurate measurements in our [[How to Measure](/how-to-measure/) Guide](/how-to-measure).
 
 ---
 
@@ -106,7 +106,7 @@ While high-street retailers often stock A through G cups, specialist lingerie ma
 
 ## Suggested Content & Recommended Tools
 
-- 🧮 **[Bra Size Calculator](/#calculator)**: Verify your true band and cup baseline size.
-- 👯‍♀️ **[Sister Size Calculator](/sister-size-calculator)**: Find sister sizes for tighter bands.
-- 🏋️‍♀️ **[Sports Bra Size Calculator Guide](/blog/sports-bra-size-calculator-guide)**: Specialized fitting advice for workout gear.
+- 🧮 [Bra Size Calculator](/#calculator): Verify your true band and cup baseline size.
+- 👯‍♀️ [Sister Size Calculator](/sister-size-calculator): Find sister sizes for tighter bands.
+- 🏋️‍♀️ [Sports Bra Size Calculator Guide](/blog/sports-bra-size-calculator-guide): Specialized fitting advice for workout gear.
 - 🩺 **[Fit Guide Troubleshooting](/fit-guide)**: Fix gaping, digging wires, and slipping straps.

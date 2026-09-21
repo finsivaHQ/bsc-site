@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx tsx tests/braSizing.test.ts",
     "dev": "astro dev",
-    "build": "astro build", "postbuild": "node scripts/submit-indexnow.js",
+    "build": "astro build",
     "preview": "astro preview"
   },
   "repository": {

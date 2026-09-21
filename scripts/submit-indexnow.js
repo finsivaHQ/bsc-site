@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const distDir = path.join(__dirname, '../dist');
-const API_KEY = '21b6e8338b8246dfa0bb162dc5349410';
+const API_KEY = '781a4deb77414d5d857bcd8222d13895';
 const HOST = 'brasizechecker.com';
 const KEY_LOCATION = `https://${HOST}/${API_KEY}.txt`;
 

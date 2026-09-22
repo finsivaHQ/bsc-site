@@ -1,7 +1,7 @@
 ---
 title: "The Professional Guide: How to Fit Someone for a Bra"
 description: "Discover the precise methodology on how to fit someone for a bra, ensuring unparalleled comfort, support, and a flawless silhouette."
-pubDate: "2026-09-23"
+pubDate: 2026-09-23
 heroImage: "/img/bra-measure-dos-donts.jpg"
 fitReviewed: true
 tags: ["bra fitting", "measurement guide", "professional advice", "womens health"]

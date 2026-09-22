@@ -1,7 +1,7 @@
 ---
 title: "The Ultimate Guide: How to Tell if Your Bra is Too Small"
 description: "Discover the telltale signs that your bra is too small. Learn how to achieve the perfect fit, elevate your comfort, and redefine your daily wardrobe with our comprehensive styling guide."
-pubDate: "2026-09-23"
+pubDate: 2026-09-23
 heroImage: "/img/bra-cup-fit-guide.jpg"
 fitReviewed: true
 tags: ["bra fit", "lingerie", "comfort", "sizing guide"]

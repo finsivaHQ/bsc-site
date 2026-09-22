@@ -1,7 +1,7 @@
 ---
 title: "The Complete Sister Bra Size Chart for Every Band Size"
 description: "Discover the ultimate guide to finding your perfect fit with our comprehensive sister bra size chart. Covering band sizes from 28 to 58."
-pubDate: "2026-09-23"
+pubDate: 2026-09-23
 heroImage: "/img/bra-band-fit-guide.jpg"
 fitReviewed: true
 tags:

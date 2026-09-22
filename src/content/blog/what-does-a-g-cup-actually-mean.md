@@ -1,7 +1,7 @@
 ---
 title: "The Ultimate Guide: What Does a G Cup Actually Mean?"
 description: "Demystifying G cup sizes, visual comparisons, and expert fitting advice for G, GG, and beyond."
-pubDate: "2026-09-23"
+pubDate: 2026-09-23
 heroImage: "/img/bra-cup-fit-guide.jpg"
 fitReviewed: true
 tags: ["bra fit", "g cup", "bra sizing", "lingerie guide"]

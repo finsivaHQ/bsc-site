@@ -24,7 +24,7 @@ Buying a bra is only half the battle; ensuring it **fits correctly in daily life
 Questions like *"Should I go up a bra size?"*, *"Should a bra feel tight?"*, or *"Should I size up in a sports bra?"* pop up constantly. In this complete fitting guide, we solve common fit dilemmas, provide age-specific advice for teens (ages 13–15), and explain store policies.
 
 > [!TIP]
-> **Solve Your Fit Problem**: Experiencing gaping or digging? Calculate your true baseline size with our [[Bra Size Calculator](/#calculator)](/#calculator) or diagnose specific fit issues using our interactive [[Fit Guide](/fit-guide/)](/fit-guide).
+> **Solve Your Fit Problem**: Experiencing gaping or digging? Calculate your true baseline size with our [[Bra Size Calculator](/#calculator)](/#calculator) or diagnose specific fit issues using our interactive [[Fit Guide](/fit-guide/)](/fit-guide/).
 
 ---
 
@@ -78,7 +78,7 @@ Teenagers frequently ask: *"What should my bra size be at 13 or 15?"*
 There is no single "normal" bra size for teenagers. Breast development begins during puberty (typically between ages 9 and 14) and varies widely based on genetics, body mass index (BMI), and hormone timing. 
 - At age 13, sizes often range anywhere from 30AA to 34C or larger.
 - At age 15, breasts are still maturing, and sizing can change every few months.
-- **Advice for Parents & Teens**: Avoid rigid wired bras during early puberty. Opt for flexible bralettes or wireless contour bras that adapt to rapid growth. Learn how to take accurate measurements in our [[How to Measure](/how-to-measure/) Guide](/how-to-measure).
+- **Advice for Parents & Teens**: Avoid rigid wired bras during early puberty. Opt for flexible bralettes or wireless contour bras that adapt to rapid growth. Learn how to take accurate measurements in our [[How to Measure](/how-to-measure/) Guide](/how-to-measure/).
 
 ---
 
@@ -107,6 +107,6 @@ While high-street retailers often stock A through G cups, specialist lingerie ma
 ## Suggested Content & Recommended Tools
 
 - 🧮 [Bra Size Calculator](/#calculator): Verify your true band and cup baseline size.
-- 👯‍♀️ [Sister Size Calculator](/sister-size-calculator): Find sister sizes for tighter bands.
-- 🏋️‍♀️ [Sports Bra Size Calculator Guide](/blog/sports-bra-size-calculator-guide): Specialized fitting advice for workout gear.
-- 🩺 **[Fit Guide Troubleshooting](/fit-guide)**: Fix gaping, digging wires, and slipping straps.
+- 👯‍♀️ [Sister Size Calculator](/sister-size-calculator/): Find sister sizes for tighter bands.
+- 🏋️‍♀️ [Sports Bra Size Calculator Guide](/blog/sports-bra-size-calculator-guide/): Specialized fitting advice for workout gear.
+- 🩺 **[Fit Guide Troubleshooting](/fit-guide/)**: Fix gaping, digging wires, and slipping straps.

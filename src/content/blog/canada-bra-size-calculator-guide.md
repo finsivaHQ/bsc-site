@@ -74,7 +74,7 @@ To find your bra size in Canada, you only need a flexible tailor's measuring tap
 1. Wrap the measuring tape directly around your ribcage, right under your bust where your bra band sits.
 2. Ensure the tape measure is level across your back, parallel to the floor.
 3. Pull the tape snug against your skin, but not uncomfortably tight. Exhale completely to get your natural ribcage baseline.
-4. Note the measurement in inches (or cm). If measuring in inches and you get an odd number (e.g., 31 inches), round to the nearest even number or test both sister sizes in our [sister size calculator](/sister-size-calculator).
+4. Note the measurement in inches (or cm). If measuring in inches and you get an odd number (e.g., 31 inches), round to the nearest even number or test both sister sizes in our [sister size calculator](/sister-size-calculator/).
 
 ### Step 2: Measure Your Fullest Bust (Cup Size)
 1. Wrap the measuring tape around the fullest part of your breasts (usually across the nipple line).
@@ -135,7 +135,7 @@ Each inch of difference corresponds to one cup letter in the Canadian/US standar
 | **9 inches** | I | I | G |
 | **10 inches** | J | J | GG |
 
-*(For a full breakdown of international size charts, see our [International Bra Size Conversion Chart](/bra-size-converter) or read our guide on [US vs UK Bra Sizing](/guides/us-vs-uk-bra-sizing)).*
+*(For a full breakdown of international size charts, see our [International Bra Size Conversion Chart](/bra-size-converter/) or read our guide on [US vs UK Bra Sizing](/guides/us-vs-uk-bra-sizing/)).*
 
 ---
 
@@ -162,7 +162,7 @@ Sister sizes retain the **exact same cup volume** while changing the band tightn
 - **Need a tighter band?** Go DOWN 1 band size and UP 1 cup size (e.g., from 34C to **32D**).
 - **Need a looser band?** Go UP 1 band size and DOWN 1 cup size (e.g., from 34C to **36B**).
 
-Read our full guide on [Sister Sizes Explained](/blog/sister-sizes-explained) or use our interactive [Sister Size Calculator](/sister-size-calculator) to check your alternatives.
+Read our full guide on [Sister Sizes Explained](/blog/sister-sizes-explained/) or use our interactive [Sister Size Calculator](/sister-size-calculator/) to check your alternatives.
 
 ---
 
@@ -170,5 +170,5 @@ Read our full guide on [Sister Sizes Explained](/blog/sister-sizes-explained) or
 
 1. Take your measurements with a flexible tape measure.
 2. Use our free, private [Canada Bra Size Calculator](/#calculator).
-3. Review our [Bra [Fit Guide](/fit-guide/)](/fit-guide) to troubleshoot band ride-up, cup gaping, or underwire digging.
-4. Explore our specialized guide for [Plus Size Bras & Large Breasts](/blog/bra-size-calculator-plus-size-large-breasts).
+3. Review our [Bra [Fit Guide](/fit-guide/)](/fit-guide/) to troubleshoot band ride-up, cup gaping, or underwire digging.
+4. Explore our specialized guide for [Plus Size Bras & Large Breasts](/blog/bra-size-calculator-plus-size-large-breasts/).

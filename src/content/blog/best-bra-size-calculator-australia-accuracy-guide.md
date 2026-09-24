@@ -56,7 +56,7 @@ faqs:
 
 Finding the best bra size calculator for Australian women requires understanding how Australian sizing conventions differ from US, UK, and European standards. While North American and British brands label bands in inches (30, 32, 34, 36) and European brands label bands in centimeters (65, 70, 75, 80), Australia uses dress size numbers (AU 8, 10, 12, 14, 16).
 
-To calculate your exact baseline size across all systems immediately, use our free [Bra Size Calculator Australia](/#calculator) or convert known sizes using our interactive [Bra Size Converter](/bra-size-converter).
+To calculate your exact baseline size across all systems immediately, use our free [Bra Size Calculator Australia](/#calculator) or convert known sizes using our interactive [Bra Size Converter](/bra-size-converter/).
 
 ---
 
@@ -103,7 +103,7 @@ Scientific studies published in ergonomic and apparel engineering journals demon
 
 If your underbust measurement falls between two Australian band sizes (for example, 31 inches, which lies between AU Size 10 and AU Size 12):
 
-1. Test Both Primary and Sister Sizes: Use our [Sister Size Calculator](/sister-size-calculator) to determine equivalent cup volumes.
+1. Test Both Primary and Sister Sizes: Use our [Sister Size Calculator](/sister-size-calculator/) to determine equivalent cup volumes.
 2. Sister Size Rule:
    - **AU 10C** holds the exact same cup volume as **AU 12B** and **AU 8D**.
    - If an AU 10 band feels uncomfortably tight on the first hook, step up to an **AU 12B** to maintain proper cup capacity.
@@ -123,7 +123,7 @@ When shopping online for international brands in Australia, keep these key trade
 * **AU vs US Sizing:** US band numbers use inches (30, 32, 34), whereas AU uses dress sizes (8, 10, 12). Cup letters are identical up to D cups.
 * **AU vs EU Sizing:** European brands (like Triumph AU, Hunkemöller, or Chantelle) measure bands in centimeters (70, 75, 80). An AU Size 12 equals **75 cm EU** and **90 cm French (FR)**.
 
-Use our main [[Bra Size Chart](/bra-size-chart/)](/bra-size-chart) to cross-reference all international columns before checking out.
+Use our main [[Bra Size Chart](/bra-size-chart/)](/bra-size-chart/) to cross-reference all international columns before checking out.
 
 ---
 
@@ -135,7 +135,7 @@ Use our main [[Bra Size Chart](/bra-size-chart/)](/bra-size-chart) to cross-refe
     <h4 class="font-bold text-ink text-lg group-hover:text-primary transition-colors mb-2">[International Bra Size Conver](/bra-size-converter/)ter</h4>
     <p class="text-sm text-body line-clamp-2">Convert your Australian dress size to US, UK, EU, and French sizing instantly.</p>
   </a>
-  <a href="/blog/bra-size-calculator-plus-size-large-breasts" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">
+  <a href="/blog/bra-size-calculator-plus-size-large-breasts/" class="group block bg-surface border border-hairline rounded-2xl p-5 hover:border-primary/50 transition-colors shadow-xs">
     <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Body Shapes</span>
     <h4 class="font-bold text-ink text-lg group-hover:text-primary transition-colors mb-2">Fuller Bust & Large Breasts Fitting Guide</h4>
     <p class="text-sm text-body line-clamp-2">Master fitting advice for small ribcages with fuller busts and plus-size support.</p>

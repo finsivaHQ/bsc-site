@@ -66,7 +66,7 @@ faqs:
 
 Shopping for lingerie in India or ordering [international brands online often introduces sizing confusion. Whether you are searching for a [bra size chart](/bra-size-chart/) India to Australia, conver](/bra-size-converter/)ting a bra size chart Us to India, or trying to determine what a 32/80 bra size in India means, understanding global conversion matrices ensures a supportive fit.
 
-To calculate your exact baseline size across all systems immediately, use our free [[Bra Size Calculator](/#calculator) India](/#calculator) or convert a known size using our interactive [Bra Size Converter](/bra-size-converter).
+To calculate your exact baseline size across all systems immediately, use our free [[Bra Size Calculator](/#calculator) India](/#calculator) or convert a known size using our interactive [Bra Size Converter](/bra-size-converter/).
 
 ---
 
@@ -83,7 +83,7 @@ The table below outlines international band size equivalences across India, Nort
 | **38 in** | 38 | 38 | 85 cm | 100 cm | AU 16 | 85 cm |
 | **40 in** | 40 | 40 | 90 cm | 105 cm | AU 18 | 90 cm |
 
-For full reference charts covering all band and cup steps up to J cups, visit our main [Bra Size Chart](/bra-size-chart).
+For full reference charts covering all band and cup steps up to J cups, visit our main [Bra Size Chart](/bra-size-chart/).
 
 ---
 
@@ -126,7 +126,7 @@ When using an indian bra size calculator uk, indian bra size calculator usa, or 
 2. **United States & Canada:** Use double-letter notation (D -> DD/E -> DDD/F -> G -> H).
 3. **Europe, Japan & Korea:** Use sequential single letters without double letters (A -> B -> C -> D -> E -> F -> G -> H).
 
-Learn more about volume equivalence by exploring our [[Sister Size](/sister-size-calculator/)s Explained](/blog/sister-sizes-explained) guide.
+Learn more about volume equivalence by exploring our [[Sister Size](/sister-size-calculator/)s Explained](/blog/sister-sizes-explained/) guide.
 
 ---
 
@@ -148,7 +148,7 @@ European brands (like Triumph, Hunkemöller, or Chantelle) label bands in centim
 * **36 Band India** = 80 EU / 95 FR
 
 ### 3. Bra Size Chart Us to India
-US brands (such as Victoria's Secret, SKIMS, or Savage X Fenty) share identical inch band numbers with Indian sizes. However, for cup sizes above D (e.g., US DDD or G cups), convert to the equivalent Indian/UK cup letter using our [Bra Size Converter](/bra-size-converter).
+US brands (such as Victoria's Secret, SKIMS, or Savage X Fenty) share identical inch band numbers with Indian sizes. However, for cup sizes above D (e.g., US DDD or G cups), convert to the equivalent Indian/UK cup letter using our [Bra Size Converter](/bra-size-converter/).
 
 ---
 
@@ -161,7 +161,7 @@ US brands (such as Victoria's Secret, SKIMS, or Savage X Fenty) share identical 
   </p>
 </div>
 
-If you find that your bra band rides up your back or the shoulder straps dig in to support your bust, test your measurements using our step-by-step [[How to Measure](/how-to-measure/) Bra Size](/how-to-measure) tutorial.
+If you find that your bra band rides up your back or the shoulder straps dig in to support your bust, test your measurements using our step-by-step [[How to Measure](/how-to-measure/) Bra Size](/how-to-measure/) tutorial.
 
 ---
 

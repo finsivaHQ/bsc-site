@@ -52,7 +52,7 @@ While our tool is highly accurate, it's important to remember that a calculator 
 - **Shallow breasts** (tissue spread over a wide area) might need a cup size down in certain styles.
 - **Projected breasts** (tissue that protrudes forward) might need deeper cups, like balconette styles.
 
-If your calculator result feels slightly off, don't panic. Check out our [Sister Size Guide](/blog/sister-sizes-explained) to learn how to adjust your band or cup volume perfectly.
+If your calculator result feels slightly off, don't panic. Check out our [Sister Size Guide](/blog/sister-sizes-explained/) to learn how to adjust your band or cup volume perfectly.
 
 ---
 

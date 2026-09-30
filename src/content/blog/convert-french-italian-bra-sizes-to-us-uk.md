@@ -2,7 +2,7 @@
 title: "Shopping European Lingerie Online: How to Convert French and Italian Bra Sizes to US/UK"
 description: "Buying luxury lingerie online? Learn the exact differences between French, Italian, EU, UK, and US bra sizing so you never order the wrong size again."
 pubDate: 2026-09-30
-heroImage: "/img/bra-cup-fit-guide.jpg"
+heroImage: "/img/bra-strap-fit-guide.jpg"
 fitReviewed: true
 tags: ["international sizing", "french bras", "italian bras", "eu sizing"]
 author: "FinsivaHQ"

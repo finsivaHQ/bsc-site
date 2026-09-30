@@ -2,7 +2,7 @@
 title: "Why Your 34C Bra Doesn't Fit But a 36B Might: Sister Sizing for Weight Loss & Gain"
 description: "Experiencing weight fluctuations? Learn how breast volume displacement works and why sister sizing (like swapping a 34C for a 36B) is the secret to a perfect fit."
 pubDate: 2026-09-30
-heroImage: "/img/bra-cup-fit-guide.jpg"
+heroImage: "/img/bra-band-fit-guide.jpg"
 fitReviewed: true
 tags: ["sister sizes", "weight loss", "bra fit"]
 author: "FinsivaHQ"

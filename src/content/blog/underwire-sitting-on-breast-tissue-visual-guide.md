@@ -2,7 +2,7 @@
 title: "How to Tell if Your Underwire is Sitting on Breast Tissue: A Visual Guide"
 description: "Is your bra causing pain on the sides of your chest? Learn how to identify if your underwire is sitting on breast tissue and how to find a bra that actually fits your root."
 pubDate: 2026-09-30
-heroImage: "/img/bra-cup-fit-guide.jpg"
+heroImage: "/img/bra-measure-dos-donts.jpg"
 fitReviewed: true
 tags: ["bra fit", "underwire pain", "breast root"]
 author: "FinsivaHQ"

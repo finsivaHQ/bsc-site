@@ -3,7 +3,7 @@ title: "Sports Bra Size Calculator: Find Your High-Impact Fit"
 description: "A sports bra needs to fit differently. Learn how to calculate your sports bra size for maximum support and minimum bounce."
 pubDate: 2026-08-06
 heroImage: "/img/bra-cup-fit-guide.jpg"
-fitReviewed: false
+fitReviewed: true
 tags: ["sports bra","bra size calculator","fitness"]
 author: "BraSizeChecker Expert Team"
 ---

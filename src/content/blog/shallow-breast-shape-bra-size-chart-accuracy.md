@@ -63,3 +63,12 @@ If you have shallow breasts, you need bras that accommodate a wide footprint but
 Understanding your shape is the key to unlocking a perfect fit. However, you still need a mathematically accurate starting point to know what volume you are trying to fit into a balconette bra. 
 
 Don't let a bad experience with a t-shirt bra deter you from finding your true size. Use our **[Bra Size Chart & Calculator](/bra-size-chart/)** to get your accurate baseline volume, and then apply your new knowledge of shallow shaping to select the right style in that size.
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+

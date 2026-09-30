@@ -110,3 +110,12 @@ While high-street retailers often stock A through G cups, specialist lingerie ma
 - 👯‍♀️ [Sister Size Calculator](/sister-size-calculator/): Find sister sizes for tighter bands.
 - 🏋️‍♀️ [Sports Bra Size Calculator Guide](/blog/sports-bra-size-calculator-guide/): Specialized fitting advice for workout gear.
 - 🩺 **[Fit Guide Troubleshooting](/fit-guide/)**: Fix gaping, digging wires, and slipping straps.
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+

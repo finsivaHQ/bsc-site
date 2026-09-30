@@ -81,6 +81,15 @@ Demanding that your **center gore** lays flat is not about adhering to arbitrary
 
 A floating gore is a red flag that your garment is failing. When that central piece of fabric finally anchors securely to your sternum, you will immediately feel a radical difference. Your breasts will be lifted and separated, the weight will vanish from your shoulders, and you will experience the all-day, "forget-you're-wearing-it" comfort of a truly flawless fit.
 
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+
 ## Stop Guessing, Start Calculating
 
 Finding a bra that tacks flawlessly shouldn't require a degree in structural engineering. It begins with identifying your true, mathematically accurate size. 

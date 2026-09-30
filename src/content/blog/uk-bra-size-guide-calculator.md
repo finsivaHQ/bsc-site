@@ -91,6 +91,15 @@ If you've identified that your bra doesn't fit, how do you adjust? This is where
 
 This concept is known as sister sizing. If you need help calculating this, use our **[Sister Size Calculator UK](/sister-size-calculator/)**.
 
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+
 ## Stop Guessing, Start Calculating
 
 You don't need to struggle with complex math or confusing conversion charts. 

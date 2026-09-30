@@ -73,6 +73,15 @@ To find your true size, you need to learn **how to measure bra size uk at home**
 2.  **Measure Your Full Bust:** Wrap the tape around the fullest part of your breasts, usually across the nipples.
 3.  **Calculate the Difference:** Each inch of difference represents a cup size in the UK system (1" = A, 2" = B, 3" = C, 4" = D, 5" = DD, 6" = E, 7" = F, and so on).
 
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+
 ## Stop Guessing: Use Our UK Bra Size Calculator
 
 Math can be confusing, especially when navigating sister sizes and international conversions. Instead of guessing, let our highly accurate tools do the work for you. 

@@ -69,6 +69,15 @@ Armed with accurate, personalized data, you can boldly navigate the expansive wo
 
 Investing in a meticulously well-fitted bra is a direct investment in your daily physical and mental well-being. A great fit improves your natural posture, dramatically enhances the drape and silhouette of your outer clothing, and permanently eliminates a persistent, unnecessary source of physical stress. Do not settle for substandard garments that require constant, annoying management throughout your busy day. Demand excellence, prioritize comfort, and elevate your foundation pieces.
 
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+
 ## Frequently Asked Questions
 
 <details>

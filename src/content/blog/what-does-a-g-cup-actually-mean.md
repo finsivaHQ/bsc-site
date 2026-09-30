@@ -93,6 +93,15 @@ Embracing your true, mathematically correct size is nothing short of a transform
 </details>
 
 
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+
 ## Stop Guessing, Start Calculating
 
 Finding your perfect fit shouldn't be a mystery. Use our advanced **[Bra Size Calculator](/bra-size-chart/)** or explore your alternative sizing options with our **[Sister Size Calculator](/sister-size-calculator/)** to find a fit that feels custom-tailored to your unique shape.

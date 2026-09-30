@@ -95,3 +95,12 @@ Mastering the use of a **sister bra size chart uk** elevates your relationship w
 However, remembering the UK double-letter progression (DD, E, F, FF, G) can be confusing. To instantly find your exact matches without the headache, use our free **[Bra Sister Size Calculator](/sister-size-calculator/)**. Simply input your current size, and it will generate your entire matrix of equivalent sizes in an instant. 
 
 Need to check your true baseline size first? Head over to our **[UK Bra Size Calculator](/bra-size-chart/)** for a precise measurement.
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+

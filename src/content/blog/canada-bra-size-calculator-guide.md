@@ -172,3 +172,12 @@ Read our full guide on [Sister Sizes Explained](/blog/sister-sizes-explained/) o
 2. Use our free, private [Canada Bra Size Calculator](/#calculator).
 3. Review our [Bra [Fit Guide](/fit-guide/)](/fit-guide/) to troubleshoot band ride-up, cup gaping, or underwire digging.
 4. Explore our specialized guide for [Plus Size Bras & Large Breasts](/blog/bra-size-calculator-plus-size-large-breasts/).
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+

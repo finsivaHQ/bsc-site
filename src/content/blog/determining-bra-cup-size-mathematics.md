@@ -135,6 +135,15 @@ By choosing to calculate my bra size using precise mathematics rather than relyi
 
 A meticulously calculated bra size means no more slipping straps, no more underwire friction, and no more restricted breathing. It eliminates the physical pain of a garment constantly fighting against your body's natural physics. It is the purest expression of self-care—wrapping yourself in a garment engineered mathematically just for you.
 
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+
 ## Stop Guessing, Start Calculating
 
 Finding your perfect fit shouldn't be a mystery left to trial and error. The numbers don't lie. Empower yourself with the correct mathematics of support. 

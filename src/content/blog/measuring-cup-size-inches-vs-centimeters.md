@@ -181,6 +181,15 @@ As your lingerie wardrobe expands, you will encounter the idiosyncrasies of glob
 - **European Brands (EU):** Utilize the metric centimeter system. Brands like PrimaDonna or Chantelle will scale differently than UK brands. A UK 'G' cup is vastly larger than an EU 'G' cup. 
 - **French Brands (FR):** French band sizes are notoriously confusing. They take the EU band size (in cm) and add 15. So an EU 75 band is an FR 90 band. 
 
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+
 ## Frequently Asked Questions
 
 <details>

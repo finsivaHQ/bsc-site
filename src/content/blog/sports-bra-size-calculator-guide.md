@@ -82,7 +82,16 @@ Don't let an ill-fitting sports bra hold you back from achieving your fitness go
 
 ---
 
-### Frequently Asked Questions
+#
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+
+## Frequently Asked Questions
 
 <details class="bg-surface border border-hairline rounded-xl p-5 mt-4 cursor-pointer">
   <summary class="font-bold text-ink list-none flex justify-between">

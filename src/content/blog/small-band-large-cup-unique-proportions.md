@@ -95,6 +95,15 @@ Realizing that you fall into the small band, large cup demographic is often a mo
 
 Embracing your true proportions is a powerful act of self-care. By seeking out specialized, premium brands that cater specifically to the small band/large cup demographic, you are investing in garments that are scientifically designed to support, lift, and celebrate your natural shape in absolute luxury. 
 
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+
 ## Stop Guessing, Start Calculating
 
 Your journey to finding garments engineered specifically for your unique proportions begins with knowing your true mathematical size. 

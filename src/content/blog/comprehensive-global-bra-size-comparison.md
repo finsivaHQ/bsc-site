@@ -127,6 +127,15 @@ You can confidently select a meticulously engineered, unlined balconette from a 
 
 Understanding the intricate nuances of an AUS bra size to UK conversion, and leveraging an accurate international bra size converter, ensures that your global collection is not only breathtakingly beautiful but also structurally flawless and perfectly fitted to your unique shape.
 
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+
 ## Stop Guessing, Start Calculating Globally
 
 Finding your perfect fit shouldn't be limited by geography. Eliminate the confusion of international sizing with precise mathematics.

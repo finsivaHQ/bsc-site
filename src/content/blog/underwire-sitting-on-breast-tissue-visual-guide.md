@@ -61,3 +61,12 @@ If you have confirmed that your underwire is resting on breast tissue, you need 
 A poking underwire is not something you just have to "put up with." It is a clear mechanical failure of the bra's fit. 
 
 If you suspect your underwire is resting on breast tissue, it's time to re-evaluate your sizing. Use our comprehensive **[Bra Fit Guide](/fit-guide/)** to diagnose other common issues, or head straight to our **[Bra Size Chart & Calculator](/bra-size-chart/)** to ensure you are starting with the correct baseline measurements.
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+

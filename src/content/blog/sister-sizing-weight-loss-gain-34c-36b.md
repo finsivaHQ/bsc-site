@@ -75,6 +75,15 @@ Navigating sister sizes during a fitness journey can be confusing, but there is 
 *   **If you go UP in band size, you must go DOWN in cup letter.** (34C → 36B)
 *   **If you go DOWN in band size, you must go UP in cup letter.** (36C → 34D)
 
+
+
+## Medical & Ergonomic References
+
+For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
+*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
+*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
+*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
+
 ## Stop Guessing and Calculate Your Exact Sister Size
 
 Navigating the sister size matrix in your head can be exhausting, especially when dealing with international brands or large fluctuations in weight. 

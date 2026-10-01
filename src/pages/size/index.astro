@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const bands = [28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48];
+const cups = [
+  'AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H', 'HH', 'J'
+];
+---
+
+<Layout 
+  title="Visual Bra Size Database & International Reference | BraSizeChecker"
+  description="Explore our interactive global database of bra sizes. Find the exact mathematical breakdown, international conversion matrix, and sister sizes for any cup and band."
+>
+  <Header />
+  <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <header class="mb-12 text-center max-w-3xl mx-auto">
+      <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest mb-4">
+        Interactive Hub
+      </span>
+      <h1 class="text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+        The Bra Size Database
+      </h1>
+      <p class="text-lg text-body">
+        Select any size below to view its algorithmic volume, international conversions (US, UK, EU, AU, FR), exact measurements, and sister sizes.
+      </p>
+    </header>
+
+    <div class="bg-surface border border-hairline rounded-3xl p-6 md:p-10 shadow-sm overflow-x-auto">
+      <div class="min-w-[800px]">
+        <!-- Table Header (Cups) -->
+        <div class="flex pb-4 border-b border-hairline mb-4">
+          <div class="w-16 shrink-0 flex items-end justify-center font-bold text-mute text-xs uppercase tracking-widest">Band</div>
+          <div class="flex-1 grid grid-cols-14 gap-2">
+            {cups.map((cup) => (
+              <div class="text-center font-bold text-ink">{cup}</div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Table Rows (Bands) -->
+        <div class="space-y-2">
+          {bands.map((band) => (
+            <div class="flex items-center">
+              <div class="w-16 shrink-0 flex items-center justify-center font-bold text-ink text-lg">{band}</div>
+              <div class="flex-1 grid grid-cols-14 gap-2">
+                {cups.map((cup) => (
+                  <a 
+                    href={`/size/${band}${cup.toLowerCase()}`}
+                    class="aspect-square flex items-center justify-center rounded-xl bg-canvas-soft border border-hairline hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-0.5 transition-all shadow-xs text-xs font-bold text-body group"
+                  >
+                    <span class="group-hover:scale-110 transition-transform">{band}{cup}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,251 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const bands = [28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48];
+  
+  // UK Cup Sizing System (Gold Standard for global consistency)
+  const cups = [
+    { name: 'AA', diff: 0, us: 'AA', eu: 'AA' },
+    { name: 'A', diff: 1, us: 'A', eu: 'A' },
+    { name: 'B', diff: 2, us: 'B', eu: 'B' },
+    { name: 'C', diff: 3, us: 'C', eu: 'C' },
+    { name: 'D', diff: 4, us: 'D', eu: 'D' },
+    { name: 'DD', diff: 5, us: 'DD/E', eu: 'E' },
+    { name: 'E', diff: 6, us: 'DDD/F', eu: 'F' },
+    { name: 'F', diff: 7, us: 'G', eu: 'G' },
+    { name: 'FF', diff: 8, us: 'H', eu: 'H' },
+    { name: 'G', diff: 9, us: 'I', eu: 'I' },
+    { name: 'GG', diff: 10, us: 'J', eu: 'J' },
+    { name: 'H', diff: 11, us: 'K', eu: 'K' },
+    { name: 'HH', diff: 12, us: 'L', eu: 'L' },
+    { name: 'J', diff: 13, us: 'M', eu: 'M' }
+  ];
+
+  const paths = [];
+
+  for (let i = 0; i < bands.length; i++) {
+    for (let j = 0; j < cups.length; j++) {
+      const band = bands[i];
+      const cup = cups[j];
+      const sizeSlug = `${band}${cup.name.toLowerCase()}`;
+
+      // Calculate Sister Sizes
+      let sisterDown = null;
+      if (i > 0 && j < cups.length - 1) {
+        sisterDown = { band: bands[i - 1], cup: cups[j + 1] };
+      }
+      
+      let sisterUp = null;
+      if (i < bands.length - 1 && j > 0) {
+        sisterUp = { band: bands[i + 1], cup: cups[j - 1] };
+      }
+
+      paths.push({
+        params: { size: sizeSlug },
+        props: { 
+          band, 
+          cup,
+          sisterDown,
+          sisterUp
+        }
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { size } = Astro.params;
+const { band, cup, sisterDown, sisterUp } = Astro.props;
+
+// Overbust calculation (Band + Cup Difference)
+const overbust = band + cup.diff;
+
+// International Conversions
+// EU Band: 34 UK = 75 EU. Each 2 inches = 5cm.
+const euBand = 75 + ((band - 34) / 2) * 5;
+// AU Band: 34 UK = 12 AU. Each 2 inches = 2 sizes.
+const auBand = 12 + (band - 34);
+// FR Band: EU Band + 15
+const frBand = euBand + 15;
+
+const title = `What does a ${band}${cup.name} Bra Size look like? | Visual Database`;
+const description = `Complete reference guide for the ${band}${cup.name} bra size. See the exact measurements, sister sizes, visual volume, and international conversions for US, UK, and EU.`;
+
+// Volume visualization scaling (simplified heuristic for AdSense visualizer tool)
+const baseVolume = 10; 
+const volumeFactor = baseVolume + (cup.diff * 2) + ((band - 28) * 0.5);
+---
+
+<Layout 
+  title={title}
+  description={description}
+>
+  <Header />
+  <main class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <!-- Breadcrumbs -->
+    <nav class="flex text-sm text-mute mb-8" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1 md:space-x-3">
+        <li class="inline-flex items-center">
+          <a href="/" class="hover:text-primary transition-colors">Home</a>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <svg class="w-3 h-3 mx-1" aria-hidden="true" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <a href="/size/" class="hover:text-primary transition-colors ml-1 md:ml-2">Size Database</a>
+          </div>
+        </li>
+        <li aria-current="page">
+          <div class="flex items-center">
+            <svg class="w-3 h-3 mx-1" aria-hidden="true" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="ml-1 md:ml-2 font-bold text-ink">{band}{cup.name}</span>
+          </div>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-10">
+      <!-- Main Content Column -->
+      <div class="lg:col-span-2 space-y-10">
+        <header>
+          <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest mb-4">
+            Size Reference Guide
+          </span>
+          <h1 class="text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
+            The {band}{cup.name} Bra Size
+          </h1>
+          <p class="text-lg text-body">
+            Everything you need to know about the <strong>{band}{cup.name}</strong> bra size, including precise measurements, international equivalents, and sister sizes for better fits.
+          </p>
+        </header>
+
+        <!-- Measurement Engine -->
+        <section class="bg-surface border border-hairline rounded-3xl p-6 md:p-8 shadow-sm">
+          <h2 class="text-2xl font-bold text-ink mb-6 flex items-center gap-3">
+            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
+            Measurement Breakdown
+          </h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="p-5 rounded-2xl bg-canvas-soft-2/50 border border-hairline">
+              <span class="text-sm text-mute font-bold uppercase tracking-wider block mb-1">Underbust (Band)</span>
+              <span class="text-3xl font-black text-ink">{band}"</span>
+              <p class="text-xs text-body mt-2">Your ribcage measurement, taken snugly just under the breasts.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-primary/5 border border-primary/20">
+              <span class="text-sm text-primary font-bold uppercase tracking-wider block mb-1">Overbust (Cup)</span>
+              <span class="text-3xl font-black text-ink">{overbust}"</span>
+              <p class="text-xs text-body mt-2">Taken around the fullest part of the bust (usually at the nipple).</p>
+            </div>
+          </div>
+          <p class="text-sm text-body mt-6 p-4 bg-canvas rounded-xl border border-hairline">
+            <strong>The Math:</strong> The {cup.name} cup represents a <strong>{cup.diff}-inch difference</strong> between your underbust ({band}") and overbust ({overbust}"). 
+          </p>
+        </section>
+
+        <!-- Sister Sizes -->
+        <section class="bg-surface border border-hairline rounded-3xl p-6 md:p-8 shadow-sm">
+          <h2 class="text-2xl font-bold text-ink mb-6">Sister Sizes (Same Volume)</h2>
+          <p class="text-body mb-6">
+            If the {band}{cup.name} cup fits perfectly but the band feels too tight or too loose, you need a <strong>sister size</strong>. These sizes hold the exact same volume of breast tissue.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-4">
+            {sisterDown ? (
+              <a href={`/size/${sisterDown.band}${sisterDown.cup.name.toLowerCase()}`} class="group p-5 rounded-2xl border border-hairline hover:border-primary/50 transition-colors flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-mute font-bold uppercase block mb-1">Band Too Loose?</span>
+                  <span class="text-xl font-bold text-ink group-hover:text-primary transition-colors">Try {sisterDown.band}{sisterDown.cup.name}</span>
+                </div>
+                <svg class="w-5 h-5 text-mute group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </a>
+            ) : (
+              <div class="p-5 rounded-2xl border border-hairline bg-canvas/50 opacity-60">
+                <span class="text-xs text-mute font-bold uppercase block mb-1">Band Too Loose?</span>
+                <span class="text-sm text-body">No smaller band manufactured for this volume.</span>
+              </div>
+            )}
+            
+            {sisterUp ? (
+              <a href={`/size/${sisterUp.band}${sisterUp.cup.name.toLowerCase()}`} class="group p-5 rounded-2xl border border-hairline hover:border-primary/50 transition-colors flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-mute font-bold uppercase block mb-1">Band Too Tight?</span>
+                  <span class="text-xl font-bold text-ink group-hover:text-primary transition-colors">Try {sisterUp.band}{sisterUp.cup.name}</span>
+                </div>
+                <svg class="w-5 h-5 text-mute group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </a>
+            ) : (
+              <div class="p-5 rounded-2xl border border-hairline bg-canvas/50 opacity-60">
+                <span class="text-xs text-mute font-bold uppercase block mb-1">Band Too Tight?</span>
+                <span class="text-sm text-body">No larger band manufactured for this volume.</span>
+              </div>
+            )}
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-8">
+        
+        <!-- AdSense Safety: Algorithmic Volume Visualizer -->
+        <div class="bg-surface border border-hairline rounded-3xl p-6 shadow-sm overflow-hidden relative">
+          <h3 class="font-bold text-ink mb-6 text-center text-sm uppercase tracking-widest">Algorithmic Volume</h3>
+          <div class="flex justify-center items-center h-48 relative">
+            <div class="relative flex justify-center items-center">
+              <div class="absolute rounded-full border-2 border-hairline-strong opacity-30 w-40 h-40"></div>
+              <div class="absolute rounded-full bg-gradient-to-tr from-primary/80 to-accent/40 shadow-inner" style={`width: ${Math.min(volumeFactor * 3.5, 180)}px; height: ${Math.min(volumeFactor * 3.5, 180)}px;`}></div>
+              <div class="absolute bg-white/30 w-1/3 h-1/3 rounded-full top-1/4 left-1/4 blur-md"></div>
+            </div>
+          </div>
+          <p class="text-xs text-center text-mute mt-4">
+            Relative volumetric capacity index: <strong>{Math.round(volumeFactor)}v</strong>
+          </p>
+        </div>
+
+        <!-- International Matrix -->
+        <div class="bg-surface border border-hairline rounded-3xl p-6 shadow-sm">
+          <h3 class="font-bold text-ink mb-6">International Matrix</h3>
+          <ul class="space-y-4">
+            <li class="flex justify-between items-center pb-3 border-b border-hairline">
+              <span class="text-sm text-body">UK (Standard)</span>
+              <span class="font-bold text-ink">{band}{cup.name}</span>
+            </li>
+            <li class="flex justify-between items-center pb-3 border-b border-hairline">
+              <span class="text-sm text-body">US</span>
+              <span class="font-bold text-ink">{band}{cup.us}</span>
+            </li>
+            <li class="flex justify-between items-center pb-3 border-b border-hairline">
+              <span class="text-sm text-body">Europe (EU)</span>
+              <span class="font-bold text-ink">{euBand}{cup.eu}</span>
+            </li>
+            <li class="flex justify-between items-center pb-3 border-b border-hairline">
+              <span class="text-sm text-body">Australia (AU)</span>
+              <span class="font-bold text-ink">{auBand}{cup.name}</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-sm text-body">France (FR)</span>
+              <span class="font-bold text-ink">{frBand}{cup.eu}</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- CTA -->
+        <div class="bg-primary/5 border border-primary/20 rounded-3xl p-6 text-center">
+          <h3 class="font-bold text-ink mb-2">Not sure this is you?</h3>
+          <p class="text-sm text-body mb-4">Use our advanced algorithmic calculator to verify your exact measurements.</p>
+          <a href="/#calculator" class="block w-full bg-primary text-white font-bold py-3 rounded-xl hover:bg-primary-hover transition-colors shadow-sm">
+            Calculate My Size
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

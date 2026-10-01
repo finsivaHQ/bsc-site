@@ -5,7 +5,7 @@ pubDate: 2026-09-06
 heroImage: "/img/bra-band-fit-guide.jpg"
 fitReviewed: true
 tags: ["small band large cup", "bra proportions", "uk sizes"]
-author: "Editorial Team"
+author: "BSC Team"
 faqs:
   - question: "What are considered small bra sizes uk in terms of bands?"
     answer: "Generally, band sizes 26, 28, and 30 are considered small band sizes. Mainstream stores often don't carry below a 32, forcing women into ill-fitting garments that ride up and offer no structural support."

@@ -8,7 +8,7 @@ tags:
   - Bra Fitting
   - Sister Sizes
   - Lingerie Guide
-author: "Editorial Team"
+author: "BSC Team"
 faqs:
   - question: "What exactly is a sister bra size?"
     answer: "A sister size is an alternative bra size where the cup volume remains exactly the same, even though the band size and cup letter change. This allows you to adjust the fit of the band without losing the correct cup capacity."

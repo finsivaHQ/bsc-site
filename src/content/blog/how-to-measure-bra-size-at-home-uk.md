@@ -5,7 +5,7 @@ pubDate: 2026-09-06
 heroImage: "/img/measure-underbust-correct.svg"
 fitReviewed: true
 tags: ["measuring your bra size uk", "how to measure bra size uk", "how do you measure your bra size uk", "measure for bra uk"]
-author: "Editorial Team"
+author: "BSC Team"
 faqs:
   - question: "How to measure bra size uk at home?"
     answer: "To measure your bra size at home, take a soft measuring tape and measure around your ribcage directly under your bust (pulling very tight). This is your band size in inches. Then, measure around the fullest part of your bust. Subtract the first number from the second. The difference in inches dictates your UK cup size."

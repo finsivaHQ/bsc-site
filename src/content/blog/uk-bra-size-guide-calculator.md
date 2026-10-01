@@ -5,7 +5,7 @@ pubDate: 2026-09-06
 heroImage: "/img/bra-measure-dos-donts.jpg"
 fitReviewed: true
 tags: ["bra size calculator uk", "uk bra size calculator", "how to calculate your bra size uk", "what is my bra size uk"]
-author: "Editorial Team"
+author: "BSC Team"
 faqs:
   - question: "How do I calculate my bra size UK?"
     answer: "To calculate your UK bra size, measure your underbust snugly in inches (this is your band size, e.g., 34). Then measure your full bust. Subtract your underbust from your full bust. Each inch of difference equals one cup size (1=A, 2=B, 3=C, 4=D, 5=DD, 6=E)."

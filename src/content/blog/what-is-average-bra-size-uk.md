@@ -5,7 +5,7 @@ pubDate: 2026-09-06
 heroImage: "/img/bra-cup-fit-guide.jpg"
 fitReviewed: true
 tags: ["uk bra size", "average breast size", "uk sizing"]
-author: "Editorial Team"
+author: "BSC Team"
 faqs:
   - question: "What is the average bra size in the UK?"
     answer: "Currently, the average bra size in the UK is reported to be a 36D or 36DD. However, many industry experts believe this number is skewed because a large percentage of women are wearing the wrong bra size (often a band that is too large and a cup that is too small)."

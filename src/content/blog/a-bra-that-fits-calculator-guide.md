@@ -5,7 +5,7 @@ pubDate: 2026-09-06
 heroImage: "/img/bra-measure-dos-donts.jpg"
 fitReviewed: true
 tags: ["bra calculator", "a bra that fits", "fitting guide"]
-author: "Editorial Team"
+author: "BSC Team"
 faqs:
   - question: "What is the A Bra That Fits calculator?"
     answer: "It is an advanced sizing tool that uses six measurements to determine your most accurate bra size."

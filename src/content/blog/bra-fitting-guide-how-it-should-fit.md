@@ -5,7 +5,7 @@ pubDate: 2026-09-06
 heroImage: "/img/bra-band-fit-guide.jpg"
 fitReviewed: true
 tags: ["bra fitting", "fitting guide", "fit calculator"]
-author: "Editorial Team"
+author: "BSC Team"
 faqs:
   - question: "Why should I use a bra fitting guide uk?"
     answer: "Because UK sizing is highly standardized for full busts, and a dedicated guide helps you spot fit issues before you buy. A UK-specific guide helps you understand the intricacies of double-letter sizing which is crucial for proper support."

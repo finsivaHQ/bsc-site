@@ -79,3 +79,12 @@
     -moz-appearance: textfield;
   }
 }
+
+@layer components {
+  .prose a {
+    @apply font-bold underline decoration-primary/40 underline-offset-4 transition-colors ;
+  }
+  .prose a:hover {
+    @apply text-primary-hover decoration-primary ;
+  }
+}

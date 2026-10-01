@@ -19,7 +19,7 @@ faqs:
 
 # Why Your 34C Bra Doesn't Fit But a 36B Might: Sister Sizing for Weight Loss and Gain
 
-If you've recently experienced weight fluctuations—whether from dieting, a new fitness routine, or pregnancy—you might have noticed your favorite bra suddenly feels like a medieval torture device. The band digs in, but the cups seem perfectly fine. So, you go to the store and grab a 36C instead of your usual 34C, only to find the cups are now gaping and huge. 
+If you've recently experienced weight fluctuations—whether from dieting, using a [calorie calculator](https://caloriecalculatorfree.com/) to manage your daily intake, a new fitness routine, or pregnancy—you might have noticed your favorite bra suddenly feels like a medieval torture device. The band digs in, but the cups seem perfectly fine. So, you go to the store and grab a 36C instead of your usual 34C, only to find the cups are now gaping and huge. 
 
 Why did this happen? 
 

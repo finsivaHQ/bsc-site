@@ -5,7 +5,7 @@ pubDate: 2026-09-30
 heroImage: "/img/bra-band-fit-guide.jpg"
 fitReviewed: true
 tags: ["sister sizes", "weight loss", "bra fit"]
-author: "FinsivaHQ"
+author: "Editorial Team"
 faqs:
   - question: "What is a sister size in bras?"
     answer: "A sister size is a bra size that holds the exact same volume of breast tissue as your current size, but on a different band size (e.g., 34C and 36B both hold the same cup volume)."

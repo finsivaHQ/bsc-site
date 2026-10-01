@@ -5,7 +5,7 @@ pubDate: 2026-09-06
 heroImage: "/img/bra-strap-fit-guide.jpg"
 fitReviewed: true
 tags: ["bra measurements", "uk chart", "bra sizing"]
-author: "FinsivaHQ"
+author: "Editorial Team"
 faqs:
   - question: "How do I take measurements for a bra size?"
     answer: "You take snug measurements around your ribcage for the band, and across the fullest part of your bust for the cup."

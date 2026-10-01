@@ -5,7 +5,7 @@ pubDate: 2026-09-06
 heroImage: "/img/bra-measure-dos-donts.jpg"
 fitReviewed: true
 tags: ["sister bra size chart uk", "bra sister sizes uk", "sister sizes uk", "equivalent bra sizes"]
-author: "FinsivaHQ"
+author: "Editorial Team"
 faqs:
   - question: "What exactly are bra sister sizes uk?"
     answer: "Bra sister sizes uk are groups of bra sizes that share the exact same cup volume, despite having different band sizes and cup letters. They allow you to adjust the band fit without sacrificing the cup capacity."

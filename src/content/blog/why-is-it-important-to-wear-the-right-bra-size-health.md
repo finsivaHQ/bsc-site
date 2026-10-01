@@ -8,7 +8,7 @@ tags:
   - Bra Fit
   - Health
   - Posture
-author: "FinsivaHQ"
+author: "Editorial Team"
 faqs:
   - question: "Why is it important to wear the right bra size?"
     answer: "Wearing the right bra size ensures proper biomechanical support, which helps alleviate back and shoulder pain, improves your overall posture, and maintains the health of delicate breast tissues."

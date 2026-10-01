@@ -5,7 +5,7 @@ pubDate: 2026-09-23
 heroImage: "/img/bra-cup-fit-guide.jpg"
 fitReviewed: true
 tags: ["bra fit", "g cup", "bra sizing", "lingerie guide"]
-author: "FinsivaHQ"
+author: "Editorial Team"
 faqs:
   - question: "What is a G cup in inches?"
     answer: "A G cup typically represents a 9-inch difference between your underbust and overbust measurement in standard US sizing, though this varies depending on the specific sizing system."

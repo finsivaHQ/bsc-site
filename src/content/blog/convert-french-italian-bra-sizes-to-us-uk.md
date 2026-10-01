@@ -5,7 +5,7 @@ pubDate: 2026-09-30
 heroImage: "/img/bra-strap-fit-guide.jpg"
 fitReviewed: true
 tags: ["international sizing", "french bras", "italian bras", "eu sizing"]
-author: "FinsivaHQ"
+author: "Editorial Team"
 faqs:
   - question: "What is the difference between French and EU bra sizes?"
     answer: "French bra band sizes are calculated by taking the EU band size (in cm) and adding 15. So, an EU 75 band is identical to a French 90 band."

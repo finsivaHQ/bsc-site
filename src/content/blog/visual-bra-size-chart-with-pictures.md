@@ -5,7 +5,7 @@ pubDate: 2026-09-06
 heroImage: "/img/bra-cup-fit-guide.jpg"
 fitReviewed: true
 tags: ["visual size chart", "bra comparison", "bra fit pictures"]
-author: "FinsivaHQ"
+author: "Editorial Team"
 faqs:
   - question: "Why is a visual bra size chart with pictures helpful?"
     answer: "A visual bra size chart shatters the myth of what certain sizes 'look like'. It shows that cup size is proportional to band size, meaning a D cup isn't inherently 'large' on a smaller frame, and helps you identify your true size by comparing real-world examples."

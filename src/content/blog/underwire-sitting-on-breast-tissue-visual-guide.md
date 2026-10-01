@@ -5,7 +5,7 @@ pubDate: 2026-09-30
 heroImage: "/img/bra-measure-dos-donts.jpg"
 fitReviewed: true
 tags: ["bra fit", "underwire pain", "breast root"]
-author: "FinsivaHQ"
+author: "Editorial Team"
 faqs:
   - question: "Why does my underwire hurt on the sides?"
     answer: "If your underwire hurts on the sides, near your armpits, it is likely sitting on top of your breast tissue instead of encapsulating it. This means the cups or the underwires themselves are too narrow for your breast root."

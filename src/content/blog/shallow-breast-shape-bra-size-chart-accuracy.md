@@ -5,7 +5,7 @@ pubDate: 2026-09-30
 heroImage: "/img/bra-cup-fit-guide.jpg"
 fitReviewed: true
 tags: ["breast shape", "shallow breasts", "bra sizing"]
-author: "FinsivaHQ"
+author: "Editorial Team"
 faqs:
   - question: "What does it mean to have shallow breasts?"
     answer: "Shallow breasts have breast tissue that is spread widely across the chest wall, rather than protruding outward. They often look smaller than their actual calculated cup volume."

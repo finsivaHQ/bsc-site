@@ -5,7 +5,7 @@ pubDate: 2026-09-23
 heroImage: "/img/bra-cup-fit-guide.jpg"
 fitReviewed: true
 tags: ["bra fit", "lingerie", "comfort", "sizing guide"]
-author: "FinsivaHQ"
+author: "Editorial Team"
 faqs:
   - question: "Why does my bra band ride up in the back?"
     answer: "A band that rides up is a clear indicator that your bra is too large in the band and likely too small in the cup. The band should sit perfectly parallel to the floor, acting as the primary source of support. When it rides up, the structural balance is lost."

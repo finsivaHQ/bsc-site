@@ -5,7 +5,7 @@ pubDate: 2026-09-23
 heroImage: "/img/bra-measure-dos-donts.jpg"
 fitReviewed: true
 tags: ["bra fitting", "measurement guide", "professional advice", "womens health"]
-author: "FinsivaHQ"
+author: "Editorial Team"
 faqs:
   - question: "How to fit a bra size correctly without a professional?"
     answer: "You can achieve a precise fit at home by using a soft measuring tape, ensuring it remains parallel to the floor, and calculating the difference between your snug underbust and fullest bust measurements."

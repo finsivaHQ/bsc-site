@@ -24,6 +24,46 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Sister sizing maintains constant volumetric displacement (V) by balancing band circumference (B) against cup index (C): to decrease band size by 2 inches (B - 2), you increase the cup index by 1 letter (C + 1). To increase band size by 2 inches (B + 2), you decrease the cup index by 1 letter (C - 1)."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do you use the direct measurement method instead of the +4 method?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We strictly use the direct measurement method because the +4 method mathematically inflates the band size. This results in a loose band that cannot provide adequate friction against the ribcage. It forces the wearer into smaller cup volumes that sit on top of the breast tissue rather than fully encapsulating it, leading to a profound lack of support, discomfort, and poor posture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much of the breast's weight should the band actually support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In a correctly engineered and fitted bra, the underbust band is responsible for supporting 80% to 90% of the breast's weight through tension and friction against the ribcage. The shoulder straps are only meant to carry the remaining 10% to 20%, serving primarily to shape the top of the cup and keep the fabric flush against the chest wall."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are my straps digging into my shoulders if my bra supposedly fits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your straps are painful, digging into your shoulders, or leaving deep red indentations, your bra does not fit correctly. This is the classic symptom of a band that is much too loose. When the band fails to carry its 80% share of the structural load, 100% of the weight transfers to the thin shoulder straps, causing severe neck and shoulder strain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do cup sizes represent a fixed volume of breast tissue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, they do not. Cup sizes are relative ratios, not fixed volumes. A 'D' cup simply indicates a mathematical 4-inch difference between your underbust and overbust circumferences. Therefore, the actual volume of a 32D and a 38D are vastly different, despite both sharing the 'D' designation. A 38D holds significantly more volume than a 32D."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens mathematically and physically when my band is too large?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mathematically, a too-large band means its circumference exceeds your ribcage measurement. Since friction requires normal force (tension), a loose band provides zero tension and thus zero grip. Physically, gravity pulls the front of the bra downward, acting as a lever that yanks the back of the band upwards between your shoulder blades."
+      }
     }
   ]
 };
@@ -47,38 +87,76 @@ const faqSchema = {
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
         BraSizeChecker Technical Calculation Methodology
       </h1>
-      <div class="flex items-center gap-3 text-xs text-mute mb-4">
+      <div class="flex items-center gap-3 text-xs text-mute mb-4 justify-center sm:justify-start">
         <span>By BraSizeChecker Technical Engineering Team</span>
         <span>&bull;</span>
         <time datetime="2026-09-04">Updated September 2026</time>
       </div>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        Transparency is fundamental to scientific fitting accuracy. On this page, we document the exact mathematical equations, rounding tolerances, cup delta array mappings, sister size matrices, and international standards (EN 13402, UK BS, US Standard) implemented by BraSizeChecker.
+        Transparency is fundamental to scientific fitting accuracy, but more importantly, it is the cornerstone of trust. For decades, the intimate apparel industry has relied on obscure sizing methods, archaic formulas, and proprietary sizing charts designed to fit women into a limited inventory rather than designing inventory to fit women. Here at BraSizeChecker, we believe that understanding your body shouldn't require a degree in structural engineering—even though the mechanics of a great bra absolutely rely on it.
+      </p>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl mt-4">
+        On this page, we lay bare the exact mathematical equations, rounding tolerances, cup delta array mappings, sister size matrices, and international standards (like EN 13402, UK BS, and US Standards) that power our calculation engine. We want you to understand exactly how we arrive at your recommended size, why we reject outdated industry practices, and how the physics of breast support actually work. Because when you understand the "why" behind the numbers, you are empowered to advocate for your own comfort, health, and confidence. Our mission is to demystify bra sizing, replacing confusion and frustration with clarity, science, and a deep sense of empathy for the lived experience of bra wearers everywhere.
       </p>
     </header>
 
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      
+      <!-- Section: The Physics of Bra Support -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">The Physics of Bra Support: Band vs. Straps</h2>
+        <p class="mb-4">
+          To truly understand how our sizing algorithms work, we first need to talk about biomechanics and physics. A bra is, fundamentally, a structural suspension system engineered to counteract the continuous, relentless downward force of gravity. But how that mechanical load is distributed makes the profound difference between feeling weightless and feeling like you are carrying the weight of the world on your shoulders.
+        </p>
+        <p class="mb-4">
+          Many people mistakenly believe that the shoulder straps are doing the heavy lifting. We tug at them, tighten them to their absolute limits, and suffer in silence as they dig into our skin. In reality, the shoulder straps are only meant to do about 10% to 20% of the work. Their primary job is simply to keep the fabric of the cup smooth against your chest, prevent top spillage, and provide a small amount of shaping.
+        </p>
+        <p class="mb-4">
+          The true hero of the suspension system is the underbust band. In a correctly fitted bra, the band should seamlessly support 80% to 90% of the breast's weight. How does it accomplish this? Through tension and friction. The band must wrap around your ribcage snugly enough to create a firm, unmoving anchor point. When the band sits level and parallel to the floor, firmly gripping the ribcage, it creates a stable foundation. The underwires (or wireless seams) sit flush against the chest wall, right under the inframammary fold—the exact crease where the breast tissue meets the chest. From this anchored base, the cups can effectively encapsulate, lift, and project the tissue forward.
+        </p>
+        <p>
+          If the band is too loose, the physics instantly fall apart. Without sufficient tension, the band cannot create enough friction against the skin to stay in place. The weight of the breasts pulls the front of the bra down, creating a lever effect that inevitably pulls the back of the band up between the shoulder blades. When the band fails, the shoulder straps are cruelly forced to take over 100% of the load. This is a biomechanical disaster. The thin straps dig deeply into the soft tissue of the shoulders, putting immense pressure on the trapezius muscles and the brachial plexus nerves. This structural failure is the root cause of the chronic shoulder indentations, neck pain, tension headaches, and upper back fatigue that millions of women endure every single day. Our methodology rigorously anchors the band size directly to your literal ribcage measurement to ensure this vital structural foundation is rock solid.
+        </p>
+      </section>
+
+      <!-- Section: The Mathematical Flaw of the +4 Method -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">The Mathematical Flaw of the "+4 Method"</h2>
+        <p class="mb-4">
+          Perhaps the most damaging and pervasive myth in the history of lingerie fitting is the "+4 method." If you have ever been fitted in a standard mall department store or a major chain boutique, you have almost certainly been subjected to this archaic rule. The +4 method dictates that you take your snug underbust measurement in inches, and then indiscriminately add 4 inches (or 5 inches, if it happens to be an odd number) to determine your band size.
+        </p>
+        <p class="mb-4">
+          Mathematically, structurally, and physiologically, this makes absolutely no sense. Consider the geometry: if your ribcage measures exactly 32 inches around, your skeletal frame and surrounding tissue equal a 32-inch circumference. Adding 4 inches magically yields a size 36 band. But a 36-inch band is manufactured and structurally engineered to grip a 36-inch ribcage. When it is placed on a 32-inch ribcage, it is a full four inches too large. It provides zero tension. Zero tension translates to zero friction, which ultimately means zero support.
+        </p>
+        <p class="mb-4">
+          So, where did this nonsensical rule come from? In the 1930s and 1940s, bra fabrics were rigid, stiff, and completely lacking in elasticity. Synthetic stretch fibers like Elastane and Spandex were not yet widely used. To ensure that wearers could literally expand their ribs to breathe, manufacturers advised adding several inches to the underbust measurement. Furthermore, early sizing systems were loosely based on generalized dress sizes rather than literal anatomical measurements. Today, however, modern bras are constructed with highly elastic power mesh and advanced stretch knits. A modern size 32 band is perfectly designed to stretch comfortably over exactly 32 inches, breathing with you while maintaining a firm grip.
+        </p>
+        <p>
+          When a retailer or brand uses the +4 method today, they are intentionally putting you in a band that they know is too large. Why would they do this? The answer is unfortunately simple: inventory management and cost reduction. The +4 method artificially compresses the vast, beautiful, and complex diversity of human bodies into a very narrow range of sizes that are cheap to mass-produce and easy to stock. By artificially inflating your band size, they simultaneously and mathematically shrink your required cup volume. For example, a true 32G—a size many mainstream stores refuse to manufacture or stock—is often incorrectly fitted by store associates as a 36DD, a size every store carries in abundance. The wearer is left walking out of the store with a band that constantly rides up their back and cups that function merely as "boob hats"—sitting loosely in front of the breasts rather than encapsulating and supporting them. BraSizeChecker decisively and unapologetically rejects the +4 method. Our algorithms use your raw, un-altered underbust measurement as the foundational truth for all calculations.
+        </p>
+      </section>
+
       <!-- Section 1: System Inputs & Pre-Processing -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
         <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. System Inputs & Unit Conversion Physics</h2>
         <p class="mb-4">
-          The calculation engine consumes two primary physiological variables:
+          At the core of our calculation engine, the system ingests two primary, highly sensitive physiological variables. These must be taken accurately, ideally without wearing a padded bra, to ensure the input data is pure:
         </p>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
             <h3 class="font-bold text-primary mb-1 text-sm uppercase tracking-wider">Underbust Circumference (U)</h3>
-            <p class="text-xs text-body">Snug horizontal measurement around the ribcage directly beneath the inframammary fold crease.</p>
+            <p class="text-xs text-body">A snug, horizontal measurement taken securely around the ribcage, resting directly beneath the inframammary fold crease. This is the structural anchor.</p>
           </div>
 
           <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
             <h3 class="font-bold text-primary mb-1 text-sm uppercase tracking-wider">Overbust Circumference (B)</h3>
-            <p class="text-xs text-body">Loose horizontal measurement across the fullest projection apex of the chest wall.</p>
+            <p class="text-xs text-body">A slightly looser horizontal measurement taken completely across the fullest projection apex of the chest wall, usually across the nipples.</p>
           </div>
         </div>
 
         <p class="mb-4">
-          If the user inputs measurements in metric centimeters, the system performs pre-processing unit transformation:
+          Because the foundational mathematics of bra sizing (specifically the US and UK systems) were developed using the Imperial inch, our engine standardizes all data. If a user inputs their measurements in metric centimeters, the system instantly performs a precise pre-processing unit transformation:
         </p>
 
         <div class="p-4 bg-canvas border border-hairline rounded-xl text-center mb-4 font-mono text-xs sm:text-sm text-ink font-bold">
@@ -90,14 +168,14 @@ const faqSchema = {
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
         <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Underbust Band Calculation Algorithms</h2>
         <p class="mb-4">
-          BraSizeChecker calculates underbust band sizes across three regional standard models:
+          Once the raw measurements are standardized, BraSizeChecker calculates the optimal underbust band sizes across three dominant regional standard models, dynamically adapting to the nuanced conventions of international sizing:
         </p>
 
         <div class="space-y-4 mb-6">
           <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
             <h3 class="font-bold text-ink mb-1 text-sm">Model A: US & UK Modern Direct Underbust Equation</h3>
             <p class="text-xs sm:text-sm text-body mb-2">
-              For US and UK sizing, the raw underbust measurement is rounded to the nearest even integer to anchor 80% of support load against ribcage friction:
+              For United States and United Kingdom sizing, the system strictly applies the direct measurement methodology. The raw underbust measurement is calculated and rounded to the nearest even integer, assuring that we anchor 80-90% of the support load against the necessary ribcage friction:
             </p>
             <code class="block bg-canvas p-2.5 rounded border border-hairline text-primary font-mono text-xs">
               Band_US_UK = Math.ceil(U_inches / 2) * 2
@@ -107,7 +185,7 @@ const faqSchema = {
           <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
             <h3 class="font-bold text-ink mb-1 text-sm">Model B: European EN 13402 Metric Specification</h3>
             <p class="text-xs sm:text-sm text-body mb-2">
-              European band numbers represent underbust centimeters rounded to the nearest 5 cm step:
+              The European standard (EN 13402) operates natively in centimeters. European band numbers do not translate directly to inches; rather, they represent the underbust circumference in centimeters rounded mathematically to the nearest 5 cm interval:
             </p>
             <code class="block bg-canvas p-2.5 rounded border border-hairline text-ink font-mono text-xs">
               Band_EU = Math.round(U_cm / 5) * 5
@@ -117,7 +195,7 @@ const faqSchema = {
           <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
             <h3 class="font-bold text-ink mb-1 text-sm">Model C: French (FR/BE/ES) & Australian (AU/NZ) Offsets</h3>
             <p class="text-xs sm:text-sm text-body mb-2">
-              French and Australian sizes are computed using deterministic linear offsets from EU and US bands:
+              French sizing (also used in Belgium and Spain) and Australian sizing (also used in New Zealand) are computed using deterministic linear offsets derived directly from the EU and US band bases:
             </p>
             <code class="block bg-canvas p-2.5 rounded border border-hairline text-ink font-mono text-xs">
               Band_FR = Band_EU + 15 &nbsp;&nbsp;|&nbsp;&nbsp; Band_AU = 8 + (Band_US - 30)
@@ -130,12 +208,16 @@ const faqSchema = {
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
         <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. Cup Volume Delta Mapping</h2>
         <p class="mb-4">
-          Cup size is calculated from the volumetric difference (&Delta;) between full bust and calculated band size:
+          The concept of a "cup size" is highly misunderstood. A cup letter does not represent a static, objective volume of breast tissue. Instead, cup size is dynamically calculated from the volumetric difference (the mathematical delta, denoted as &Delta;) between the full overbust measurement and the calculated band size. Every 1-inch increase in this delta traditionally correlates to moving up one sequential cup letter.
         </p>
 
         <div class="p-4 bg-canvas border border-hairline rounded-xl text-center mb-6 font-mono text-xs sm:text-sm text-ink font-bold">
           &Delta;_inches = B_inches - U_inches
         </div>
+        
+        <p class="mb-4">
+          Because international systems diverge heavily after the "D" cup, our algorithm maps the delta integer to a precise array index, which then retrieves the correctly translated cup letter for US, UK, and EU specifications.
+        </p>
 
         <!-- Data Table 1: Full Technical Array Mapping -->
         <h3 class="text-lg font-bold text-ink mb-3">System Cup Delta Array Index Mapping</h3>
@@ -169,7 +251,10 @@ const faqSchema = {
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
         <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. Sister Size Transformation Logic</h2>
         <p class="mb-4">
-          Sister size generation maintains constant volumetric displacement ($V$) across band size steps ($B$) by shifting the cup index ($C_idx$):
+          Finding the perfect fit is rarely a static process; it requires dynamic adaptation based on brand idiosyncrasies and personal preference. This is where sister sizing becomes essential. Sister sizing is the mathematical principle of maintaining a constant volumetric displacement ($V$) of the cup while shifting the band size ($B$).
+        </p>
+        <p class="mb-4">
+          To maintain the exact same volume of tissue encapsulation, altering the band size requires an inversely proportional shift in the cup index ($C_idx$). If you decrease the band circumference, you must increase the cup letter. If you increase the band circumference, you must decrease the cup letter. Our engine automates this transformation seamlessly:
         </p>
 
         <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl mb-6 space-y-2">
@@ -180,11 +265,17 @@ const faqSchema = {
             <strong>Looser Sister Size:</strong> Band_New = Band + 2 &nbsp;&nbsp;&rArr;&nbsp;&nbsp; CupIndex_New = CupIndex - 1
           </p>
         </div>
+        <p>
+          By understanding sister sizing, you empower yourself to navigate the often inconsistent sizing standards across different global lingerie brands, ensuring you always find a garment that honors the true volume of your body.
+        </p>
       </section>
 
       <!-- Section 5: Interactive Tools & Next Steps -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
         <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">5. Test Our Algorithms Online</h2>
+        <p class="mb-4 text-body">
+          Now that you understand the rigorous physics, mathematical formulas, and deep-rooted empathy that govern our sizing engine, we invite you to put our algorithms to the test. Let us help you find the structural support and supreme comfort you genuinely deserve.
+        </p>
         <div class="flex flex-wrap gap-3">
           <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
             Open Primary Calculator &rarr;
@@ -205,8 +296,8 @@ const faqSchema = {
           {faqSchema.mainEntity.map(item => (
             <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
               <summary class="font-bold text-ink flex justify-between items-center list-none">
-                <span>{item.name}</span>
-                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+                <span class="pr-6">{item.name}</span>
+                <span class="text-primary group-open:rotate-180 transition-transform shrink-0">&darr;</span>
               </summary>
               <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
             </details>

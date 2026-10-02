@@ -13,85 +13,159 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   <main class="flex-1 w-full max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
     <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />
 
-    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-ink mb-6">Privacy Policy</h1>
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-ink mb-6">Privacy Policy & Our Stance on Data</h1>
     <div class="prose prose-slate max-w-none text-body space-y-6 leading-relaxed text-sm sm:text-base">
       <p class="text-xs text-mute font-mono uppercase tracking-wider">Last updated: October 2026</p>
       
       <section>
-        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">1. Introduction and Core Philosophy</h2>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">Introduction: A Radical Stance on Privacy</h2>
         <p>
           Welcome to BraSizeChecker.com. We respect your privacy and are committed to maintaining full transparency regarding data processing. This Privacy Policy explains exactly how our calculator operates and how information is handled when you visit our website.
         </p>
         <p>
-          Unlike many online retail stores that force you to create an account to save your sizes for marketing purposes, we believe your physical dimensions are deeply personal and highly sensitive. Our platform is engineered to never see or store your bodily data.
+          Unlike many online retail stores that force you to create an account to save your sizes for marketing purposes, we believe your physical dimensions are deeply personal and highly sensitive. Our platform is engineered from the ground up to never see, store, or transmit your bodily data. We believe that privacy is not just a feature, but a fundamental human right, particularly when it comes to the intimate details of your physical form.
         </p>
       </section>
 
       <section>
-        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">2. Body Measurement Privacy (Local Processing)</h2>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">1. The History of Data Mining in the Retail Industry</h2>
         <p>
-          Your body measurements (bust, underbust, leaning, lying, etc.) are processed <strong>100% locally</strong> inside your browser's JavaScript engine. 
+          To understand why we have taken such a strong stance on data protection, it is helpful to look at the historical context of the retail and apparel industry. Over the past two decades, many online retailers realized that capturing physical measurements was a gold mine for their marketing departments. They began requiring users to create accounts, ostensibly to "save sizes for convenience" or offer a "personalized shopping experience." 
         </p>
-        <ul class="list-disc pl-5 sm:pl-6 space-y-2 mt-2">
+        <p>
+          In reality, this allowed corporations to build highly intimate demographic profiles of their customers. They connected bust, underbust, and other physical proportions to your email address, physical address, and credit card history. When an entity knows everything about your physical shape and size, they hold an uncomfortable amount of power. It quickly became an industry standard to track these metrics to hyper-target advertisements, sometimes deliberately exploiting physical insecurities to push targeted sales. If a company knows you just measured yourself and might have changed sizes, they can immediately flood your inbox and social media feeds with advertisements designed to make you feel inadequate unless you purchase their products. 
+        </p>
+        <p>
+          We fundamentally reject this entire paradigm. We believe that the corporatization and surveillance of the human body is inherently wrong. You should never have to trade away your privacy and personal data just to figure out what size clothing you need to wear. 
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">2. Why Your Body Measurements Are Sacred</h2>
+        <p>
+          A person's physical measurements are not just random numbers; they are deeply intimate, personal data points. Taking these measurements often requires a moment of vulnerability. You stand in front of a mirror, perhaps feeling exposed, navigating the complex relationship many of us have with our own bodies. Your bust size, the shape of your ribs, the way your body leans or lies—these are not commodities to be bought, sold, or traded on the open market. 
+        </p>
+        <p>
+          They are sacred metrics that belong entirely to you and you alone. When you type those numbers into a screen, you are trusting the software on the other side. Historically, the modern internet has betrayed that trust, hoovering up every keystroke and storing it in a massive cloud database indefinitely. We view your physical body data as akin to sensitive medical data. It is nobody's business but yours. We built BraSizeChecker upon the foundational philosophy that your body is yours, your measurements are yours, and our only job is to provide the math required to help you find comfort. We don't want your data. We don't need your data. And we have explicitly designed our systems to ensure we can never access it.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">3. The Mechanics of Privacy: How Local JavaScript Works</h2>
+        <p>
+          You might naturally be wondering: "If you don't collect my data, how does the calculator actually work? How does it know my size?" The answer lies in a web programming technology called "Local JavaScript processing." 
+        </p>
+        <p>
+          To understand this, let's use a real-world analogy. Imagine you walk into a store and need help with some complex math to figure out your size. In the old internet model, you would write your numbers on a piece of paper, hand it to a clerk (your browser), who puts it in an envelope, mails it to a giant warehouse in another state (a server), where a massive computer calculates the answer, writes it down, and mails the answer back to you. In that scenario, the warehouse now has a permanent copy of your piece of paper and knows exactly what you asked.
+        </p>
+        <p>
+          Our website works entirely differently. Instead of mailing your numbers to a warehouse, we simply hand you a digital pocket calculator the exact moment you open our webpage. Once our website loads on your screen, all the instructions (the mathematical sizing formulas) are downloaded directly to your device—whether that is your phone, tablet, or desktop computer. When you type in your measurements, those numbers go strictly into the digital pocket calculator sitting on your device. The calculation happens right there, instantly, on your own hardware processor. 
+        </p>
+        <p>
+          Your numbers are never put into an envelope, and they are never mailed across the internet connection. Because the math is executed locally within your web browser, our remote servers remain completely blind to what you are doing. We have no idea if you typed in 28 inches or 48 inches. The data never leaves your physical device. Once you close the browser tab, the digital pocket calculator effectively disappears, and the numbers are wiped from the computer's temporary memory forever. There is no trace left behind.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">4. Our Zero-Collection Guarantee</h2>
+        <p>
+          Because of our local processing architecture, we can offer an absolute guarantee regarding your measurement data. Your bust, underbust, leaning, and lying measurements are processed <strong>100% locally</strong> inside your browser's JavaScript engine.
+        </p>
+        <ul class="list-disc pl-5 sm:pl-6 space-y-2 mt-2 mb-4">
           <li>Measurements are <strong>never</strong> transmitted over network requests or sent to remote servers.</li>
           <li>Measurements are <strong>never</strong> stored in databases, cookies, `localStorage`, or `sessionStorage`.</li>
           <li>Measurements are <strong>never</strong> included in query parameters or analytics events.</li>
           <li>Once you close or refresh your browser tab, your entered measurements vanish from memory entirely.</li>
         </ul>
-        <p>This means that in the event of a theoretical server breach, your measurements cannot be stolen, because they simply do not exist on our servers.</p>
-      </section>
-
-      <section>
-        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">3. No Account Required</h2>
         <p>
-          BraSizeChecker.com is open to all users without registration. We do not require users to create an account, log in, or provide a name, email address, or personal profile to use the sizing tool. We do not want your email address unless you are specifically reaching out to our support team for assistance.
+          This zero-collection approach provides ultimate security. In the theoretical event that our web servers were ever compromised by a malicious hacker, there is absolutely zero measurement data for them to steal or extort, because it simply does not exist on our servers. You cannot leak what you do not have.
         </p>
       </section>
 
       <section>
-        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">4. Contact Form Submissions</h2>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">5. No Accounts, No Profiles, No Friction</h2>
         <p>
-          If you choose to submit an inquiry through our <a href="/contact/" class="text-primary font-medium hover:underline">Contact Us</a> page, you voluntarily provide your email address and message contents. 
+          A key part of our privacy strategy is intentional frictionlessness. The modern internet has conditioned users to expect a login screen or a registration prompt for everything. "Create an account to see your results!" is a predatory tactic designed solely for data capture and marketing retention. 
         </p>
-        <p class="mt-2">
-          Contact form submissions are securely processed via Formspree solely for the purpose of responding to your inquiry. Formspree handles form data in accordance with strict privacy standards. We will never add your email to a marketing newsletter without explicit consent, and we will never sell your contact information.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">5. Browser Storage & Cookies</h2>
         <p>
-          We do not use tracking or advertising cookies. The only item saved in your browser's local storage (`localStorage`) is your preferred color theme (`light` or `dark`), which allows the website to preserve your visual theme choice across visits. This is purely a functional mechanism and contains no personal data.
+          BraSizeChecker is completely open and free to use without any registration whatsoever. We do not require users to create an account, log in, or provide a name, email address, or personal profile to use the sizing tool. We do not want your email address unless you are specifically reaching out to our support team for assistance. By eliminating user profiles, we eliminate the temptation and the capability to link your browsing behavior and highly sensitive measurement data to your personal identity. You visit as an anonymous user, you calculate your size anonymously, and you leave anonymously. That is exactly how it should be.
         </p>
       </section>
 
       <section>
-        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">6. Third-Party Links & Services</h2>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">6. Cookies and Browser Storage</h2>
         <p>
-          Our website contains no third-party tracking scripts or advertising networks on sizing pages. If external links are provided (such as links to bra retailers or educational forums like Reddit's A Bra That Fits), we encourage you to review the privacy policies of any third-party websites you visit, as we have no control over their tracking mechanisms.
+          We despise the modern web's reliance on tracking cookies and third-party advertising surveillance. Therefore, BraSizeChecker operates with absolute minimalism. We do not deploy any intrusive advertising cookies, cross-site retargeting pixels, or invasive behavioral trackers on our core sizing tool pages. 
+        </p>
+        <p>
+          The only piece of information we may save in your browser's local storage is a simple preference toggle for your visual experience—specifically, whether you prefer the "light" or "dark" color theme. This single setting allows the website to remember if you like a bright background or a dark background the next time you visit. It is purely a functional mechanism, contains absolutely zero personal data, and cannot be used to track you across the internet.
         </p>
       </section>
 
       <section>
-        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">7. GDPR, CCPA, and Global Privacy Compliance</h2>
-        <p>If you are a resident of the European Economic Area (EEA) under the General Data Protection Regulation (GDPR), a California resident under the CCPA, or a citizen of another jurisdiction with strict data laws, you have specific data protection rights.</p>
-        <p>Because we explicitly do not store, process, or collect any personal health data (including body measurements), there is no personal data database to query. However, if you have contacted us via email or our contact form, you maintain the right to request access to, correction of, or deletion of that specific communication data. We strictly adhere to the principle of data minimization.</p>
-      </section>
-
-      <section>
-        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">8. Log Files and Analytics</h2>
-        <p>Like many modern websites, we collect standard log files to ensure site functionality, security, and performance. This anonymous data includes IP addresses (anonymized where required by law), browser types, ISPs, date/time stamps, and referring/exit pages. This information is critical for defending against cyber attacks and is not linked to any information that is personally identifiable.</p>
-      </section>
-
-      <section>
-        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">9. Children's Privacy</h2>
-        <p>Our tools are designed for adult users. We do not knowingly collect personal information from individuals under the age of 13. If we become aware that a child under 13 has provided us with personal information (such as via an email), we will take steps to delete such information immediately.</p>
-      </section>
-
-      <section>
-        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">10. Contact Us</h2>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">7. Third-Party Links, Services, and External Platforms</h2>
         <p>
-          If you have any questions, feedback, or data deletion requests regarding this Privacy Policy, please email us directly at <a href="mailto:ornacasa11@gmail.com" class="text-primary font-medium hover:underline">ornacasa11@gmail.com</a>.
+          While our core calculator is a closed, secure ecosystem, we do occasionally provide links out to the broader internet. For instance, we may link to educational resources, community forums like Reddit's amazing "A Bra That Fits" community, or external retailers where you might purchase garments in your newly calculated size. 
+        </p>
+        <p>
+          It is vitally important to understand that once you click a link and leave BraSizeChecker.com, our strict privacy protections no longer apply. We do not control those external websites. They have their own privacy policies, their own tracking mechanisms, and their own philosophies on data collection. We strongly encourage you to review the privacy policies of any third-party websites you visit, as we have no control over their tracking mechanisms. Rest assured, we do not share any of your measurement data with these third parties—because, as established, we don't have it to share in the first place.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">8. Communication: When You Choose to Contact Us</h2>
+        <p>
+          The only time we ever interact with your personal information is when you explicitly and voluntarily choose to hand it to us. If you encounter an issue, have a suggestion, or just want to reach out, you might use our <a href="/contact/" class="text-primary font-medium hover:underline">Contact Us</a> page or email us directly.
+        </p>
+        <p>
+          When you do this, you are providing us with your email address and the contents of your message. We treat this communication with the utmost respect. Contact form submissions are processed securely through our form provider (such as Formspree) solely so we can receive your message and write back to you. They handle form data in accordance with strict privacy standards. We will never harvest these email addresses for marketing purposes, we will never silently subscribe you to a promotional newsletter, and we will absolutely never sell your contact information to a third-party lead generation company. Your email is used for customer support and human-to-human conversation, nothing else.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">9. Analytics, Server Logs, and Operational Data</h2>
+        <p>
+          Like almost every functioning website on the internet, our hosting infrastructure automatically collects standard log files. This is not for spying on users; it is strictly for keeping the website online, performant, and secure. When a device requests a page from our server, basic telemetry is recorded: the IP address (which is anonymized where required by law), the type of browser being used, Internet Service Providers (ISPs), date/time stamps, and referring/exit pages. 
+        </p>
+        <p>
+          We use this high-level, aggregate data to monitor overall server performance, ensure the site isn't crashing under heavy traffic, and defend against malicious cyber attacks. This anonymous operational data is kept strictly separate from the calculator functionality, and it is entirely unlinked from any personally identifiable information.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">10. Global Privacy Compliance (GDPR, CCPA, and Beyond)</h2>
+        <p>
+          We designed our systems to be inherently compliant with the strictest privacy laws in the world, including the European Economic Area's (EEA) General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). These laws grant consumers powerful rights regarding their personal data, including the right to access it, correct it, and demand its deletion.
+        </p>
+        <p>
+          Because our entire philosophy is built around data minimization—explicitly not storing, processing, or collecting any personal health data—compliance is straightforward. If you submit a Subject Access Request asking for the measurement data we have on file for you, our response will be that there is no personal data database to query. We are fundamentally incapable of turning over your data, because it never touches our servers. However, if you have contacted us via email or our contact form in the past, you maintain the right to request access to, correction of, or deletion of that specific communication data, and we will comply promptly and thoroughly.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">11. Children's Privacy Protection</h2>
+        <p>
+          Our sizing tools and educational resources are intended strictly for adult users. We do not knowingly solicit, collect, or process any personal information from children under the age of 13 (or higher age thresholds as defined by specific regional laws). If we become aware that a child under 13 has provided us with personal information (such as via an email inquiry), we will take swift action to locate and permanently expunge that information from our communication records immediately.
+        </p>
+      </section>
+      
+      <section>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">12. Evolving Policies for an Evolving Web</h2>
+        <p>
+          The internet is not a static place. Technologies change, legal frameworks evolve, and new security best practices emerge constantly. While our foundational philosophy—that your body measurements are none of our business—will never change, the specific technical details of this Privacy Policy may be updated from time to time to reflect changes in the law or improvements to our website structure. 
+        </p>
+        <p>
+          When we make updates, we will revise the "Last updated" date at the top of this page. We encourage you to review this policy periodically so that you remain fully informed about how we are protecting your privacy. Your continued use of the website after any changes constitutes your acceptance of the new terms.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg sm:text-xl font-bold text-ink mb-3">13. Final Thoughts and Getting in Touch</h2>
+        <p>
+          We understand that reading privacy policies is rarely an exciting activity. However, in an era of unprecedented corporate surveillance, we believe it is one of the most important pages on our website. We want you to feel incredibly safe when you use our tools. We want you to know that there is still software in the world designed to help you without secretly trying to exploit you or commodify your physical insecurities. 
+        </p>
+        <p>
+          If you have read through this document and still have lingering questions, concerns, or feedback about our approach to privacy, data security, or deletion requests, we genuinely want to hear from you. We are real people building tools for real people. You can reach out to us directly at any time by sending an email to <a href="mailto:ornacasa11@gmail.com" class="text-primary font-medium hover:underline">ornacasa11@gmail.com</a>. We will do our absolute best to address your concerns with clarity and honesty.
         </p>
       </section>
     </div>

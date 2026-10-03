@@ -8,6 +8,24 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+
+    {
+      "@type": "Question",
+      "name": "Can a poorly fitting bra cause permanent changes to my body?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Long-term wear of a bra with a loose band and tight straps can cause permanent grooving in the shoulder tissue and contribute to chronic postural issues like kyphosis (hunched back). Wires resting on breast tissue can also cause painful tissue migration over time."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Why do I feel so much better in a sports bra than a regular bra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sports bras often rely on compression and a very firm band to eliminate bounce. If you find them drastically more comfortable than everyday bras, it's a huge indicator that your everyday bras have bands that are much too loose, failing to provide the firm anchorage your ribcage craves."
+      }
+    },
     {
       "@type": "Question",
       "name": "How do I know if my bra fitting issue is caused by the band or the cup?",
@@ -22,6 +40,54 @@ const faqSchema = {
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "The most common fitting mistake is wearing a band that is too loose (e.g. 36 band instead of 32) paired with a cup that is too small (e.g. B cup instead of E/DD). This causes the band to ride up your back and forces shoulder straps to carry all the bust weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do my bra straps keep falling down even after I tighten them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Slipping straps are almost always a symptom of a band that is too loose. When the band is loose, it rides up in the back, causing the straps to slide off your shoulders. Moving to a smaller band size anchors the bra correctly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it normal for my underwire to poke or dig into my ribs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, underwire digging is never normal and is usually a sign of a cup that is too small or a wire width that doesn't match your breast root. If the cup is too small, your breast tissue pushes the bra away, forcing the wire to dig into your ribs or sternum."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I have quad-boob or breast tissue spilling over the top of my bra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spillage, often called quad-boob, happens when the cup volume is simply too small for your breast tissue. The immediate solution is to keep your current band size and go up one or two cup letters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I measure my bra size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You should measure your bra size every 6 months, or whenever you experience significant weight changes, pregnancy, or simply notice your current bras becoming uncomfortable, causing shoulder pain, or leaving red marks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it mean if the center gore of my bra doesn't touch my sternum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the center piece of fabric between the cups (the gore) floats away from your chest, the cups are too small. Your breasts are pushing the cups outward, preventing the gore from tacking flat against your sternum. Try sizing up in the cup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a bad bra fit cause neck and shoulder pain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. If your band is too loose, it offers no support, forcing your shoulder straps to carry the heavy lifting. This excessive weight on your shoulders can lead to severe neck tension, shoulder grooving, and chronic pain."
       }
     }
   ]
@@ -110,16 +176,82 @@ const fitProblems = [
         Interactive Diagnostic Hub
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        Bra Fit Diagnostic Hub: Solve Every Fitting Problem
+        Bra Fit Diagnostic Hub: Solve Every Fitting Problem With Confidence
       </h1>
-      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        Calculating your baseline size is only the first step. Because brand elasticity, wire width, cup cut, and breast shape vary widely, minor fit issues can still occur. Use our master diagnostic decision matrix to isolate the root cause of your discomfort and apply instant solutions.
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl mb-6">
+        Calculating your baseline size is only the first step to true comfort. Because brand elasticity, wire width, cup cut, and your own unique breast shape vary widely, minor fit issues can still occur even when you're wearing the "right" numerical size. But you don't have to suffer in silence.
+      </p>
+      <p class="text-base text-body leading-relaxed max-w-3xl mb-6">
+        If you're reading this, chances are you've experienced the deep frustration of a poorly fitting bra. Maybe you're constantly tugging at slipping straps, battling a band that aggressively rides up your back, or enduring the sharp, unrelenting poke of an underwire digging into your ribs. These aren't just minor annoyances—they are symptoms of systemic sizing issues that can cause physical pain, posture problems, and destroy your confidence.
+      </p>
+      <p class="text-base text-body leading-relaxed max-w-3xl mb-6">
+        We deeply understand the exhaustion of trying on dozen of bras, only to leave the fitting room feeling defeated. The reality is that the bra industry has long normalized discomfort. You are told that beauty is pain, or that you just have "hard to fit" proportions. We're here to tell you unequivocally: <strong>the problem is the bra, not your body</strong>. Use our master diagnostic decision matrix below to isolate the root cause of your specific discomfort, and apply our targeted solutions. Let's reclaim your comfort. If you haven't checked your size recently, start by visiting our <a href="/how-to-measure/" class="text-primary hover:underline">comprehensive how-to-measure guide</a>.
       </p>
     </header>
+
+    <div class="prose prose-lg max-w-none text-body mb-10">
+      <h2 class="text-2xl font-bold text-ink">The Deep Emotional and Physical Reality of Bra Fitting</h2>
+      <p>
+        Let’s take a moment to deeply acknowledge the physical and emotional toll that an ill-fitting bra takes on your daily life. For far too long, the lingerie industry has normalized pain. We are taught to expect that the moment we walk through our front door, the first thing we must do is unhook our bra to finally breathe. We are told that beauty is pain, that red marks are normal, and that shoulder grooves are just a part of having breasts. But let us be unequivocally clear: this is a systemic failure of garment manufacturing, not a flaw in your beautiful, natural body.
+      </p>
+      <p>
+        The sheer exhaustion of dealing with underwires that dig into your sensitive breast tissue, bands that ride up and offer zero support, and straps that mercilessly slice into your trapezius muscles is profound. This isn't just about fashion; it's about your medical and physical well-being. When a bra fails to support you properly, your body is forced to compensate. Your shoulders hunch forward, trying to alleviate the downward pull on the straps. Your neck muscles tighten, leading to chronic tension headaches and upper back spasms. This constant, low-grade physical stress drains your energy and distracts you from living your life fully.
+      </p>
+      <p>
+        You might have stood in a harshly lit department store dressing room, trying on a dozen different bras in the size you were 'told' you are, only to find that every single one pinches, gaps, or spills over. The psychological impact of this experience is often one of deep inadequacy. You might look in the mirror and wonder, 'Why doesn't my body look like the mannequins? What is wrong with my shape?' The answer is absolutely nothing. The bra industry uses incredibly limited, statistically average fit models that fail to represent the immense, beautiful diversity of human breast shapes, root widths, and tissue densities. 
+      </p>
+      <p>
+        It is time to radically shift our perspective. A bra should be an article of clothing that serves you, not a cage that you must endure. It should be a masterpiece of engineering that lifts, supports, and seamlessly integrates with your unique anatomy. Finding that perfect fit is an act of radical self-care. It is a declaration that you refuse to accept pain as a baseline condition of your daily existence. When you finally find a bra that genuinely fits—a band that anchors securely around your ribcage without suffocating you, cups that perfectly encapsulate your breast tissue without spilling or gaping, and straps that simply rest gently on your shoulders—the relief is instantaneous and profound. You stand taller. Your silhouette changes. The chronic pain in your shoulders begins to melt away. You can finally breathe, move, and exist in the world without the constant, nagging distraction of a garment actively hurting you.
+      </p>
+      <p>
+        We want you to embark on this fitting journey with immense self-compassion. Throw away the arbitrary numbers and letters that have caused you so much frustration. Approach this process as a scientific exploration of your own body. Learn about your shape, understand your roots, and demand garments that meet your precise needs. You deserve comfort. You deserve support. And you absolutely deserve a bra that makes you feel powerful, capable, and pain-free every single day. Always remember to check our <a href="/how-to-measure/" class="text-primary hover:underline">How to Measure</a> and <a href="/fit-guide/" class="text-primary hover:underline">Fit Guide</a> for more help.
+      </p>
+    </div>
+
+
+    
+    <div class="prose prose-lg max-w-none text-body mb-10">
+      <h2 class="text-2xl font-bold text-ink">The Medical and Biomechanical Reality of Poor Fit</h2>
+      <p>
+        When we discuss the importance of a properly fitting bra, it is crucial to elevate the conversation beyond aesthetics and delve into the stark medical and biomechanical realities. For individuals with larger busts, an ill-fitting bra is not merely an inconvenience; it is a significant medical liability. The human spine is an incredible, complex structure designed to bear weight and maintain balance, but it is highly susceptible to chronic misalignment when subjected to consistent, unbalanced anterior loads.
+      </p>
+      <p>
+        When the underbust band is too loose—a startlingly common occurrence due to pervasive miseducation—the structural load of the breasts is immediately and aggressively transferred to the cervical and thoracic regions of the spine via the shoulder straps. The trapezius muscles, which are designed for subtle head and neck movements, are suddenly forced to act as primary load-bearing cables. This leads directly to chronic muscle fatigue, deep tissue inflammation, and the development of painful myofascial trigger points. Over time, the constant downward pressure of the straps can actually create permanent indentations in the shoulder tissue and compress the brachial plexus, a vital network of nerves that controls movement and sensation in the arms and hands. This compression can cause radiating pain, numbness, and tingling down the arms.
+      </p>
+      <p>
+        Furthermore, the sheer weight pulling forward causes a compensatory rounding of the shoulders and an exaggerated kyphosis (forward curvature) in the upper back. This postural collapse drastically alters your center of gravity, placing immense strain on the lower back (lumbar spine) as it struggles to counterbalance the forward pull. The domino effect of this poor posture affects everything from your breathing mechanics—as a collapsed chest cavity restricts full diaphragmatic excursion—to your digestion and overall energy levels. A perfectly fitted bra, where a snug band firmly anchors the weight around the sturdy, bony structure of the ribcage, acts as an essential orthotic device, instantly correcting this anterior pull and allowing the spine to return to magnet natural, healthy alignment.
+      </p>
+      <p>
+        Beyond the spine, the soft tissue of the breast itself is highly vulnerable to damage from improper support. The underwire of a bra is a rigid piece of engineering designed to perfectly trace the inframammary fold (the crease where the breast meets the chest wall). When a cup is too small, or the wire is too narrow for your breast root, that rigid wire rests directly on top of delicate breast tissue instead of encapsulating it. The constant friction and pressure from a misplaced wire can lead to severe chafing, painful bruising, and the development of fibrocystic lumps. In extreme cases, chronic pressure on the breast tissue and surrounding lymphatic vessels can impair lymphatic drainage, leading to swelling and tenderness.
+      </p>
+      <p>
+        The emotional exhaustion of dealing with this chronic, low-level pain cannot be overstated. When your body is constantly fighting against a garment that is actively harming it, your stress levels rise, and your overall quality of life diminishes. Finding a bra that fits is a vital component of preventative healthcare. It is about honoring the biomechanics of your body and providing it with the precise structural support it requires to function optimally. By insisting on a proper fit, utilizing tools like our <a href="/sister-size-calculator/" class="text-primary hover:underline">Sister Size Calculator</a>, and rejecting the normalization of discomfort, you are taking a powerful step toward long-term physical well-being.
+      </p>
+    </div>
+<div class="prose prose-lg max-w-none text-body mb-10">
+      <h2 class="text-2xl font-bold text-ink">Why Bra Fit Issues Happen to Everyone</h2>
+      <p>
+        The journey to a perfect fit is rarely a straight line. Many women spend decades wearing the wrong size simply because no one ever taught them what a good fit actually feels like. The most widespread phenomenon is wearing a band that is vastly too loose paired with cups that are tragically too small. 
+      </p>
+      <p>
+        When your band is too loose, the architectural foundation of the bra crumbles. The band is designed to provide 80% to 90% of the total support for your breasts. When that band is loose, it slides up your spine, completely shifting the burden of weight onto the flimsy shoulder straps. The straps, desperate to hold everything up, start digging viciously into your trapezius muscles. This isn't just a clothing malfunction; it's a structural failure that causes genuine neck strain, shoulder grooving, and chronic headaches. You deserve a garment that does the heavy lifting for you.
+      </p>
+      <h3 class="text-xl font-bold text-ink mt-8">The Emotional Toll of Ill-Fitting Lingerie</h3>
+      <p>
+        We talk a lot about the physical mechanics of bra fitting—wire width, cup depth, gore tacking—but we must also acknowledge the emotional toll. There is an undeniable feeling of vulnerability when an essential, everyday garment actively hurts you. It distracts you at work. It makes you want to cancel social plans just so you can go home and unhook it.
+      </p>
+      <p>
+        Finding a bra that fits like a second skin is a profoundly validating experience. It smooths your silhouette, improves your posture, and gives you a silent boost of confidence that radiates outward. By identifying your exact fit problem using the matrix below, you are taking a crucial step toward demanding better for yourself. You are no longer guessing; you are diagnosing. Let's find your solution, and you can always verify your size with our <a href="/sister-size-calculator/" class="text-primary hover:underline">sister size calculator</a>.
+      </p>
+      <p>
+        Every body is unique. Left side might be different from the right. Your root width might be exceptionally wide or remarkably narrow. Your breasts might be projected or shallow. Acknowledging this biological diversity is step one. Step two is learning to read your body's signals. When a bra digs in, it is telling you exactly where it is failing. When it gapes, it is speaking to you about shape incompatibility. By learning this language, you become your own expert fitter.
+      </p>
+    </div>
 
     <!-- Master Diagnostic Decision Tree Matrix -->
     <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8 mb-12 shadow-xs">
       <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Master Fit Diagnostic Decision Matrix</h2>
+      <p class="text-body text-sm mb-6">Identify your primary symptom below to find the root cause and immediate corrective action. This table is your quick-reference guide to troubleshooting.</p>
       <div class="overflow-x-auto -mx-2 px-2 mb-6">
         <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[540px]">
           <thead>
@@ -177,6 +309,19 @@ const fitProblems = [
         </table>
       </div>
     </section>
+    
+    <div class="prose prose-lg max-w-none text-body mb-10">
+      <h2 class="text-2xl font-bold text-ink">Detailed Breakdown of the 7 Key Fit Problems</h2>
+      <p>
+        Let's take a closer look at the specific symptoms that are ruining your day. When you can articulate exactly <em>how</em> a bra is failing you, you unlock the ability to fix it. We've categorized these issues into the seven most universally experienced problems. 
+      </p>
+      <p>
+        Remember, you should never have to compromise. If your underwire is acting like a tiny dagger against your ribcage, or if you feel like you are constantly hauling your straps back up onto your shoulders, it's time for a change. Let the guides below empower you to make informed decisions about your next purchase. And if you're ever in doubt, you can always refer back to our <a href="/how-to-measure/" class="text-primary hover:underline">measuring instructions</a> to double-check your baseline.
+      </p>
+      <p>
+        Our goal is to shift your mindset. A bra should not be an adversary. It is a piece of engineered fabric meant to enhance your life, not diminish it. As you read through these solutions, you'll see a recurring theme: volume and band support are intricately linked. If one fails, the other must compensate, which inevitably leads to a cascade of fitting errors. Break the cycle by understanding the underlying mechanics of support.
+      </p>
+    </div>
 
     <!-- 7 Fit Problem Cards Grid -->
     <div class="space-y-6 mb-12">
@@ -215,6 +360,22 @@ const fitProblems = [
         </section>
       ))}
     </div>
+    
+    <div class="prose prose-lg max-w-none text-body mb-10">
+      <h2 class="text-2xl font-bold text-ink">Empowering Yourself with the Right Information</h2>
+      <p>
+        The journey to absolute comfort doesn't end here. We know that navigating the labyrinth of bra sizing can feel overwhelming, especially when brands use inconsistent sizing charts and obscure terminology. But armed with this diagnostic matrix, you are no longer at the mercy of arbitrary letters and numbers. You have the vocabulary to identify the problem and the knowledge to seek out the solution.
+      </p>
+      <p>
+        Think about how much energy is drained by physical discomfort. When you are no longer distracted by a pinching underwire or a suffocating band, you free up mental space for the things that actually matter. Your body deserves respect, and that includes clothing that honors your shape and provides unyielding support.
+      </p>
+      <p>
+        As you continue to refine your fit, remember that your body is dynamic. It changes with time, hormones, weight fluctuations, and life events. A bra that fits perfectly today might not fit perfectly in six months. That's why it's so important to view this not as a one-time fix, but as a continuous practice of self-care. Check in with your body regularly. Listen to its signals. If something feels off, don't ignore it—use our <a href="/fit-guide/" class="text-primary hover:underline">fit guides</a> to course-correct immediately. And remember, trying a new size isn't a failure; it's an adaptation. Be patient with yourself as you navigate these changes.
+      </p>
+      <p>
+        Ultimately, we want you to feel empowered when you step into a lingerie store or shop online. Instead of wondering, "Is there something wrong with me?" you should be asking, "Does this garment meet my rigorous standards?" We believe that comfort is a right, not a privilege. By understanding your own anatomy and the basic principles of bra construction, you can advocate for your own comfort and well-being. Stop settling for less than what you deserve. Take the time to measure properly, diagnose your fit issues honestly, and demand a bra that works as hard as you do.
+      </p>
+    </div>
 
     <!-- Calculator CTA Card -->
     <section class="bg-primary text-white rounded-2xl p-6 sm:p-10 mb-12 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
@@ -222,7 +383,7 @@ const fitProblems = [
         <span class="text-xs font-bold uppercase tracking-widest text-accent-soft block mb-1">ACCURATE FITTING BASELINE</span>
         <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Check Your Bra Size Today</h2>
         <p class="text-xs sm:text-sm text-canvas-soft-2 max-w-xl">
-          If your current bra causes discomfort, establish an accurate modern direct measurement baseline in seconds.
+          If your current bra causes discomfort, establish an accurate modern direct measurement baseline in seconds. Stop guessing and start knowing.
         </p>
       </div>
       <a 
@@ -234,9 +395,33 @@ const fitProblems = [
       </a>
     </section>
 
-    <!-- FAQ Section -->
+    
+    <div class="prose prose-lg max-w-none text-body mb-10">
+      <h2 class="text-2xl font-bold text-ink">Reclaiming Your Comfort: A Holistic Approach</h2>
+      <p>
+        The journey to reclaiming your comfort goes beyond just understanding tape measures and cup letters. It requires a fundamental re-education about what a supportive garment should actually feel like. For generations, women have been passed down fitting advice that is fundamentally flawed, most notably the disastrous '+4 method' that was designed for non-stretch fabrics of the 1950s but is still inexplicably used by major retailers today. This archaic practice deliberately puts you in a band that is far too loose, completely destroying the structural integrity of the bra and guaranteeing that the weight of your breasts will hang painfully from your shoulders. 
+      </p>
+      <p>
+        Imagine trying to build a house on a foundation made of loose sand. No matter how beautifully designed the walls and roof are, the structure will inevitably sag, shift, and fail. The underbust band of your bra is that foundation. When it fits correctly, it acts as a firm, secure cantilever, distributing the weight evenly around the strong structural core of your ribcage. When it doesn't, the entire system collapses. The cups tilt forward, the underwires dig viciously into your ribs, and the straps become agonizingly tight. Fixing the band is often the single most transformative step in resolving bra fit issues.
+      </p>
+      <p>
+        But the band is only half the equation. We must also talk about the profound discomfort of incorrect cup volume and shape mismatch. Breasts are incredibly diverse three-dimensional forms. They can be shallow and spread out across the chest, or highly projected and concentrated. They can be full on the top, full on the bottom, wide-rooted, or narrow-rooted. A moulded foam cup (the ubiquitous t-shirt bra) is essentially a rigid plastic dome that demands your breast tissue conform to its shape. If your breasts are naturally softer, or if they are shaped differently than that specific dome, the bra will never fit properly, regardless of whether the mathematical size is technically 'correct'. You will experience gaping at the top, or painful spillage at the sides, leading you to believe you have the wrong size when you actually just have the wrong shape.
+      </p>
+      <p>
+        Understanding your unique breast shape is the key to unlocking true comfort. If you have soft tissue that pools at the bottom of the cup, a seamed, unlined balconette bra with stretch lace at the top will conform beautifully to your natural curves, preventing both spillage and gaping. If your breasts are wide-rooted, sitting further back under your arms, you need bras designed with wider wires so that the rigid metal doesn't sit painfully on top of your delicate breast tissue. Learning these nuances is empowering. It transforms you from a frustrated consumer into an informed advocate for your own body.
+      </p>
+      <p>
+        We also must acknowledge the incredible, dynamic nature of the human body. Your breasts will change. They will fluctuate with your menstrual cycle, swelling and becoming tender. They will change with weight fluctuations, pregnancy, breastfeeding, and the natural process of aging. It is completely unrealistic to expect one single bra size to serve you perfectly for the rest of your life, or even for an entire month. Building a 'wardrobe' of sizes—perhaps including a sister size with a looser band for days when you are bloated, or a softer, wire-free option for times of extreme tenderness—is a practical and deeply compassionate approach to dressing yourself. Honor your body's changes. Don't fight them.
+      </p>
+      <p>
+        The ultimate goal is to reach a point where you put your bra on in the morning and never think about it again until you take it off at night. It should be a silent, invisible partner in your daily life, providing unwavering support without demanding your constant attention. Achieving this state of comfort is possible. It requires patience, a willingness to experiment, and a refusal to settle for pain. Keep exploring, keep questioning, and never hesitate to consult our detailed <a href="/how-to-measure/" class="text-primary hover:underline">measurement guides</a> and <a href="/fit-guide/" class="text-primary hover:underline">diagnostic tools</a>. You are entirely worthy of comfort, and the perfect fit is out there waiting for you.
+      </p>
+    </div>
+
+<!-- FAQ Section -->
     <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
       <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+      <p class="text-body text-sm mb-6">Deepen your understanding of bra fitting mechanics with answers to our most common user questions.</p>
       <div class="space-y-4">
         {faqSchema.mainEntity.map(item => (
           <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">

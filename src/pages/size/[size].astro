@@ -105,7 +105,8 @@ const volumeFactor = baseVolume + (cup.diff * 2) + ((band - 28) * 0.5);
             <svg class="w-3 h-3 mx-1" aria-hidden="true" fill="none" viewBox="0 0 6 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
             </svg>
-            <span class="ml-1 md:ml-2 font-bold text-ink">{band}{cup.name}</span>
+            <span class="ml-1 md:ml-2 font-bold text-ink">{band},
+    {cup.name}</span>
           </div>
         </li>
       </ol>
@@ -119,10 +120,12 @@ const volumeFactor = baseVolume + (cup.diff * 2) + ((band - 28) * 0.5);
             Size Reference Guide
           </span>
           <h1 class="text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-            The {band}{cup.name} Bra Size
+            The {band},
+    {cup.name} Bra Size
           </h1>
           <p class="text-lg text-body">
-            Everything you need to know about the <strong>{band}{cup.name}</strong> bra size, including precise measurements, international equivalents, and sister sizes for better fits.
+            Everything you need to know about the <strong>{band},
+    {cup.name}</strong> bra size, including precise measurements, international equivalents, and sister sizes for better fits.
           </p>
         </header>
 
@@ -153,14 +156,16 @@ const volumeFactor = baseVolume + (cup.diff * 2) + ((band - 28) * 0.5);
         <section class="bg-surface border border-hairline rounded-3xl p-6 md:p-8 shadow-sm">
           <h2 class="text-2xl font-bold text-ink mb-6">Sister Sizes (Same Volume)</h2>
           <p class="text-body mb-6">
-            If the {band}{cup.name} cup fits perfectly but the band feels too tight or too loose, you need a <strong>sister size</strong>. These sizes hold the exact same volume of breast tissue.
+            If the {band},
+    {cup.name} cup fits perfectly but the band feels too tight or too loose, you need a <strong>sister size</strong>. These sizes hold the exact same volume of breast tissue.
           </p>
           <div class="grid sm:grid-cols-2 gap-4">
             {sisterDown ? (
               <a href={`/size/${sisterDown.band}${sisterDown.cup.name.toLowerCase()}`} class="group p-5 rounded-2xl border border-hairline hover:border-primary/50 transition-colors flex items-center justify-between">
                 <div>
                   <span class="text-xs text-mute font-bold uppercase block mb-1">Band Too Loose?</span>
-                  <span class="text-xl font-bold text-ink group-hover:text-primary transition-colors">Try {sisterDown.band}{sisterDown.cup.name}</span>
+                  <span class="text-xl font-bold text-ink group-hover:text-primary transition-colors">Try {sisterDown.band},
+    {sisterDown.cup.name}</span>
                 </div>
                 <svg class="w-5 h-5 text-mute group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
               </a>
@@ -169,13 +174,13 @@ const volumeFactor = baseVolume + (cup.diff * 2) + ((band - 28) * 0.5);
                 <span class="text-xs text-mute font-bold uppercase block mb-1">Band Too Loose?</span>
                 <span class="text-sm text-body">No smaller band manufactured for this volume.</span>
               </div>
-            )}
-            
-            {sisterUp ? (
+            )},
+    {sisterUp ? (
               <a href={`/size/${sisterUp.band}${sisterUp.cup.name.toLowerCase()}`} class="group p-5 rounded-2xl border border-hairline hover:border-primary/50 transition-colors flex items-center justify-between">
                 <div>
                   <span class="text-xs text-mute font-bold uppercase block mb-1">Band Too Tight?</span>
-                  <span class="text-xl font-bold text-ink group-hover:text-primary transition-colors">Try {sisterUp.band}{sisterUp.cup.name}</span>
+                  <span class="text-xl font-bold text-ink group-hover:text-primary transition-colors">Try {sisterUp.band},
+    {sisterUp.cup.name}</span>
                 </div>
                 <svg class="w-5 h-5 text-mute group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
               </a>
@@ -214,23 +219,28 @@ const volumeFactor = baseVolume + (cup.diff * 2) + ((band - 28) * 0.5);
           <ul class="space-y-4">
             <li class="flex justify-between items-center pb-3 border-b border-hairline">
               <span class="text-sm text-body">UK (Standard)</span>
-              <span class="font-bold text-ink">{band}{cup.name}</span>
+              <span class="font-bold text-ink">{band},
+    {cup.name}</span>
             </li>
             <li class="flex justify-between items-center pb-3 border-b border-hairline">
               <span class="text-sm text-body">US</span>
-              <span class="font-bold text-ink">{band}{cup.us}</span>
+              <span class="font-bold text-ink">{band},
+    {cup.us}</span>
             </li>
             <li class="flex justify-between items-center pb-3 border-b border-hairline">
               <span class="text-sm text-body">Europe (EU)</span>
-              <span class="font-bold text-ink">{euBand}{cup.eu}</span>
+              <span class="font-bold text-ink">{euBand},
+    {cup.eu}</span>
             </li>
             <li class="flex justify-between items-center pb-3 border-b border-hairline">
               <span class="text-sm text-body">Australia (AU)</span>
-              <span class="font-bold text-ink">{auBand}{cup.name}</span>
+              <span class="font-bold text-ink">{auBand},
+    {cup.name}</span>
             </li>
             <li class="flex justify-between items-center">
               <span class="text-sm text-body">France (FR)</span>
-              <span class="font-bold text-ink">{frBand}{cup.eu}</span>
+              <span class="font-bold text-ink">{frBand},
+    {cup.eu}</span>
             </li>
           </ul>
         </div>

@@ -23,6 +23,30 @@ const faqSchema = {
         "@type": "Answer",
         "text": "The Scoop and Swoop is an essential bra fitting step: lean forward at 45 degrees, reach your opposite hand inside the cup, and pull all breast tissue forward from under your arm and side ribcage into the center of the cup. This ensures the underwire sits flush in your inframammary fold and often eliminates cup gaping instantly."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Does cup gaping always mean my bra is too big?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, cup gaping does not always mean your bra is too big. In many cases, gaping happens because the cup is too small or the wrong shape. If the cup is too small, your breast tissue might push the cup away from your body, causing the top edge to gap. Similarly, if the band is too loose, the bra will tilt forward, creating a gap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my bra gap only on one side?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost all women have some degree of breast asymmetry, where one breast is larger than the other. If you fit your bra to the smaller breast, the larger one will spill over. If you fit to the larger breast, the smaller one may gap. The expert recommendation is always to fit the bra to your larger breast and use a removable insert or tighten the strap slightly on the smaller side to fix the gaping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What bra styles are best to prevent cup gaping?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To prevent cup gaping, avoid stiff moulded t-shirt bras. Instead, opt for unlined bras with seams, particularly those with stretch lace on the top panel. Balconette, demi, and plunge styles are generally better for avoiding top gaping because they have shorter cup heights compared to full-coverage styles."
+      }
     }
   ]
 };
@@ -50,16 +74,27 @@ const faqSchema = {
         Why Do My Bra Cups Gap? Shape & Volume Master Analysis
       </h1>
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        Empty space, puckering, or wrinkling at the top edge of your bra cups is one of the most common and confusing fitting problems. Many assume gaping automatically means their cups are too big, but it is frequently caused by cup shape mismatches or underwires that are too narrow.
+        Empty space, puckering, or wrinkling at the top edge of your bra cups is one of the most common and confusing fitting problems. Many assume gaping automatically means their cups are too big, but it is frequently caused by cup shape mismatches, underwires that are too narrow, or incorrect sizing metrics. Let's delve deep into the biomechanics of bra fit to solve this frustrating issue once and for all.
       </p>
     </header>
 
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
+      
+      <!-- Introduction: Empathy and Setting the Stage -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <p class="mb-4">
+          When you look in the mirror and see empty space at the top of your bra, the intuitive reaction is to assume your breasts aren't large enough to fill the cup. This assumption leads countless individuals to size down their cups, only to find the new bra still gapes, yet now the underwires dig painfully into their side tissue.
+        </p>
+        <p>
+          This cycle of frustration is a direct result of misunderstanding how bra construction interacts with human anatomy. Cup gaping is rarely a simple issue of lacking volume. More often, it is a complex interaction of breast shape, root height, band tension, and fabric rigidity.
+        </p>
+      </section>
+
       <!-- Section 1: Vector Diagram & Orange in a Glass Effect -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
         <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. The "Orange in a Glass" Effect Explained</h2>
         <p class="mb-4">
-          Imagine trying to push an orange into a tall, narrow drinking glass. Because the orange is wider than the glass opening, it gets stuck near the top, leaving a completely empty air gap at the bottom of the glass.
+          Imagine trying to push an orange into a tall, narrow drinking glass. Because the orange is wider than the glass opening, it gets stuck near the top, leaving a completely empty air gap at the bottom of the glass. No matter how hard you push, the orange cannot reach the bottom because the structural dimensions are incompatible.
         </p>
 
         <!-- Diagram -->
@@ -76,15 +111,38 @@ const faqSchema = {
         </div>
 
         <p class="mb-4">
-          In bra mechanics, if a bra's underwire is too narrow for your breast root, your breast tissue cannot physically enter the base of the cup. The tissue sits outside the underwire arch, causing the top edge of the cup to tilt outward and gape—even though the cup volume is actually <em>too small</em>!
+          In bra mechanics, this exact physical phenomenon occurs when a bra's underwire is too narrow for your breast root (the area where your breast tissue attaches to your chest wall). If your breast root is wide but the underwire is shaped like a narrow 'U', your breast tissue cannot physically enter the deepest part of the cup base.
+        </p>
+        <p>
+          Instead, your breast tissue sits outside the underwire arch, effectively pushing the entire cup away from your body. Because the cup is being pushed outward, the top edge tilts away from your chest, causing severe gaping—even though the cup volume is actually <em>too small</em> to encapsulate your tissue. Understanding your breast root width is a fundamental component of bra fitting that goes far beyond simple tape measurements.
         </p>
       </section>
 
       <!-- Section 2: Three Main Causes of Gaping -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Three Primary Causes of Cup Gaping</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. The Core Biomechanical Causes of Cup Gaping</h2>
+        <p class="mb-6">Beyond narrow underwires, there are several other primary mechanisms that cause bra cups to gape. Identifying which of these applies to your body is the first step toward finding a flawless fit.</p>
         
+        <h3 class="text-lg font-bold text-ink mb-2">The Moulded Foam Stiff Shape (Shape Mismatch)</h3>
+        <p class="mb-6">
+          The vast majority of modern bras sold in department stores are "t-shirt bras" constructed from moulded foam. These bras are manufactured by heat-pressing synthetic foam over a fixed metal dome. Consequently, the cup holds its own rigid shape whether it is on or off your body. If your natural breast tissue does not exactly match the shape of that pre-formed dome, the bra will gape. Breasts are soft tissue and dynamic; they are rarely perfect spheres. If you have "bottom-heavy" breasts, you will not have enough upper-pole fullness to fill out the top curve, resulting in empty space.
+          <br /><strong class="text-primary mt-2 inline-block">The Fix:</strong> Transition away from rigid foam and embrace unlined, cut-and-sewn (seamed) bras, particularly those featuring stretch lace on the upper panels.
+        </p>
+
+        <h3 class="text-lg font-bold text-ink mb-2">Short Breast Root Height</h3>
+        <p class="mb-6">
+          Breast root height refers to how tall your breast tissue sits on your chest wall, from the inframammary fold up towards your collarbone. Individuals with short roots have breast tissue that ends relatively low on the chest. Full-coverage bras are designed with tall cups meant to encapsulate tall breast roots. If you have short roots and wear a full-coverage style, the top half of the cup will simply cover empty chest space.
+          <br /><strong class="text-primary mt-2 inline-block">The Fix:</strong> Opt for balconette, demi-cup, or half-cup styles. These cuts feature shorter cup heights engineered to lift without demanding tall upper-pole tissue.
+        </p>
+
+        <h3 class="text-lg font-bold text-ink mb-2">Inadequate Band Tension</h3>
+        <p class="mb-6">
+          The bra band is the foundation of the garment's structural integrity. A properly fitted band should provide 80% to 90% of the support. If your band is too loose, the back of the bra will ride up your spine. When the back rides up, the front inevitably tilts forward and down, pulling the bra cups away from your chest wall and instantly creating a gaping void at the top edge.
+          <br /><strong class="text-primary mt-2 inline-block">The Fix:</strong> Recalculate your band size. Your band size should roughly equal your snug underbust measurement in inches.
+        </p>
+
         <!-- Data Table 1: Gaping Diagnostic Matrix -->
+        <h3 class="text-lg font-bold text-ink mb-4 mt-8">Quick Diagnostic Matrix</h3>
         <div class="overflow-x-auto -mx-2 px-2 mb-6">
           <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[500px]">
             <thead>
@@ -117,22 +175,47 @@ const faqSchema = {
 
       <!-- Section 3: The Scoop and Swoop Protocol -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. The 30-Second Scoop and Swoop Protocol</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. The Mandatory 30-Second Scoop and Swoop Protocol</h2>
         <p class="mb-4">
-          Before deciding a bra cup is too large, you must perform the mandatory fitting maneuver:
+          Before diagnosing any fit issue or deciding a bra cup is too large, you must perform the mandatory fitting maneuver known as the "Scoop and Swoop." When you put a bra on like a t-shirt, gravity and everyday movement cause breast tissue to settle backward toward your underarms and side ribcage.
         </p>
 
-        <ol class="list-decimal pl-5 space-y-2 text-xs sm:text-sm mb-6">
-          <li>Lean forward from your waist at a 45-degree angle so gravity pulls breast tissue into the cups.</li>
-          <li>Reach inside the left cup with your right hand. Gently scoop your breast tissue from under your arm and side ribcage, pulling it forward and up into the center of the cup.</li>
-          <li>Adjust the underwire so it rests flush inside your inframammary fold (the crease under your breast).</li>
-          <li>Repeat for the right side. Now check the cup top—in 50% of cases, gaping disappears instantly!</li>
+        <ol class="list-decimal pl-5 space-y-4 text-xs sm:text-sm mb-6">
+          <li><strong>The Lean:</strong> Lean forward from your waist at a 45-degree angle so gravity pulls breast tissue into the cups.</li>
+          <li><strong>The Scoop:</strong> Reach inside the left cup with your right hand. Gently but firmly scoop your breast tissue from under your arm and side ribcage, including the axillary tail.</li>
+          <li><strong>The Swoop:</strong> Pull that scooped tissue forward and up into the center of the cup. Adjust the underwire so it rests flush inside your inframammary fold.</li>
+          <li><strong>The Assessment:</strong> Repeat for the right side, stand up straight, and check the cup top. In 50% of cases, gaping disappears instantly!</li>
         </ol>
+
+        <p>If you swoop and suddenly spill out of the top of the cup, it confirms that your cup size is actually too <em>small</em>, not too big. This simple biomechanical adjustment is critical for accurate fitting.</p>
       </section>
 
-      <!-- Section 4: Interactive Sizing Tools -->
+      <!-- Section 4: Deep Empathy & Industry Context -->
+      <section class='bg-surface border border-hairline rounded-2xl p-6 sm:p-8'>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. The Physical and Emotional Reality of Sizing Frustrations</h2>
+        <p class="mb-4">Let's be incredibly honest for a moment. If you are reading this, you have likely spent years dealing with painful, frustrating, and exhausting sizing issues. The apparel industry has normalized discomfort. We have been conditioned to believe that red marks, deep shoulder grooves, the need to adjust constantly, and the urge to unhook your garment the second you get home are simply "normal" parts of life.</p>
+        <p class="mb-4">They are not normal. They are the direct result of archaic manufacturing standards.</p>
+        <p class="mb-4">When you wear a garment that does not properly anchor to your ribcage, the entire biomechanical load shifts to your shoulders and neck. This isn't just an aesthetic issue; it is a profound ergonomic failure. A band that rides up your back forces you to unconsciously hunch your shoulders forward to relieve the tension. Over years, this micro-postural adjustment leads to chronic neck pain, tension headaches, and deep fatigue in the trapezius muscles.</p>
+        <p class="mb-6">Furthermore, the psychological toll is immense. Countless individuals step into fitting rooms only to be told they are a size that feels completely wrong, or worse, that their true size simply "doesn't exist." This gaslighting by the retail industry forces millions to wear the wrong size, leading to body dysmorphia and a feeling that their body is somehow "wrong." Your body is not wrong. The math used by modern fast-fashion brands is wrong.</p>
+        
+        <h3 class="text-lg font-bold text-ink mb-2">Why The "+4 Method" Failed Us</h3>
+        <p class="mb-4">Historically, before the invention of modern stretch fabrics like elastane and spandex, garments were made of rigid cotton. To allow individuals to breathe, tailors instructed them to add 4 or 5 inches to their actual underbust measurement.</p>
+        <p class="mb-4">Today, fabrics stretch dynamically. Yet, brands continue to teach the "+4 method." Why? Because by adding 4 inches to your band size and shrinking your cup size, brands can force a massive variety of body types into a highly restricted, cheap-to-manufacture matrix of 32A to 38DD. It is a financial decision, not an ergonomic one.</p>
+        <p class="mb-4">When you discover your mathematically correct size—anchoring the band firmly against the ribcage wall to bear 80% of the load—the relief is instantaneous. The shoulder straps no longer dig in. The underwires no longer sit on sensitive breast tissue. The center gore tacks perfectly flat against the sternum. And the cups no longer gape.</p>
+      </section>
+
+      <!-- Section 5: Long-Term Impact -->
+      <section class='bg-surface border border-hairline rounded-2xl p-6 sm:p-8'>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">5. The Long-Term Impact of Ignoring Fit Issues</h2>
+        <p class="mb-4">In addition to the immediate physical pain of straps falling down or underwires digging into sensitive breast tissue, the long-term musculoskeletal impact is undeniable. When you settle for the restrictive 'standard sizing matrix' sold in massive retail chains, you force your body into a mold it was never meant to fit. This compression alters how you breathe, limits your chest expansion during aerobic activities, and even changes the way your clothes drape over your silhouette.</p>
+        <p class="mb-4">Consider the engineering of a suspension bridge. The support cables must be tensioned perfectly to carry the load. If the main anchors (your bra band) are loose, the secondary cables (your shoulder straps) take on forces they were never designed to handle.</p>
+        <p>We urge you to take your measurements using our rigorous, unpadded calculators and finally experience what a properly engineered garment feels like. Your body deserves the mathematical accuracy of a custom fit, not a generic retail approximation. Resolving cup gaping is an investment in your daily comfort, your posture, and your overall confidence.</p>
+      </section>
+
+      <!-- Section 6: Interactive Sizing Tools -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. Re-Calculate Your Correct Cup Size</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">6. Re-Calculate Your Correct Cup Size</h2>
+        <p class="mb-6">Ready to find a fit that actually respects your biomechanics? Use our precision calculators below to determine your mathematically accurate bra size and discover sister sizes that can solve cup gaping once and for all.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
             Calculate Size Baseline &rarr;
@@ -146,11 +229,11 @@ const faqSchema = {
         </div>
       </section>
 
-      <!-- Section 5: FAQ Section -->
+      <!-- Section 7: FAQ Section -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
         <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
         <div class="space-y-4">
-          {faqSchema.mainEntity.map(item => (
+          {faqSchema.mainEntity.map((item: any) => (
             <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
               <summary class="font-bold text-ink flex justify-between items-center list-none">
                 <span>{item.name}</span>
@@ -162,26 +245,5 @@ const faqSchema = {
         </div>
       </section>
     </div>
-  
-<section class='bg-surface border border-hairline rounded-2xl p-6 sm:p-8 mt-10'>
-<h2>The Physical and Emotional Reality of Sizing Frustrations</h2>
-<p>Let's be incredibly honest for a moment. If you are reading this, you have likely spent years dealing with painful, frustrating, and exhausting sizing issues. The apparel industry has normalized discomfort. We have been conditioned to believe that red marks, deep shoulder grooves, and the urge to unhook your garment the second you get home are simply "normal" parts of life.</p>
-<p>They are not normal. They are the direct result of archaic manufacturing standards.</p>
-<p>When you wear a garment that does not properly anchor to your ribcage, the entire biomechanical load shifts to your shoulders and neck. This isn't just an aesthetic issue; it is a profound ergonomic failure. A band that rides up your back forces you to unconsciously hunch your shoulders forward to relieve the tension. Over years, this micro-postural adjustment leads to chronic neck pain, tension headaches, and deep fatigue in the trapezius muscles.</p>
-<p>Furthermore, the psychological toll is immense. Countless individuals step into fitting rooms only to be told they are a size that feels completely wrong, or worse, that their true size simply "doesn't exist." This gaslighting by the retail industry forces millions to wear the wrong size, leading to body dysmorphia and a feeling that their body is somehow "wrong." Your body is not wrong. The math used by modern fast-fashion brands is wrong.</p>
-<h3>Why The "+4 Method" Failed Us</h3>
-<p>Historically, before the invention of modern stretch fabrics like elastane and spandex, garments were made of rigid cotton. To allow individuals to breathe, tailors instructed them to add 4 or 5 inches to their actual underbust measurement.</p>
-<p>Today, fabrics stretch dynamically. Yet, brands continue to teach the "+4 method." Why? Because by adding 4 inches to your band size and shrinking your cup size, brands can force a massive variety of body types into a highly restricted, cheap-to-manufacture matrix of 32A to 38DD. It is a financial decision, not an ergonomic one.</p>
-<p>When you discover your mathematically correct size—anchoring the band firmly against the ribcage wall to bear 80% of the load—the relief is instantaneous. The shoulder straps no longer dig in. The underwires no longer sit on sensitive breast tissue. The center gore tacks perfectly flat against the sternum.</p>
-<p>We encourage you to trust the math, measure accurately, and demand garments that respect the actual physics of your body.</p>
-</section>
-
-
-<section class='bg-surface border border-hairline rounded-2xl p-6 sm:p-8 mt-10'>
-<h2>The Long-Term Impact of Ignoring Fit Issues</h2>
-<p>In addition to the immediate physical pain of straps falling down or underwires digging into sensitive breast tissue, the long-term musculoskeletal impact is undeniable. When you settle for the restrictive 'standard sizing matrix' sold in massive retail chains (often ending at a DDD cup), you force your body into a mold it was never meant to fit. This compression alters how you breathe, limits your chest expansion during aerobic activities, and even changes the way your clothes drape over your silhouette.</p>
-<p>Consider the engineering of a suspension bridge. The support cables must be tensioned perfectly to carry the load. If the main anchors (your bra band) are loose, the secondary cables (your shoulder straps) take on forces they were never designed to handle. We urge you to take your measurements using our rigorous, unpadded calculators and finally experience what a properly engineered garment feels like. Your body deserves the mathematical accuracy of a custom fit, not a generic retail approximation. It is an investment in your daily comfort, your posture, and your overall confidence.</p>
-</section>
-
-</main>
+  </main>
 </Layout>

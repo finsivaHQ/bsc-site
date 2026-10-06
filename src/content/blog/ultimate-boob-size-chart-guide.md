@@ -30,7 +30,7 @@ In this comprehensive guide, we will break down the physiological reality of **b
 <div class="bg-primary-50 p-6 rounded-lg my-8 border-l-4 border-primary">
   <h3 class="text-xl font-bold mt-0 mb-2">Want to skip the math?</h3>
   <p class="mb-4">Use our interactive algorithm to calculate your precise cup size instantly using your raw measurements.</p>
-  <a href="/" class="inline-block bg-primary text-white font-bold py-2 px-6 rounded-full hover:bg-primary-600 transition-colors">Access the Bra Size Calculator &rarr;</a>
+  <a href="/" class="inline-block bg-primary text-on-primary font-bold py-2 px-6 rounded-full hover:bg-primary-600 transition-colors">Access the Bra Size Calculator &rarr;</a>
 </div>
 
 ## 1. The Big Myth: Boob Size vs Bra Size
@@ -102,7 +102,7 @@ Understanding this concept is the absolute key to fine-tuning your comfort and a
 <div class="bg-surface p-6 rounded-lg my-8 border border-hairline text-center">
   <h3 class="text-2xl font-bold mt-0 mb-4">Find Your Perfect Fit Today</h3>
   <p class="mb-6">Ready to ditch the confusing charts and get an exact, personalized size recommendation? Input your underbust and bust measurements into our advanced algorithm now.</p>
-  <a href="/" class="inline-block bg-ink text-white font-bold py-3 px-8 rounded-full hover:bg-gray-800 transition-colors">
+  <a href="/" class="inline-block bg-ink text-canvas font-bold py-3 px-8 rounded-full hover:bg-gray-800 transition-colors">
     Open the Bra Size Calculator
   </a>
 </div>

@@ -32,7 +32,7 @@ In this definitive, expert-reviewed masterclass, we will thoroughly decode the g
 <div class="bg-primary-50 p-6 rounded-lg my-8 border-l-4 border-primary">
   <h3 class="text-xl font-bold mt-0 mb-2">Ready to convert your size instantly?</h3>
   <p class="mb-4">Skip the math and use our highly accurate, interactive conversion engine to translate your measurements across US, UK, EU, French, and Australian standards.</p>
-  <a href="/bra-size-converter/" class="inline-block bg-primary text-white font-bold py-2 px-6 rounded-full hover:bg-primary-600 transition-colors">Access the Bra Size Converter Tool &rarr;</a>
+  <a href="/bra-size-converter/" class="inline-block bg-primary text-on-primary font-bold py-2 px-6 rounded-full hover:bg-primary-600 transition-colors">Access the Bra Size Converter Tool &rarr;</a>
 </div>
 
 ## 1. High-Intent Conversions: Decoding Global Standards
@@ -112,7 +112,7 @@ Understanding the math behind your measurements is the first step toward reclaim
 By taking accurate measurements and utilizing an advanced **international bra size converter**, you can confidently shop any brand, in any country, knowing exactly how their sizing translates to your unique body.
 
 <div class="text-center mt-12 mb-8">
-  <a href="/bra-size-converter/" class="inline-block bg-ink text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-gray-800 transition-colors shadow-lg">
+  <a href="/bra-size-converter/" class="inline-block bg-ink text-canvas font-bold py-4 px-10 rounded-full text-lg hover:bg-gray-800 transition-colors shadow-lg">
     Open the International Bra Size Converter
   </a>
 </div>

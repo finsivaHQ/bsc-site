@@ -14,7 +14,7 @@ const faqSchema = {
       "name": "How do I read an international bra size chart?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Locate your snug underbust measurement in either inches or centimeters on the band matrix row. This reveals your equivalent band size across regions (e.g. 34 in US/UK = 75 in EU = 90 in FR = 12 in AU). Next, locate your bust-to-band delta in the cup matrix to find your regional cup letter."
+        "text": "Locate your snug underbust measurement in either inches or centimeters on the band matrix row. This reveals your equivalent band size across regions (e.g. 34 in US/UK = 75 in EU = 90 in FR = 12 in AU). Next, locate your bust-to-band delta in the cup matrix to find your regional cup letter. Combine the two for your final converted size."
       }
     },
     {
@@ -22,15 +22,57 @@ const faqSchema = {
       "name": "Why do Asian bra sizes (Japan, Hong Kong, Korea, Singapore) use metric band numbers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Asian bra sizing systems (such as Japan JIS L 4006 and South Korea KS K 9404) follow metric EN 13402 specifications, using underbust centimeters for band numbers (65, 70, 75, 80) and 2.5 cm cup delta increments."
+        "text": "Asian bra sizing systems (such as Japan JIS L 4006 and South Korea KS K 9404) follow metric EN 13402 specifications. They use your literal underbust measurement in centimeters for band numbers (such as 65, 70, 75, 80) and calculate cups using 2.5 cm delta increments, making it one of the most logically consistent systems."
       }
     },
-    {"@type": "Question", "name": "Why do my bra straps keep falling down even when tightened?", "acceptedAnswer": {"@type": "Answer", "text": "Straps constantly slipping off your shoulders is a classic sign that your bra band is too large. When the band is too loose, the straps are set too far apart for your frame and cannot maintain tension. We recommend checking your underbust measurement with our <a href='/how-to-measure/'>How to Measure Guide</a> to ensure you're in the right band size."}},
-    {"@type": "Question", "name": "What causes the underwire to dig into my ribs or armpits?", "acceptedAnswer": {"@type": "Answer", "text": "Underwire digging is usually caused by wearing a cup size that is too small or a band that is too tight. If the cups are too small, the wire sits on breast tissue instead of your ribcage. If the band is too tight, it pulls the wires uncomfortably hard against your body. Review our <a href='/fit-guide/'>Fit Guide</a> for more details."}},
-    {"@type": "Question", "name": "How often should I measure my bra size?", "acceptedAnswer": {"@type": "Answer", "text": "You should measure your bra size every 6 months, or whenever you experience significant weight changes, hormonal shifts, or pregnancy. Breast tissue changes naturally over time, and a size that fit perfectly a year ago may no longer provide the necessary support."}},
-    {"@type": "Question", "name": "What does 'sister sizing' mean and how do I use it?", "acceptedAnswer": {"@type": "Answer", "text": "Sister sizes are bra sizes that hold the same cup volume but have different band sizes. If you go up a band size, you must go down a cup letter to maintain the same volume (e.g., a 34C holds the same volume as a 36B). This is incredibly helpful when a specific brand runs tight or loose."}},
-    {"@type": "Question", "name": "Why do bras from different brands fit differently even if they are the same size?", "acceptedAnswer": {"@type": "Answer", "text": "Different brands use different fit models and grading rules. Additionally, international sizing standards vary wildly. A US 34G is vastly different from a UK 34G. Always cross-reference the brand's country of origin using our converter tools before purchasing."}},
-    {"@type": "Question", "name": "Can wearing the wrong bra size cause back pain?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. If your bra band is too loose, your shoulder straps bear the weight of your breasts, leading to neck, shoulder, and back pain. The band should provide 80% of the support, not the straps."}}
+    {
+      "@type": "Question",
+      "name": "Are UK and US bra sizes the same?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Up to a DD cup, UK and US bra sizes are identical. However, after a DD cup, the sizing systems diverge significantly and cause a lot of confusion. The UK system uses double letters consistently (DD, E, F, FF, G, GG), while the US system often uses multiple Ds (DDD) and skips double letters (G, H, I). Always check the brand's country of origin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the same size fit differently depending on the brand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Beyond regional sizing differences, brands use unique design blocks, specific fit models, and varying fabric stretch levels. A stretchy lace band feels different from a rigid mesh one, even if cut exactly the same. Manufacturing tolerances and dye shrinkage (like with black dyes) also cause variations. Your size is a starting point, not a guarantee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I tell if my bra cup is too small?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Signs of a too-small cup include breast tissue spilling over the top edge (causing a \"quad-boob\" effect), tissue escaping at the underarms, or the underwire resting on breast tissue instead of sitting flat against your ribcage. If you experience these, try going up one or two cup volumes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What exactly is sister sizing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sister sizes hold the exact same cup volume, but are attached to different band sizes. For example, the cup of a 34C holds the same volume as a 36B or a 32D. If a band is too tight but the cup volume fits perfectly, you go up a band size and down a cup size (e.g., 34C to 36B) to maintain the exact same volume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a D cup the same size on every band?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely not. Cup sizes are not static volumes; they represent a ratio or difference between your bust and underbust measurements. A 32D is significantly smaller in overall volume than a 40D. The letter only tells you the relative proportion to the band, not the absolute size of the cup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I measure my bra size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend checking your measurements every six months, or whenever you experience significant life changes. Weight fluctuations, pregnancy, nursing, hormonal shifts, and starting new fitness routines can all alter your breast shape and ribcage size. Your body naturally evolves over time, and your bras should keep up."
+      }
+    }
   ]
 };
 ---
@@ -48,21 +90,27 @@ const faqSchema = {
 
     <!-- Page Header / Intro -->
     <header class="mb-10 text-center sm:text-left">
-    <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
         Master Reference Guide
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
         Master Bra Size Chart: US, UK, EU, AU, JP, IN & International Matrix
       </h1>
-      <div class="flex items-center gap-3 text-xs text-mute mb-4">
+      <div class="flex items-center gap-3 text-xs text-mute mb-4 justify-center sm:justify-start">
         <span>By BraSizeChecker Editorial Guide</span>
         <span>&bull;</span>
-        <time datetime="2026-09-04">Updated October 2026</time>
+        <time datetime="2026-09-04">Updated September 2026</time>
       </div>
-      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
-        Navigating international bra sizing standards across different regions and manufacturers can be daunting. Every bra size consists of a <strong>band number</strong> (representing ribcage circumference) and a <strong>cup letter</strong> (representing cup volume displacement). Use our master chart below to cross-reference sizes across 10 global regions.
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl mb-5">
+        Let's be incredibly honest for a moment: navigating the tangled web of international bra sizes is utterly exhausting. You finally find a bra that makes you feel supported, confident, and comfortable, only to realize it's from a UK brand while you live in the US, or it's a European label that uses a completely different numbering system. Suddenly, the size that fits you perfectly in one store is entirely wrong in another. It’s enough to make anyone want to give up and live in sports bras forever.
       </p>
-  </header>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl mb-5">
+        If you’ve ever felt like you need a mathematics degree just to decode a bra tag, you are not alone. Millions of women and bra-wearers experience this exact same frustration every single day. The sizing systems across the world evolved independently, leading to a chaotic overlap of inches, centimeters, and mismatched cup letters. It's not your body that is the problem—it is a deeply flawed, historically disjointed apparel industry. But we believe that finding a bra that fits your unique body shouldn't feel like a punishment. 
+      </p>
+      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
+        Every bra size consists of two crucial elements: a <strong>band number</strong> (representing the circumference of your ribcage, the true foundation of support) and a <strong>cup letter</strong> (representing the volume displacement of your breast tissue). To take the guesswork out of your shopping experience, we’ve developed the ultimate Master Bra Size Chart below. You can seamlessly cross-reference sizes across 10 major global regions, ensuring you find your perfect fit no matter where your favorite lingerie originates.
+      </p>
+    </header>
 
     <!-- Interactive Conversion Chart Tool -->
     <section class="bg-surface border border-hairline rounded-2xl shadow-sm p-4 sm:p-6 md:p-8 mb-12" aria-labelledby="chart-heading">
@@ -173,45 +221,81 @@ const faqSchema = {
       </div>
     </section>
 
-    <!-- Educational Sections -->
+    <!-- Educational Sections (Expanded Content) -->
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
-
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8 mt-10">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">The Physical Impact of a Poorly Fitted Bra</h2>
-        <p class="mb-4">
-          It is a startling reality that the majority of women are currently wearing the wrong bra size. The consequences of this go far beyond mere aesthetics. A poorly fitted bra can lead to a cascade of physical ailments that many women accept as a normal part of life, completely unaware that their undergarments are the root cause. When a band is too loose, it fails to provide the necessary support, forcing the shoulder straps to carry the weight of the breasts. Over time, this constant downward pressure can lead to deep grooving in the shoulders, chronic neck tension, and persistent upper back pain. It can even contribute to poor posture, as the body instinctively hunches forward to relieve the strain.
-        </p>
-        <p class="mb-4">
-          Conversely, a band that is excessively tight restricts breathing, causes painful friction against the skin, and can even impede healthy circulation. The underwires, which are designed to sit flush against the ribcage and encapsulate the breast tissue, can become instruments of torture if the cup size is incorrect. Cups that are too small force the underwires to sit on top of the delicate breast tissue, causing painful bruising, digging, and the dreaded "quad-boob" effect. Cups that are too large fail to provide adequate containment, leading to uncomfortable shifting and chafing throughout the day.
-        </p>
-        <p class="mb-4">
-          By taking the time to understand your true size and how it translates across different brands and regions, you are investing in your own health and comfort. You are saying no to the normalized pain of a poorly fitted bra and demanding undergarments that work with your body, not against it. We know that the journey to finding the perfect fit can be frustrating, involving trial and error, multiple returns, and moments of exasperation. But we assure you, the moment you put on a bra that fits perfectly—a bra that feels like a second skin, supporting you effortlessly and painlessly—it will all be worth it. If you are still unsure about your size or experiencing persistent fit issues, our <a href="/fit-guide/" class="text-primary hover:underline">Fit Guide</a> offers detailed troubleshooting advice to help you pinpoint exactly where your current bras are failing you.
-        </p>
-        <p class="mb-4">
-          Remember, your bra size is just a number and a letter—a starting point, a tool to help you navigate the vast and often confusing world of lingerie. It does not define you, and it certainly shouldn't dictate your comfort. Embrace the process, be patient with yourself, and don't hesitate to utilize all the resources we have provided, from our precise <a href="/how-to-measure/" class="text-primary hover:underline">measurement instructions</a> to our dynamic converters and comprehensive charts. True comfort is achievable, and it starts with understanding the unique needs of your own body.
-        </p>
-      </section>
-
-
+      
       <!-- Section 1: How to Measure & Read Chart -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
         <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. How to Read & Use This Master Chart</h2>
-        <p class="mb-4">
-          Follow these 3 simple steps to find your exact size in any international brand:
+        <p class="mb-5">
+          Looking at a grid full of numbers and letters can feel overwhelming. Take a deep breath. You are completely capable of figuring this out, and we are here to hold your hand through the process. The chart above acts as a decoder ring for the entire bra industry. Once you have your baseline measurements, using this matrix becomes second nature. Follow these simple steps to confidently locate your size:
+        </p>
+        <ol class="list-decimal pl-5 space-y-4 text-xs sm:text-sm mb-6">
+          <li>
+            <strong>Find Your Band Row:</strong> Think of the band as the foundation of a house; if it's unstable, nothing else will work correctly. Up to 80% of your bra's support should come from the band around your ribcage, not the shoulder straps. Locate your snug underbust measurement in either inches or centimeters on the Band Size Conversion Matrix above. For instance, if you measure 34 inches, you would look across that row to see that your European size is 75, your French size is 90, and your Australian size is 12.
+          </li>
+          <li>
+            <strong>Find Your Cup Column:</strong> Your cup size isn't a static bowl; it's a dynamic ratio. It represents the difference between your full bust measurement and your underbust measurement. Locate your calculated bust-to-band delta in the Cup Size Conversion Matrix to identify your regional letter. This is where sizes often diverge wildly—a DD in the US is very different from an E in Europe.
+          </li>
+          <li>
+            <strong>Cross-Reference Your Destination Region:</strong> Now that you have both your converted band and cup, simply combine them. Read horizontally across the row to find your target country's equivalent size tag. So, a US 34DD might become a UK 34DD, but in France, it would be labeled a 90E.
+          </li>
+        </ol>
+        <p class="mb-2">
+          <strong>A quick pro-tip:</strong> When in doubt, always look at the brand's country of origin. A bra designed by a British brand will be manufactured using UK sizing standards, even if you are buying it in a boutique in New York, Tokyo, or Sydney.
+        </p>
+      </section>
+
+      <!-- Section 1.5: The Psychology & Reality of Sizing (New E-E-A-T Section) -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">The Truth About Bra Sizing Variations</h2>
+        <p class="mb-5">
+          It is completely normal to feel frustrated when a 36D fits perfectly in one brand, but you can barely hook a 36D in another. We want to validate that experience: you aren't doing anything wrong, and your body isn't "weird." The lingerie industry is notoriously inconsistent. Brands use entirely different fit models to create their base patterns (known in the industry as blocks). If a brand's fit model has wider-set breasts or a broader ribcage, their cups will be constructed differently than a brand using a model with close-set, high-profile breasts.
+        </p>
+        <p class="mb-5">
+          Additionally, fabrics play a massive role in how a garment performs on your body. A stretchy lace band will feel entirely different from a rigid satin or strong powermesh one, even if they are cut to the exact same measurements. Did you know that darker dyes (like black, navy, or deep reds) can sometimes shrink fabrics slightly during the manufacturing process? This is a little-known secret that explains why a black bra often feels tighter than the exact same bra in a beige or pastel color. 
+        </p>
+        <p>
+          Always remember that the size on the tag is merely a starting point—a helpful suggestion from the manufacturer. Your ultimate goal is comfort, support, and feeling great in your clothes. If you need to size up or down to achieve that feeling, do it without a second thought. The tag doesn't define your body; your comfort dictates the fit.
+        </p>
+      </section>
+
+      <!-- Section 1.8: Common Fit Issues & Troubleshooting (New E-E-A-T Section) -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Troubleshooting Common Fit Issues</h2>
+        <p class="mb-5">
+          Finding your size on a chart is just the beginning of the journey. Once you actually put the bra on, your body will tell you the real story. Let's talk about some of the most common fit issues and how you can troubleshoot them effectively. Remember, it is the garment's job to fit you, not your job to squeeze into the garment.
+        </p>
+        
+        <h3 class="font-bold text-lg text-ink mt-6 mb-2">The Band Rides Up Your Back</h3>
+        <p class="mb-5">
+          If the back band of your bra is forming an inverted "U" shape and riding up toward your shoulder blades, the band is too loose. A loose band forces the shoulder straps to carry the heavy weight of your breasts, which leads to painful shoulder indentations, tension headaches, and neck strain. Try going down one band size. Because you are decreasing the band size, remember to use the Sister Size principle and go up one cup size to maintain the same breast volume (e.g., switch from a 36C to a 34D).
         </p>
 
-        <ol class="list-decimal pl-5 space-y-2 text-xs sm:text-sm mb-6">
-          <li><strong>Find Your Band Row:</strong> Locate your snug underbust measurement in either inches or centimeters on the Band Size Conversion Matrix above.</li>
-          <li><strong>Find Your Cup Column:</strong> Locate your calculated bust-to-band delta in the Cup Size Conversion Matrix to identify your regional letter.</li>
-          <li><strong>Cross-Reference Destination Region:</strong> Read horizontally across the row to find your target country's equivalent size tag.</li>
-        </ol>
+        <h3 class="font-bold text-lg text-ink mt-6 mb-2">The Center Gore Doesn't Sit Flat</h3>
+        <p class="mb-5">
+          The center gore is the small piece of fabric and underwire that sits right between your breasts. In a well-fitting underwired bra, this gore should tack completely flat against your sternum. If it is floating away from your chest, or sitting on top of your breast tissue, it is a glaring indicator that the cups are too small. Your breasts are actively pushing the cups outward, pulling the gore away from your body. You will likely need to go up at least one cup size, and sometimes two, to give your tissue enough room to settle.
+        </p>
+
+        <h3 class="font-bold text-lg text-ink mt-6 mb-2">Straps Are Constantly Slipping</h3>
+        <p class="mb-5">
+          Slipping straps can be absolutely infuriating, especially if you have narrow or sloping shoulders. However, they are also a key sign of a band that is too large. When the band is too loose, the straps are positioned wider apart on your back, making them far more likely to slide off. Sizing down in the band often brings the straps closer together. If you've corrected your band size and still experience slipping, look for "racerback" styles, or bras with fully adjustable straps, as well as styles designed with "leotard" (U-shaped) backs.
+        </p>
+
+        <h3 class="font-bold text-lg text-ink mt-6 mb-2">The Cups Are Wrinkling or Gaping</h3>
+        <p class="mb-4">
+          When you notice empty space, wrinkling, or gaping at the top or sides of your cups, the instinct is usually to assume the cup is too large. Often, this is correct—you simply need to drop down a cup volume. But occasionally, gaping happens when the cup is actually too small or the wrong shape! If a cup is too shallow for your breast shape (often the case with molded seamless "T-shirt" bras), your breast will push the bra away from your chest, creating a gap at the top. If sizing down doesn't fix the issue, you may need to try a seamed, unlined bra that accommodates more natural projection.
+        </p>
       </section>
 
       <!-- Section 2: Related Tools -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Interactive Tools & Calculators</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">Interactive Tools & Calculators</h2>
+        <p class="mb-6">
+          Still feeling unsure? You don't have to do the complex math in your head. We've built an entire suite of intuitive tools designed to take the mental load off your shoulders. Whether you need to calculate your size from scratch or figure out your sister sizes for a tricky brand, our main Hub pages have you covered. Use these resources to verify your fit.
+        </p>
         <div class="flex flex-wrap gap-3">
-          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-on-primary font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
+          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
             Primary Calculator Tool &rarr;
           </a>
           <a href="/bra-size-converter/" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
@@ -226,6 +310,9 @@ const faqSchema = {
       <!-- Section 3: FAQ Section -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
         <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+        <p class="mb-6 text-sm text-body">
+          We hear these questions all the time from people just like you who are trying to make sense of the chaos. Here are our most honest, straightforward answers to help you navigate the complexities of bra fitting.
+        </p>
         <div class="space-y-4">
           {faqSchema.mainEntity.map(item => (
             <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
@@ -239,22 +326,6 @@ const faqSchema = {
         </div>
       </section>
     </div>
-  
-  <article class='mt-12 space-y-6'>
-    <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl mb-6">
-        For years, women have silently endured the physical and emotional toll of wearing the wrong bra size. The pinching, the digging underwires, the straps that perpetually slip down your shoulders, and that inescapable feeling of restriction—it is a frustration that transcends borders. If you have ever felt a burning ache in your shoulders after a long day at work, or found deep red indentations along your ribcage the moment you take your bra off, you are intimately familiar with the struggle. This isn't just about fashion; it is about your daily comfort, your posture, and your overall well-being. Finding a bra that truly fits shouldn't feel like deciphering an ancient, unsolvable puzzle, yet the chaotic landscape of international sizing often makes it seem exactly like that.
-      </p>
-      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl mb-6">
-        We understand the exhaustion of ordering what you think is your size, only to have it arrive and fit completely differently from the bra you bought just weeks prior. You might be a 34DD in a US brand, but suddenly find yourself spilling out of a French 90E, or swimming in a UK 34E. It’s enough to make anyone want to give up and settle for "good enough." But you deserve better than "good enough." You deserve a garment that supports you seamlessly, distributing weight evenly across your torso rather than placing the entire burden on your delicate shoulder muscles. A well-fitted bra can alleviate chronic back pain, improve your posture, and give you the confidence to move freely throughout your day without constantly adjusting your undergarments.
-      </p>
-      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl mb-6">
-        This is why we have meticulously compiled this comprehensive guide and sizing matrix. We believe that knowledge is power, and by demystifying the complex world of international bra sizing, we aim to empower you to make informed, confident choices. Whether you are shopping for a delicate lace bralette from a boutique in Paris, a highly structured sports bra from the UK, or a comfortable everyday t-shirt bra from an American retailer, understanding how your measurements translate across different regional standards is the key to unlocking true comfort. 
-      </p>
-      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl mb-6">
-        Before diving into the charts and converters, it is absolutely crucial that you start with accurate baseline measurements. If you haven't measured yourself recently—and by recently, we mean within the last six months—we strongly encourage you to visit our comprehensive <a href="/how-to-measure/" class="text-primary hover:underline">How to Measure Guide</a>. Our bodies are dynamic and constantly evolving; factors such as weight fluctuation, hormonal changes, pregnancy, and simple aging can all impact your breast tissue and ribcage dimensions. Relying on a measurement taken three years ago is a guaranteed recipe for a poor fit. Once you have your current, precise measurements in both inches and centimeters, you can use the tools provided here to seamlessly translate your size across any global standard. For a deeper understanding of how a bra should actually sit on your body, check out our <a href="/fit-guide/" class="text-primary hover:underline">Ultimate Fit Guide</a>.
-      </p>
-  </article>
-
   </main>
   <Footer />
 </Layout>

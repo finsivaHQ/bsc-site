@@ -29,12 +29,54 @@ const faqSchema = {
         "text": "To convert a US/UK inch band to EU metric band, multiply the inch band by 2.54 and round to the nearest multiple of 5 cm (e.g. 30 in = 65 EU, 32 in = 70 EU, 34 in = 75 EU, 36 in = 80 EU, 38 in = 85 EU)."
       }
     },
-    {"@type": "Question", "name": "Why do my bra straps keep falling down even when tightened?", "acceptedAnswer": {"@type": "Answer", "text": "Straps constantly slipping off your shoulders is a classic sign that your bra band is too large. When the band is too loose, the straps are set too far apart for your frame and cannot maintain tension. We recommend checking your underbust measurement with our <a href='/how-to-measure/'>How to Measure Guide</a> to ensure you're in the right band size."}},
-    {"@type": "Question", "name": "What causes the underwire to dig into my ribs or armpits?", "acceptedAnswer": {"@type": "Answer", "text": "Underwire digging is usually caused by wearing a cup size that is too small or a band that is too tight. If the cups are too small, the wire sits on breast tissue instead of your ribcage. If the band is too tight, it pulls the wires uncomfortably hard against your body. Review our <a href='/fit-guide/'>Fit Guide</a> for more details."}},
-    {"@type": "Question", "name": "How often should I measure my bra size?", "acceptedAnswer": {"@type": "Answer", "text": "You should measure your bra size every 6 months, or whenever you experience significant weight changes, hormonal shifts, or pregnancy. Breast tissue changes naturally over time, and a size that fit perfectly a year ago may no longer provide the necessary support."}},
-    {"@type": "Question", "name": "What does 'sister sizing' mean and how do I use it?", "acceptedAnswer": {"@type": "Answer", "text": "Sister sizes are bra sizes that hold the same cup volume but have different band sizes. If you go up a band size, you must go down a cup letter to maintain the same volume (e.g., a 34C holds the same volume as a 36B). This is incredibly helpful when a specific brand runs tight or loose."}},
-    {"@type": "Question", "name": "Why do bras from different brands fit differently even if they are the same size?", "acceptedAnswer": {"@type": "Answer", "text": "Different brands use different fit models and grading rules. Additionally, international sizing standards vary wildly. A US 34G is vastly different from a UK 34G. Always cross-reference the brand's country of origin using our converter tools before purchasing."}},
-    {"@type": "Question", "name": "Can wearing the wrong bra size cause back pain?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. If your bra band is too loose, your shoulder straps bear the weight of your breasts, leading to neck, shoulder, and back pain. The band should provide 80% of the support, not the straps."}}
+    {
+      "@type": "Question",
+      "name": "Is my bra size the same in every brand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unfortunately, no. While international sizing systems provide a fantastic baseline, individual brands often have their own unique fit models. A 34C in a US brand might feel slightly different than a 34C in another US brand due to fabric stretch, cup shape, and intended style. Always use conversion charts as a starting point, but listen to how the bra actually feels on your body."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my converted size still doesn't fit right?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you've converted your size but the bra still feels uncomfortable, you might need to explore 'sister sizes'. If the band is too tight but the cup fits, go up a band size and down a cup size (e.g., from 34C to 36B). If the band is too loose, go down a band size and up a cup size (e.g., from 34C to 32D). Fit is a personal journey, and sister sizing is a powerful tool."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do French and EU sizes use the same cup letters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, generally speaking, French (FR) and European (EU) sizing systems use the exact same single-letter cup progression (A, B, C, D, E, F...). The main difference between FR and EU sizing lies in the band numbers. French band sizes are typically exactly 15 higher than the corresponding standard EU band size (e.g., a 75 EU band is a 90 FR band)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do UK brands use double letters like FF and GG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The UK sizing system is renowned for its precision, particularly in larger cup sizes. Instead of just progressing through the alphabet, they introduce double letters (DD, FF, GG, HH) to denote half-step increments in cup volume. This allows for a much more customized and supportive fit for those who need it, compared to systems that only use single letters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do if a brand doesn't specify which sizing system they use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If a brand is ambiguous about its sizing (which happens all too frequently!), check their size chart carefully. Look at the progression of cups. If you see 'DD, E, F, FF, G', you are dealing with UK sizing. If you see 'DD, DDD, G, H', it is US sizing. If you only see single letters 'D, E, F, G', it's likely EU sizing. Knowing these telltale signs is your best defense against mis-ordering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my band size a completely different number in Australia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unlike the US or UK which use inches for underbust measurement (e.g., 34), Australian and New Zealand bra bands are aligned with their standard dress sizes (e.g., 8, 10, 12, 14). So, a US 34 band equates to an AU 12. Their cup sizes, however, closely follow the UK system up to a certain point."
+      }
+    }
   ]
 };
 ---
@@ -52,7 +94,7 @@ const faqSchema = {
 
     <!-- Page Header / Intro -->
     <header class="mb-10 text-center sm:text-left">
-    <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+      <span class="inline-block py-1 px-3 rounded-full bg-canvas-soft-2 border border-hairline text-xs font-semibold uppercase tracking-widest text-primary mb-3">
         Interactive Size Conversion Engine
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
@@ -61,7 +103,7 @@ const faqSchema = {
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
         Select your known bra size and country standard below to convert your equivalent band and cup sizes across US/CA, UK, EU, FR, AU/NZ, JP, IN, HK, KR, and SG sizing conventions instantly.
       </p>
-  </header>
+    </header>
 
     <!-- Converter Form & Results Card -->
     <section class="bg-surface border border-hairline rounded-2xl shadow-sm p-4 sm:p-6 md:p-10 mb-12" aria-labelledby="converter-heading">
@@ -198,135 +240,206 @@ const faqSchema = {
       </div>
     </section>
 
-    <!-- Educational Sections -->
+    <!-- PROSE CONTENT START -->
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
-
-      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8 mt-10">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">The Physical Impact of a Poorly Fitted Bra</h2>
-        <p class="mb-4">
-          It is a startling reality that the majority of women are currently wearing the wrong bra size. The consequences of this go far beyond mere aesthetics. A poorly fitted bra can lead to a cascade of physical ailments that many women accept as a normal part of life, completely unaware that their undergarments are the root cause. When a band is too loose, it fails to provide the necessary support, forcing the shoulder straps to carry the weight of the breasts. Over time, this constant downward pressure can lead to deep grooving in the shoulders, chronic neck tension, and persistent upper back pain. It can even contribute to poor posture, as the body instinctively hunches forward to relieve the strain.
-        </p>
-        <p class="mb-4">
-          Conversely, a band that is excessively tight restricts breathing, causes painful friction against the skin, and can even impede healthy circulation. The underwires, which are designed to sit flush against the ribcage and encapsulate the breast tissue, can become instruments of torture if the cup size is incorrect. Cups that are too small force the underwires to sit on top of the delicate breast tissue, causing painful bruising, digging, and the dreaded "quad-boob" effect. Cups that are too large fail to provide adequate containment, leading to uncomfortable shifting and chafing throughout the day.
-        </p>
-        <p class="mb-4">
-          By taking the time to understand your true size and how it translates across different brands and regions, you are investing in your own health and comfort. You are saying no to the normalized pain of a poorly fitted bra and demanding undergarments that work with your body, not against it. We know that the journey to finding the perfect fit can be frustrating, involving trial and error, multiple returns, and moments of exasperation. But we assure you, the moment you put on a bra that fits perfectly—a bra that feels like a second skin, supporting you effortlessly and painlessly—it will all be worth it. If you are still unsure about your size or experiencing persistent fit issues, our <a href="/fit-guide/" class="text-primary hover:underline">Fit Guide</a> offers detailed troubleshooting advice to help you pinpoint exactly where your current bras are failing you.
-        </p>
-        <p class="mb-4">
-          Remember, your bra size is just a number and a letter—a starting point, a tool to help you navigate the vast and often confusing world of lingerie. It does not define you, and it certainly shouldn't dictate your comfort. Embrace the process, be patient with yourself, and don't hesitate to utilize all the resources we have provided, from our precise <a href="/how-to-measure/" class="text-primary hover:underline">measurement instructions</a> to our dynamic converters and comprehensive charts. True comfort is achievable, and it starts with understanding the unique needs of your own body.
-        </p>
+      
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink mb-6">Navigating the Exhausting Maze of International Bra Sizing</h2>
+        <div class="space-y-5 text-body leading-relaxed">
+          <p>Let's be incredibly honest for a moment: buying a bra shouldn't require an advanced degree in mathematics. Yet, standing in a fitting room—or staring at a checkout screen on a gorgeous European boutique's website—trying to decode exactly what a US 34DD translates to in French or European sizing can feel completely, utterly overwhelming. It is frustrating, it is confusing, and quite frankly, it can make you want to give up on finding a bra that actually fits you well.</p>
+          
+          <p>We've all been there. You finally find the perfect bra online. The fabric looks absolutely divine, the cut is exactly the silhouette you've been searching for, and you're ready to hit 'add to cart'. But then you look at the sizing dropdown and see numbers and letters that look like a completely foreign language—or worse, numbers you recognize but paired with letters that make zero sense for your body. You are not alone in this struggle. The unfortunate reality of the global lingerie market is that there is absolutely no universal standard. Different regions and countries have evolved their own unique sizing systems based on completely different historical measurement conventions, manufacturing practices, and cultural norms.</p>
+          
+          <p>This is not just about aesthetics or vanity; it's deeply tied to your comfort, your support, and your day-to-day physical well-being. A bra that doesn't fit properly—whether the band is mercilessly digging into your ribcage and restricting your breathing, or the cups are gaping and failing to provide the support you need—can ruin your posture, cause chronic back and shoulder pain, and completely destroy your confidence. When your foundational garment isn't right, your entire day feels off. But don't worry. You don't have to navigate this intricate maze blindly.</p>
+          
+          <p>We've built this interactive converter to be your trusted, foolproof guide, cutting straight through the confusion and giving you the precise, mathematical answers you need instantly. Whether you're shopping from an exquisite French boutique, trying out a highly-rated British brand renowned for their incredible large-cup support, or just trying to decipher the complex, multi-national tags on the bras you already own in your drawer, mastering international conversion is the master key to unlocking a world of better-fitting, more supportive, and more comfortable lingerie. If you're completely unsure of where to even begin and don't know your starting size, you might want to visit our main <a href="/" class="text-primary hover:underline font-semibold">Bra Size Hub</a> to ensure you have a highly accurate starting point before attempting to convert your size across borders. Getting your initial measurement right is the single most important step before engaging with any conversions.</p>
+        </div>
       </section>
-
 
       <!-- Section 1: Global Conversion Rules -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. Master Global Conversion Rules</h2>
-        <p class="mb-4">
-          Understanding international sizing conversion requires evaluating two separate variables: underbust band numbers and overbust cup letters.
-        </p>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">1. Master the Complex Global Conversion Rules</h2>
+        <div class="space-y-5 text-body leading-relaxed">
+          <p>
+            Understanding international sizing conversion requires you to evaluate two entirely separate variables: the underbust band numbers, and the overbust cup letters. It is absolutely crucial to realize that these two components do not always change at the same rate across different countries. Sometimes the band size translates directly, but the cup size shifts completely. Other times, it's the exact opposite. Let's break down the underlying mechanics of these systems so you never feel lost again.
+          </p>
 
-        <!-- Data Table 1: Band Conversion Chart -->
-        <h3 class="text-lg font-bold text-ink mb-3">Global Band Conversion Reference Matrix</h3>
-        <div class="overflow-x-auto -mx-2 px-2 mb-6">
-          <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[500px]">
-            <thead>
-              <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
-                <th scope="col" class="py-2.5 px-3 font-semibold">US / UK / IN (Inches)</th>
-                <th scope="col" class="py-2.5 px-3 font-semibold">EU / JP / HK / KR (cm)</th>
-                <th scope="col" class="py-2.5 px-3 font-semibold">FR / BE / ES (cm)</th>
-                <th scope="col" class="py-2.5 px-3 font-semibold">AU / NZ Dress Size</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-hairline">
-              {BAND_CONVERSION_MATRIX.map(row => (
-                <tr>
-                  <td class="py-2 px-3 font-semibold text-primary">{row.us} inches</td>
-                  <td class="py-2 px-3 font-semibold text-ink">{row.eu} cm</td>
-                  <td class="py-2 px-3 font-semibold text-ink">{row.fr} cm</td>
-                  <td class="py-2 px-3 font-semibold text-ink">Size {row.au}</td>
+          <h3 class="text-lg font-bold text-ink mt-6 mb-3">The Global Band Conversion Reference Matrix</h3>
+          <p>
+            Band sizes are the absolute foundation of your bra's support system. In fact, a properly fitted band should be providing approximately 80% of the heavy lifting, taking the strain off your shoulders and straps. In the US, UK, and India, bands are traditionally measured in inches. In most of Continental Europe, Japan, and other Asian markets, they are measured in centimeters. This matrix below provides a clear, reliable translation across the globe.
+          </p>
+          
+          <div class="overflow-x-auto -mx-2 px-2 my-6">
+            <table class="w-full text-left text-xs sm:text-sm text-body border-collapse min-w-[500px]">
+              <thead>
+                <tr class="border-b border-hairline bg-canvas-soft-2 text-ink">
+                  <th scope="col" class="py-3 px-4 font-semibold rounded-tl-xl">US / UK / IN (Inches)</th>
+                  <th scope="col" class="py-3 px-4 font-semibold">EU / JP / HK / KR (cm)</th>
+                  <th scope="col" class="py-3 px-4 font-semibold">FR / BE / ES (cm)</th>
+                  <th scope="col" class="py-3 px-4 font-semibold rounded-tr-xl">AU / NZ Dress Size</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody class="divide-y divide-hairline">
+                {BAND_CONVERSION_MATRIX.map(row => (
+                  <tr class="hover:bg-canvas-soft-2/50 transition-colors">
+                    <td class="py-3 px-4 font-semibold text-primary">{row.us} inches</td>
+                    <td class="py-3 px-4 font-semibold text-ink">{row.eu} cm</td>
+                    <td class="py-3 px-4 font-semibold text-ink">{row.fr} cm</td>
+                    <td class="py-3 px-4 font-semibold text-ink">Size {row.au}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="p-6 bg-canvas-soft-2 rounded-xl text-sm space-y-3 border border-hairline">
+            <h4 class="font-bold text-ink text-base flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+              </svg>
+              Pro-Tip for Band Conversions
+            </h4>
+            <p>
+              When converting from inches to centimeters (like moving from US sizing to EU sizing), you might notice that the direct mathematical conversion doesn't perfectly align with the size chart. For example, 34 inches is exactly 86.36 cm, but a US 34 band converts to an EU 75 band. Why? Because the EU sizing system has a built-in 'ease' measurement—they traditionally add roughly 10cm to the actual underbust measurement to determine the final band size on the tag. This is why you must always trust the established conversion charts rather than trying to do raw mathematical conversions in your head. Trying to calculate this yourself will almost always lead to purchasing a band that is entirely too loose for proper support.
+            </p>
+          </div>
         </div>
       </section>
 
       <!-- Section 2: Regional Cup Divergence -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. Regional Cup Divergence Guidelines</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">2. The Absolute Chaos of Regional Cup Divergence</h2>
         
-        <div class="space-y-4 mb-6">
-          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink text-sm mb-1">North America (US & CA)</h3>
-            <p class="text-xs sm:text-sm text-body">
-              Uses single letters or multi-D designations above D cup: D, DD, DDD (or F), G, H, I, J.
-            </p>
-          </div>
+        <div class="space-y-5 text-body leading-relaxed">
+          <p>
+            While band sizes are relatively straightforward to convert once you understand the core rules, cup sizes are where the real chaos begins. Up to a D cup, almost the entire world agrees: an A is an A, a B is a B, a C is a C, and a D is a D. It is delightfully simple. But the very moment you need a cup larger than a D, the global systems fracture entirely. This is universally recognized as the single biggest pain point for bra shoppers globally. Let's demystify these regional quirks so you can shop with confidence, no matter where a brand is based.
+          </p>
 
-          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
-            <h3 class="font-bold text-primary text-sm mb-1">United Kingdom (UK & Commonwealth)</h3>
-            <p class="text-xs sm:text-sm text-body">
-              Uses double-letter progressions above D cup: D, DD, E, F, FF, G, GG, H, HH, J, JJ.
-            </p>
-          </div>
+          <div class="grid grid-cols-1 gap-4 mt-6">
+            <div class="p-6 bg-canvas-soft-2/70 border border-hairline rounded-xl transition-all hover:bg-canvas-soft-2 shadow-sm">
+              <h3 class="font-bold text-ink text-lg mb-3 flex items-center gap-2">
+                <span class="text-2xl">🇺🇸</span> North America (US & CA)
+              </h3>
+              <p class="text-sm text-body leading-relaxed">
+                The US system is notoriously inconsistent above a D cup. It is practically the wild west of lingerie sizing. Some major brands use multiple D's (such as DD, DDD, DDDD), while others switch entirely to a single letter progression (DD, F, G, H, I). This means if you are a US size DDD in one brand, you might very well be labeled an F in another US brand, despite them both being domestic companies. It requires incredibly careful attention to the specific brand's sizing chart before purchasing. As a general rule for our converter, we use the standard, most widely accepted US progression: DD, DDD/F, G, H, I, J, K.
+              </p>
+            </div>
 
-          <div class="p-4 bg-canvas-soft-2/70 border border-hairline rounded-xl">
-            <h3 class="font-bold text-ink text-sm mb-1">Continental Europe (EU, JP, KR, HK, SG)</h3>
-            <p class="text-xs sm:text-sm text-body">
-              Uses sequential single-letter metric progressions: A, B, C, D, E, F, G, H, I. Note that EU E cup equals US DDD and UK E.
+            <div class="p-6 bg-canvas-soft-2/70 border border-hairline rounded-xl transition-all hover:bg-canvas-soft-2 shadow-sm">
+              <h3 class="font-bold text-ink text-lg mb-3 flex items-center gap-2">
+                <span class="text-2xl">🇬🇧</span> United Kingdom (UK & Commonwealth)
+              </h3>
+              <p class="text-sm text-body leading-relaxed">
+                The UK sizing system is widely considered the absolute gold standard for full-bust sizing because it is highly standardized, extremely precise, and logically structured. Instead of just jumping to a new letter, they utilize double letters to thoughtfully denote half-cup steps in volume: D, DD, E, F, FF, G, GG, H, HH, J, JJ. If you are shopping for a cup size larger than a DD, UK brands (like Panache, Freya, Curvy Kate, and Elomi) often provide the most consistent, supportive, and well-engineered fit on the market. Note that a UK 'E' cup is completely different from a US 'E' cup; a UK 'E' is actually equivalent to a US 'DDD'.
+              </p>
+            </div>
+
+            <div class="p-6 bg-canvas-soft-2/70 border border-hairline rounded-xl transition-all hover:bg-canvas-soft-2 shadow-sm">
+              <h3 class="font-bold text-ink text-lg mb-3 flex items-center gap-2">
+                <span class="text-2xl">🇪🇺</span> Continental Europe (EU, JP, KR, HK, SG)
+              </h3>
+              <p class="text-sm text-body leading-relaxed">
+                European and many Asian systems keep things seemingly straightforward by strictly using single letters, progressing straight through the alphabet: A, B, C, D, E, F, G, H, I, J. They completely reject the concept of double letters (you will virtually never see a DD or FF in true EU sizing). However, this creates a major trap for international shoppers: an EU 'E' cup is significantly smaller than a UK 'E' cup. In fact, a UK 'E' actually translates to an EU 'F'. If you are buying a premium European brand (like PrimaDonna, Chantelle, or Simone Pérèle), you must pay incredibly close attention to this shift, or you will end up with cups that are uncomfortably tight and cause "quad-boob."
+              </p>
+            </div>
+          </div>
+          
+          <div class="mt-6 p-5 border border-primary/20 bg-primary/5 rounded-xl">
+            <p class="text-sm text-ink leading-relaxed">
+              <strong>A vital piece of insider advice:</strong> When buying internationally, you must always check whether the brand uses their native country's sizing system, or the sizing system of the country you are currently shopping in. Many top-tier British brands sold in US department stores will still list their UK size on the tag, causing mass confusion for American buyers who think they are picking up a US 'G' cup when it is actually a much larger UK 'G'. Always check the tag for the regional indicators (UK, US, EU, FR).
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Section 3: Related Sizing Tools -->
+      <!-- Section 3: Troubleshooting Fit After Conversion -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
-        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. Related Bra Sizing Tools</h2>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">3. Troubleshooting: What to Do When the Converted Size Doesn't Feel Right</h2>
+        <div class="space-y-5 text-body leading-relaxed">
+          <p>
+            So, you've used the converter. You've read the charts. You know exactly what your size should be in that beautiful French boutique. You excitedly order the bra, wait for it to arrive, finally slip it on... and your heart sinks. It just doesn't feel right. First, take a deep breath. You didn't do the math wrong, and our converter isn't broken. This is an incredibly common experience, and it comes down to the highly nuanced, artistic nature of garment manufacturing.
+          </p>
+          <p>
+            Every single bra brand in the world uses a different "fit model" (a real human being whose exact body proportions are used to test the prototypes). Furthermore, different fabrics have vastly different levels of stretch, tension, and give. A delicate, non-stretch lace French balconette will fit entirely differently than a sturdy, molded-cup American t-shirt bra made from spandex, even if the tag insists they are technically the exact same converted size. Fit is incredibly dynamic, not static. So, how do we fix it?
+          </p>
+          
+          <h3 class="text-lg font-bold text-ink mt-6 mb-3">Your Definitive Troubleshooting Checklist:</h3>
+          <ul class="list-none space-y-4">
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold">1</span>
+              <div>
+                <strong class="text-ink block mb-1">If the band is digging in painfully:</strong>
+                <p class="text-sm">Before abandoning the brand entirely, try going up one band size. But—and this is critical—remember to go down one cup size to maintain the exact same cup volume (e.g., if a 34D is too agonizingly tight around your ribs, you need to try a 36C). If you just went up to a 36D, the cups would become significantly larger and likely gape.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold">2</span>
+              <div>
+                <strong class="text-ink block mb-1">If the cups are gaping at the top:</strong>
+                <p class="text-sm">First, ensure you have properly "scooped and swooped" all of your breast tissue from under your arms and along your ribcage fully into the cups. If you've done this vigorously and the fabric still gapes, wrinkles, or sags, the cups are simply too large for your breast shape in this specific brand. Try going down one cup size while keeping the band the same (e.g., move from a 34D to a 34C).</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold">3</span>
+              <div>
+                <strong class="text-ink block mb-1">If the underwire sits directly on your breast tissue:</strong>
+                <p class="text-sm">This is a major red flag and incredibly uncomfortable. The underwire should encase your breast tissue completely and lay perfectly flat against your sternum (the gore). If it's resting on breast tissue on the sides (under your arms), or floating away from your chest in the middle, the cups are definitively too small. You need a larger cup volume immediately (e.g., scale up from a 34D to a 34DD or 34E).</p>
+              </div>
+            </li>
+          </ul>
+          
+          <p class="mt-6 p-5 bg-surface border border-hairline rounded-xl">
+            Understanding how to rapidly and accurately adjust your size based on how the bra actually feels on your unique body is incredibly empowering. This core concept is known in the lingerie industry as "sister sizing," and it is an absolute game-changer for online shopping. For a much deeper, comprehensive dive into this technique, we highly recommend using our dedicated <a href="/sister-size-calculator/" class="text-primary hover:underline font-semibold">Sister Size Calculator</a> to instantly see all of your adjacent, mathematically equivalent sizes. It can literally save you hundreds of dollars in return shipping fees.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Related Sizing Tools -->
+      <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-bold text-ink mb-4">4. Essential Bra Sizing Tools to Continue Your Journey</h2>
+        <p class="mb-5 text-sm text-body">Still exploring your perfect fit? We've built a comprehensive suite of tools to help you along every single step of your journey. Return to our main hubs to continue exploring and finding that perfect match.</p>
         <div class="flex flex-wrap gap-3">
-          <a href="/#calculator" class="px-5 py-2.5 bg-primary text-on-primary font-bold text-xs rounded-xl hover:bg-primary-hover transition-colors shadow-2xs">
-            Calculate Size Baseline &rarr;
+          <a href="/#calculator" class="px-5 py-3 bg-primary text-white font-bold text-sm rounded-xl hover:bg-primary-hover transition-colors shadow-2xs flex items-center gap-2">
+            Calculate Size Baseline 
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
           </a>
-          <a href="/bra-size-chart/" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
-            Bra Size Chart &rarr;
+          <a href="/bra-size-chart/" class="px-5 py-3 bg-surface border border-hairline text-ink font-semibold text-sm rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs flex items-center gap-2">
+            Bra Size Chart Hub
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
           </a>
-          <a href="/sister-size-calculator/" class="px-5 py-2.5 bg-surface border border-hairline text-ink font-semibold text-xs rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs">
-            Sister Size Calculator &rarr;
+          <a href="/sister-size-calculator/" class="px-5 py-3 bg-surface border border-hairline text-ink font-semibold text-sm rounded-xl hover:bg-canvas-soft-2 transition-colors shadow-2xs flex items-center gap-2">
+            Sister Size Calculator
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
           </a>
         </div>
       </section>
 
-      <!-- Section 4: FAQ Section -->
+      <!-- Section 5: FAQ Section -->
       <section class="bg-surface border border-hairline rounded-2xl p-6 sm:p-8">
         <h2 class="text-xl sm:text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
         <div class="space-y-4">
           {faqSchema.mainEntity.map(item => (
             <details class="bg-canvas border border-hairline rounded-xl p-5 cursor-pointer group">
-              <summary class="font-bold text-ink flex justify-between items-center list-none">
-                <span>{item.name}</span>
-                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+              <summary class="font-bold text-ink flex justify-between items-center list-none outline-none">
+                <span class="pr-6">{item.name}</span>
+                <span class="text-primary group-open:rotate-180 transition-transform duration-300 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </span>
               </summary>
-              <p class="mt-4 text-body text-xs sm:text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+              <p class="mt-4 text-body text-sm leading-relaxed border-t border-hairline pt-4">{item.acceptedAnswer.text}</p>
             </details>
           ))}
         </div>
       </section>
     </div>
-  
-  <article class='mt-12 space-y-6'>
-    <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl mb-6">
-        For years, women have silently endured the physical and emotional toll of wearing the wrong bra size. The pinching, the digging underwires, the straps that perpetually slip down your shoulders, and that inescapable feeling of restriction—it is a frustration that transcends borders. If you have ever felt a burning ache in your shoulders after a long day at work, or found deep red indentations along your ribcage the moment you take your bra off, you are intimately familiar with the struggle. This isn't just about fashion; it is about your daily comfort, your posture, and your overall well-being. Finding a bra that truly fits shouldn't feel like deciphering an ancient, unsolvable puzzle, yet the chaotic landscape of international sizing often makes it seem exactly like that.
-      </p>
-      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl mb-6">
-        We understand the exhaustion of ordering what you think is your size, only to have it arrive and fit completely differently from the bra you bought just weeks prior. You might be a 34DD in a US brand, but suddenly find yourself spilling out of a French 90E, or swimming in a UK 34E. It’s enough to make anyone want to give up and settle for "good enough." But you deserve better than "good enough." You deserve a garment that supports you seamlessly, distributing weight evenly across your torso rather than placing the entire burden on your delicate shoulder muscles. A well-fitted bra can alleviate chronic back pain, improve your posture, and give you the confidence to move freely throughout your day without constantly adjusting your undergarments.
-      </p>
-      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl mb-6">
-        This is why we have meticulously compiled this comprehensive guide and sizing matrix. We believe that knowledge is power, and by demystifying the complex world of international bra sizing, we aim to empower you to make informed, confident choices. Whether you are shopping for a delicate lace bralette from a boutique in Paris, a highly structured sports bra from the UK, or a comfortable everyday t-shirt bra from an American retailer, understanding how your measurements translate across different regional standards is the key to unlocking true comfort. 
-      </p>
-      <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl mb-6">
-        Before diving into the charts and converters, it is absolutely crucial that you start with accurate baseline measurements. If you haven't measured yourself recently—and by recently, we mean within the last six months—we strongly encourage you to visit our comprehensive <a href="/how-to-measure/" class="text-primary hover:underline">How to Measure Guide</a>. Our bodies are dynamic and constantly evolving; factors such as weight fluctuation, hormonal changes, pregnancy, and simple aging can all impact your breast tissue and ribcage dimensions. Relying on a measurement taken three years ago is a guaranteed recipe for a poor fit. Once you have your current, precise measurements in both inches and centimeters, you can use the tools provided here to seamlessly translate your size across any global standard. For a deeper understanding of how a bra should actually sit on your body, check out our <a href="/fit-guide/" class="text-primary hover:underline">Ultimate Fit Guide</a>.
-      </p>
-  </article>
-
   </main>
   <Footer />
 </Layout>

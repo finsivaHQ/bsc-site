@@ -2,20 +2,26 @@ import re
 import os
 
 with open('astro.config.mjs', 'r', encoding='utf-8') as f:
-    content = f.read()
+    lines = f.readlines()
 
-redirects_match = re.search(r'redirects:\s*\{([^}]+)\}', content)
-if redirects_match:
-    lines = redirects_match.group(1).splitlines()
-    with open('public/_redirects', 'w', encoding='utf-8') as f:
-        for line in lines:
+os.makedirs('public', exist_ok=True)
+with open('public/_redirects', 'w', encoding='utf-8') as f:
+    in_redirects = False
+    for line in lines:
+        if 'redirects: {' in line:
+            in_redirects = True
+            continue
+        if in_redirects:
+            if line.strip() == '},' or line.strip() == '}':
+                in_redirects = False
+                continue
             if ':' in line and 'destination' in line:
                 source = line.split(':')[0].strip().strip("'")
                 dest_match = re.search(r"destination:\s*'([^']+)'", line)
                 if dest_match:
                     dest = dest_match.group(1)
-                    # Write both non-trailing and trailing slash rules for Cloudflare Pages
                     f.write(f'{source} {dest} 301\n')
                     if not source.endswith('/'):
                         f.write(f'{source}/ {dest} 301\n')
-    print('Done.')
+
+print('Done.')

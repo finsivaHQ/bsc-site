@@ -17,6 +17,12 @@ export default defineConfig({
     })
   ],
   redirects: {
+    '/blog/comprehensive-global-bra-size-comparison/': { status: 301, destination: '/bra-size-converter/' },
+    '/blog/how-to-fit-someone-for-a-bra-professional-guide/': { status: 301, destination: '/how-to-measure/' },
+    '/blog/measuring-cup-size-inches-vs-centimeters/': { status: 301, destination: '/how-to-measure/' },
+    '/blog/how-to-tell-if-your-bra-is-too-small-signs/': { status: 301, destination: '/fit-guide/' },
+    '/blog/convert-french-italian-bra-sizes-to-us-uk/': { status: 301, destination: '/eu-bra-size-guide/' },
+
     '/blog/ultimate-international-bra-size-converter-guide/': { status: 301, destination: '/bra-size-converter/' },
     '/blog/sister-sizes-explained/': { status: 301, destination: '/sister-size-calculator/' },
     '/blog/complete-sister-bra-size-chart-every-band-size/': { status: 301, destination: '/sister-size-calculator/' },

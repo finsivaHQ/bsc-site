@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -78,7 +78,7 @@ const faqSchema = {
 ---
 
 <Layout 
-  title="Bra Size Chart — US, UK, EU, AU, JP, IN, HK, South Korea, SG & International Conversion Guide | BraSizeChecker"
+  title="Visual Bra Size Chart with Pictures & International Conversion Guide | BraSizeChecker"
   description="Comprehensive international bra size chart. Compare US, UK, EU, FR, AU, JP, IN, HK, South Korea, and Singapore band and cup sizes."
   canonical="https://brasizechecker.com/bra-size-chart"
 >
@@ -94,7 +94,7 @@ const faqSchema = {
         Master Reference Guide
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-        Master Bra Size Chart: US, UK, EU, AU, JP, IN & International Matrix
+        Visual Bra Size Chart with Pictures: Master International Matrix
       </h1>
       <div class="flex items-center gap-3 text-xs text-mute mb-4 justify-center sm:justify-start">
         <span>By BraSizeChecker Editorial Guide</span>
@@ -110,7 +110,17 @@ const faqSchema = {
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
         Every bra size consists of two crucial elements: a <strong>band number</strong> (representing the circumference of your ribcage, the true foundation of support) and a <strong>cup letter</strong> (representing the volume displacement of your breast tissue). To take the guesswork out of your shopping experience, we’ve developed the ultimate Master Bra Size Chart below. You can seamlessly cross-reference sizes across 10 major global regions, ensuring you find your perfect fit no matter where your favorite lingerie originates.
       </p>
-    </header>
+            <figure class="my-10 w-full rounded-2xl overflow-hidden border border-hairline shadow-sm">
+          <img 
+            src="/img/bra-cup-fit-guide.jpg" 
+            alt="Visual bra size chart with pictures showing realistic cup size comparisons" 
+            class="w-full h-auto object-cover"
+          />
+          <figcaption class="p-4 bg-canvas-soft text-sm text-mute text-center border-t border-hairline">
+            A visual representation of how different cup sizes look relative to band sizes.
+          </figcaption>
+        </figure>
+      </header>
 
     <!-- Interactive Conversion Chart Tool -->
     <section class="bg-surface border border-hairline rounded-2xl shadow-sm p-4 sm:p-6 md:p-8 mb-12" aria-labelledby="chart-heading">
@@ -362,3 +372,4 @@ const faqSchema = {
     }
   });
 </script>
+

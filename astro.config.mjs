@@ -17,6 +17,8 @@ export default defineConfig({
     })
   ],
   redirects: {
+    '/blog/bra-size-chart-with-pictures-explained': { status: 301, destination: '/blog/visual-bra-size-chart-with-pictures/' },
+
     '/blog/accurate-bra-size-calculator-inches': { status: 301, destination: '/how-to-measure/' },
     '/blog/international-bra-size-conversion-chart': { status: 301, destination: '/bra-size-converter/' },
     '/blog/how-to-measure-bra-size-at-home': { status: 301, destination: '/how-to-measure/' },
@@ -68,3 +70,4 @@ export default defineConfig({
     },
   },
 });
+

@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -129,7 +129,17 @@ const faqSchema = {
         <br/><br/>
         If you've spent years believing you are a certain size, you need to momentarily set that aside. European sizing doesn't care about what tag you've worn your whole life; it cares about raw, precise centimeter measurements. Let's break down exactly how this metric architecture functions and why it often provides a more supportive, longer-lasting fit than its imperial counterparts. Welcome to the ultimate EU Bra Size Guide.
       </p>
-  </header>
+          <figure class="my-10 w-full rounded-2xl overflow-hidden border border-hairline shadow-sm">
+          <img 
+            src="/img/bra-strap-fit-guide.jpg" 
+            alt="Shopping European Lingerie and converting French/Italian sizes" 
+            class="w-full h-auto object-cover"
+          />
+          <figcaption class="p-4 bg-canvas-soft text-sm text-mute text-center border-t border-hairline">
+            Shopping European Lingerie and converting French/Italian sizes
+          </figcaption>
+        </figure>
+      </header>
 
     <div class="space-y-10 text-body leading-relaxed text-sm sm:text-base">
       <!-- Section 1: EN 13402 Metric Standards -->
@@ -309,3 +319,4 @@ const faqSchema = {
   </main>
   <Footer />
 </Layout>
+

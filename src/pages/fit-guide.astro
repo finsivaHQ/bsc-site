@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -181,7 +181,17 @@ const fitProblems = [
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl mb-6">
         Calculating your baseline size is only the first step to true comfort. Because brand elasticity, wire width, cup cut, and your own unique breast shape vary widely, minor fit issues can still occur even when you're wearing the "right" numerical size. But you don't have to suffer in silence.
       </p>
-  </header>
+          <figure class="my-10 w-full rounded-2xl overflow-hidden border border-hairline shadow-sm">
+          <img 
+            src="/img/bra-cup-fit-guide.jpg" 
+            alt="How to tell if your bra is too small or doesn't fit right" 
+            class="w-full h-auto object-cover"
+          />
+          <figcaption class="p-4 bg-canvas-soft text-sm text-mute text-center border-t border-hairline">
+            How to tell if your bra is too small or doesn't fit right
+          </figcaption>
+        </figure>
+      </header>
 
     <div class="prose prose-lg max-w-none text-body mb-10">
       <h2 class="text-2xl font-bold text-ink">The Deep Emotional and Physical Reality of Bra Fitting</h2>
@@ -441,3 +451,4 @@ const fitProblems = [
   </main>
   <Footer />
 </Layout>
+

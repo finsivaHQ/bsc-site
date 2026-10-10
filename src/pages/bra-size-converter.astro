@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -103,7 +103,17 @@ const faqSchema = {
       <p class="text-base sm:text-lg text-body leading-relaxed max-w-3xl">
         Select your known bra size and country standard below to convert your equivalent band and cup sizes across US/CA, UK, EU, FR, AU/NZ, JP, IN, HK, KR, and SG sizing conventions instantly.
       </p>
-    </header>
+            <figure class="my-10 w-full rounded-2xl overflow-hidden border border-hairline shadow-sm">
+          <img 
+            src="/img/bra-band-fit-guide.jpg" 
+            alt="Comprehensive Global Bra Size Comparison" 
+            class="w-full h-auto object-cover"
+          />
+          <figcaption class="p-4 bg-canvas-soft text-sm text-mute text-center border-t border-hairline">
+            Comprehensive Global Bra Size Comparison
+          </figcaption>
+        </figure>
+      </header>
 
     <!-- Converter Form & Results Card -->
     <section class="bg-surface border border-hairline rounded-2xl shadow-sm p-4 sm:p-6 md:p-10 mb-12" aria-labelledby="converter-heading">
@@ -608,3 +618,4 @@ const faqSchema = {
     populateSelectors();
   });
 </script>
+

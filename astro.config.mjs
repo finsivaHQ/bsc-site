@@ -20,7 +20,7 @@ export default defineConfig({
     '/blog/international-bra-size-conversion-uk-us-eu': { status: 301, destination: '/blog/ultimate-international-bra-size-converter-guide/' },
     '/blog/uk-bra-size-guide-calculator': { status: 301, destination: '/uk-bra-size-guide/' },
     '/blog/how-to-measure-bra-size-at-home-uk': { status: 301, destination: '/how-to-measure/' },
-    '/blog/bra-fitting-guide-how-it-should-fit': { status: 301, destination: '/fit-guide/' }
+    '/blog/bra-fitting-guide-how-it-should-fit': { status: 301, destination: '/fit-guide/' },
 
     '/blog/bra-size-chart-with-pictures-explained': { status: 301, destination: '/blog/visual-bra-size-chart-with-pictures/' },
 

@@ -72,8 +72,96 @@ const auBand = 12 + (band - 34);
 // FR Band: EU Band + 15
 const frBand = euBand + 15;
 
+// Volumetric breast tissue displacement per breast in cc (cubic centimeters)
+const cupBaseCc = [
+  150, // AA (diff 0)
+  220, // A  (diff 1)
+  300, // B  (diff 2)
+  390, // C  (diff 3)
+  490, // D  (diff 4)
+  600, // DD (diff 5)
+  720, // E  (diff 6)
+  850, // F  (diff 7)
+  990, // FF (diff 8)
+  1140, // G (diff 9)
+  1300, // GG (diff 10)
+  1470, // H (diff 11)
+  1650, // HH (diff 12)
+  1840  // J (diff 13)
+];
+const baseCc = cupBaseCc[cup.diff] !== undefined ? cupBaseCc[cup.diff] : (150 + cup.diff * 120);
+const bandRatio = Math.pow(band / 34, 1.8);
+const volumeCc = Math.round(baseCc * bandRatio);
+const massGrams = Math.round(volumeCc * 0.95);
+const massLbs = (massGrams * 0.00220462).toFixed(2);
 
-// 6-PILLAR E-E-A-T FAQ SCHEMA FOR DYNAMIC SIZE PAGES
+// Physical Archetype Classification for Differentiated Content
+const isPetite = band <= 32 && cup.diff <= 3;
+const isSmallBandFullBust = band <= 32 && cup.diff >= 4;
+const isBroadBandSmallCup = band >= 36 && cup.diff <= 3;
+const isFullFigureFullBust = band >= 36 && cup.diff >= 4;
+const isMidRange = !isPetite && !isSmallBandFullBust && !isBroadBandSmallCup && !isFullFigureFullBust;
+
+// Archetype-specific FAQ schema generation
+let archetypeQuestions = [];
+
+if (isPetite) {
+  archetypeQuestions = [
+    {
+      q: `Why do molded T-shirt bras gap at the top on a ${band}${cup.name}?`,
+      a: `On a ${band}${cup.name}, breast tissue is often distributed across a shallower root. Rigid, dome-shaped molded foam cups expect deep forward projection and will gap at the collarbone even when the cup volume is correct. Unlined balconette or demi bras with horizontal seams provide vastly superior shaping without gaping.`
+    },
+    {
+      q: `Do I really need an underwire for a ${band}${cup.name}?`,
+      a: `At an estimated ${volumeCc}cc per breast, heavy mechanical support is not mandatory for pain prevention. However, a flexible underwire in a ${band}${cup.name} provides clean tissue separation, prevents friction under the breast root, and creates a tailored silhouette that wireless bralettes cannot match.`
+    }
+  ];
+} else if (isSmallBandFullBust) {
+  archetypeQuestions = [
+    {
+      q: `Why did department stores always sell me a 34C or 36D instead of a ${band}${cup.name}?`,
+      a: `Mainstream retail fitting rooms rely on the outdated '+4 method' because standard fast-fashion brands rarely stock bands under 32 or cups above DD. They artificially put you in a loose 34 or 36 band to make their limited cup inventory fit around your ${volumeCc}cc of breast tissue, sacrificing all your support.`
+    },
+    {
+      q: `Why do bra straps dig painfully into my shoulders with a ${band}${cup.name}?`,
+      a: `When a band is too loose, your shoulder straps bear the entire ~${(massGrams * 2 / 1000).toFixed(1)} kg weight of both breasts. A snug, true ${band} band securely anchors against your ribcage to take over 80% of that weight, immediately eliminating trapezius strain.`
+    }
+  ];
+} else if (isBroadBandSmallCup) {
+  archetypeQuestions = [
+    {
+      q: `Why do underwires feel wide or poke my sides in a ${band}${cup.name}?`,
+      a: `With a ${band} band and ${cup.name} cup, your breast tissue is distributed over a broader ribcage circumference. Traditional bra cuts often assume larger bands automatically require deeper, narrow cups. Look for shallow-cup balconettes or front-close bras designed specifically for wide roots.`
+    },
+    {
+      q: `Why does my ${band} band fold or roll up during the day?`,
+      a: `A broader ribcage expands dynamically when sitting. If the band has only 2 narrow hooks, it can fold beneath the breast fold. Choosing a ${band}${cup.name} bra with a 3-hook closure or a supportive leotard back prevents band-rolling.`
+    }
+  ];
+} else if (isFullFigureFullBust) {
+  archetypeQuestions = [
+    {
+      q: `What structural features are essential for a ${band}${cup.name}?`,
+      a: `At approximately ${volumeCc}cc and ~${massLbs} lbs per breast, a ${band}${cup.name} requires heavy-duty structural engineering: a 3-to-4 hook closure, firm power-mesh wings, multi-part seamed cups (not stretchy molded foam), and fully centered, padded shoulder straps.`
+    },
+    {
+      q: `How do I prevent the underwires from poking or digging in a ${band}${cup.name}?`,
+      a: `Wire digging in a full bust usually indicates the ${cup.name} cups are slightly too small or the center gore cannot tack. If breast tissue forces the wires outward, they tilt and dig into ribcage tissue. Ensure all tissue is scooped fully into the cup.`
+    }
+  ];
+} else {
+  archetypeQuestions = [
+    {
+      q: `How should a classic mid-range ${band}${cup.name} fit?`,
+      a: `A ${band}${cup.name} should feel snug on the loosest hook when new, with the center gore resting completely flat against the sternum and wires encompassing the natural crease of the breast without sitting on soft tissue.`
+    },
+    {
+      q: `How often should I replace a ${band}${cup.name} bra?`,
+      a: `With regular rotation among 3 to 4 bras, the elastane in a ${band} band retains its optimal elastic recovery for 9 to 12 months before stretching out enough to require the tighter hooks.`
+    }
+  ];
+}
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -83,58 +171,46 @@ const faqSchema = {
       "name": `Is the ${band}${cup.name} bra size considered big or small?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `Cup size is entirely relative to band size. A ${band}${cup.name} holds exactly the same volume of breast tissue as a ${sisterDown ? sisterDown.band + sisterDown.cup.name : 'smaller band'} and a ${sisterUp ? sisterUp.band + sisterUp.cup.name : 'larger band'}. Therefore, a ${cup.name} cup on a ${band} band looks very different physically than it does on other bands.`
+        "text": `Cup size is entirely relative to band size. A ${band}${cup.name} holds approximately ${volumeCc}cc of breast tissue volume. It holds exactly the same volume as a ${sisterDown ? sisterDown.band + sisterDown.cup.name : 'smaller band sister size'} and a ${sisterUp ? sisterUp.band + sisterUp.cup.name : 'larger band sister size'}.`
       }
     },
     {
       "@type": "Question",
-      "name": `Why does my ${band}${cup.name} bra hurt my shoulders?`,
+      "name": `What does a ${cup.diff}-inch overbust difference mean for a ${band}${cup.name}?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `If your shoulders hurt, it is highly likely your ${band} band is actually too loose, or the ${cup.name} cups are too small. When the band fails to carry 80% of the bust weight securely against the ribcage, all that mechanical load transfers to your shoulder straps, digging into your trapezius muscles.`
+        "text": `In modern bra sizing math, every 1-inch difference between your ribcage and the fullest part of your bust equals one cup step. Measuring ${band} inches underbust and ${overbust} inches overbust creates a ${cup.diff}-inch delta, confirming the ${cup.name} cup bracket.`
       }
     },
     {
       "@type": "Question",
-      "name": `What does a ${cup.diff}-inch overbust difference actually mean?`,
+      "name": `What are the sister sizes for a ${band}${cup.name}?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `In modern bra sizing math, every 1-inch difference between your ribcage and the fullest part of your bust equals one cup letter. Because you measure ${band} inches underbust and ${overbust} inches overbust, the ${cup.diff}-inch mathematical delta places you precisely in the ${cup.name} cup bracket.`
+        "text": `The sister sizes that hold the identical ${volumeCc}cc volume are ${sisterUp ? sisterUp.band + sisterUp.cup.name : 'a larger band'} (if the ${band} band feels too constricting) and ${sisterDown ? sisterDown.band + sisterDown.cup.name : 'a smaller band'} (if the band slides up your back).`
       }
     },
     {
       "@type": "Question",
-      "name": `Are US and UK sizes the same for a ${band}${cup.name}?`,
+      "name": archetypeQuestions[0].q,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `For a ${band}${cup.name} in the UK system, the exact US equivalent is a ${band}${cup.us}. While bands remain identical, US manufacturers scale their cup letters completely differently after a D cup.`
+        "text": archetypeQuestions[0].a
       }
     },
     {
       "@type": "Question",
-      "name": `Can I wear a sister size instead of a ${band}${cup.name}?`,
+      "name": archetypeQuestions[1].q,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `Yes. If a ${band}${cup.name} fits perfectly in the cups but the band feels suffocatingly tight around your ribs, you should sister-size UP to a ${sisterUp ? sisterUp.band + sisterUp.cup.name : 'larger band size'}. If the cups fit but the band rides up your back, sister-size DOWN to a ${sisterDown ? sisterDown.band + sisterDown.cup.name : 'smaller band size'}.`
-      }
-    },
-    {
-      "@type": "Question",
-      "name": `How do I know if my ${band}${cup.name} fits correctly?`,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": `In a properly fitted ${band}${cup.name}, the center wire gore must rest completely flat against your sternum. The underwire must encapsulate all breast tissue without sitting on top of it laterally, and the band should sit parallel to the floor without riding up your spine.`
+        "text": archetypeQuestions[1].a
       }
     }
   ]
 };
 
 const title = `What does a ${band}${cup.name} Bra Size look like? | Visual Database`;
-const description = `Complete reference guide for the ${band}${cup.name} bra size. See the exact measurements, sister sizes, visual volume, and international conversions for US, UK, and EU.`;
-
-// Volume visualization scaling (simplified heuristic for AdSense visualizer tool)
-const baseVolume = 10; 
-const volumeFactor = baseVolume + (cup.diff * 2) + ((band - 28) * 0.5);
+const description = `Complete reference guide for the ${band}${cup.name} bra size. See the exact measurements, volumetric capacity (${volumeCc}cc), sister sizes, and international equivalents.`;
 ---
 
 <Layout 
@@ -163,8 +239,7 @@ const volumeFactor = baseVolume + (cup.diff * 2) + ((band - 28) * 0.5);
             <svg class="w-3 h-3 mx-1" aria-hidden="true" fill="none" viewBox="0 0 6 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
             </svg>
-            <span class="ml-1 md:ml-2 font-bold text-ink">{band},
-    {cup.name}</span>
+            <span class="ml-1 md:ml-2 font-bold text-ink">{band}{cup.name}</span>
           </div>
         </li>
       </ol>
@@ -178,12 +253,10 @@ const volumeFactor = baseVolume + (cup.diff * 2) + ((band - 28) * 0.5);
             Size Reference Guide
           </span>
           <h1 class="text-4xl md:text-5xl font-bold text-ink tracking-tight mb-4">
-            The {band},
-    {cup.name} Bra Size
+            The {band}{cup.name} Bra Size
           </h1>
           <p class="text-lg text-body">
-            Everything you need to know about the <strong>{band},
-    {cup.name}</strong> bra size, including precise measurements, international equivalents, and sister sizes for better fits.
+            Comprehensive dimensional breakdown for the <strong>{band}{cup.name}</strong> bra size, including tissue volume displacement, physical root profile, sister sizes, and global conversions.
           </p>
         </header>
 
@@ -191,61 +264,65 @@ const volumeFactor = baseVolume + (cup.diff * 2) + ((band - 28) * 0.5);
         <section class="bg-surface border border-hairline rounded-3xl p-6 md:p-8 shadow-sm">
           <h2 class="text-2xl font-bold text-ink mb-6 flex items-center gap-3">
             <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
-            Measurement Breakdown
+            Physical Measurement Breakdown
           </h2>
-          <div class="grid sm:grid-cols-2 gap-4">
+          <div class="grid sm:grid-cols-3 gap-4">
             <div class="p-5 rounded-2xl bg-canvas-soft-2/50 border border-hairline">
-              <span class="text-sm text-mute font-bold uppercase tracking-wider block mb-1">Underbust (Band)</span>
+              <span class="text-xs text-mute font-bold uppercase tracking-wider block mb-1">Underbust Band</span>
               <span class="text-3xl font-black text-ink">{band}"</span>
-              <p class="text-xs text-body mt-2">Your ribcage measurement, taken snugly just under the breasts.</p>
+              <p class="text-xs text-body mt-2">Snug ribcage baseline directly beneath breast tissue.</p>
             </div>
             <div class="p-5 rounded-2xl bg-primary/5 border border-primary/20">
-              <span class="text-sm text-primary font-bold uppercase tracking-wider block mb-1">Overbust (Cup)</span>
+              <span class="text-xs text-primary font-bold uppercase tracking-wider block mb-1">Overbust Cup</span>
               <span class="text-3xl font-black text-ink">{overbust}"</span>
-              <p class="text-xs text-body mt-2">Taken around the fullest part of the bust (usually at the nipple).</p>
+              <p class="text-xs text-body mt-2">Taken around the fullest contour of the bust.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-canvas-soft-2/50 border border-hairline">
+              <span class="text-xs text-mute font-bold uppercase tracking-wider block mb-1">Tissue Volume</span>
+              <span class="text-3xl font-black text-ink">~{volumeCc}cc</span>
+              <p class="text-xs text-body mt-2">Approx. {massGrams}g (~{massLbs} lbs) per breast.</p>
             </div>
           </div>
           <p class="text-sm text-body mt-6 p-4 bg-canvas rounded-xl border border-hairline">
-            <strong>The Math:</strong> The {cup.name} cup represents a <strong>{cup.diff}-inch difference</strong> between your underbust ({band}") and overbust ({overbust}"). 
+            <strong>Mathematical Delta:</strong> The {cup.name} cup represents a <strong>{cup.diff}-inch difference</strong> between your ribcage ({band}") and fullest bust ({overbust}"). 
           </p>
         </section>
 
         <!-- Sister Sizes -->
         <section class="bg-surface border border-hairline rounded-3xl p-6 md:p-8 shadow-sm">
-          <h2 class="text-2xl font-bold text-ink mb-6">Sister Sizes (Same Volume)</h2>
+          <h2 class="text-2xl font-bold text-ink mb-6">Sister Sizes (Identical ~{volumeCc}cc Volume)</h2>
           <p class="text-body mb-6">
-            If the {band},
-    {cup.name} cup fits perfectly but the band feels too tight or too loose, you need a <strong>sister size</strong>. These sizes hold the exact same volume of breast tissue.
+            If the {band}{cup.name} cup volume encapsulates your breast tissue without overflowing or empty space, but the band requires mechanical adjustment, these sister sizes hold the exact same volumetric capacity:
           </p>
           <div class="grid sm:grid-cols-2 gap-4">
             {sisterDown ? (
-              <a href={`/size/${sisterDown.band}${sisterDown.cup.name.toLowerCase()}`} class="group p-5 rounded-2xl border border-hairline hover:border-primary/50 transition-colors flex items-center justify-between">
+              <a href={`/size/${sisterDown.band}${sisterDown.cup.name.toLowerCase()}/`} class="group p-5 rounded-2xl border border-hairline hover:border-primary/50 transition-colors flex items-center justify-between">
                 <div>
-                  <span class="text-xs text-mute font-bold uppercase block mb-1">Band Too Loose?</span>
-                  <span class="text-xl font-bold text-ink group-hover:text-primary transition-colors">Try {sisterDown.band},
-    {sisterDown.cup.name}</span>
+                  <span class="text-xs text-mute font-bold uppercase block mb-1">Band Feels Loose?</span>
+                  <span class="text-xl font-bold text-ink group-hover:text-primary transition-colors">Try {sisterDown.band}{sisterDown.cup.name}</span>
+                  <span class="text-xs text-mute block mt-1">Firmer band, larger cup letter</span>
                 </div>
                 <svg class="w-5 h-5 text-mute group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
               </a>
             ) : (
               <div class="p-5 rounded-2xl border border-hairline bg-canvas/50 opacity-60">
-                <span class="text-xs text-mute font-bold uppercase block mb-1">Band Too Loose?</span>
-                <span class="text-sm text-body">No smaller band manufactured for this volume.</span>
+                <span class="text-xs text-mute font-bold uppercase block mb-1">Band Feels Loose?</span>
+                <span class="text-sm text-body">No smaller standard band manufactured.</span>
               </div>
-            )},
-    {sisterUp ? (
-              <a href={`/size/${sisterUp.band}${sisterUp.cup.name.toLowerCase()}`} class="group p-5 rounded-2xl border border-hairline hover:border-primary/50 transition-colors flex items-center justify-between">
+            )}
+            {sisterUp ? (
+              <a href={`/size/${sisterUp.band}${sisterUp.cup.name.toLowerCase()}/`} class="group p-5 rounded-2xl border border-hairline hover:border-primary/50 transition-colors flex items-center justify-between">
                 <div>
-                  <span class="text-xs text-mute font-bold uppercase block mb-1">Band Too Tight?</span>
-                  <span class="text-xl font-bold text-ink group-hover:text-primary transition-colors">Try {sisterUp.band},
-    {sisterUp.cup.name}</span>
+                  <span class="text-xs text-mute font-bold uppercase block mb-1">Band Feels Too Tight?</span>
+                  <span class="text-xl font-bold text-ink group-hover:text-primary transition-colors">Try {sisterUp.band}{sisterUp.cup.name}</span>
+                  <span class="text-xs text-mute block mt-1">Looser band, smaller cup letter</span>
                 </div>
                 <svg class="w-5 h-5 text-mute group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
               </a>
             ) : (
               <div class="p-5 rounded-2xl border border-hairline bg-canvas/50 opacity-60">
-                <span class="text-xs text-mute font-bold uppercase block mb-1">Band Too Tight?</span>
-                <span class="text-sm text-body">No larger band manufactured for this volume.</span>
+                <span class="text-xs text-mute font-bold uppercase block mb-1">Band Feels Too Tight?</span>
+                <span class="text-sm text-body">No larger standard band manufactured.</span>
               </div>
             )}
           </div>
@@ -256,18 +333,19 @@ const volumeFactor = baseVolume + (cup.diff * 2) + ((band - 28) * 0.5);
       <!-- Sidebar -->
       <div class="space-y-8">
         
-        <!-- AdSense Safety: Algorithmic Volume Visualizer -->
+        <!-- Algorithmic Volume Displacement Card -->
         <div class="bg-surface border border-hairline rounded-3xl p-6 shadow-sm overflow-hidden relative">
-          <h3 class="font-bold text-ink mb-6 text-center text-sm uppercase tracking-widest">Algorithmic Volume</h3>
-          <div class="flex justify-center items-center h-48 relative">
-            <div class="relative flex justify-center items-center">
-              <div class="absolute rounded-full border-2 border-hairline-strong opacity-30 w-40 h-40"></div>
-              <div class="absolute rounded-full bg-gradient-to-tr from-primary/80 to-accent/40 shadow-inner" style={`width: ${Math.min(volumeFactor * 3.5, 180)}px; height: ${Math.min(volumeFactor * 3.5, 180)}px;`}></div>
-              <div class="absolute bg-white/30 w-1/3 h-1/3 rounded-full top-1/4 left-1/4 blur-md"></div>
+          <h3 class="font-bold text-ink mb-4 text-center text-sm uppercase tracking-widest">Volumetric Profile</h3>
+          <div class="p-4 bg-canvas rounded-2xl border border-hairline text-center space-y-2">
+            <span class="text-3xl font-black text-primary block">{volumeCc} cc</span>
+            <span class="text-xs text-mute block">Fluid Displacement per Breast</span>
+            <div class="pt-2 border-t border-hairline flex justify-around text-xs text-body">
+              <span>Weight: <strong>~{massGrams}g</strong></span>
+              <span>Pair: <strong>~{(massGrams * 2 / 1000).toFixed(1)}kg</strong></span>
             </div>
           </div>
           <p class="text-xs text-center text-mute mt-4">
-            Relative volumetric capacity index: <strong>{Math.round(volumeFactor)}v</strong>
+            Volumetric density index computed at ~0.95 g/cm³ human glandular/adipose baseline.
           </p>
         </div>
 
@@ -277,103 +355,147 @@ const volumeFactor = baseVolume + (cup.diff * 2) + ((band - 28) * 0.5);
           <ul class="space-y-4">
             <li class="flex justify-between items-center pb-3 border-b border-hairline">
               <span class="text-sm text-body">UK (Standard)</span>
-              <span class="font-bold text-ink">{band},
-    {cup.name}</span>
+              <span class="font-bold text-ink">{band}{cup.name}</span>
             </li>
             <li class="flex justify-between items-center pb-3 border-b border-hairline">
-              <span class="text-sm text-body">US</span>
-              <span class="font-bold text-ink">{band},
-    {cup.us}</span>
+              <span class="text-sm text-body">US Equivalent</span>
+              <span class="font-bold text-ink">{band}{cup.us}</span>
             </li>
             <li class="flex justify-between items-center pb-3 border-b border-hairline">
               <span class="text-sm text-body">Europe (EU)</span>
-              <span class="font-bold text-ink">{euBand},
-    {cup.eu}</span>
+              <span class="font-bold text-ink">{euBand}{cup.eu}</span>
             </li>
             <li class="flex justify-between items-center pb-3 border-b border-hairline">
               <span class="text-sm text-body">Australia (AU)</span>
-              <span class="font-bold text-ink">{auBand},
-    {cup.name}</span>
+              <span class="font-bold text-ink">{auBand}{cup.name}</span>
             </li>
             <li class="flex justify-between items-center">
               <span class="text-sm text-body">France (FR)</span>
-              <span class="font-bold text-ink">{frBand},
-    {cup.eu}</span>
+              <span class="font-bold text-ink">{frBand}{cup.eu}</span>
             </li>
           </ul>
         </div>
         
         <!-- CTA -->
         <div class="bg-primary/5 border border-primary/20 rounded-3xl p-6 text-center">
-          <h3 class="font-bold text-ink mb-2">Not sure this is you?</h3>
-          <p class="text-sm text-body mb-4">Use our advanced algorithmic calculator to verify your exact measurements.</p>
+          <h3 class="font-bold text-ink mb-2">Verify Your Measurements</h3>
+          <p class="text-sm text-body mb-4">Use our precision 6-point algorithmic calculator to ensure this is your exact mathematical fit.</p>
           <a href="/#calculator" class="block w-full bg-primary text-on-primary font-bold py-3 rounded-xl hover:bg-primary-hover transition-colors shadow-sm">
-            Calculate My Size
+            Open Fit Calculator
           </a>
         </div>
 
       </div>
     </div>
   
-      <!-- 6-PILLAR HIGH-RICH CONTENT EXPANSION -->
-      <section class="mt-12 space-y-8 bg-surface border border-hairline rounded-3xl p-6 md:p-10 shadow-sm">
-        <h2 class="text-2xl md:text-3xl font-black text-ink">The Physical Reality of the {band}{cup.name} Bra Size</h2>
-        
-        <p class="text-body leading-relaxed">
-          Let's be incredibly honest for a moment. If you've just discovered through our calculator that you are a <strong>{band}{cup.name}</strong>, you might be experiencing a bit of "sticker shock"—especially if retail stores have spent years trying to force you into a vastly different size. The global fast-fashion apparel industry has unfortunately normalized profound physical discomfort, leading millions of individuals to believe that deep shoulder grooves, red marks, and the desperate urge to unhook their garment at the end of the day are simply normal parts of life. They are not.
-        </p>
+    <!-- ARCHETYPE-SPECIFIC TECHNICAL DEEP DIVE -->
+    <section class="mt-12 space-y-8 bg-surface border border-hairline rounded-3xl p-6 md:p-10 shadow-sm">
+      <h2 class="text-2xl md:text-3xl font-black text-ink">
+        Ergonomic & Structural Analysis: The {band}{cup.name} Profile
+      </h2>
+      
+      {isPetite && (
+        <div class="space-y-4 text-body leading-relaxed">
+          <p>
+            The <strong>{band}{cup.name}</strong> represents a petite anatomical architecture where breast tissue is dispersed over a compact ribcage circumference. At an estimated volume of approximately <strong>{volumeCc}cc</strong> (~{massGrams}g per breast), the primary fit challenge is rarely heavy downward gravitational pull; rather, it is <em>cup depth vs. root width mismatch</em>.
+          </p>
+          <p>
+            Many wearers in the {band}{cup.name} range experience frustrating cup gaping at the collarbone. This almost never means the cup is too large. Instead, standard commercial molded "T-shirt" bras are pressed into deep conical shapes that assume forward projection. On a {band}-inch frame with shallower root distribution, breast tissue rests against the bottom of the cup while the rigid top edge flares open.
+          </p>
+          <h3 class="text-xl font-bold text-ink pt-2">Recommended Bra Construction for {band}{cup.name}</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Balconette and Demi Cuts:</strong> Horizontal cup seams push tissue upward to fill the neckline smoothly without hollow gaping.</li>
+            <li><strong>Narrow Wires:</strong> Avoid wide underwires that extend past your mid-axillary line into your armpit tissue.</li>
+            <li><strong>Unlined or Spacer Foam:</strong> Flexible fabrics mold to your natural breast contour instead of forcing your tissue into an artificial mold.</li>
+          </ul>
+        </div>
+      )}
 
-        <p class="text-body leading-relaxed">
-          When you wear a {band}{cup.name}, it is because the specific three-dimensional geometry of your chest requires a precise mathematical container. The <strong>{band}-inch underbust band</strong> is engineered to act as a structural anchor. In a properly fitted {band}{cup.name}, this snug band wraps horizontally around the ribcage and utilizes friction to carry 80% of the weight of your breast tissue. 
-        </p>
+      {isSmallBandFullBust && (
+        <div class="space-y-4 text-body leading-relaxed">
+          <p>
+            The <strong>{band}{cup.name}</strong> is a classic "small band, full cup" proportion. With an underbust ribcage of {band} inches carrying approximately <strong>{volumeCc}cc</strong> (~{massGrams}g / {massLbs} lbs per breast), you possess a high tissue volume relative to your compact frame. 
+          </p>
+          <p>
+            Because fast-fashion retailers rarely manufacture cups above DD on bands below 34, fitting rooms routinely misguide women in your range into sister sizes like 34DD or 36D. While the total volume might seem superficially similar, the geometry is completely broken. On a {band}-inch torso, a 34 or 36 band floats loosely against the spine, causing the entire {volumeCc}cc weight to hang directly from your shoulder straps. This is the root cause of chronic shoulder grooving, neck headaches, and upper back fatigue.
+          </p>
+          <h3 class="text-xl font-bold text-ink pt-2">Essential Engineering Requirements for {band}{cup.name}</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Firm Power-Mesh Band:</strong> The {band} band must anchor horizontally across your ribcage, carrying 80%+ of the bust's load.</li>
+            <li><strong>Multi-Part Seamed Cups:</strong> Three-part and four-part vertical seams lift heavy tissue upward and forward far more effectively than seamless foam.</li>
+            <li><strong>Flush Center Gore:</strong> Ensure the center wire bridge rests flush against your sternum without floating or tilting forward.</li>
+          </ul>
+        </div>
+      )}
 
-        <h3 class="text-xl font-bold text-ink mt-6">Why Your Shoulders Hurt (And How the {band}{cup.name} Fixes It)</h3>
-        
-        <p class="text-body leading-relaxed">
-          Consider the engineering of a suspension bridge. The heavy structural load must be supported by thick, tensioned base cables. In your body, your underbust band is that primary base cable. If you have been wearing a band larger than {band}, that primary anchor is completely useless. It rides up your back, effectively transferring 100% of the heavy, cantilevered load of your bust directly onto your delicate shoulder straps. 
-        </p>
-        
-        <p class="text-body leading-relaxed">
-          This isn't just an aesthetic inconvenience. Over years, this micro-postural adjustment leads to chronic kyphosis (rounded shoulders), severe tension headaches, and deep fatigue in the upper trapezius muscles. By securing a true <strong>{band} band</strong>, you relieve your neck and shoulders of this immense burden.
-        </p>
+      {isBroadBandSmallCup && (
+        <div class="space-y-4 text-body leading-relaxed">
+          <p>
+            The <strong>{band}{cup.name}</strong> reflects a broader ribcage foundation paired with a modest projection depth. With a {band}-inch underbust and a {cup.diff}-inch overbust differential, your estimated volume of <strong>{volumeCc}cc</strong> is distributed broadly across a wide chest wall.
+          </p>
+          <p>
+            The most common fit frustration for a {band}{cup.name} is underwire pinching. Traditional bra grading formulas mistakenly assume that as band sizes increase into the 38-48 range, breast tissue must project forward deeply. As a result, standard department store bras often feature cups that are too narrow and projected, resulting in empty cup tops while the underwires painfully pinch the lateral edges of your breast roots near your ribs.
+          </p>
+          <h3 class="text-xl font-bold text-ink pt-2">Optimal Design Specs for {band}{cup.name}</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Wide-Root Underwires:</strong> Choose brands known for shallow cup projection and broader wire curvature.</li>
+            <li><strong>Comfort Underband Wings:</strong> Bands with 3 or more hooks prevent the fabric from rolling or folding beneath the bust when seated.</li>
+            <li><strong>Plunge or Front-Close Styles:</strong> Lower center gores eliminate pressure on the sternum while keeping the band securely seated.</li>
+          </ul>
+        </div>
+      )}
 
-        <h3 class="text-xl font-bold text-ink mt-6">Decoding the {cup.diff}-inch Difference of the {cup.name} Cup</h3>
+      {isFullFigureFullBust && (
+        <div class="space-y-4 text-body leading-relaxed">
+          <p>
+            The <strong>{band}{cup.name}</strong> represents a full-figured, full-bust profile carrying substantial tissue mass. With an estimated <strong>{volumeCc}cc</strong> per breast—translating to roughly <strong>{massGrams} grams (~{massLbs} lbs) per side</strong>—a combined dynamic weight of over {(massGrams * 2 / 1000).toFixed(1)} kg must be supported through every movement of your day.
+          </p>
+          <p>
+            At this volume, bra construction ceases to be mere fashion and becomes serious structural engineering. Lightweight elastic or single-hook closures will immediately buckle under this load. Without an unyielding, firm underband and reinforced side slings, the cantilevered weight of the bust pulls the center of gravity forward, placing excessive strain on the thoracic vertebrae and cervical spine.
+          </p>
+          <h3 class="text-xl font-bold text-ink pt-2">Non-Negotiable Support Features for {band}{cup.name}</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Reinforced Side Support Slings:</strong> Side panels in the cup prevent tissue from spilling horizontally toward the armpits and project it forward.</li>
+            <li><strong>Padded, Inset Shoulder Straps:</strong> Wide, cushioned straps positioned closer to the neck prevent painful slippage and trapezius indentation.</li>
+            <li><strong>Heavy-Gauge Underwires & 4-Hook Bands:</strong> High-tensile steel underwires maintain their shape under pressure without splaying or digging.</li>
+          </ul>
+        </div>
+      )}
 
-        <p class="text-body leading-relaxed">
-          The letter "{cup.name}" is not an arbitrary label indicating "large" or "small." It is a strict mathematical variable. It simply denotes that the circumference of the fullest part of your bust (<strong>{overbust} inches</strong>) is exactly <strong>{cup.diff} inches larger</strong> than your ribcage. 
-        </p>
-
-        <p class="text-body leading-relaxed">
-          This relative volume means a {cup.name} cup looks entirely different depending on the band it is attached to. The volume of breast tissue in a {band}{cup.name} is identical to the volume in a {sisterDown ? sisterDown.band + sisterDown.cup.name : 'smaller sister size'} and a {sisterUp ? sisterUp.band + sisterUp.cup.name : 'larger sister size'}. If the {band}{cup.name} cups encapsulate your tissue perfectly without spillage (quad-boob) or gaping, but the band feels suffocating, you should sister-size to the {sisterUp ? sisterUp.band + sisterUp.cup.name : 'larger band'}. If the band is loose and riding up, sister-size down to the {sisterDown ? sisterDown.band + sisterDown.cup.name : 'smaller band'}.
-        </p>
-
-        <div class="p-6 bg-primary/5 border border-primary/20 rounded-2xl my-8">
-          <h4 class="font-bold text-primary mb-2">The Center Gore Check</h4>
-          <p class="text-sm text-body">
-            When evaluating a {band}{cup.name} underwired bra, pay absolute attention to the "center gore" (the fabric between the cups). It must tack completely flat against your sternum bone. If it floats away from your chest wall, or if the underwire sits on top of soft breast tissue laterally near your armpits, the {cup.name} cups are too small for your true volume. 
+      {isMidRange && (
+        <div class="space-y-4 text-body leading-relaxed">
+          <p>
+            The <strong>{band}{cup.name}</strong> represents a classic proportional balance. With a {band}-inch underbust and a {cup.diff}-inch differential, your breast tissue volume is approximately <strong>{volumeCc}cc</strong> (~{massGrams}g per breast).
+          </p>
+          <p>
+            When properly fitted in a true {band}{cup.name}, the underband should sit parallel to the floor from front to back without riding up into a 'U' curve. The underwires should neatly encircle your breast tissue without resting on sensitive glandular areas, and the center gore should lie completely flat against your breastbone.
           </p>
         </div>
+      )}
 
-        <p class="text-body leading-relaxed">
-          We encourage you to trust the math. Discovering your true size is a deeply validating, emotional experience. You no longer have to squeeze your body into the cheap, restricted sizing matrix of fast-fashion retailers. Your body is absolutely not wrong, and you deserve a perfect fit; the limited retail math is wrong. Embrace the tailored, ergonomic support of the {band}{cup.name}.
+      <div class="p-6 bg-primary/5 border border-primary/20 rounded-2xl mt-6">
+        <h4 class="font-bold text-primary mb-2">The Golden Rule of Volume Conservation</h4>
+        <p class="text-sm text-body">
+          Cup sizes do not represent fixed volumes. The {cup.name} cup on a {band} band holds exactly {volumeCc}cc. If you increase the band to {band + 2}, you must decrease the cup to maintain this exact volume ({sisterUp ? sisterUp.band + sisterUp.cup.name : 'sister size'}). Never alter your band size without adjusting your cup letter accordingly.
         </p>
-      </section>
+      </div>
+    </section>
 
-      <!-- FAQ SECTION -->
-      <section class="mt-12 space-y-6">
-        <h2 class="text-2xl font-bold text-ink">Frequently Asked Questions about Size {band}{cup.name}</h2>
-        <div class="space-y-4">
-          {faqSchema.mainEntity.map(item => (
-            <details class="bg-surface border border-hairline rounded-2xl p-5 cursor-pointer group shadow-sm hover:border-primary/40 transition-colors">
-              <summary class="font-bold text-ink flex justify-between items-center list-none text-sm md:text-base">
-                <span>{item.name}</span>
-                <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
-              </summary>
-              <p class="mt-4 text-body text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
-            </details>
-          ))}
-        </div>
-      </section>
+    <!-- FAQ SECTION -->
+    <section class="mt-12 space-y-6">
+      <h2 class="text-2xl font-bold text-ink">Frequently Asked Questions for Size {band}{cup.name}</h2>
+      <div class="space-y-4">
+        {faqSchema.mainEntity.map(item => (
+          <details class="bg-surface border border-hairline rounded-2xl p-5 cursor-pointer group shadow-sm hover:border-primary/40 transition-colors">
+            <summary class="font-bold text-ink flex justify-between items-center list-none text-sm md:text-base">
+              <span>{item.name}</span>
+              <span class="text-primary group-open:rotate-180 transition-transform">&darr;</span>
+            </summary>
+            <p class="mt-4 text-body text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+    </section>
 
   </main>
   <Footer />

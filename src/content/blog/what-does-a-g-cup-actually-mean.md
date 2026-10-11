@@ -1,20 +1,20 @@
 ---
-title: "The Ultimate Guide: What Does a G Cup Actually Mean?"
-description: "Demystifying G cup sizes, visual comparisons, and expert fitting advice for G, GG, and beyond."
+title: "The Ultimate Guide: What Does a G Cup Actually Mean? (F, FF, G & GG Explained)"
+description: "Demystifying G cup sizes, visual comparisons, and expert fitting advice for bra cup size F, FF, G, and the double G (GG) bra size."
 pubDate: 2026-09-23
 heroImage: "/img/bra-cup-fit-guide.jpg"
 fitReviewed: true
-tags: ["bra fit", "g cup", "bra sizing", "lingerie guide"]
+tags: ["bra fit", "g cup", "gg bra size", "size g", "bra cup size f", "double g bra size", "bra size cup g", "ff cup size", "bra sizing", "lingerie guide"]
 author: "BSC Team"
 faqs:
   - question: "What is a G cup in inches?"
     answer: "A G cup typically represents a 9-inch difference between your underbust and overbust measurement in standard US sizing, though this varies depending on the specific sizing system."
-  - question: "Is G cup bigger than F?"
-    answer: "Yes, in both US and UK sizing systems, a G cup is larger than an F cup. In UK sizing, the progression usually goes F, FF, then G."
+  - question: "Is G cup bigger than F and FF?"
+    answer: "Yes, in UK sizing, the cup progression moves systematically from F (7-inch difference) to FF (8-inch difference), and then to G (9-inch difference). In US sizing, G directly follows DDD/F."
   - question: "What does double G cup mean?"
-    answer: "A double G cup, or GG, is a UK size that represents one cup size larger than a standard G cup, accommodating a 10-inch difference between the bust and underbust."
+    answer: "A double G cup, or GG, is a UK size that represents one cup volume larger than a standard G cup, accommodating a 10-inch difference between bust and underbust."
   - question: "Are G size boobs considered extremely large?"
-    answer: "While larger than average, G size boobs are incredibly common when women are fitted correctly. Many women wearing DD or DDD are actually a G cup or larger."
+    answer: "While larger than average, G size boobs are remarkably common when properly fitted. Many women wearing 36DD or 34DDD are mathematically a 32G or 30GG when given proper band support."
 ---
 
 # The Definitive Guide to G Cups: Beyond the Letters
@@ -91,16 +91,6 @@ Embracing your true, mathematically correct size is nothing short of a transform
 <summary><strong>Are G size boobs considered extremely large?</strong></summary>
 <p>While they are statistically larger than the societal average, G size boobs are incredibly common when women are measured and fitted correctly by professionals. An enormous number of women currently wearing a DD or DDD are actually a G cup or larger and simply have not yet experienced a proper, inclusive fitting.</p>
 </details>
-
-
-
-
-## Medical & Ergonomic References
-
-For further reading on the impact of proper breast support on posture, back pain, and overall health, we recommend consulting these authoritative medical resources:
-*   [NHS Guide to Back Pain and Posture](https://www.nhs.uk/conditions/back-pain/)
-*   [Mayo Clinic: Breast Health Basics](https://www.mayoclinic.org/healthy-lifestyle/womens-health/basics/breast-health/hlv-20049411)
-*   [National Institutes of Health (NIH): Ergonomics and Musculoskeletal Health](https://www.nih.gov/)
 
 ## Stop Guessing, Start Calculating
 

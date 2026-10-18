@@ -135,7 +135,9 @@ const faqSchema = {
         <img 
           src="/img/bra-cup-fit-guide.jpg" 
           alt="Visual bra size chart with pictures showing realistic cup size comparisons and volume scaling" 
-          class="w-full h-auto object-cover max-h-[460px]"
+          width="1200"
+          height="896"
+          class="w-full h-auto block"
           loading="eager"
         />
         <figcaption class="p-3.5 bg-canvas-soft text-xs text-mute text-center border-t border-hairline">
@@ -427,14 +429,18 @@ const faqSchema = {
         </p>
       </div>
 
-      <figure class="my-6 p-4 bg-canvas rounded-xl border border-hairline text-center">
-        <img 
-          src="/img/sister-size-diagram.svg" 
-          alt="Sister sizing volume equivalence visual diagram" 
-          class="w-full max-w-lg mx-auto h-auto object-contain"
-          loading="lazy"
-        />
-        <figcaption class="mt-3 text-xs text-mute">
+      <figure class="my-6 max-w-2xl mx-auto rounded-2xl overflow-hidden border border-hairline bg-surface shadow-xs text-center">
+        <div class="p-4 sm:p-6 bg-canvas flex items-center justify-center">
+          <img 
+            src="/img/sister-size-diagram.svg" 
+            alt="Sister sizing volume equivalence visual diagram" 
+            width="400"
+            height="240"
+            class="w-full max-w-md h-auto block rounded-xl shadow-2xs"
+            loading="lazy"
+          />
+        </div>
+        <figcaption class="p-3.5 bg-canvas-soft text-xs text-mute text-center border-t border-hairline">
           <strong>Figure 2.0:</strong> How identical breast tissue volume (~590cc) shifts across 30DD, 32D, and 34C band frames.
         </figcaption>
       </figure>
@@ -488,7 +494,16 @@ const faqSchema = {
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <!-- Spillage -->
         <div class="p-5 bg-canvas rounded-xl border border-hairline flex flex-col items-center text-center">
-          <img src="/img/fit-cup-spillage.svg" alt="Diagram showing bra cup spillage quad boob effect" class="w-32 h-32 object-contain mb-3" loading="lazy" />
+          <div class="w-full flex items-center justify-center mb-4">
+            <img 
+              src="/img/fit-cup-spillage.svg" 
+              alt="Diagram showing bra cup spillage quad boob effect" 
+              width="400" 
+              height="240" 
+              class="w-full max-w-[320px] h-auto block rounded-xl shadow-2xs" 
+              loading="lazy" 
+            />
+          </div>
           <h3 class="font-bold text-ink text-base mb-1">1. The &ldquo;Quad-Boob&rdquo; (Cup Spillage)</h3>
           <p class="text-xs text-body leading-relaxed mb-3">
             Breast tissue bulges over the top rim or underarm edges of the cup, forming a double curve under clothing.
@@ -498,7 +513,16 @@ const faqSchema = {
 
         <!-- Gaping -->
         <div class="p-5 bg-canvas rounded-xl border border-hairline flex flex-col items-center text-center">
-          <img src="/img/fit-cup-gaping.svg" alt="Diagram showing empty space and gaping bra cups" class="w-32 h-32 object-contain mb-3" loading="lazy" />
+          <div class="w-full flex items-center justify-center mb-4">
+            <img 
+              src="/img/fit-cup-gaping.svg" 
+              alt="Diagram showing empty space and gaping bra cups" 
+              width="400" 
+              height="240" 
+              class="w-full max-w-[320px] h-auto block rounded-xl shadow-2xs" 
+              loading="lazy" 
+            />
+          </div>
           <h3 class="font-bold text-ink text-base mb-1">2. Cup Gaping &amp; Wrinkling</h3>
           <p class="text-xs text-body leading-relaxed mb-3">
             Hollow empty gaps appear at the top of the cup, or fabric folds when you sit down.
@@ -508,7 +532,16 @@ const faqSchema = {
 
         <!-- Band Riding Up -->
         <div class="p-5 bg-canvas rounded-xl border border-hairline flex flex-col items-center text-center">
-          <img src="/img/fit-band-rides-up.svg" alt="Diagram showing loose bra band riding up toward shoulder blades" class="w-32 h-32 object-contain mb-3" loading="lazy" />
+          <div class="w-full flex items-center justify-center mb-4">
+            <img 
+              src="/img/fit-band-rides-up.svg" 
+              alt="Diagram showing loose bra band riding up toward shoulder blades" 
+              width="400" 
+              height="240" 
+              class="w-full max-w-[320px] h-auto block rounded-xl shadow-2xs" 
+              loading="lazy" 
+            />
+          </div>
           <h3 class="font-bold text-ink text-base mb-1">3. The Riding Back Band</h3>
           <p class="text-xs text-body leading-relaxed mb-3">
             The band forms an upward arch across your spine rather than anchoring straight and horizontal to the floor.
@@ -518,7 +551,16 @@ const faqSchema = {
 
         <!-- Wire Digging -->
         <div class="p-5 bg-canvas rounded-xl border border-hairline flex flex-col items-center text-center">
-          <img src="/img/fit-underwire-digging.svg" alt="Diagram showing underwire resting on breast tissue" class="w-32 h-32 object-contain mb-3" loading="lazy" />
+          <div class="w-full flex items-center justify-center mb-4">
+            <img 
+              src="/img/fit-underwire-digging.svg" 
+              alt="Diagram showing underwire resting on breast tissue" 
+              width="400" 
+              height="240" 
+              class="w-full max-w-[320px] h-auto block rounded-xl shadow-2xs" 
+              loading="lazy" 
+            />
+          </div>
           <h3 class="font-bold text-ink text-base mb-1">4. Underwire Poking Breast Tissue</h3>
           <p class="text-xs text-body leading-relaxed mb-3">
             The wire terminates on soft breast tissue at the underarms or fails to sit completely flush against the sternum.
@@ -529,15 +571,33 @@ const faqSchema = {
 
       <!-- Secondary Photo Guides -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 pt-8 border-t border-hairline">
-        <figure class="rounded-xl overflow-hidden border border-hairline">
-          <img src="/img/bra-band-fit-guide.jpg" alt="Bra band horizontal alignment fit photo" class="w-full h-48 object-cover" loading="lazy" />
-          <figcaption class="p-3 bg-canvas text-xs text-mute text-center">
+        <figure class="rounded-2xl overflow-hidden border border-hairline bg-surface shadow-xs flex flex-col justify-between">
+          <div class="w-full bg-canvas flex items-center justify-center">
+            <img 
+              src="/img/bra-band-fit-guide.jpg" 
+              alt="Bra band horizontal alignment fit photo showing level band vs riding up" 
+              width="1200" 
+              height="896" 
+              class="w-full h-auto block" 
+              loading="lazy" 
+            />
+          </div>
+          <figcaption class="p-3.5 bg-canvas-soft text-xs text-mute text-center border-t border-hairline">
             <strong>Band Alignment:</strong> The band must sit completely level from front sternum to spine.
           </figcaption>
         </figure>
-        <figure class="rounded-xl overflow-hidden border border-hairline">
-          <img src="/img/bra-strap-fit-guide.jpg" alt="Bra shoulder strap tension and adjustment photo" class="w-full h-48 object-cover" loading="lazy" />
-          <figcaption class="p-3 bg-canvas text-xs text-mute text-center">
+        <figure class="rounded-2xl overflow-hidden border border-hairline bg-surface shadow-xs flex flex-col justify-between">
+          <div class="w-full bg-canvas flex items-center justify-center">
+            <img 
+              src="/img/bra-strap-fit-guide.jpg" 
+              alt="Bra shoulder strap tension and adjustment photo" 
+              width="1200" 
+              height="896" 
+              class="w-full h-auto block" 
+              loading="lazy" 
+            />
+          </div>
+          <figcaption class="p-3.5 bg-canvas-soft text-xs text-mute text-center border-t border-hairline">
             <strong>Strap Tension:</strong> You should comfortably fit two fingers under the strap without digging.
           </figcaption>
         </figure>

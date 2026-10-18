@@ -162,7 +162,7 @@ Sister sizes retain the **exact same cup volume** while changing the band tightn
 - **Need a tighter band?** Go DOWN 1 band size and UP 1 cup size (e.g., from 34C to **32D**).
 - **Need a looser band?** Go UP 1 band size and DOWN 1 cup size (e.g., from 34C to **36B**).
 
-Read our full guide on [Sister Sizes Explained](/blog/sister-sizes-explained/) or use our interactive [Sister Size Calculator](/sister-size-calculator/) to check your alternatives.
+Explore our interactive [Sister Size Calculator & Guide](/sister-size-calculator/) to check your equivalent band and cup sizes.
 
 ---
 

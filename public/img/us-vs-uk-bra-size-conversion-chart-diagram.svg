@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="530" viewBox="0 0 760 530" fill="none">
+  <!-- Card Background -->
+  <rect width="760" height="530" rx="16" fill="#FAF7F4" stroke="#E8DED9" stroke-width="2"/>
+
+  <!-- Title & Header -->
+  <text x="380" y="42" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="700" fill="#171717" text-anchor="middle">US vs UK Bra Cup Size Conversion Guide</text>
+  <text x="380" y="66" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#66535B" text-anchor="middle">Step-by-Step Volume Progression &amp; The Infamous Divergence Past D Cup</text>
+
+  <!-- Column Headers -->
+  <rect x="35" y="90" width="210" height="36" rx="8" fill="#FFFFFF" stroke="#E8DED9" stroke-width="1.5"/>
+  <text x="140" y="113" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#171717" text-anchor="middle">US Standard Cup</text>
+
+  <rect x="275" y="90" width="210" height="36" rx="8" fill="#FFFFFF" stroke="#E8DED9" stroke-width="1.5"/>
+  <text x="380" y="113" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#171717" text-anchor="middle">Bust - Band Difference</text>
+
+  <rect x="515" y="90" width="210" height="36" rx="8" fill="#FFFFFF" stroke="#E8DED9" stroke-width="1.5"/>
+  <text x="620" y="113" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#171717" text-anchor="middle">UK Standard Cup</text>
+
+  <!-- Row 1: 4" (D Cup - Identical) -->
+  <g transform="translate(35, 138)">
+    <rect width="690" height="36" rx="6" fill="#FFFFFF" stroke="#E8DED9" stroke-width="1"/>
+    <text x="105" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#171717" text-anchor="middle">D</text>
+    <text x="345" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#66535B" text-anchor="middle">4 inches (10.2 cm)</text>
+    <text x="585" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#171717" text-anchor="middle">D</text>
+  </g>
+
+  <!-- Row 2: 5" (DD Cup - Identical) -->
+  <g transform="translate(35, 180)">
+    <rect width="690" height="36" rx="6" fill="#FFFFFF" stroke="#E8DED9" stroke-width="1"/>
+    <text x="105" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#171717" text-anchor="middle">DD</text>
+    <text x="345" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#66535B" text-anchor="middle">5 inches (12.7 cm)</text>
+    <text x="585" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#171717" text-anchor="middle">DD</text>
+  </g>
+
+  <!-- Row 3: 6" (Divergence Begins: DDD/F vs E) -->
+  <g transform="translate(35, 222)">
+    <rect width="690" height="36" rx="6" fill="#FFF9FA" stroke="#F0D9DD" stroke-width="1"/>
+    <text x="105" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#A95563" text-anchor="middle">DDD / F</text>
+    <text x="345" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#66535B" text-anchor="middle">6 inches (15.2 cm)</text>
+    <text x="585" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#A95563" text-anchor="middle">E</text>
+  </g>
+
+  <!-- Row 4: 7" (US G vs UK F) -->
+  <g transform="translate(35, 264)">
+    <rect width="690" height="36" rx="6" fill="#FFF9FA" stroke="#F0D9DD" stroke-width="1"/>
+    <text x="105" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#C93B50" text-anchor="middle">G (US)</text>
+    <text x="345" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#66535B" text-anchor="middle">7 inches (17.8 cm)</text>
+    <text x="585" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#A95563" text-anchor="middle">F</text>
+  </g>
+
+  <!-- Row 5: 8" (US H vs UK FF) -->
+  <g transform="translate(35, 306)">
+    <rect width="690" height="36" rx="6" fill="#FFF9FA" stroke="#F0D9DD" stroke-width="1"/>
+    <text x="105" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#A95563" text-anchor="middle">H</text>
+    <text x="345" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#66535B" text-anchor="middle">8 inches (20.3 cm)</text>
+    <text x="585" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#A95563" text-anchor="middle">FF</text>
+  </g>
+
+  <!-- Row 6: 9" (US I vs UK G - THE CRITICAL TRAP) -->
+  <g transform="translate(35, 348)">
+    <rect width="690" height="40" rx="8" fill="#FDF2F4" stroke="#C93B50" stroke-width="2"/>
+    <text x="105" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#171717" text-anchor="middle">I</text>
+    <text x="345" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#C93B50" text-anchor="middle">9 inches (22.9 cm)</text>
+    <text x="585" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="800" fill="#C93B50" text-anchor="middle">G (UK) ⚠️</text>
+  </g>
+
+  <!-- Row 7: 10" (US J vs UK GG) -->
+  <g transform="translate(35, 394)">
+    <rect width="690" height="36" rx="6" fill="#FFF9FA" stroke="#F0D9DD" stroke-width="1"/>
+    <text x="105" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#A95563" text-anchor="middle">J</text>
+    <text x="345" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#66535B" text-anchor="middle">10 inches (25.4 cm)</text>
+    <text x="585" y="23" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#A95563" text-anchor="middle">GG</text>
+  </g>
+
+  <!-- Bottom Warning Box -->
+  <g transform="translate(35, 442)">
+    <rect width="690" height="66" rx="10" fill="#FFFFFF" stroke="#E8DED9" stroke-width="1.5"/>
+    <text x="30" y="28" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#C93B50">⚠️ THE "G CUP" CONFUSION TRAP:</text>
+    <text x="30" y="48" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5" fill="#4B5563">A UK G cup is designed for a 9" difference, while a US G is only 7". Ordering your US size in a UK brand means receiving cups 2 full sizes too big!</text>
+  </g>
+</svg>

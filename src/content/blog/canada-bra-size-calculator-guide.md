@@ -2,7 +2,7 @@
 title: "Canada Bra Size Calculator: Sizing & Measurement Guide (Inches & CM)"
 description: "Find your exact bra size in Canada using our accurate bra size calculator. Learn how to take proper bra measurements in inches and cm, compare Canadian sizing to international standards, and find your perfect fit."
 pubDate: 2026-09-01
-heroImage: "/img/bra-strap-fit-guide.jpg"
+heroImage: "/img/bra-band-fit-guide.jpg"
 fitReviewed: true
 author: "BraSizeChecker Editorial Team"
 tags: ["bra size calculator canada", "bra size canada", "bra size guide canada", "how to measure", "canada bra fitting"]

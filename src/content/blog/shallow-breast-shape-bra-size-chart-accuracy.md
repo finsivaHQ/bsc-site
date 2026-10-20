@@ -2,7 +2,7 @@
 title: "What is a 'Shallow' Breast Shape and Why Do Standard Bra Size Charts Get It Wrong?"
 description: "If your calculated bra size always seems too big in the cup, you might have shallow breasts. Learn how to identify this shape, avoid molded cup gaping, and find the perfect bra style."
 pubDate: 2026-09-30
-heroImage: "/img/bra-cup-fit-guide.jpg"
+heroImage: "/img/shallow-breast-balconette-demi-bra.jpg"
 fitReviewed: true
 tags: ["breast shape", "shallow breasts", "bra sizing", "fit guide"]
 author: "BSC Certified Fitting Team"
@@ -30,6 +30,21 @@ You look in the mirror at the wrinkling fabric, the hollow air gaps near the col
 Before you give up and blame your body, you need to understand one transformative fitting reality: **Bra size is only half the equation—breast shape is the other half.** 
 
 If you have taken accurate tape measurements but consistently find that your calculated cup size gaps at the top, you do not have "weird" or "deflated" breasts. You almost certainly have what intimate apparel engineers call a **Shallow Breast Shape**. Understanding this anatomical profile will instantly demystify why mass-market bra styles fail you, save you hundreds of dollars in wasted return shipping fees, and unlock a world of effortless, gap-free comfort.
+
+<figure class="my-8 text-center">
+  <img 
+    src="/img/shallow-breast-balconette-demi-bra.jpg" 
+    alt="Vertical-seamed balconette demi bra with open neckline and wide underwires designed for shallow breast shapes" 
+    width="1200" 
+    height="896" 
+    loading="lazy" 
+    decoding="async" 
+    class="rounded-2xl border border-hairline shadow-md mx-auto max-w-full h-auto"
+  />
+  <figcaption class="mt-3 text-xs sm:text-sm text-body italic">
+    An architectural vertical-seamed balconette bra featuring wide underwire channels and a low open neckline, specifically engineered to lift and support shallow, wide-rooted breast tissue without upper cup gaping.
+  </figcaption>
+</figure>
 
 ---
 

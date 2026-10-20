@@ -2,7 +2,7 @@
 title: "Indian Bra Size Chart & Conversion Guide: US, UK, EU & Australia Sizing Explained"
 description: "Master Indian bra size conversion across US, UK, European (EU), French (FR), and Australian (AU) standards. Includes band & cup conversion tables, 32/80 tag decoder, and calculator guidance."
 pubDate: 2026-08-29
-heroImage: "/img/bra-strap-fit-guide.jpg"
+heroImage: "/img/us-vs-uk-bra-size-tag-conversion.jpg"
 fitReviewed: true
 tags: ["bra size chart india", "international bra conversion", "us to india bra size", "uk bra size india"]
 author: "BraSizeChecker Expert Team"
@@ -132,6 +132,21 @@ In reality, major lingerie manufacturers supplying the Indian market print dual 
 |                      [Equals 70 cm EU Band]                  |
 +--------------------------------------------------------------+
 ```
+
+<figure class="my-8 text-center">
+  <img 
+    src="/img/us-vs-uk-bra-size-tag-conversion.jpg" 
+    alt="International bra sizing label displaying US, UK, and European size conversions" 
+    width="1200" 
+    height="896" 
+    loading="lazy" 
+    decoding="async" 
+    class="rounded-2xl border border-hairline shadow-md mx-auto max-w-full h-auto"
+  />
+  <figcaption class="mt-3 text-xs sm:text-sm text-body italic">
+    An authentic international garment label showing multi-region sizing (UK, US, EU) sewn into the band, illustrating why reading regional codes prevents fit mismatches.
+  </figcaption>
+</figure>
 
 * **30/75:** 30 inches underbust (IN/UK/US) = 75 cm French band (65 cm EU)
 * **32/80:** 32 inches underbust (IN/UK/US) = 80 cm French band (70 cm EU)

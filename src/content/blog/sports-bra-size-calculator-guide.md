@@ -2,7 +2,7 @@
 title: "Sports Bra Size Calculator: Find Your High-Impact Fit"
 description: "A sports bra needs to fit differently. Learn how to calculate your sports bra size for maximum support and minimum bounce."
 pubDate: 2026-08-06
-heroImage: "/img/bra-cup-fit-guide.jpg"
+heroImage: "/img/sports-bra-high-impact-fit-guide.jpg"
 fitReviewed: true
 tags: ["sports bra","bra size calculator","fitness"]
 author: "BraSizeChecker Expert Team"
@@ -21,6 +21,21 @@ faqs:
 For active women, a well-fitting sports bra is just as crucial to a workout as a good pair of sneakers. Whether you are running a marathon, practicing yoga, or doing high-intensity interval training (HIIT), breast bounce isn't just uncomfortable—it can cause permanent damage to the delicate Cooper's ligaments that support breast tissue, leading to premature sagging and severe back and neck pain. 
 
 Because sports bras serve a vastly different purpose than your everyday lingerie, they need to fit differently. This comprehensive pillar guide will explain the science behind sports bra fitting, how to accurately calculate your size, the difference between encapsulation and compression, and how to choose the perfect bra for your specific activity level.
+
+<figure class="my-8 text-center">
+  <img 
+    src="/img/sports-bra-high-impact-fit-guide.jpg" 
+    alt="High-impact encapsulation sports bra showing wide padded shoulder straps and structured inner support cups" 
+    width="1200" 
+    height="896" 
+    loading="lazy" 
+    decoding="async" 
+    class="rounded-2xl border border-hairline shadow-md mx-auto max-w-full h-auto"
+  />
+  <figcaption class="mt-3 text-xs sm:text-sm text-body italic">
+    An encapsulation-style high-impact sports bra featuring wide padded ergonomic straps, molded inner cups, and breathable side mesh panels designed to minimize multidirectional bounce.
+  </figcaption>
+</figure>
 
 ### Why Your Regular Bra Size Might Not Work for a Sports Bra
 

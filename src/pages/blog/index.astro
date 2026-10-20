@@ -34,9 +34,12 @@ const posts = (await getCollection('blog')).sort(
               <div class="w-full aspect-[4/3] bg-canvas-soft-2 overflow-hidden border-b border-hairline relative">
                 <img 
                   src={post.data.heroImage} 
-                  alt="" 
+                  alt={post.data.title}
+                  width="600"
+                  height="450"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy" 
+                  loading="lazy"
+                  decoding="async"
                 />
                 {post.data.fitReviewed && (
                   <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full border border-white flex items-center gap-1 shadow-sm">

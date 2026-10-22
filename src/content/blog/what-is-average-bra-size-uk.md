@@ -2,7 +2,7 @@
 title: "What is the Average Bra Size in the UK? Surprising Statistics & Facts"
 description: "Curious about the average UK bra size? We break down the latest data on average bust and cup sizes in the UK, how it has changed, and why correct fitting matters."
 pubDate: 2026-09-06
-heroImage: "/img/bra-cup-fit-guide.jpg"
+heroImage: "/img/average-bra-size-uk-bell-curve.jpg"
 fitReviewed: true
 tags: ["uk bra size", "average breast size", "uk sizing"]
 author: "BraSizeChecker Expert Team"

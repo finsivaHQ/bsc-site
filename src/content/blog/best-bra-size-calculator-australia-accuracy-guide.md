@@ -2,7 +2,7 @@
 title: "Best Bra Size Calculator Australia: Algorithm Accuracy & Fitters Guide"
 description: "In-depth scientific review of Australian bra size calculator algorithms. Compare AU dress size band formulas, mathematical accuracy, between-size rules, and fitter recommendations."
 pubDate: 2026-08-29
-heroImage: "/img/bra-cup-fit-guide.jpg"
+heroImage: "/img/australian-bra-size-conversion-tag.jpg"
 fitReviewed: true
 tags: ["best bra size calculator australia", "australian bra sizing algorithm", "au bra size converter", "bra size calculator accuracy"]
 author: "BraSizeChecker Expert Team"

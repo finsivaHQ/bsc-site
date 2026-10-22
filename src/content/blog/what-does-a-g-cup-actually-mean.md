@@ -54,7 +54,7 @@ When discussing g size boobs, the mental image many people instantly conjure is 
 
 A well-fitted G cup provides a beautifully lifted, distinctly separated, and incredibly sleek silhouette under clothing. The right bra acts as a high-performance structural foundation, actively taking the heavy weight off the delicate tissues of the shoulders and transferring it securely to the robust band around the ribcage. 
 
-![Proper Cup Fit](/img/fit-cups-correct.svg)
+![British G Cup Fuller-Bust Balconette Bra with Sizing Tag](/img/g-cup-bra-size-volume-guide.jpg)
 
 ## The Premium Fit Experience: What to Look For
 

@@ -2,7 +2,7 @@
 title: "Bra Size Calculator & Fit Guide for Trans Women"
 description: "A specialized guide and bra size calculator for trans women (MTF) to find the perfect band width and cup depth."
 pubDate: 2026-08-19
-heroImage: "/img/bra-measure-dos-donts.jpg"
+heroImage: "/img/trans-women-bra-fit-contour.jpg"
 fitReviewed: true
 tags: ["transgender","mtf","bra fitting"]
 author: "BraSizeChecker Expert Team"

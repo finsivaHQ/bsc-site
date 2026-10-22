@@ -135,8 +135,8 @@ In reality, major lingerie manufacturers supplying the Indian market print dual 
 
 <figure class="my-8 text-center">
   <img 
-    src="/img/us-vs-uk-bra-size-tag-conversion.jpg" 
-    alt="International bra sizing label displaying US, UK, and European size conversions" 
+    src="/img/indian-bra-size-conversion-tag.jpg" 
+    alt="Indian bra sizing label displaying India, US, UK, and European size conversions" 
     width="1200" 
     height="896" 
     loading="lazy" 
@@ -144,7 +144,7 @@ In reality, major lingerie manufacturers supplying the Indian market print dual 
     class="rounded-2xl border border-hairline shadow-md mx-auto max-w-full h-auto"
   />
   <figcaption class="mt-3 text-xs sm:text-sm text-body italic">
-    An authentic international garment label showing multi-region sizing (UK, US, EU) sewn into the band, illustrating why reading regional codes prevents fit mismatches.
+    An authentic international garment label showing multi-region sizing (India, UK, US, EU) sewn into the band, illustrating why reading regional codes prevents fit mismatches.
   </figcaption>
 </figure>
 

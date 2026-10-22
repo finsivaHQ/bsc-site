@@ -2,7 +2,7 @@
 title: "The Ultimate Guide: What Does a G Cup Actually Mean? (F, FF, G & GG Explained)"
 description: "Demystifying G cup sizes, visual comparisons, and expert fitting advice for bra cup size F, FF, G, and the double G (GG) bra size."
 pubDate: 2026-09-23
-heroImage: "/img/bra-cup-fit-guide.jpg"
+heroImage: "/img/g-cup-bra-size-volume-guide.jpg"
 fitReviewed: true
 tags: ["bra fit", "g cup", "gg bra size", "size g", "bra cup size f", "double g bra size", "bra size cup g", "ff cup size", "bra sizing", "lingerie guide"]
 author: "BSC Team"

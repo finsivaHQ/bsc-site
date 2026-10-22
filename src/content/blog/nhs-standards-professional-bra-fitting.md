@@ -2,7 +2,7 @@
 title: "UK Bra Fitting Standards & The Health Benefits of Proper Support"
 description: "Discover why a proper bra fit is essential for posture, comfort, and physical well-being. Learn how UK bra fitting standards prioritize underbust support."
 pubDate: 2026-09-06
-heroImage: "/img/bra-strap-fit-guide.jpg"
+heroImage: "/img/nhs-bra-fitting-posture-ergonomics.jpg"
 fitReviewed: true
 tags: ["UK Sizing", "Health & Comfort", "Bra Fitting", "Fit Guide"]
 author: "BraSizeChecker Editorial Team"

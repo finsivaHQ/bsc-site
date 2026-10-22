@@ -2,7 +2,7 @@
 title: "Beyond GG: A Comprehensive Guide to Navigating H, HH, J, K, and L Cups"
 description: "Discover the ultimate guide to finding the perfect fit in large cup sizes, from H cup to L cup, including styles, sizing tips, and support."
 pubDate: 2026-09-06
-heroImage: "/img/bra-strap-fit-guide.jpg"
+heroImage: "/img/heavy-bust-support-bra-engineering.jpg"
 fitReviewed: true
 tags: ["bra sizing", "large cup sizes", "h cup", "k cup", "lingerie advice"]
 author: "Sizing Expert"

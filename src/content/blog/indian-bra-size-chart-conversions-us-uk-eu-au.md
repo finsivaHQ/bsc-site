@@ -133,20 +133,7 @@ In reality, major lingerie manufacturers supplying the Indian market print dual 
 +--------------------------------------------------------------+
 ```
 
-<figure class="my-8 text-center">
-  <img 
-    src="/img/indian-bra-size-conversion-tag.jpg" 
-    alt="Indian bra sizing label displaying India, US, UK, and European size conversions" 
-    width="1200" 
-    height="896" 
-    loading="lazy" 
-    decoding="async" 
-    class="rounded-2xl border border-hairline shadow-md mx-auto max-w-full h-auto"
-  />
-  <figcaption class="mt-3 text-xs sm:text-sm text-body italic">
-    An authentic international garment label showing multi-region sizing (India, UK, US, EU) sewn into the band, illustrating why reading regional codes prevents fit mismatches.
-  </figcaption>
-</figure>
+
 
 * **30/75:** 30 inches underbust (IN/UK/US) = 75 cm French band (65 cm EU)
 * **32/80:** 32 inches underbust (IN/UK/US) = 80 cm French band (70 cm EU)

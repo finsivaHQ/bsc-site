@@ -24,20 +24,7 @@ But it doesn't have to be this way. The secret to unlocking all-day comfort and 
 
 In this comprehensive pillar guide, our fitting specialists break down exactly why standard calculators fail you, how to take the most accurate measurements for a larger bust, what breast shape means for your fit, and how to troubleshoot the most common fit issues.
 
-<figure class="my-8 text-center">
-  <img 
-    src="/img/plus-size-fuller-bust-support-bra.jpg" 
-    alt="Full-support plus size bra featuring wide 4-hook back closure, tall reinforced powernet wings, and padded comfort straps" 
-    width="1200" 
-    height="896" 
-    loading="lazy" 
-    decoding="async" 
-    class="rounded-2xl border border-hairline shadow-md mx-auto max-w-full h-auto"
-  />
-  <figcaption class="mt-3 text-xs sm:text-sm text-body italic">
-    An engineered full-coverage support bra designed for larger busts, showcasing a wide 4-hook-and-eye closure, tall powernet wings, multi-part seamed cups, and cushioned straps for optimal weight distribution.
-  </figcaption>
-</figure>
+
 
 ### The Epidemic of Incorrect Sizing in the Plus Size Community
 

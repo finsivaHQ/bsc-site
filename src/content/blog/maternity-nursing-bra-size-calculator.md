@@ -20,20 +20,7 @@ faqs:
 
 Navigating the profound physical changes of pregnancy and postpartum life can be both exciting and overwhelming. One of the most significant changes you’ll experience is in your breast size and shape. Finding the correct fit isn't just about aesthetics; it's about crucial support, health, and comfort. This comprehensive pillar guide will explain everything you need to know about using a maternity and nursing bra size calculator, how to measure correctly at different stages, and what to look for when shopping for maternity lingerie.
 
-<figure class="my-8 text-center">
-  <img 
-    src="/img/maternity-nursing-bra-fit-guide.jpg" 
-    alt="Seamless maternity nursing bra showing quick-release nursing drop-down clasps and wide supportive underband" 
-    width="1200" 
-    height="896" 
-    loading="lazy" 
-    decoding="async" 
-    class="rounded-2xl border border-hairline shadow-md mx-auto max-w-full h-auto"
-  />
-  <figcaption class="mt-3 text-xs sm:text-sm text-body italic">
-    A soft, seamless wireless nursing bra featuring one-handed drop-down feeding clasps, flexible molded cups, and a wide supportive rib underband designed to adapt to pregnancy and postpartum fluctuations.
-  </figcaption>
-</figure>
+
 
 ### The Importance of a Correctly Fitting Maternity Bra
 

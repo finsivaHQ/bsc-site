@@ -89,11 +89,13 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', 
 
       <!-- Hero Image -->
       {frontmatter.heroImage && (
-        <div class="w-full aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden mb-12 shadow-sm border border-hairline bg-canvas-soft-2">
+        <div class="w-full rounded-2xl overflow-hidden mb-12 shadow-sm border border-hairline bg-canvas-soft-2">
           <img 
             src={frontmatter.heroImage} 
             alt={frontmatter.title} 
-            class="w-full h-full object-cover"
+            width="1200"
+            height="896"
+            class="w-full h-auto block"
             loading="eager"
             fetchpriority="high"
             decoding="async"

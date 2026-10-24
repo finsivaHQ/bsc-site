@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@source "../**/*.{astro,html,js,ts,jsx,tsx}";
+@source "../**/*.{astro,html,js,ts,jsx,tsx,md}";
 
 @custom-variant dark (&:where(.dark, .dark *));
 

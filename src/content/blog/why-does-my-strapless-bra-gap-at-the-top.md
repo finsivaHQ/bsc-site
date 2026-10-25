@@ -31,6 +31,27 @@ The truth is liberating: **your body is not misshapen, and your breasts are not 
 
 The culprit is an intimate apparel engineering failure known in professional fitting clinics as **The Shallow Cup Trap**. In this definitive clinical diagnostic guide, our master fitters break down the biomechanical lever effect that forces stiff foam cups to flare open, explain how your breast shape dictates strapless performance, and reveal the exact bra architectures that hug your chest flush with zero upper gaps.
 
+<div class="my-8 bg-canvas-soft border-2 border-primary/20 rounded-2xl p-6 not-prose shadow-xs">
+  <div class="flex items-center gap-2 mb-3 text-primary">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+    <h3 class="font-bold text-ink text-sm sm:text-base uppercase tracking-wider">Fast Takeaway: The 30-Second Summary</h3>
+  </div>
+  <div class="grid sm:grid-cols-3 gap-3 pt-1 text-xs sm:text-sm">
+    <div class="bg-surface p-3.5 rounded-xl border border-hairline/80">
+      <div class="font-bold text-ink mb-1">1. Gaping ≠ Too Big</div>
+      <p class="text-mute text-xs leading-relaxed">Top-rim gaping is rarely caused by extra cup volume. It is usually caused by a cup that is too flat or shallow for your natural projection.</p>
+    </div>
+    <div class="bg-surface p-3.5 rounded-xl border border-hairline/80">
+      <div class="font-bold text-ink mb-1">2. The Lever Tilt</div>
+      <p class="text-mute text-xs leading-relaxed">When breasts cannot fit into a stiff foam cup's base, they push the bra forward. The wire slides down onto the stomach, and the top rim flips open.</p>
+    </div>
+    <div class="bg-surface p-3.5 rounded-xl border border-hairline/80">
+      <div class="font-bold text-ink mb-1">3. The Real Solution</div>
+      <p class="text-mute text-xs leading-relaxed">Swap rigid molded t-shirt domes for open sweetheart balconettes or 3-part seamed cups that offer deep room right at the underwire.</p>
+    </div>
+  </div>
+</div>
+
 ---
 
 ## The Root Cause: Why Strapless Bra Cups Stick Out (The Shallow Cup Trap)

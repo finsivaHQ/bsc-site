@@ -3,6 +3,8 @@ title: "Why Does My Strapless Bra Keep Slipping Down? (The 100% Band Rule)"
 description: "Discover why strapless bras slide down to your stomach, how the 100% band support rule works, and the sister-sizing formula to keep your bra locked in place all day."
 pubDate: 2026-10-25
 heroImage: "/img/strapless-bra-slipping-down-100-percent-band-rule.jpg"
+imageAlt: "Biomechanical diagram of the 100 percent band rule for strapless bras comparing proper ribcage anchor against slipping waist belt fit"
+imageCaption: "Biomechanical Load Distribution: 100% underband anchorage vs. slack band slippage and lever gaping."
 fitReviewed: true
 tags: ["Strapless Bra", "Bra Fitting", "Fit Issues", "Sister Sizing", "Fuller Bust"]
 author: "BraSizeChecker Editorial Team"
@@ -298,7 +300,7 @@ This paradox is caused by **The Shallow Cup Trap**:
 3. **The Lever Effect:** When your breast tissue cannot fit into the shallow base of the foam cup, it acts like a lever. Your breasts push the apex of the cup forward and outward.
 4. **The Slide & Gap:** This outward leverage forces the bottom underwire out of your inframammary fold and slides it down toward your stomach. Because the bra is now tilted forward, the top edge of the cup flares open, creating an unsightly gap under clothing.
 
-**The Solution:** Look for strapless bras with **multi-part seamed cups** or sweetheart balconette necklines rather than flat, rigid T-shirt domes. Seamed cups provide immediate forward projection at the underwire root, allowing breast tissue to settle fully without levering the bra downward.
+**The Solution:** Look for strapless bras with **multi-part seamed cups** or sweetheart balconette necklines rather than flat, rigid T-shirt domes. Seamed cups provide immediate forward projection at the underwire root, allowing breast tissue to settle fully without levering the bra downward. *(For the complete diagnostic and bra recommendations by breast shape, read our full breakdown on [Why Does My Strapless Bra Gap at the Top? (The Shallow Cup Trap)](/blog/why-does-my-strapless-bra-gap-at-the-top/)).*
 
 ---
 

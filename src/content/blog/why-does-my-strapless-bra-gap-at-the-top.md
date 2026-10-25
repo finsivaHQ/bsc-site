@@ -3,6 +3,8 @@ title: "Why Does My Strapless Bra Gap at the Top? (The Shallow Cup Trap)"
 description: "Discover why strapless bra cups stick out and gap at the top rim while sliding down, how the shallow cup lever effect works, and which styles fix it."
 pubDate: 2026-10-26
 heroImage: "/img/strapless-bra-gaping-at-top-shallow-cup-trap.jpg"
+imageAlt: "Biomechanical comparison diagram showing why molded strapless bras gap at the top versus seamed balconettes with zero hollow cavity"
+imageCaption: "Biomechanical Comparison: Seamed balconette flush contact vs. the rigid molded foam shallow cup lever effect."
 fitReviewed: true
 tags: ["Strapless Bra", "Bra Gaping", "Breast Shape", "Shallow Breasts", "Balconette Bra"]
 author: "BraSizeChecker Editorial Team"

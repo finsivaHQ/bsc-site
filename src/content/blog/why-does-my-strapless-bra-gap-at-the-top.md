@@ -308,6 +308,7 @@ If you have suffered through endless gaping strapless bras, here are the industr
 ### 1. For Projected & Fuller Busts (D to K Cups)
 * **Curvy Kate Luxe Strapless:** Engineered with multi-part vertically seamed cups rather than molded foam. It offers unmatched immediate projection at the underwire root and a sweetheart neckline that hugs tissue flush without standing off the chest.
 * **Panache Evie / Porcelain Elan Strapless:** Features a reinforced 4-hook powernet wing with firm side boning and an open balcony neckline specifically designed to prevent upper cup flaring.
+*(For an exhaustive architectural review of how to support 3 to 8+ lbs of breast tissue without slippage, read our complete guide on the [Best Strapless Bras for Large Breasts: D to K Cups](/blog/best-strapless-bras-for-large-breasts/)).*
 
 ### 2. For Bottom-Heavy (FOB) Breasts & Short Roots
 * **Wacoal Red Carpet Strapless:** Widely regarded as the gold standard of molded strapless bras. While lightly molded, its sweetheart neckline curves inward toward the body rather than pointing straight up, contouring perfectly to FOB tissue.

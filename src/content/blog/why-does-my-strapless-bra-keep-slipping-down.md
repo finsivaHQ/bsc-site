@@ -335,7 +335,7 @@ When silicone is pressed tightly against the skin during hot summer events or ac
 
 ## Architectural Anatomy of a Zero-Slip Strapless Bra
 
-If you have a fuller bust (D, DD, E, F, G, or H+ cups), you cannot rely on an ordinary fashion strapless bra with a 2-hook clasp. Supporting heavier breast tissue without shoulder straps requires serious garment engineering:
+If you have a fuller bust (D, DD, E, F, G, or H+ cups), you cannot rely on an ordinary fashion strapless bra with a 2-hook clasp. Supporting heavier breast tissue without shoulder straps requires serious garment engineering. *(For tested brand recommendations and cup-by-cup architectural analysis, see our comprehensive buying guide on the [Best Strapless Bras for Large Breasts: D to K Cups](/blog/best-strapless-bras-for-large-breasts/)).*
 
 <div class="my-8 grid sm:grid-cols-2 gap-3.5 not-prose">
   <div class="bg-surface border border-hairline rounded-2xl p-4 shadow-2xs flex items-start gap-3">

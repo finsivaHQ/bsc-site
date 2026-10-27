@@ -17,7 +17,6 @@ export default defineConfig({
     })
   ],
   redirects: {
-    '/sitemap.xml': { status: 301, destination: '/sitemap-index.xml' },
     '/blog/understanding-large-cup-sizes-f-ff-g-gg': { status: 301, destination: '/blog/what-does-a-g-cup-actually-mean/' },
     '/blog/sister-sizing-weight-loss-gain-34c-36b': { status: 301, destination: '/sister-size-calculator/' },
     '/blog/converting-specific-sizes-75b-105d-70b': { status: 301, destination: '/bra-size-converter/' },

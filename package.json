@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx tsx tests/braSizing.test.ts",
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node -e \"const fs=require('fs'); if(fs.existsSync('dist/sitemap-0.xml')){ fs.copyFileSync('dist/sitemap-0.xml','dist/sitemap.xml'); let idx=fs.readFileSync('dist/sitemap-index.xml','utf8'); idx=idx.replace(/sitemap-0\\.xml/g,'sitemap.xml'); fs.writeFileSync('dist/sitemap-index.xml',idx); }\"",
     "preview": "astro preview"
   },
   "repository": {
